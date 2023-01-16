@@ -7,6 +7,8 @@ public class MouseFollow : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     private SpriteRenderer rs;
+
+    public List<Sprite> sprites;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,19 +26,23 @@ public class MouseFollow : MonoBehaviour
 
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0, 0, rotZ);
+        //transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
         if(rotZ > 90 || rotZ < -90)
         {
             rs.flipX = true;
-            rs.flipY = true;
-        }
-        else if (rotZ < 90 || rotZ > -90)
+        }else if (rotZ < 90 || rotZ > -90)
         {
-            rs.flipX = true;
-            rs.flipY = false;
+            rs.flipX = false;
         }
 
+        if(rotZ > -135 && rotZ < -45){
+            rs.sprite = sprites[2];
+        }else if(rotZ > 45 && rotZ < 135){
+            rs.sprite = sprites[1];
+        } else{
+            rs.sprite = sprites[0];
+        }
 
     }
 }
