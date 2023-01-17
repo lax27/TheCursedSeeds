@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8051245350902433056}
   - component: {fileID: 8051245350902433071}
   - component: {fileID: 8051245350902433070}
+  - component: {fileID: 7249189959585820691}
+  - component: {fileID: 2614223063030115873}
   m_Layer: 0
   m_Name: Mantee
   m_TagString: Untagged
@@ -101,3 +103,36 @@ MonoBehaviour:
   - {fileID: 21300000, guid: db56237257731e84183b63b4a593ed7c, type: 3}
   - {fileID: 21300000, guid: a4a3430d740aafc4da2d769a177fc3d7, type: 3}
   - {fileID: 21300000, guid: b598299336107c840aee9316f27802da, type: 3}
+--- !u!114 &7249189959585820691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051245350902433069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8301947562a92b4c80dd0158d73064c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &2614223063030115873
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051245350902433069}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
