@@ -19,15 +19,12 @@ public class PlayerMove : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-       /*
+       
         Vector3 Hdirecion = new Vector3(horizontal, 0, 0);
-        Vector3 Vdirecion = new Vector3(0, vertical, 0);   
-        rg.AddForce(Hdirecion * speed);
-        rg.AddForce(Vdirecion * speed);
-        */
+        Vector3 Vdirecion = new Vector3(0, vertical, 0);    
         
 
-       // transform.position +=  new Vector3(horizontal * speed * Time.deltaTime, vertical * speed * Time.deltaTime,0);   
+       transform.position +=  new Vector3(horizontal * speed * Time.deltaTime, vertical * speed * Time.deltaTime);   
 
 
 
