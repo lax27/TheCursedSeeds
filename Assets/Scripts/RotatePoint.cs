@@ -14,7 +14,6 @@ public class RotatePoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-  
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -44,7 +43,7 @@ public class RotatePoint : MonoBehaviour
         {
             canFire = false;
             GameObject temp = Instantiate(bullet, gun.position,Quaternion.identity);
-            Destroy(temp, 1);
+            Destroy(temp, 3);
         }
 
     }

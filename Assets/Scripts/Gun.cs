@@ -15,9 +15,22 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        if (rp.transform.localEulerAngles.z > 90 && rp.transform.localEulerAngles.z < -90)
+        {
+            rs.flipY = true;
+        }
+        else
+        {
+            rs.flipY = false;
+        }
+
+
         if (rp.transform.localEulerAngles.z > 45 && rp.transform.localEulerAngles.z < 135)
         {
             rs.sortingOrder = 0;
+          
         }
         else
         {

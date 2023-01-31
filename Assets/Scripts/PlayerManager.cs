@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public float speed;
-
-
-
+    public int life = 6;
+    public int CseedOn = 0;
+    public int maxCseed = 1;
+    public int weaponsOn = 0;
+    public int maxWeaponCapacity = 1;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.up * speed);
+        
     }
-
 
     // Update is called once per frame
     void Update()
