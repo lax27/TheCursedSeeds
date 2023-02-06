@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public int life = 6;
+    public int life = 3;
     public int CseedOn = 0;
     public int maxCseed = 1;
     public int weaponsOn = 0;
