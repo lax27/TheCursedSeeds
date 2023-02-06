@@ -11,10 +11,14 @@ public class RotatePoint : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetwenFire;
+
+    Collider2D coll;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        coll = bullet.GetComponent<Collider2D>(); 
     }
 
     // Update is called once per frame
@@ -39,12 +43,17 @@ public class RotatePoint : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0) && canFire)
-        {
+        if (Input.GetMouseButton(0) && canFire) {
             canFire = false;
             GameObject temp = Instantiate(bullet, gun.position,Quaternion.identity);
-            Destroy(temp, 3);
         }
 
     }
+
+
+    
+
+
 }
+
+
