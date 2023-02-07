@@ -10,6 +10,9 @@ public class UI : MonoBehaviour
     public List<Image> lifes;
     public GameObject playerManager;
     private PlayerManager player;
+    public Material vacio;
+    public Material lleno;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +26,23 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
-        if(player.life == 2)
-        {
-            
-        }
 
     }
+
+    public void UpdateLife()
+    {
+        for (int i = 0; i < lifes.Count; i++)
+        {
+            if (i < player.life)
+            {
+                lifes[i].material = lleno;
+            }
+            else
+            {
+                lifes[i].material = vacio;
+            }
+        }
+    }
 }
+
+
