@@ -199,6 +199,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61063000}
   m_CullTransparentMesh: 1
+--- !u!1 &102732236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8666903661678268734, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+  m_PrefabInstance: {fileID: 6946409123574724220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &102732244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102732236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735b8978487fbd24dade73d610f7679d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 0}
 --- !u!1 &142070611
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,9 +446,11 @@ GameObject:
   m_Component:
   - component: {fileID: 839538608}
   - component: {fileID: 839538607}
+  - component: {fileID: 839538609}
+  - component: {fileID: 839538610}
   m_Layer: 0
   m_Name: Fly-Sheet_3
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -495,13 +515,44 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839538606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0051413, y: -1.2014941, z: 0}
+  m_LocalPosition: {x: 8.38, y: -1.2014941, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839538609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839538606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c494c1fcc6a41f41ab12190b73cdfd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
+  chargerSpeed: 1
+  sprintMultiplier: 5
+--- !u!70 &839538610
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839538606}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0048906803, y: -0.04082325}
+  m_Size: {x: 0.67842245, y: 0.79781073}
+  m_Direction: 0
 --- !u!1 &849833355
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +672,6 @@ Transform:
   m_Children:
   - {fileID: 2079302277}
   - {fileID: 980466014}
-  - {fileID: 1710996547}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2351,55 +2401,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1710996546
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1710996547}
-  - component: {fileID: 1710996548}
-  m_Layer: 0
-  m_Name: PlayerManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1710996547
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710996546}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 585.79065, y: 269.3716, z: -2.8729932}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 965509048}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1710996548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710996546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d3b91a486dc1d47b8b8272b1516a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 3
-  CseedOn: 0
-  maxCseed: 1
-  weaponsOn: 0
-  maxWeaponCapacity: 1
 --- !u!1 &1864097020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,6 +2587,8 @@ MonoBehaviour:
   maxCseed: 1
   weaponsOn: 0
   maxWeaponCapacity: 1
+  player: {fileID: 102732236}
+  uid: {fileID: 1132990555}
 --- !u!4 &2057544469
 Transform:
   m_ObjectHideFlags: 0
