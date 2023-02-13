@@ -4,28 +4,70 @@ using UnityEngine;
 
 public class loseLife : MonoBehaviour
 {
+    private float timer = 0;
     private PlayerManager pm;
     public GameObject playerManager;
+    private Rigidbody2D rb;
+    private SpriteRenderer rb2;
+    private bool isDamage = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        rb2 = GetComponent<SpriteRenderer>();
         playerManager = GameObject.Find("PlayerManager");
         pm = playerManager.GetComponent<PlayerManager>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (timer > 0)
+        {
+            rb2.color = Color.red;
+            isDamage = true;
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                rb2.color = Color.white;
+                rb.velocity = new Vector2(0, 0);
+                isDamage = false;
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "enemy")
         {
-            pm.GetDamage();
+     
+            if (isDamage == false)
+            {
+             
+
+                timer += Time.deltaTime;
+
+                pm.GetDamage();
+
+
+                Vector3 k = transform.position - collision.gameObject.transform.position;
+
+                k = k.normalized;
+                rb.AddForce(k * 3f, ForceMode2D.Impulse);
+                timer = 1;
+
+                collision.gameObject.GetComponent<ChargerMove>().chargerSpeed = 0;
+
+
+
+
+            }
+
+
         }
     }
+
 }
