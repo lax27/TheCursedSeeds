@@ -30,6 +30,7 @@ public class loseLife : MonoBehaviour
             rb2.color = Color.red;
             isDamage = true;
             timer -= Time.deltaTime;
+
             if (timer <= 0)
             {
                 rb2.color = Color.white;
@@ -43,27 +44,18 @@ public class loseLife : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-     
+            //si el enemigo es un charger:     
             if (isDamage == false)
             {
-             
-
-                timer += Time.deltaTime;
-
+                //timer += Time.deltaTime;
                 pm.GetDamage();
-
-
                 Vector3 k = transform.position - collision.gameObject.transform.position;
-
                 k = k.normalized;
-                rb.AddForce(k * 3f, ForceMode2D.Impulse);
+                rb.AddForce(k * 0.3f, ForceMode2D.Impulse);
+               
                 timer = 1;
-
                 collision.gameObject.GetComponent<ChargerMove>().chargerSpeed = 0;
-
-
-
-
+                collision.gameObject.GetComponent<ChargerMove>().isMoving = false;
             }
 
 

@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
     {
         if(life == 0)
         {
-            Destroy(player);
+           // Destroy(player);
         }
     }
 

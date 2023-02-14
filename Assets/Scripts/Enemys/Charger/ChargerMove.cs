@@ -5,7 +5,13 @@ using UnityEngine;
 public class ChargerMove : MonoBehaviour
 {
     //charger vivo
+    public int life = 6;
     public bool isAlive = false;
+    public bool isMoving = true;
+    private SpriteRenderer sr;
+    private float timer;
+
+    //hacer una variable para velocidad actual y otra para la base
 
     //velocidad del charger
     public float chargerSpeed = 5f;
@@ -17,20 +23,55 @@ public class ChargerMove : MonoBehaviour
 
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
+
+
         isAlive = true;
         if (isAlive == true)
         {
             StartCoroutine(SprintCooldown());
+
         }
-        
+ 
+
+
         //especificando que el objetivo es "player" y que coja la información del transform de "player"
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
     void Update()
     {
+      
+        timer -= Time.deltaTime;    
+        if (timer < 0.5f)
+        {
+            sr.color = Color.white;
+        }
+
+    
+        if(life == 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (isMoving == false)
+        {
+            StartCoroutine(Rest());
+            isMoving = true;
+        }
         //Charger se dirije a la posición del player a la velocidad de la variable "chargerSpeed"
         transform.position = Vector2.MoveTowards(transform.position, target.position, chargerSpeed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == ("bullet"))
+        {
+            timer = 1;
+            sr.color = Color.red;
+            life--;
+        }
+    }
+
 
     IEnumerator SprintCooldown()
     {
@@ -43,4 +84,12 @@ public class ChargerMove : MonoBehaviour
         //al pasar el segundo, divide por 2 la velocidad del charger
         chargerSpeed = chargerSpeed / sprintMultiplier;
     }
+    
+    IEnumerator Rest()
+    {
+        yield return new WaitForSeconds(2.5f);
+        chargerSpeed = 2f;
+    }
+
 }
+

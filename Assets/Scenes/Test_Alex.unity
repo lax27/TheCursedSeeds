@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735b8978487fbd24dade73d610f7679d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 0}
+  playerManager: {fileID: 2057544467}
 --- !u!1 &142070611
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c494c1fcc6a41f41ab12190b73cdfd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: 6
   isAlive: 0
+  isMoving: 1
   chargerSpeed: 1
   sprintMultiplier: 5
 --- !u!70 &839538610
@@ -5447,6 +5449,18 @@ PrefabInstance:
       propertyPath: life
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8666903661678268721, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666903661678268721, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666903661678268721, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8666903661678268722, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5491,9 +5505,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8666903661678268724, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666903661678268724, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8666903661678268734, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_Name
       value: mantee_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666903662453623766, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8666903663076166852, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_FlipX
@@ -5503,5 +5529,6 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5184189545001114271, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
