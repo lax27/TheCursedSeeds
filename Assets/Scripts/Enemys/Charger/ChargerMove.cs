@@ -8,6 +8,7 @@ public class ChargerMove : MonoBehaviour
     public int life = 6;
     public bool isAlive = false;
     public bool isMoving = true;
+    public bool isFreez = false;
     private SpriteRenderer sr;
     private float timer;
 
@@ -52,6 +53,10 @@ public class ChargerMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if(isFreez == true)
+        {
+            StartCoroutine(Freez());
+        }
 
         if (isMoving == false)
         {
@@ -66,6 +71,7 @@ public class ChargerMove : MonoBehaviour
     {
         if (collision.tag == ("bullet"))
         {
+            Destroy(collision.gameObject);
             timer = 1;
             sr.color = Color.red;
             life--;
@@ -87,9 +93,20 @@ public class ChargerMove : MonoBehaviour
     
     IEnumerator Rest()
     {
-        yield return new WaitForSeconds(2.5f);
-        chargerSpeed = 2f;
+       
+        
+            yield return new WaitForSeconds(2.5f);
+            chargerSpeed = 2f;
+        
     }
-
+    IEnumerator Freez()
+    {
+        chargerSpeed = 0;
+        sr.color = Color.blue;
+        yield return new WaitForSeconds(7);
+        sr.color = Color.white;
+        chargerSpeed = 2;
+        isFreez = false;
+    }
 }
 

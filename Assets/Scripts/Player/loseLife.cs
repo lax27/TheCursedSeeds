@@ -24,6 +24,8 @@ public class loseLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
 
         if (timer > 0)
         {
