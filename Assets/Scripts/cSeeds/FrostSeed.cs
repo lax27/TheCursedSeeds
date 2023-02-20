@@ -16,10 +16,9 @@ public class FrostSeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("cSeed"))
+        if (Input.GetButtonDown("cseed"))
         {
-            ch.isFreez = true;
-            Debug.Log("Se congelan");
+            ch.setToFreeze = true;
 
         }
     }

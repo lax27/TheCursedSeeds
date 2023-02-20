@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 2057544467}
+  force: 0.5
 --- !u!114 &102732251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +230,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3501bafe330a148936069ab5a056e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &102732258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102732236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a6057f9225c454b88ab7654818a37c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raysAxisV: []
+  raysAxisH: []
+  rayDistanceV: 0.5
+  rayDistanceH: 0.4
 --- !u!1 &142070611
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &839538607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -550,6 +567,8 @@ MonoBehaviour:
   isAlive: 0
   isMoving: 1
   isFreez: 0
+  setToFreeze: 0
+  isHit: 0
   chargerSpeed: 1
   sprintMultiplier: 5
 --- !u!70 &839538610
@@ -5529,6 +5548,10 @@ PrefabInstance:
     - target: {fileID: 8666903661678268734, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_Name
       value: mantee_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666903661678268734, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8666903662453623766, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: timeBetwenFire

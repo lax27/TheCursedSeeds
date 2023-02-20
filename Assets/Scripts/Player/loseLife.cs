@@ -10,6 +10,7 @@ public class loseLife : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer rb2;
     private bool isDamage = false;
+    public float force = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -51,10 +52,11 @@ public class loseLife : MonoBehaviour
             {
                 //timer += Time.deltaTime;
                 pm.GetDamage();
-                Vector3 k = transform.position - collision.gameObject.transform.position;
-                k = k.normalized;
-                rb.AddForce(k * 0.3f, ForceMode2D.Impulse);
-               
+
+                Vector2 direcion = transform.position - collision.gameObject.transform.position;
+                direcion = direcion.normalized * force;
+                rb.AddForce(direcion, ForceMode2D.Impulse);
+            
                 timer = 1;
                 collision.gameObject.GetComponent<ChargerMove>().chargerSpeed = 0;
                 collision.gameObject.GetComponent<ChargerMove>().isMoving = false;

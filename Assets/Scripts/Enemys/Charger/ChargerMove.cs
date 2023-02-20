@@ -9,8 +9,11 @@ public class ChargerMove : MonoBehaviour
     public bool isAlive = false;
     public bool isMoving = true;
     public bool isFreez = false;
+    public bool setToFreeze = false;
     private SpriteRenderer sr;
-    private float timer;
+    private float timerHit;
+
+    public bool isHit = false;
 
     //hacer una variable para velocidad actual y otra para la base
 
@@ -18,6 +21,8 @@ public class ChargerMove : MonoBehaviour
     public float chargerSpeed = 5f;
 
     public float sprintMultiplier = 2f;
+
+    private float timeToMelt = 0.0f;
 
     //GameObject que va a perseguir
     private Transform target;
@@ -28,12 +33,13 @@ public class ChargerMove : MonoBehaviour
 
 
         isAlive = true;
+
         if (isAlive == true)
         {
             StartCoroutine(SprintCooldown());
 
         }
- 
+
 
 
         //especificando que el objetivo es "player" y que coja la información del transform de "player"
@@ -41,28 +47,48 @@ public class ChargerMove : MonoBehaviour
     }
     void Update()
     {
-      
-        timer -= Time.deltaTime;    
-        if (timer < 0.5f)
+        if (isHit && !setToFreeze && !isFreez)
         {
-            sr.color = Color.white;
-        }
-
-    
+            timerHit -= Time.deltaTime;
+            if (timerHit < 0.5f)
+            {
+                sr.color = Color.white;
+                isHit = false;
+            }
+        } 
+        
         if(life == 0)
         {
             Destroy(gameObject);
         }
-        if(isFreez == true)
-        {
-            StartCoroutine(Freez());
-        }
 
+
+        ////////// Movimiento ////////////
+        ///// CONGELAMIENTO ////
+        if(setToFreeze){
+            freezeChar();
+        }else if (isFreez){
+            timeToMelt -= Time.deltaTime;
+
+            if (isHit) {
+                timerHit -= Time.deltaTime;
+                if (timerHit < 0.5f)
+                {
+                    sr.color = Color.blue;
+                    isHit = false;
+                }
+            }
+            if(timeToMelt <= 0.0f){
+                meltChar();
+            }
+        }
+        /////////////////////////////////
         if (isMoving == false)
         {
             StartCoroutine(Rest());
             isMoving = true;
         }
+
         //Charger se dirije a la posición del player a la velocidad de la variable "chargerSpeed"
         transform.position = Vector2.MoveTowards(transform.position, target.position, chargerSpeed * Time.deltaTime);
     }
@@ -72,8 +98,11 @@ public class ChargerMove : MonoBehaviour
         if (collision.tag == ("bullet"))
         {
             Destroy(collision.gameObject);
-            timer = 1;
+            timerHit = 1;
             sr.color = Color.red;
+
+            isHit = true;
+            
             life--;
         }
     }
@@ -93,20 +122,28 @@ public class ChargerMove : MonoBehaviour
     
     IEnumerator Rest()
     {
-       
-        
             yield return new WaitForSeconds(2.5f);
-            chargerSpeed = 2f;
-        
+            chargerSpeed = 2f;   
     }
-    IEnumerator Freez()
+
+    private void freezeChar()
     {
         chargerSpeed = 0;
         sr.color = Color.blue;
-        yield return new WaitForSeconds(7);
+        isFreez = true;
+        timeToMelt = 7.0f;
+        setToFreeze = false;
+
+    }
+
+    private void meltChar()
+    {
+        setToFreeze = false;
         sr.color = Color.white;
         chargerSpeed = 2;
         isFreez = false;
+        timeToMelt = 0.0f;
     }
+
 }
 
