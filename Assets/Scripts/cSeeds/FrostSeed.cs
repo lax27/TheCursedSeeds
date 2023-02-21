@@ -6,6 +6,8 @@ public class FrostSeed : MonoBehaviour
 {
     private GameObject enemy;
     private ChargerMove ch;
+    public float cooldown = 20;
+    private float Currentcooldown = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +18,19 @@ public class FrostSeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("cseed"))
-        {
-            ch.setToFreeze = true;
 
+        if (Currentcooldown > 0)
+        {
+            Currentcooldown -= Time.deltaTime;
         }
+        
+
+        if (Input.GetButtonDown("cseed") && Currentcooldown <= 0)
+        {
+            Currentcooldown = cooldown;
+            ch.setToFreeze = true;
+           
+        }
+     
     }
 }

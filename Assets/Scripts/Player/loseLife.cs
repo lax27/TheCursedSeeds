@@ -12,6 +12,10 @@ public class loseLife : MonoBehaviour
     private bool isDamage = false;
     public float force = 0.5f;
 
+    bool setKnok = false;
+    Vector2 direcionEnemy;
+    public float knokTime = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +30,6 @@ public class loseLife : MonoBehaviour
     void Update()
     {
         
-
-
         if (timer > 0)
         {
             rb2.color = Color.red;
@@ -41,8 +43,16 @@ public class loseLife : MonoBehaviour
                 isDamage = false;
             }
         }
+
+        if (setKnok)
+        {
+            knokTime -= Time.deltaTime;
+        }
+
+
     }
 
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "enemy")
@@ -53,9 +63,16 @@ public class loseLife : MonoBehaviour
                 //timer += Time.deltaTime;
                 pm.GetDamage();
 
-                Vector2 direcion = transform.position - collision.gameObject.transform.position;
-                direcion = direcion.normalized * force;
-                rb.AddForce(direcion, ForceMode2D.Impulse);
+
+                 direcionEnemy = transform.position - collision.gameObject.transform.position;
+                direcionEnemy = direcionEnemy.normalized * force;
+                rb.AddForce(direcionEnemy, ForceMode2D.Impulse);
+                    
+                
+                
+                    
+           
+
             
                 timer = 1;
                 collision.gameObject.GetComponent<ChargerMove>().chargerSpeed = 0;
