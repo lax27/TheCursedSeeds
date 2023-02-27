@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerManager : MonoBehaviour
 {
@@ -9,10 +11,10 @@ public class PlayerManager : MonoBehaviour
     public int maxCseed = 1;
     public int weaponsOn = 0;
     public int maxWeaponCapacity = 1;
-    public float coolDownTime;
+    int sceneID = 1;
+
     //
     public GameObject player;
-    public FrostSeed seed;
     //
 
     public GameObject uid;
@@ -20,23 +22,17 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("mantee_test");
-        seed = GetComponent<FrostSeed>();   
         uid = GameObject.Find("ui");
         ui = uid.GetComponent<UI>();
-
-        seed = player.GetComponent<FrostSeed>();
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        if (life == 0)
+        if(life == 0)
         {
-           // Destroy(player);
+            // Destroy(player);
+            SceneManager.LoadScene(sceneID);
         }
     }
 

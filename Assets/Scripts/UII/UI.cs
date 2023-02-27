@@ -26,7 +26,7 @@ public class UI : MonoBehaviour
         p = GameObject.Find("mantee_test");
         seed = p.GetComponent<FrostSeed>();
 
-       playerManager = GameObject.Find("PlayerManager");
+        playerManager = GameObject.Find("PlayerManager");
         if (playerManager != null)
         {
             player = playerManager.GetComponent<PlayerManager>();
@@ -55,5 +55,3 @@ public class UI : MonoBehaviour
         }
     }
 }
-
-

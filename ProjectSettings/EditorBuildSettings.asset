@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/Main.unity
-    guid: 56fb75c26e06b6e428bd7155ec2a75e9
+    path: Assets/Scenes/Test_Alex.unity
+    guid: effdda527fe9e43428520b6725f78ba7
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/Start.unity
-    guid: 61319d2e3c849dc41b90a6bebdb27534
-  - enabled: 1
-    path: Assets/Scenes/DungeonRooms/Empty.unity
-    guid: bd703ba5651533045abf8b722641490a
+    path: Assets/Scenes/Test_Perna.unity
+    guid: 3115d5ef756e8e54eb319e5333494d0b
   m_configObjects: {}

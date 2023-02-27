@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FrostSeed : MonoBehaviour
 {
-  
+
     private GameObject[] enemys;
     private List<ChargerMove> chs;
     public float cooldown = 20;
@@ -16,11 +16,11 @@ public class FrostSeed : MonoBehaviour
         enemys = GameObject.FindGameObjectsWithTag("enemy");
 
         chs = new List<ChargerMove>();
-        
-        for(int i = 0; i < enemys.Length; i++)
+
+        for (int i = 0; i < enemys.Length; i++)
         {
             ChargerMove chargerMove = enemys[i].GetComponent<ChargerMove>();
-            if(chargerMove != null)
+            if (chargerMove != null)
             {
                 chs.Add(chargerMove);
             }
@@ -36,19 +36,19 @@ public class FrostSeed : MonoBehaviour
             Currentcooldown -= Time.deltaTime;
             Debug.Log(Currentcooldown);
         }
-        
+
 
         if (Input.GetButtonDown("cseed") && Currentcooldown <= 0)
         {
-            for(int i = 0; i < chs.Count; i++)
+            for (int i = 0; i < chs.Count; i++)
             {
 
                 Currentcooldown = cooldown;
                 chs[i].setToFreeze = true;
             }
-            
-           
+
+
         }
-     
+
     }
 }

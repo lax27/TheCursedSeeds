@@ -15,6 +15,11 @@ public class ChargerMove : MonoBehaviour
 
     public bool isHit = false;
 
+    private GameObject Manager;
+    private EnemyManager count;
+
+   
+
     //hacer una variable para velocidad actual y otra para la base
 
     //velocidad del charger
@@ -30,7 +35,8 @@ public class ChargerMove : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-
+        Manager = GameObject.Find("enemyManager");
+        count = Manager.GetComponent<EnemyManager>();
 
         isAlive = true;
 
@@ -55,22 +61,27 @@ public class ChargerMove : MonoBehaviour
                 sr.color = Color.white;
                 isHit = false;
             }
-        } 
-        
-        if(life == 0)
+        }
+
+        if (life == 0)
         {
+            count.deadBug++;
             Destroy(gameObject);
         }
 
 
         ////////// Movimiento ////////////
         ///// CONGELAMIENTO ////
-        if(setToFreeze){
+        if (setToFreeze)
+        {
             freezeChar();
-        }else if (isFreez){
+        }
+        else if (isFreez)
+        {
             timeToMelt -= Time.deltaTime;
 
-            if (isHit) {
+            if (isHit)
+            {
                 timerHit -= Time.deltaTime;
                 if (timerHit < 0.5f)
                 {
@@ -78,7 +89,8 @@ public class ChargerMove : MonoBehaviour
                     isHit = false;
                 }
             }
-            if(timeToMelt <= 0.0f){
+            if (timeToMelt <= 0.0f)
+            {
                 meltChar();
             }
         }
@@ -102,7 +114,7 @@ public class ChargerMove : MonoBehaviour
             sr.color = Color.red;
 
             isHit = true;
-            
+
             life--;
         }
     }
@@ -119,11 +131,11 @@ public class ChargerMove : MonoBehaviour
         //al pasar el segundo, divide por 2 la velocidad del charger
         chargerSpeed = chargerSpeed / sprintMultiplier;
     }
-    
+
     IEnumerator Rest()
     {
-            yield return new WaitForSeconds(2.5f);
-            chargerSpeed = 2f;   
+        yield return new WaitForSeconds(2.5f);
+        chargerSpeed = 2f;
     }
 
     private void freezeChar()
@@ -146,4 +158,3 @@ public class ChargerMove : MonoBehaviour
     }
 
 }
-
