@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Behind
   - 
   - 
   - 
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: Entities
     uniqueID: 3506753789
+    locked: 0
+  - name: Door
+    uniqueID: 1890343921
     locked: 0
