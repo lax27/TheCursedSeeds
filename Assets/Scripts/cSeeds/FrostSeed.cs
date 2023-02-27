@@ -34,6 +34,7 @@ public class FrostSeed : MonoBehaviour
         if (Currentcooldown > 0)
         {
             Currentcooldown -= Time.deltaTime;
+            Debug.Log(Currentcooldown);
         }
         
 
