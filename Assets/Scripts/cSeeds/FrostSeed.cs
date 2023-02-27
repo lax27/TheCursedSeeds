@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class FrostSeed : MonoBehaviour
 {
-    private GameObject enemy;
-    private ChargerMove ch;
+  
+    private GameObject[] enemys;
+    private List<ChargerMove> chs;
     public float cooldown = 20;
-    private float Currentcooldown = 0;
+    public float Currentcooldown = 0;
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GameObject.Find("Fly-Sheet_3");
-        ch = enemy.GetComponent<ChargerMove>();
+
+        enemys = GameObject.FindGameObjectsWithTag("enemy");
+
+        chs = new List<ChargerMove>();
+        
+        for(int i = 0; i < enemys.Length; i++)
+        {
+            ChargerMove chargerMove = enemys[i].GetComponent<ChargerMove>();
+            if(chargerMove != null)
+            {
+                chs.Add(chargerMove);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -27,8 +39,13 @@ public class FrostSeed : MonoBehaviour
 
         if (Input.GetButtonDown("cseed") && Currentcooldown <= 0)
         {
-            Currentcooldown = cooldown;
-            ch.setToFreeze = true;
+            for(int i = 0; i < chs.Count; i++)
+            {
+
+                Currentcooldown = cooldown;
+                chs[i].setToFreeze = true;
+            }
+            
            
         }
      

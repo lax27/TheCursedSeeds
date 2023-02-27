@@ -131,7 +131,7 @@ public class ChargerMove : MonoBehaviour
         chargerSpeed = 0;
         sr.color = Color.blue;
         isFreez = true;
-        timeToMelt = 7.0f;
+        timeToMelt = 5.0f;
         setToFreeze = false;
 
     }
