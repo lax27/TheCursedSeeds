@@ -8,7 +8,7 @@ public class loseLife : MonoBehaviour
     private PlayerManager pm;
     public GameObject playerManager;
     private Rigidbody2D rb;
-    private SpriteRenderer rb2;
+    private SpriteRenderer Sb2;
     private bool isDamage = false;
     public float force = 0.5f;
 
@@ -20,7 +20,7 @@ public class loseLife : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb2 = GetComponent<SpriteRenderer>();
+        Sb2 = GetComponent<SpriteRenderer>();
         playerManager = GameObject.Find("PlayerManager");
         pm = playerManager.GetComponent<PlayerManager>();
 
@@ -32,13 +32,13 @@ public class loseLife : MonoBehaviour
         
         if (timer > 0)
         {
-            rb2.color = Color.red;
+            Sb2.color = Color.red;
             isDamage = true;
             timer -= Time.deltaTime;
 
             if (timer <= 0)
             {
-                rb2.color = Color.white;
+                Sb2.color = Color.white;
                 rb.velocity = new Vector2(0, 0);
                 isDamage = false;
             }
