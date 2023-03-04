@@ -10,13 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 8666903661678268722}
   - component: {fileID: 8666903661678268721}
-  - component: {fileID: 8666903661678268720}
   - component: {fileID: 8666903661678268735}
-  - component: {fileID: 8666903661678268724}
-  - component: {fileID: 8666903661678268723}
-  - component: {fileID: 5184189545001114271}
+  - component: {fileID: 5312812792675255466}
+  - component: {fileID: 3018408612236659175}
+  - component: {fileID: 8494990448572967818}
+  - component: {fileID: 4625388855440687347}
+  - component: {fileID: 2488243047477028852}
+  - component: {fileID: 6712039350513687220}
+  - component: {fileID: 6030311226261155542}
   m_Layer: 0
-  m_Name: mantee_test 1
+  m_Name: mantee_v2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,19 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8666903661678268720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8666903661678268734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8301947562a92b4c80dd0158d73064c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3.5
 --- !u!114 &8666903661678268735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +109,96 @@ MonoBehaviour:
   - {fileID: 21300000, guid: db56237257731e84183b63b4a593ed7c, type: 3}
   - {fileID: 21300000, guid: a4a3430d740aafc4da2d769a177fc3d7, type: 3}
   - {fileID: 21300000, guid: b598299336107c840aee9316f27802da, type: 3}
---- !u!50 &8666903661678268724
+--- !u!114 &5312812792675255466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666903661678268734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e9b7ca4c418db4db1be10b0a081db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  speed: 5
+  seeds: 0
+  cursedSeedID: 0
+  weaponID1: 0
+  weaponID2: 0
+--- !u!114 &3018408612236659175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666903661678268734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b6aaed87030c84d81798c62b273c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isConfused: 0
+--- !u!114 &8494990448572967818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666903661678268734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f2c0cd7fd25ae488ade8d01a58faa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4625388855440687347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666903661678268734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431f605090ae0f04bb4b71b19f39f273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Currentcooldown: 0
+  DeathCooldown: 40
+  Frostcooldown: 20
+  LifeCooldown: 10
+  FireCooldown: 5
+--- !u!114 &2488243047477028852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666903661678268734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6441356323e2fe142b9e82338f9e2bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sp: {fileID: 8666903661678268721}
+--- !u!70 &6712039350513687220
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666903661678268734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.034308344, y: -0.059793055}
+  m_Size: {x: 0.5247442, y: 0.9496974}
+  m_Direction: 0
+--- !u!50 &6030311226261155542
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -140,39 +219,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &8666903661678268723
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8666903661678268734}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.035405643, y: -0.009866357}
-  m_Size: {x: 0.53891873, y: 0.9978075}
-  m_Direction: 0
---- !u!114 &5184189545001114271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8666903661678268734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d3b91a486dc1d47b8b8272b1516a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 6
-  CseedOn: 0
-  maxCseed: 1
-  weaponsOn: 0
-  maxWeaponCapacity: 1
 --- !u!1 &8666903662453623764
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f5d99af9a22924a892f6b7d7861774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3282103503836176036, guid: 9ff84c2ad1b54f3489f00ebc6b55b3a5, type: 3}
+  bullet: {fileID: 3555889375479796425, guid: 0fc61c98a12912a4da94d1c7ea544220, type: 3}
   gun: {fileID: 8666903663076166851}
   canFire: 0
   timeBetwenFire: 0.2
@@ -247,8 +293,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8666903663076166850}
-  m_LocalRotation: {x: 0, y: 0.08715578, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: 0.365, y: 0, z: -0.00000011867857}
+  m_LocalRotation: {x: -0, y: 0.08715578, z: -0, w: 0.9961947}
+  m_LocalPosition: {x: 0.303, y: 0, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
