@@ -8,7 +8,8 @@ public class UseCseeds : MonoBehaviour
     PlayerStats ps;
 
     private GameObject[] enemys;
-    private List<ChargerMove> chs;
+   // private List<ChargerMove> chs;
+    private List<EnemyFreez> chs;
 
     public float Currentcooldown = 0;
     public float DeathCooldown = 40;
@@ -24,14 +25,15 @@ public class UseCseeds : MonoBehaviour
 
         enemys = GameObject.FindGameObjectsWithTag("enemy");
 
-        chs = new List<ChargerMove>();
+        //chs = new List<ChargerMove>();
+        chs = new List<EnemyFreez>();
 
         for (int i = 0; i < enemys.Length; i++)
         {
-            ChargerMove chargerMove = enemys[i].GetComponent<ChargerMove>();
-            if (chargerMove != null)
+            EnemyFreez freez = enemys[i].GetComponent<EnemyFreez>();
+            if (freez != null)
             {
-                chs.Add(chargerMove);
+                chs.Add(freez);
             }
 
         }
