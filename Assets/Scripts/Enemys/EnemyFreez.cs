@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyFreez : MonoBehaviour
@@ -11,11 +12,17 @@ public class EnemyFreez : MonoBehaviour
     EnemysStats es;
     public bool isHit = false;
     private float timeToMelt = 0.0f;
+
+    // 
+    GameObject cubito;
+    private SpriteRenderer srCubito;
     // Start is called before the first frame update
     void Start()
     {
         es = GetComponent<EnemysStats>();
         sr = GetComponent<SpriteRenderer>();
+        cubito = GameObject.Find("ice_cube");
+        srCubito = cubito.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -30,15 +37,6 @@ public class EnemyFreez : MonoBehaviour
         {
             timeToMelt -= Time.deltaTime;
 
-            if (isHit)
-            {
-                timerHit -= Time.deltaTime;
-                if (timerHit < 0.5f)
-                {
-                    sr.color = Color.blue;
-                    isHit = false;
-                }
-            }
             if (timeToMelt <= 0.0f)
             {
                 meltChar();
@@ -50,7 +48,7 @@ public class EnemyFreez : MonoBehaviour
     private void freezeChar()
     {
         es.speed = 0;
-        sr.color = Color.blue;
+        srCubito.enabled = true;
         isFreez = true;
         timeToMelt = 5.0f;
         setToFreeze = false;
@@ -60,7 +58,7 @@ public class EnemyFreez : MonoBehaviour
     private void meltChar()
     {
         setToFreeze = false;
-        sr.color = Color.white;
+        srCubito.enabled = false;
         es.speed = 2;
         isFreez = false;
         timeToMelt = 0.0f;

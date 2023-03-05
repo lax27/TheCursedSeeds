@@ -36,17 +36,5 @@ public class MoveCharger : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (chtimer <= 0) {
-
-                 
-
-           
-        }
-
-
-
-
-
-
     }
 }
