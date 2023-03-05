@@ -343,7 +343,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590728294}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.3, y: -2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -358,6 +358,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1608599872348905737, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: KonkBackForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488243047477028852, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: KonkBackForce
+      value: 1888
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312812792675255466, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8666903661678268722, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -406,7 +418,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: mantee_v2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2488243047477028852, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
 --- !u!1 &1373841822
 GameObject:

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3018408612236659175}
   - component: {fileID: 8494990448572967818}
   - component: {fileID: 4625388855440687347}
-  - component: {fileID: 2488243047477028852}
+  - component: {fileID: 1608599872348905737}
   - component: {fileID: 6712039350513687220}
   - component: {fileID: 6030311226261155542}
   m_Layer: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   Frostcooldown: 20
   LifeCooldown: 10
   FireCooldown: 5
---- !u!114 &2488243047477028852
+--- !u!114 &1608599872348905737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sp: {fileID: 8666903661678268721}
+  KonkBackForce: 100000000
 --- !u!70 &6712039350513687220
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

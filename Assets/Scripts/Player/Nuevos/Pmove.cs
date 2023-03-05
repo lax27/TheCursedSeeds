@@ -6,6 +6,8 @@ public class Pmove : MonoBehaviour
 {
     PlayerStats ps;
     PlayerStatus status;
+    LoseGetLife ls;
+
     private Rigidbody2D rbPlayer;
     private Vector2 direction;
     // Start is called before the first frame update
@@ -13,8 +15,10 @@ public class Pmove : MonoBehaviour
     {
         ps = GetComponent<PlayerStats>();
         status = GetComponent<PlayerStatus>();
-
         rbPlayer = GetComponent<Rigidbody2D>();
+        ls = GetComponent<LoseGetLife>();
+
+
     }
 
     // Update is called once per frame
@@ -36,5 +40,6 @@ public class Pmove : MonoBehaviour
     private void FixedUpdate()
     {
         rbPlayer.MovePosition(rbPlayer.position + direction * ps.speed * Time.fixedDeltaTime);
+        //rbPlayer.AddForce(direction * ps.speed * Time.fixedDeltaTime);
     }
 }

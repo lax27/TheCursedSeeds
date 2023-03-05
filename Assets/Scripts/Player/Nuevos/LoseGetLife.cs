@@ -10,16 +10,20 @@ public class LoseGetLife : MonoBehaviour
     private float timer = 0;
     private bool isDamage = false;
 
-   // public GameObject uid;
+    public Vector3 direcionEnemy;
+    public float KonkBackForce = 10;
+    private Rigidbody2D rbPlayer;
+    
+    // public GameObject uid;
     //private UI ui;
     // Start is called before the first frame update
     void Start()
     {
         ps = GetComponent<PlayerStats>();
-        
-
-      //uid = GameObject.Find("ui");
-      //ui = uid.GetComponent<UI>();
+        rbPlayer = GetComponent<Rigidbody2D>();
+     
+        //uid = GameObject.Find("ui");
+        //ui = uid.GetComponent<UI>();
 
     }
 
@@ -32,14 +36,19 @@ public class LoseGetLife : MonoBehaviour
 
         if (timer > 0)
         {
+
            Sp.color = Color.red;
             isDamage = true;
             timer -= Time.deltaTime;
+
+       
             if (timer <= 0)
             {
                 Sp.color = Color.white;
-               // rb.velocity = new Vector2(0, 0);
+                //rbPlayer.velocity = new Vector2(0, 0);
                 isDamage = false;
+
+             
             }
         }
 
@@ -53,10 +62,17 @@ public class LoseGetLife : MonoBehaviour
             if(isDamage == false) {
                 ps.life--;
                 //ui.UpdateLife();
+                direcionEnemy = transform.position - collision.gameObject.transform.position;
+                direcionEnemy = direcionEnemy.normalized * KonkBackForce * Time.deltaTime;
+                transform.position += direcionEnemy; //FUNCIONA
+                //rbPlayer.AddForce(direcionEnemy, ForceMode2D.Impulse); //NO FUNCIONA, si en el Pmove esta con el rbPlayer.MovePosition
+                                                                         //FUNCIONA, si en el Pmove esta con el rbPlayer.addForce
+
+                
 
                 timer = 1;
             }
-            
+
         }
     }
 }
