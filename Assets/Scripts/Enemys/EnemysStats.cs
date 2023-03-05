@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnemysStats : MonoBehaviour
 {
+    public int life = 0;
+    public float speed = 5;
+    public int damage = 1;
+    public int dropSeeds = 2;
+
     // Start is called before the first frame update
     void Start()
     {
