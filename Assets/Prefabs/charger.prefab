@@ -178,6 +178,7 @@ MonoBehaviour:
   isFreez: 0
   setToFreeze: 0
   isHit: 0
+  ice: {fileID: 6279278012891426096}
 --- !u!58 &4042249129156272130
 CircleCollider2D:
   m_ObjectHideFlags: 0
