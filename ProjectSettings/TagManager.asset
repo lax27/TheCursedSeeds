@@ -51,15 +51,21 @@ TagManager:
   - name: floor
     uniqueID: 3631927859
     locked: 0
+  - name: walls
+    uniqueID: 364888813
+    locked: 0
   - name: details
     uniqueID: 2927018987
     locked: 0
-  - name: walls
-    uniqueID: 364888813
+  - name: Entities
+    uniqueID: 3506753789
     locked: 0
   - name: Guns
     uniqueID: 3339781501
     locked: 0
-  - name: Entities
-    uniqueID: 3506753789
+  - name: plants
+    uniqueID: 2621541811
+    locked: 0
+  - name: exclamation
+    uniqueID: 2691023219
     locked: 0
