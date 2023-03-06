@@ -81,7 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -788213507
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: db56237257731e84183b63b4a593ed7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sp: {fileID: 8666903661678268721}
+  isDamage: 0
   direcionEnemy: {x: 0, y: 0, z: 0}
   KonkBackForce: 100000000
 --- !u!114 &6861185161614471100
@@ -355,7 +356,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -788213507
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 452654900, guid: 303028dd7667c094ba8ff749a8ca7e42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
