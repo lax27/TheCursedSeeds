@@ -14,15 +14,17 @@ public class EnemyFreez : MonoBehaviour
     private float timeToMelt = 0.0f;
 
     // 
-    GameObject cubito;
-    private SpriteRenderer srCubito;
+    public GameObject ice;
+    private SpriteRenderer[] srCubito;
     // Start is called before the first frame update
     void Start()
     {
         es = GetComponent<EnemysStats>();
         sr = GetComponent<SpriteRenderer>();
-        cubito = GameObject.Find("ice_cube");
-        srCubito = cubito.GetComponent<SpriteRenderer>();
+
+        //desbilitar el spriterender o el hijo del objeto
+        
+    
     }
 
     // Update is called once per frame
@@ -48,7 +50,7 @@ public class EnemyFreez : MonoBehaviour
     private void freezeChar()
     {
         es.speed = 0;
-        srCubito.enabled = true;
+        ice.SetActive(true);
         isFreez = true;
         timeToMelt = 5.0f;
         setToFreeze = false;
@@ -58,7 +60,7 @@ public class EnemyFreez : MonoBehaviour
     private void meltChar()
     {
         setToFreeze = false;
-        srCubito.enabled = false;
+        ice.SetActive(false);
         es.speed = 2;
         isFreez = false;
         timeToMelt = 0.0f;

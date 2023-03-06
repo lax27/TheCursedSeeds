@@ -8,7 +8,7 @@ public class LoseGetLife : MonoBehaviour
     Collider2D cl;
     public SpriteRenderer Sp;
     private float timer = 0;
-    private bool isDamage = false;
+    public bool isDamage = false;
 
     public Vector3 direcionEnemy;
     public float KonkBackForce = 10;
@@ -67,8 +67,10 @@ public class LoseGetLife : MonoBehaviour
                 transform.position += direcionEnemy; //FUNCIONA
                 //rbPlayer.AddForce(direcionEnemy, ForceMode2D.Impulse); //NO FUNCIONA, si en el Pmove esta con el rbPlayer.MovePosition
                                                                          //FUNCIONA, si en el Pmove esta con el rbPlayer.addForce
-
+                    
                 
+
+
 
                 timer = 1;
             }

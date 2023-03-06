@@ -9,7 +9,7 @@ public class EnemyDeath : MonoBehaviour
     Collider2D cl;
     float timerHit = 0;
     SpriteRenderer sr;
-    bool isHit = false;
+    public bool isHit = false;
     EnemyFreez ef;
     // Start is called before the first frame update
     void Start()
@@ -49,8 +49,8 @@ public class EnemyDeath : MonoBehaviour
             sr.color = Color.red;
 
             isHit = true;
-
             es.life--;
+            
         }
     }
 
