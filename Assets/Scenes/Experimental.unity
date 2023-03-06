@@ -465,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 456537800736848246, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
       propertyPath: m_LinearDrag
-      value: 21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1226681174995105484, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
       propertyPath: target
@@ -477,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226681174995105484, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
       propertyPath: chargeTime
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1226681174995105484, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
       propertyPath: CharginTime
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226681174995105484, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
       propertyPath: chargingForce
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5692629178916108908, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
       propertyPath: m_Name

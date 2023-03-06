@@ -56,8 +56,11 @@ public class MoveCharger : MonoBehaviour
             }
         }
 
-
-        dir = new Vector2(target.position.x, target.position.y);
+        if (!isChargin)
+        {
+            dir = target.transform.position - transform.position;
+        }
+        
       
         if (!ef.isFreez)
         {
@@ -80,7 +83,7 @@ public class MoveCharger : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isChargin)
+        if (isChargin && !ef.isFreez)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             Debug.Log(dir);
