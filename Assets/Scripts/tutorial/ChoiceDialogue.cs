@@ -78,35 +78,28 @@ public class ChoiceDialogue : MonoBehaviour
                 
 
             }
-            else if (Input.GetKeyDown(KeyCode.N))
+            else if (Input.GetButtonDown("DENY"))
             {
                 // Player chooses to leave the item
                 DialogueText.text = "You left the item.";
 
-                timer += Time.deltaTime;
-
-                if (timer > waitTime)
-                {
                     // Do something after waiting for waitTime seconds
                     didDialogueStart = false;
                     DialoguePanel.SetActive(false);
                     exclamation.SetActive(true);
                     movement.enabled = true;
-                }
+               
 
             }/*
         else if (lineIndex == 3)
         {
-
             // Player has made a choice
             if (Input.GetKeyDown(KeyCode.F))
             {
                 // Player chooses to take the item
                 itemToTake.SetActive(true);
                 DialogueText.text = "You took a seed. Look around to plant it";
-
                 timer += Time.deltaTime;
-
                 if (timer > waitTime)
                 {
                     // Do something after waiting for waitTime seconds
@@ -115,15 +108,12 @@ public class ChoiceDialogue : MonoBehaviour
                     exclamation.SetActive(true);
                     movement.enabled = true;
                 }
-
             }
             else if (Input.GetKeyDown(KeyCode.N))
             {
                 // Player chooses to leave the item
                 DialogueText.text = "You left the item.";
-
                 timer += Time.deltaTime;
-
                 if (timer > waitTime)
                 {
                     // Do something after waiting for waitTime seconds
@@ -132,7 +122,6 @@ public class ChoiceDialogue : MonoBehaviour
                     exclamation.SetActive(true);
                     movement.enabled = true;
                 }
-
             }
             else
             {
