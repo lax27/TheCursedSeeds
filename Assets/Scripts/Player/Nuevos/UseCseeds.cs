@@ -45,7 +45,7 @@ public class UseCseeds : MonoBehaviour
         if (Currentcooldown > 0)
         {
             Currentcooldown -= Time.deltaTime;
-            Debug.Log(Currentcooldown);
+           //Debug.Log(Currentcooldown);
         }
 
         //Para la Atumm seed, CseedID == 1

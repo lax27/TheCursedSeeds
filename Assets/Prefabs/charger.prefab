@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8137341788386947016}
   - component: {fileID: 2011922834152844167}
   - component: {fileID: 1226681174995105484}
-  - component: {fileID: 2143728074908796587}
   - component: {fileID: 5220414301176472322}
   - component: {fileID: 6106785996627881591}
   - component: {fileID: 4042249129156272130}
@@ -134,23 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f005c5d1438df6c41ae39e1572458f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chtimer: 10
---- !u!114 &2143728074908796587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5692629178916108908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd303f81ce548844b6e19b248632197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 0
-  speed: 5
-  damage: 1
-  dropSeeds: 2
+  target: {fileID: 0}
+  isChargin: 0
+  chargingForce: 50
+  toCharge: 5
 --- !u!114 &5220414301176472322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b7646349520584e91ad9a6cb3d923c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHit: 0
 --- !u!114 &6106785996627881591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 452a3aa9224d54c4b866c66effaf159a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6745098}
   m_FlipX: 0

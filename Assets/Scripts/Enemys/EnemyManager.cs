@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(deadBug);
+        //Debug.Log(deadBug);
         if(deadBug == 4)
         {
             SceneManager.LoadScene(sceneID);
