@@ -464,32 +464,12 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: 8, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 1, y: 8, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: 2aa28c7aaa7adfe48a8cc41d0b93850a, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: cee08686077432e4c93f6ec9a03aea1b, type: 2}
   - m_RefCount: 1
@@ -501,8 +481,8 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: -1992773073, guid: a68fd0a683b9d514c8f7f2d04caf85d9, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1578891953, guid: a68fd0a683b9d514c8f7f2d04caf85d9, type: 3}
   - m_RefCount: 1
@@ -512,7 +492,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 447372972, guid: a68fd0a683b9d514c8f7f2d04caf85d9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 6
+  - m_RefCount: 4
     m_Data:
       e00: 1
       e01: 0
@@ -531,7 +511,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 6
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -673,6 +653,7 @@ GameObject:
   - component: {fileID: 563228818}
   - component: {fileID: 563228817}
   - component: {fileID: 563228816}
+  - component: {fileID: 563228819}
   m_Layer: 0
   m_Name: heart-plant
   m_TagString: Untagged
@@ -764,6 +745,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563228819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563228814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0288985bf7b2f241b487ab826761b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 671647797}
+  exclamation_2: {fileID: 826608102}
+  DialoguePanel: {fileID: 1065814562}
+  DialogueText: {fileID: 614689161}
+  DialogueLines:
+  - You took a seed of the heart plant!
+  mantee: {fileID: 0}
+  movement: {fileID: 0}
+  Plant: {fileID: 563228814}
+  PlantSecond: {fileID: 852591198}
 --- !u!1001 &563583743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -793,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8666903661678268722, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9
+      value: 6.53
       objectReference: {fileID: 0}
     - target: {fileID: 8666903661678268722, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -986,7 +989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &671647798
 Animator:
   serializedVersion: 4
@@ -1271,7 +1274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &826608103
 Transform:
   m_ObjectHideFlags: 0
@@ -1370,6 +1373,7 @@ GameObject:
   - component: {fileID: 852591201}
   - component: {fileID: 852591200}
   - component: {fileID: 852591202}
+  - component: {fileID: 852591203}
   m_Layer: 0
   m_Name: rabbit-plant
   m_TagString: Untagged
@@ -1461,6 +1465,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.9}
   serializedVersion: 2
   m_Radius: 6
+--- !u!114 &852591203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852591198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0288985bf7b2f241b487ab826761b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exclamation: {fileID: 826608102}
+  exclamation_2: {fileID: 671647797}
+  DialoguePanel: {fileID: 1065814562}
+  DialogueText: {fileID: 614689161}
+  DialogueLines:
+  - You took a seed of the rabbit plant!
+  mantee: {fileID: 0}
+  movement: {fileID: 0}
+  Plant: {fileID: 852591198}
+  PlantSecond: {fileID: 563228814}
 --- !u!1 &919800952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4826,7 +4852,7 @@ GameObject:
   - component: {fileID: 1487106721}
   m_Layer: 0
   m_Name: dirt-pile (1)
-  m_TagString: Untagged
+  m_TagString: crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4907,12 +4933,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487106720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.47, y: 8.67, z: 0}
+  m_LocalPosition: {x: 0, y: 9.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536868100
 GameObject:
@@ -4991,7 +5017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536868100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: -10}
+  m_LocalPosition: {x: 0, y: 7.54, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7225,107 +7251,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &2035294097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2035294100}
-  - component: {fileID: 2035294099}
-  - component: {fileID: 2035294098}
-  m_Layer: 0
-  m_Name: dirt-pile
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!58 &2035294098
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035294097}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
---- !u!212 &2035294099
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035294097}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1603944077
-  m_SortingLayer: 8
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c15ef47993d8bd745a8a5b70b7a7590c, type: 3}
-  m_Color: {r: 0.7264151, g: 0.6067223, b: 0.51739943, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 40, y: 40}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &2035294100
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035294097}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.48, y: 8.67, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2063933469
 GameObject:
   m_ObjectHideFlags: 0
