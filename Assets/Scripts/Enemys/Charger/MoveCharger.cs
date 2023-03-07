@@ -11,14 +11,20 @@ public class MoveCharger : MonoBehaviour
     LoseGetLife ls;
     GameObject pl;
     EnemyFreez ef;
-
+    
     Vector2 dir;
+    Vector3 dir3;
+    public bool isGoingToCharge = false;
     public bool isChargin = false;
     public float chargingForce = 50;
 
+
     ///CONTADORES
-    public float toCharge = 5;
+
+    public float toCharge = 1;
     public float chargeTime= 0.1f;
+    public float wait = 10;
+
 
 
 
@@ -37,13 +43,17 @@ public class MoveCharger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        toCharge -= Time.deltaTime;
-       
+        wait -= Time.deltaTime;
+       if(wait <= 0) {
+            isGoingToCharge = true;
+            toCharge -= Time.deltaTime;
+            if (toCharge <= 0)
+            {
+                isChargin = true;
+            }
+       }
 
-        if(toCharge <= 0)
-        {
-            isChargin = true;  
-        }
+      
         if (isChargin)
         {
             chargeTime -= Time.deltaTime;
@@ -51,14 +61,15 @@ public class MoveCharger : MonoBehaviour
             {
                 rb.velocity = Vector2.zero; 
                 isChargin = false;
-                chargeTime = 0.3f;
-                toCharge = 5;
+                chargeTime = 0.55f;
+                toCharge = 1;
             }
         }
 
         if (!isChargin)
         {
             dir = target.transform.position - transform.position;
+            dir = dir.normalized;
         }
         
       
@@ -70,14 +81,19 @@ public class MoveCharger : MonoBehaviour
             }
             else
             {
-                es.speed = 2;
+                es.speed = 0.4f;
             }
         }
 
         if (!isChargin)
         {
+            dir3 = target.transform.position - transform.position;
             rb.bodyType = RigidbodyType2D.Kinematic;
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, es.speed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, target.transform.position, es.speed * Time.deltaTime);
+            if (!isGoingToCharge) {
+                transform.position += dir3 * es.speed * Time.deltaTime;
+            }
+            
         }
     }
 
@@ -85,9 +101,13 @@ public class MoveCharger : MonoBehaviour
     {
         if (isChargin && !ef.isFreez)
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            Debug.Log(dir);
-            rb.AddForce(dir * chargingForce, ForceMode2D.Impulse);
+            rb.velocity = Vector2.zero;
+           
+                rb.bodyType = RigidbodyType2D.Dynamic;
+                Debug.Log(dir);
+                rb.AddForce(dir * chargingForce, ForceMode2D.Impulse);
+                isGoingToCharge = false;
+                wait = 10;
         }
     }
 }
