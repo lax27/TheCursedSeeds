@@ -24,7 +24,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPlayerInRange && Input.GetButtonDown("interaction"))
+        if (isPlayerInRange && Input.GetButtonDown("interaction"))
         {
             if (!didDialogueStart)
             {
