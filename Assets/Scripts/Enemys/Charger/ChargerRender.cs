@@ -40,16 +40,16 @@ public class ChargerRender : MonoBehaviour
         }
 
 
-        magnitude = mc.dir.magnitude;    
-        Debug.Log(magnitude);
-        if (magnitude > 0)
-        {
-            sr.flipX = true;
-        }
-        else if (magnitude < 0)
-        {
-            sr.flipX = false;
-        }
+          
+        //Debug.Log(magnitude);
+        //if (magnitude > 0)
+        //{
+        //    sr.flipX = true;
+        //}
+        //else if (magnitude < 0)
+        //{
+        //    sr.flipX = false;
+        //}
 
     }
 }
