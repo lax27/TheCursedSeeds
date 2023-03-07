@@ -37,7 +37,7 @@ public class MoveCharger : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ls = pl.GetComponent<LoseGetLife>();
         ef = GetComponent<EnemyFreez>();
-        
+        target = pl.GetComponent<Transform>();
     }
 
     // Update is called once per frame
