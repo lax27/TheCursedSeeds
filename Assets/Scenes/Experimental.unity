@@ -266,6 +266,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8805644194129115861, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8805644194129115861, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fa0ef740133ba54c905741dd355107e, type: 3}
 --- !u!1 &391519321

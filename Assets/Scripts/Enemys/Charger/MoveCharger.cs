@@ -11,9 +11,9 @@ public class MoveCharger : MonoBehaviour
     LoseGetLife ls;
     GameObject pl;
     EnemyFreez ef;
-    
-    Vector2 dir;
-    Vector3 dir3;
+   
+    public Vector2 dir;
+    public Vector3 dir3;
     public bool isGoingToCharge = false;
     public bool isChargin = false;
     public float chargingForce = 50;
@@ -37,7 +37,7 @@ public class MoveCharger : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ls = pl.GetComponent<LoseGetLife>();
         ef = GetComponent<EnemyFreez>();
-  
+        
     }
 
     // Update is called once per frame
