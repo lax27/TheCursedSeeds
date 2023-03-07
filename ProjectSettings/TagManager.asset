@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - curency
   - ice
+  - tier D
   layers:
   - Default
   - TransparentFX
