@@ -11,6 +11,7 @@ TagManager:
   - ice
   - tier D
   - crop
+  - tier C
   layers:
   - Default
   - TransparentFX

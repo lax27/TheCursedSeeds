@@ -12,35 +12,43 @@ public class SeedPlant : MonoBehaviour
     [SerializeField] private GameObject mantee;
     [SerializeField] private Pmove movement;
 
-
-    public GameObject painting;
-    private BoxCollider2D ex_colider;
-    public GameObject Plant;
-    private CircleCollider2D collider_2; 
-    public GameObject PlantSecond;
-    private CircleCollider2D second_Collider;
+    public  bool Rabbit, Heart;
+    public GameObject choose_plant;
+    public GameObject Rabbit_P, Heart_P;
+    private invisibleObject Script;
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
     private void Start()
     {
-        ex_colider = painting.GetComponent<BoxCollider2D>();
-        collider_2 = Plant.GetComponent<CircleCollider2D>();
+        Rabbit = true;
+        Heart = true;
         mantee = GameObject.Find("mantee_v2");
         movement = mantee.GetComponent<Pmove>();
-        second_Collider = PlantSecond.GetComponent<CircleCollider2D>();
-
+        Rabbit_P = GameObject.Find("rabbit-plant");
+        Heart_P = GameObject.Find("heart-plant");
+   
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Rabbit_P == null)
+        {
+            Rabbit = false;
+        }
+        
+        if(Heart_P == null)
+        {
+            Heart = false;
+        }
+
         if (isPlayerInRange && Input.GetButtonDown("Fire1"))
         {
-            second_Collider.enabled = false;
             exclamation_2.SetActive(false);
-
+          
             if (!didDialogueStart)
             {
                 StartDialogue();
@@ -52,16 +60,11 @@ public class SeedPlant : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                for (int i = 0; i < 3; i++)
-                {
-                    
                     DialogueText.text = DialogueLines[lineIndex];
                     exclamation.SetActive(false);
                     movement.enabled = true;
                     didDialogueStart = false;
                     DialoguePanel.SetActive(false);
-                    collider_2.enabled = false;
-                }
             }
 
         }
@@ -90,6 +93,7 @@ public class SeedPlant : MonoBehaviour
             didDialogueStart = false;
             DialoguePanel.SetActive(false);
             movement.enabled = true;
+            Destroy(choose_plant);
 
         }
     }

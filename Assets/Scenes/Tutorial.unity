@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 563228819}
   m_Layer: 0
   m_Name: heart-plant
-  m_TagString: Untagged
+  m_TagString: tier C
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -811,17 +811,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0288985bf7b2f241b487ab826761b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamation: {fileID: 671647797}
-  exclamation_2: {fileID: 826608102}
+  exclamation: {fileID: 826608102}
+  exclamation_2: {fileID: 671647797}
   DialoguePanel: {fileID: 1065814562}
   DialogueText: {fileID: 614689161}
   DialogueLines:
   - You took a seed of the heart plant!
+  - The other plant suddenly dissapeared! wow
   mantee: {fileID: 0}
   movement: {fileID: 0}
-  painting: {fileID: 125710752}
-  Plant: {fileID: 563228814}
-  PlantSecond: {fileID: 852591198}
+  Rabbit: 0
+  Heart: 0
+  choose_plant: {fileID: 852591198}
+  Rabbit_P: {fileID: 0}
+  Heart_P: {fileID: 0}
 --- !u!1001 &563583743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1431,7 +1434,7 @@ GameObject:
   - component: {fileID: 852591203}
   m_Layer: 0
   m_Name: rabbit-plant
-  m_TagString: Untagged
+  m_TagString: tier D
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1538,11 +1541,14 @@ MonoBehaviour:
   DialogueText: {fileID: 614689161}
   DialogueLines:
   - You took a seed of the rabbit plant!
+  - The other plant suddenly dissapeared! wow
   mantee: {fileID: 0}
   movement: {fileID: 0}
-  painting: {fileID: 517785882}
-  Plant: {fileID: 852591198}
-  PlantSecond: {fileID: 563228814}
+  Rabbit: 0
+  Heart: 0
+  choose_plant: {fileID: 563228814}
+  Rabbit_P: {fileID: 0}
+  Heart_P: {fileID: 0}
 --- !u!1 &919800952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,8 +4912,9 @@ GameObject:
   - component: {fileID: 1487106723}
   - component: {fileID: 1487106722}
   - component: {fileID: 1487106721}
+  - component: {fileID: 1487106724}
   m_Layer: 0
-  m_Name: dirt-pile (1)
+  m_Name: dirt-pile
   m_TagString: crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4996,6 +5003,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1487106724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487106720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3e4979a7fdb56498470030ba8e2f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536868100
 GameObject:
   m_ObjectHideFlags: 0
