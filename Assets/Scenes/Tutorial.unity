@@ -239,13 +239,14 @@ GameObject:
   - component: {fileID: 125710755}
   - component: {fileID: 125710754}
   - component: {fileID: 125710753}
+  - component: {fileID: 125710756}
   m_Layer: 0
-  m_Name: exclamation (1)
+  m_Name: rabbit-ex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &125710753
 Animator:
   serializedVersion: 4
@@ -333,6 +334,32 @@ Transform:
   m_Father: {fileID: 919800956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &125710756
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125710752}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &315507175
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,13 +575,14 @@ GameObject:
   - component: {fileID: 517785885}
   - component: {fileID: 517785884}
   - component: {fileID: 517785883}
+  - component: {fileID: 517785886}
   m_Layer: 0
-  m_Name: exclamation (1)
+  m_Name: heart-ex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &517785883
 Animator:
   serializedVersion: 4
@@ -642,6 +670,32 @@ Transform:
   m_Father: {fileID: 2126698940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &517785886
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517785882}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &563228814
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +819,7 @@ MonoBehaviour:
   - You took a seed of the heart plant!
   mantee: {fileID: 0}
   movement: {fileID: 0}
+  painting: {fileID: 125710752}
   Plant: {fileID: 563228814}
   PlantSecond: {fileID: 852591198}
 --- !u!1001 &563583743
@@ -1485,6 +1540,7 @@ MonoBehaviour:
   - You took a seed of the rabbit plant!
   mantee: {fileID: 0}
   movement: {fileID: 0}
+  painting: {fileID: 517785882}
   Plant: {fileID: 852591198}
   PlantSecond: {fileID: 563228814}
 --- !u!1 &919800952
@@ -1586,8 +1642,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1603944077
-  m_SortingLayer: 8
+  m_SortingLayerID: -1673425485
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4daafb962fa13514281ffd7ad66378ab, type: 3}
   m_Color: {r: 0.6981132, g: 0.6158069, b: 0.510413, a: 1}
@@ -7530,8 +7586,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1603944077
-  m_SortingLayer: 8
+  m_SortingLayerID: -1673425485
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4daafb962fa13514281ffd7ad66378ab, type: 3}
   m_Color: {r: 0.6981132, g: 0.6158069, b: 0.510413, a: 1}

@@ -12,6 +12,9 @@ public class SeedPlant : MonoBehaviour
     [SerializeField] private GameObject mantee;
     [SerializeField] private Pmove movement;
 
+
+    public GameObject painting;
+    private BoxCollider2D ex_colider;
     public GameObject Plant;
     private CircleCollider2D collider_2; 
     public GameObject PlantSecond;
@@ -22,6 +25,7 @@ public class SeedPlant : MonoBehaviour
     private int lineIndex;
     private void Start()
     {
+        ex_colider = painting.GetComponent<BoxCollider2D>();
         collider_2 = Plant.GetComponent<CircleCollider2D>();
         mantee = GameObject.Find("mantee_v2");
         movement = mantee.GetComponent<Pmove>();
@@ -32,8 +36,11 @@ public class SeedPlant : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInRange && Input.GetButtonDown("interaction"))
+        if (isPlayerInRange && Input.GetButtonDown("Fire1"))
         {
+            second_Collider.enabled = false;
+            exclamation_2.SetActive(false);
+
             if (!didDialogueStart)
             {
                 StartDialogue();
@@ -45,11 +52,16 @@ public class SeedPlant : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                DialogueText.text = DialogueLines[lineIndex];
-                exclamation.SetActive(false);
-                movement.enabled = true;
-                didDialogueStart = false;
-                DialoguePanel.SetActive(false);
+                for (int i = 0; i < 3; i++)
+                {
+                    
+                    DialogueText.text = DialogueLines[lineIndex];
+                    exclamation.SetActive(false);
+                    movement.enabled = true;
+                    didDialogueStart = false;
+                    DialoguePanel.SetActive(false);
+                    collider_2.enabled = false;
+                }
             }
 
         }
@@ -78,9 +90,7 @@ public class SeedPlant : MonoBehaviour
             didDialogueStart = false;
             DialoguePanel.SetActive(false);
             movement.enabled = true;
-            collider_2.enabled = false;
-            second_Collider.enabled = false;
-            exclamation_2.SetActive(false);
+
         }
     }
 

@@ -60,7 +60,6 @@ public class ShowDescription : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            exclamation.SetActive(false);
 
         }
     }
