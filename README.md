@@ -1,5 +1,8 @@
 # TheCursedSeeds
 Proyecto de unity Vidiojuego: Rogue-like,dungeon crawler,fram simulator y mucha yerba.
-Solo utilizar la escena que contega tu nombre.
 
-viva hitler
+viva hitler xd
+
+### Camara tipo Enter the Gungeon
+
+### Sistema de cultivo pocho
