@@ -55,11 +55,11 @@ TagManager:
   - name: floor
     uniqueID: 3631927859
     locked: 0
-  - name: walls
-    uniqueID: 364888813
-    locked: 0
   - name: details
     uniqueID: 2927018987
+    locked: 0
+  - name: walls
+    uniqueID: 364888813
     locked: 0
   - name: Entities
     uniqueID: 3506753789
