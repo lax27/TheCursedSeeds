@@ -50,7 +50,7 @@ public class Pmove : MonoBehaviour
             if(timeK <= 0)
             {
                 isK = false;
-                timeK = 0.5f;
+                timeK = 0.3f;
             }
         }
 

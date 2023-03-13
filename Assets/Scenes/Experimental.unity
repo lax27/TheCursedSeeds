@@ -292,12 +292,16 @@ PrefabInstance:
       value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 8494990448572967818, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
+      propertyPath: timeK
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494990448572967818, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: knockbackTime
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8494990448572967818, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: KonckBackForce
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8666903661678268722, guid: adfe203eb0f77f14aaa157ce63cd3d0f, type: 3}
       propertyPath: m_RootOrder
