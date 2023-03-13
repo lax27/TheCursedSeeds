@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class LoseGetLife : MonoBehaviour
 {
+    Pmove pm;
     PlayerStats ps;
     Collider2D cl;
     public SpriteRenderer Sp;
     private float timer = 0;
     public bool isDamage = false;
+ 
+
 
     public Vector3 direcionEnemy;
-    public float KonkBackForce = 10;
     private Rigidbody2D rbPlayer;
     
     // public GameObject uid;
@@ -21,6 +23,7 @@ public class LoseGetLife : MonoBehaviour
     {
         ps = GetComponent<PlayerStats>();
         rbPlayer = GetComponent<Rigidbody2D>();
+        pm = GetComponent<Pmove>();
      
         //uid = GameObject.Find("ui");
         //ui = uid.GetComponent<UI>();
@@ -37,7 +40,7 @@ public class LoseGetLife : MonoBehaviour
         if (timer > 0)
         {
 
-           Sp.color = Color.red;
+            Sp.color = Color.red;
             isDamage = true;
             timer -= Time.deltaTime;
 
@@ -46,11 +49,10 @@ public class LoseGetLife : MonoBehaviour
             {
                 Sp.color = Color.white;
                 //rbPlayer.velocity = new Vector2(0, 0);
-                isDamage = false;
-
-             
+                isDamage = false;             
             }
         }
+
 
 
     }
@@ -63,18 +65,10 @@ public class LoseGetLife : MonoBehaviour
                 ps.life--;
                 //ui.UpdateLife();
                 direcionEnemy = transform.position - collision.gameObject.transform.position;
-                direcionEnemy = direcionEnemy.normalized * KonkBackForce * Time.deltaTime;
-                transform.position += direcionEnemy; //FUNCIONA
-                //rbPlayer.AddForce(direcionEnemy, ForceMode2D.Impulse); //NO FUNCIONA, si en el Pmove esta con el rbPlayer.MovePosition
-                                                                         //FUNCIONA, si en el Pmove esta con el rbPlayer.addForce
-                    
-                
-
-
-
+                direcionEnemy = direcionEnemy.normalized;
                 timer = 1;
             }
-
+            pm.isK = true;
         }
     }
 }
