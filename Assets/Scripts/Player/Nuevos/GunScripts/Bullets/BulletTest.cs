@@ -25,8 +25,8 @@ public class BulletTest : MonoBehaviour
 
         randomAngle = Random.Range(DispersionRange.x, DispersionRange.y);
         float angle = Mathf.Deg2Rad * randomAngle;
-        sen = Mathf.Sin(angle) * 2.5f;
-        cos = Mathf.Cos(angle) * 2.5f;
+        sen = Mathf.Sin(angle) * 2.5f;  //3; ;
+        cos = Mathf.Cos(angle) * 2.5f; //3;
         Vector3 randomDir = new Vector3(cos, sen, 0);
 
 
