@@ -23,7 +23,7 @@ public class EnemyDeath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (es.life == 0) {
+        if (es.life <= 0) {
             Destroy(gameObject);
         }
 
@@ -44,12 +44,14 @@ public class EnemyDeath : MonoBehaviour
     {
         if (collision.tag == ("bullet"))
         {
+            BulletStats bs;
+            bs = collision.GetComponent<BulletStats>();
             Destroy(collision.gameObject);
             timerHit = 1;
             sr.color = Color.red;
 
             isHit = true;
-            es.life--;
+            es.life -= bs.damage;
             
         }
     }

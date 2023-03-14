@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1924926973922387781}
   - component: {fileID: -5196980155715913645}
   - component: {fileID: 7209004392317689415}
+  - component: {fileID: -2874297187770691289}
   m_Layer: 0
   m_Name: Square
   m_TagString: bullet
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -955185795
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e670d93e95d4fc546b002b7798dfe17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
+  DispersionRange: {x: 0, y: 0}
+  bs: {fileID: -2874297187770691289}
 --- !u!61 &7209004392317689415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +149,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-2874297187770691289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282103503836176036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204155e46ba0f51438ed3e02b3eb33b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  damage: 1

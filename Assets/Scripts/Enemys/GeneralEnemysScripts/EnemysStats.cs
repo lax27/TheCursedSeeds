@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemysStats : MonoBehaviour
 {
-    public int life = 0;
+    public float life = 0;
     public float speed = 5;
     public int damage = 1;
     public int dropSeeds = 2;
