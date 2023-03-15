@@ -23,7 +23,6 @@ public class CooldownTimer : MonoBehaviour
     {
         currentHealthText.text = "" + currentHealth.ToString("n0");
         healthbarImage.fillAmount = currentHealth / maxHealth;
-
         currentHealth = Time.deltaTime;
     }
 }
