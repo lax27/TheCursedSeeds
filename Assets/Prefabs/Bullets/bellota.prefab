@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e670d93e95d4fc546b002b7798dfe17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DispersionRange: {x: -60, y: 60}
+  dispersionAngle: 10
   bs: {fileID: -2177419845265775489}
 --- !u!114 &-2177419845265775489
 MonoBehaviour:
