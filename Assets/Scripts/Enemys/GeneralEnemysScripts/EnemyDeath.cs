@@ -11,9 +11,11 @@ public class EnemyDeath : MonoBehaviour
     SpriteRenderer sr;
     public bool isHit = false;
     EnemyFreez ef;
+    
     // Start is called before the first frame update
     void Start()
     {
+       
         es = GetComponent<EnemysStats>();
         cl = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -24,6 +26,7 @@ public class EnemyDeath : MonoBehaviour
     void Update()
     {
         if (es.life <= 0) {
+            GetComponent<LootBag>().InstatianteWseed(transform.position);
             Destroy(gameObject);
         }
 

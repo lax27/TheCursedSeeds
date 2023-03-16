@@ -6,6 +6,8 @@ public class CollectSeeds : MonoBehaviour
 {
     PlayerStats ps;
     Collider2D cl;
+    private Wseeds ws;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +23,18 @@ public class CollectSeeds : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if  (collision.tag == "curency")
-        {
-            ps.seeds++;
+        if  (collision.tag == "curency") { 
+            
+            //if ( == 0)
+            //{
+            //    GameManager.instance.inventory[0]++;
+            //    Destroy(collision.gameObject);
+            //}
+            //else if ( == 1)
+            //{
+            //    GameManager.instance.inventory[1]++;
+               
+            //}
 
             Destroy(collision.gameObject);
         }

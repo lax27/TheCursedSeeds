@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6690770839710626103}
   - component: {fileID: 409488380976276729}
   - component: {fileID: 1829518237999966604}
+  - component: {fileID: 7508232289444607143}
   - component: {fileID: 8486079723565115385}
   - component: {fileID: 5443051032411553421}
   - component: {fileID: 3643754983129145479}
@@ -171,6 +172,18 @@ MonoBehaviour:
   setToFreeze: 0
   isHit: 0
   ice: {fileID: 1943323802474900171}
+--- !u!114 &7508232289444607143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206075646342004119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1814f344b7c9e7f46a874fec5e6fc921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &8486079723565115385
 CircleCollider2D:
   m_ObjectHideFlags: 0

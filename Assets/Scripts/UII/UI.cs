@@ -10,7 +10,7 @@ public class UI : MonoBehaviour
 {
     public List<Image> lifes;
     PlayerStats ps;
-    private PlayerManager player;
+    //private PlayerManager player;
     public Material vacio;
     public Material lleno;
 
