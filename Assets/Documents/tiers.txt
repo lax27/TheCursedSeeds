@@ -26,3 +26,20 @@ Tier S:
 //Extra
 
 - objeto que recarga la municion de las armas
+
+
+
+
+--TP COLORS AND THINGS--
+
+Blue -> Normal room
+Red & shattered-> Boss room
+Purple -> Epic room
+
+
+--TIER PRIOR OF SPRITES--
+
+- SEED SPRITES (2 SPRITES RABBIT & HEART) 
+- MANTEE
+- DEFAULT WEAPON
+- NPC FOR TUTORIAL
