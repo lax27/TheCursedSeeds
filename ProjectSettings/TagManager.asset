@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - wall
-  - bullet
-  - enemy
-  - curency
-  - ice
-  - tier D
-  - crop
-  - tier C
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,8 +11,6 @@ TagManager:
   - 
   - Water
   - UI
-  - floor
-  - walls
   - 
   - 
   - 
@@ -35,7 +25,9 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -49,27 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 2847979195
+  - name: Layer 1
+    uniqueID: 2425651459
     locked: 0
-  - name: floor
-    uniqueID: 3631927859
+  - name: Layer 2
+    uniqueID: 4250941897
     locked: 0
-  - name: details
-    uniqueID: 2927018987
-    locked: 0
-  - name: walls
-    uniqueID: 364888813
-    locked: 0
-  - name: Entities
-    uniqueID: 3506753789
-    locked: 0
-  - name: Guns
-    uniqueID: 3339781501
-    locked: 0
-  - name: plants
-    uniqueID: 2621541811
-    locked: 0
-  - name: exclamation
-    uniqueID: 2691023219
+  - name: Layer 3
+    uniqueID: 4189426099
     locked: 0
