@@ -28,12 +28,10 @@ public class CollectSeeds : MonoBehaviour
             //if ( == 0)
             //{
             //    GameManager.instance.inventory[0]++;
-            //    Destroy(collision.gameObject);
             //}
             //else if ( == 1)
             //{
             //    GameManager.instance.inventory[1]++;
-               
             //}
 
             Destroy(collision.gameObject);
