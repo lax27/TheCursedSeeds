@@ -43,3 +43,11 @@ Purple -> Epic room
 - MANTEE
 - DEFAULT WEAPON
 - NPC FOR TUTORIAL
+
+
+
+------ TAREAS PARA MAÑANA -------
+
+- Alex: Enemigo base + enemigos no se muevan si la camará no enfoca
+
+- Aleix: Build tuto dialogue + dungeon map
