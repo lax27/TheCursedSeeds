@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemysStats : MonoBehaviour
+public class ClamperMove : MonoBehaviour
 {
-    public float life = 0;
-    public float speed = 5;
-    public int damage = 1;
     // Start is called before the first frame update
+    private EnemysStats es;
     void Start()
     {
-        
-        
+        es = GetComponent<EnemysStats>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+            
     }
 }

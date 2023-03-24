@@ -131,5 +131,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8993573725950607081, guid: b85de4c97071f874ca8087918f41b25c, type: 3}
   canFire: 0
-  timeBetwenFire: 1
+  timeBetwenFire: 0.7
   canon: {fileID: 2171958933753022544}
