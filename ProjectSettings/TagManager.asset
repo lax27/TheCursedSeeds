@@ -11,6 +11,7 @@ TagManager:
   - tier D
   - crop
   - wall
+  - exclamation
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - exclamation
   - 
   - 
   - 
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Layer 3
     uniqueID: 4189426099
+    locked: 0
+  - name: exclamation
+    uniqueID: 2907877387
     locked: 0
