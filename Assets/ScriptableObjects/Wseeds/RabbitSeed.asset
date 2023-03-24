@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6541be6695945b843b53e5cd86976e81, type: 3}
   m_Name: RabbitSeed
   m_EditorClassIdentifier: 
-  seedSprite: {fileID: 21300000, guid: 00c65d2d45e1beb4781f05c01b92dbce, type: 3}
+  seedSprite: {fileID: 21300000, guid: ddcb5db251683b445b5f82ed5b4efeeb, type: 3}
   seedName: Rabbit
   id_Wseed: 0
-  dropChance: 10
+  dropChance: 100
