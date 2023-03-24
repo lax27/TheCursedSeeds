@@ -54,17 +54,18 @@ public class Pmove : MonoBehaviour
             }
         }
 
-        if (isK)
-        {
-            transform.position += ls.direcionEnemy * KonckBackForce * Time.deltaTime;
-        }
-        else if (!isK) {
-            transform.position += directionT * ps.speed * Time.deltaTime;
-        }
+ 
     }
 
     private void FixedUpdate()
     {
-        //rbPlayer.MovePosition(rbPlayer.position + direction * ps.speed * Time.fixedDeltaTime);
+        if (isK)
+        {
+            transform.position += ls.direcionEnemy * KonckBackForce * Time.fixedDeltaTime;
+        }
+        else if (!isK)
+        {
+            transform.position += directionT * ps.speed * Time.fixedDeltaTime;
+        }
     }
 }

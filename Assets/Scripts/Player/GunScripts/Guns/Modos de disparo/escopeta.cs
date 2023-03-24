@@ -46,6 +46,8 @@ public class escopeta : MonoBehaviour
             GameObject temp4 = Instantiate(bullet, canon.position, Quaternion.identity);
             GameObject temp5 = Instantiate(bullet, canon.position, Quaternion.identity);
             GameObject temp6 = Instantiate(bullet, canon.position, Quaternion.identity);
+            GameObject temp7 = Instantiate(bullet, canon.position, Quaternion.identity);
+            GameObject temp8 = Instantiate(bullet, canon.position, Quaternion.identity);
         }
     }
 }
