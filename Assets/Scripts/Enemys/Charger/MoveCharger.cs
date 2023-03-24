@@ -104,7 +104,6 @@ public class MoveCharger : MonoBehaviour
             rb.velocity = Vector2.zero;
            
                 rb.bodyType = RigidbodyType2D.Dynamic;
-                Debug.Log(dir);
                 rb.AddForce(dir * chargingForce, ForceMode2D.Impulse);
                 isGoingToCharge = false;
                 wait = 10;
