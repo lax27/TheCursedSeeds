@@ -58,22 +58,4 @@ public class ClamperMove : MonoBehaviour
             transform.position += dir * es.speed * Time.fixedDeltaTime;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-
-            move = true;
-            stoped = false;
-            dir = transform.position - collision.transform.position;
-        }
-
-        if (collision.tag == "wall")
-        {
-            move = true;
-            stoped = false;
-            dir = transform.position - collision.transform.position;
-        }
-    }
 }
