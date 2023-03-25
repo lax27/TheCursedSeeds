@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class FirstDialogue : MonoBehaviour
+public class TeacherDialogue : MonoBehaviour
 {
     [SerializeField] private GameObject exclamation;
     [SerializeField] private GameObject DialoguePanel;
@@ -15,6 +15,8 @@ public class FirstDialogue : MonoBehaviour
     private BoxCollider2D coll;
     public GameObject Bee;
     private Animator beeT;
+    public GameObject Teacher;
+    private SpriteRenderer t;
 
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
@@ -23,9 +25,7 @@ public class FirstDialogue : MonoBehaviour
     private bool TpActivate;
     private void Start()
     {
-        mantee = GameObject.Find("tutorialMantee_");
-        movement = mantee.GetComponent<Pmove>();
-        
+        mantee = GameObject.Find("Mantee_v3");
         Teleport_t = Teleport.GetComponent<Animator>();
         Teleport_t.enabled = false;
         TpActivate = false;
@@ -35,6 +35,8 @@ public class FirstDialogue : MonoBehaviour
 
         beeT = Bee.GetComponent<Animator>();
         beeT.enabled = false;
+
+        t = Teacher.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -88,6 +90,7 @@ public class FirstDialogue : MonoBehaviour
             {
                 Teleport_t.enabled = true;
                 coll.enabled = true;
+                t.enabled = false;
             }
         }
     }

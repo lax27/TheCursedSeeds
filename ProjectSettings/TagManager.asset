@@ -65,3 +65,6 @@ TagManager:
   - name: Enemijos
     uniqueID: 794498503
     locked: 0
+  - name: ice cube
+    uniqueID: 565724635
+    locked: 0
