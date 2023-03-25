@@ -13,6 +13,8 @@ public class FirstDialogue : MonoBehaviour
     public GameObject Teleport;
     private Animator Teleport_t;
     private BoxCollider2D coll;
+    public GameObject Bee;
+    private Animator beeT;
 
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
@@ -23,11 +25,16 @@ public class FirstDialogue : MonoBehaviour
     {
         mantee = GameObject.Find("tutorialMantee_");
         movement = mantee.GetComponent<Pmove>();
+        
         Teleport_t = Teleport.GetComponent<Animator>();
         Teleport_t.enabled = false;
         TpActivate = false;
+        
         coll = Teleport.GetComponent<BoxCollider2D>();
         coll.enabled = false;
+
+        beeT = Bee.GetComponent<Animator>();
+        beeT.enabled = false;
     }
 
     // Update is called once per frame

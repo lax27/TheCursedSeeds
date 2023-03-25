@@ -12,6 +12,7 @@ TagManager:
   - crop
   - wall
   - exclamation
+  - curency
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - exclamation
   - 
   - 
-  - 
+  - details
   - 
   - 
   - 
@@ -60,4 +61,7 @@ TagManager:
     locked: 0
   - name: exclamation
     uniqueID: 2907877387
+    locked: 0
+  - name: Enemijos
+    uniqueID: 794498503
     locked: 0
