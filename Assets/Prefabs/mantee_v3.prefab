@@ -370,6 +370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicGun
       objectReference: {fileID: 0}
+    - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5886319451353504179, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
       propertyPath: m_RootOrder
