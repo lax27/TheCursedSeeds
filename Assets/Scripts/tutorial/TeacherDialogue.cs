@@ -10,11 +10,6 @@ public class TeacherDialogue : MonoBehaviour
     [SerializeField, TextArea(4, 6)] private string[] DialogueLines;
     [SerializeField] private GameObject mantee;
     [SerializeField] private Pmove movement;
-    public GameObject Teleport;
-    private Animator Teleport_t;
-    private BoxCollider2D coll;
-    public GameObject Bee;
-    private Animator beeT;
     public GameObject Teacher;
     private SpriteRenderer t;
 
@@ -26,16 +21,6 @@ public class TeacherDialogue : MonoBehaviour
     private void Start()
     {
         mantee = GameObject.Find("Mantee_v3");
-        Teleport_t = Teleport.GetComponent<Animator>();
-        Teleport_t.enabled = false;
-        TpActivate = false;
-        
-        coll = Teleport.GetComponent<BoxCollider2D>();
-        coll.enabled = false;
-
-        beeT = Bee.GetComponent<Animator>();
-        beeT.enabled = false;
-
         t = Teacher.GetComponent<SpriteRenderer>();
     }
 
@@ -83,15 +68,9 @@ public class TeacherDialogue : MonoBehaviour
         {
             didDialogueStart = false;
             DialoguePanel.SetActive(false);
-            exclamation.SetActive(true);
+            exclamation.SetActive(false);
             movement.enabled = true;
-
-            if (TpActivate == false)
-            {
-                Teleport_t.enabled = true;
-                coll.enabled = true;
-                t.enabled = false;
-            }
+            t.enabled = false;
         }
     }
 
@@ -112,7 +91,6 @@ public class TeacherDialogue : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            exclamation.SetActive(true);
         }
     }
 
@@ -121,8 +99,6 @@ public class TeacherDialogue : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            exclamation.SetActive(false);
-
 
 
         }

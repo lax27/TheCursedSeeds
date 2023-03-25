@@ -59,6 +59,9 @@ TagManager:
   - name: Layer 3
     uniqueID: 4189426099
     locked: 0
+  - name: details
+    uniqueID: 1739330569
+    locked: 0
   - name: exclamation
     uniqueID: 2907877387
     locked: 0

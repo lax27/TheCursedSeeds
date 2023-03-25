@@ -33,6 +33,17 @@ public class Cam : MonoBehaviour
             player.transform.position += new Vector3(0, -7, 0);
         }
 
+        if(collision.tag == "Player" && direcion == "right")
+        {
+            cam.transform.position += new Vector3(22, 0, 0);
+            player.transform.position += new Vector3(6.80f, 0, 0);
+        }
+
+        if (collision.tag == "Player" && direcion == "left")
+        {
+            cam.transform.position += new Vector3(-22, 0, 0);
+            player.transform.position += new Vector3(-6.80f, 0, 0);
+        }
 
     }
 
