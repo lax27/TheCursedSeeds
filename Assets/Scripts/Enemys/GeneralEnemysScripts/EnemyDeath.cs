@@ -55,8 +55,21 @@ public class EnemyDeath : MonoBehaviour
 
             isHit = true;
             es.life -= bs.damage;
-            
+
         }
     }
 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "bullet")
+    //    {
+    //        BulletStats bs;
+    //        bs = collision.gameObject.GetComponent<BulletStats>();
+    //        Destroy(collision.gameObject);
+    //        timerHit = 1;
+    //        sr.color = Color.red;
+    //        isHit = true;
+    //        es.life -= bs.damage;
+    //    }
+    //}
 }
