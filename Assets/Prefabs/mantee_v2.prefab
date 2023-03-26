@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 446731444}
   - component: {fileID: 1874673432262967476}
   m_Layer: 0
-  m_Name: mantee_v3
+  m_Name: mantee_v2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

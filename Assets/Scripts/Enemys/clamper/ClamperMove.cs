@@ -7,7 +7,7 @@ public class ClamperMove : MonoBehaviour
     private Vector3 dir;
     private bool stoped = true;
     private bool move = false;
-   [SerializeField] private float timer = 5;
+   [SerializeField] private float timer = 2;
     [SerializeField ]private float timerM = 1f;
     // Start is called before the first frame update
     private EnemysStats es;
@@ -38,7 +38,7 @@ public class ClamperMove : MonoBehaviour
 
         if (move)
         {
-            timer = 5;
+            timer = 2;
             timerM -= Time.deltaTime;
         }
 
