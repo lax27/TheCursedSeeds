@@ -6,7 +6,7 @@ public class RoundTwo : MonoBehaviour
 {
     public GameObject Bee;
     public GameObject Teleport;
-
+    private GameObject cube;
 
     private Animator a;
     private BoxCollider2D coll;
@@ -27,6 +27,14 @@ public class RoundTwo : MonoBehaviour
         {
             a.enabled = true;
             coll.enabled = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (Input.GetButtonDown("interaction")){
+
+
         }
     }
 }
