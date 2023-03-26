@@ -71,4 +71,15 @@ public class LoseGetLife : MonoBehaviour
             pm.isK = true;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyB")
+        {
+            if (isDamage == false)
+            {
+                ps.life--;
+                timer = 1;
+            }
+        }
+    }
 }

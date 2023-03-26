@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5190039600244564786}
   - component: {fileID: 2465839978527300387}
   - component: {fileID: -4824810733795380179}
+  - component: {fileID: 9044577313143557449}
   m_Layer: 0
   m_Name: clampwerBullwt
-  m_TagString: Untagged
+  m_TagString: EnemyB
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204155e46ba0f51438ed3e02b3eb33b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3.7
   damage: 1
 --- !u!114 &-4824810733795380179
 MonoBehaviour:
@@ -136,3 +137,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bs: {fileID: 2465839978527300387}
+--- !u!58 &9044577313143557449
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649301274021428973}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49999997
