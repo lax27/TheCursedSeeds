@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 1685678027289531310, guid: b435a2b367d3b3341be833a16e9d137c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4
+      value: -2.19
       objectReference: {fileID: 0}
     - target: {fileID: 1685678027289531310, guid: b435a2b367d3b3341be833a16e9d137c,
         type: 3}
@@ -325,6 +325,16 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 794498503
       objectReference: {fileID: 0}
+    - target: {fileID: 1685678029044527849, guid: b435a2b367d3b3341be833a16e9d137c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685678029044527849, guid: b435a2b367d3b3341be833a16e9d137c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 794498503
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b435a2b367d3b3341be833a16e9d137c, type: 3}
 --- !u!1001 &67600979
@@ -334,6 +344,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1131213523}
     m_Modifications:
+    - target: {fileID: 2334146017784503392, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2334146017784503398, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
       propertyPath: m_SortingLayer
@@ -403,6 +418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BeeCharge
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334146017784503448, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2334146018713380575, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
@@ -10822,12 +10842,12 @@ PrefabInstance:
     - target: {fileID: 1685678027289531310, guid: b435a2b367d3b3341be833a16e9d137c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.539999
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 1685678027289531310, guid: b435a2b367d3b3341be833a16e9d137c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5600004
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: 1685678027289531310, guid: b435a2b367d3b3341be833a16e9d137c,
         type: 3}
@@ -10884,6 +10904,16 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 794498503
       objectReference: {fileID: 0}
+    - target: {fileID: 1685678029044527849, guid: b435a2b367d3b3341be833a16e9d137c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685678029044527849, guid: b435a2b367d3b3341be833a16e9d137c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 794498503
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b435a2b367d3b3341be833a16e9d137c, type: 3}
 --- !u!1001 &1503568544
@@ -10893,6 +10923,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1131213523}
     m_Modifications:
+    - target: {fileID: 2334146017784503392, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2334146017784503398, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
       propertyPath: m_SortingLayer
@@ -10962,6 +10997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BeeCharge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334146017784503448, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2334146018713380575, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
@@ -12777,7 +12817,8 @@ MonoBehaviour:
   exclamation: {fileID: 1143635754}
   DialoguePanel: {fileID: 128475469}
   DialogueText: {fileID: 2090457203}
-  DialogueLines: []
+  DialogueLines:
+  - 8======S --
   mantee: {fileID: 354024913}
   movement: {fileID: 1761008311}
   Teacher: {fileID: 1806150699}
@@ -13038,6 +13079,11 @@ PrefabInstance:
       propertyPath: setToFreeze
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2334146018713380574, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2334146018713380575, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
       propertyPath: m_SortingLayer
@@ -13048,7 +13094,8 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 565724635
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2334146017784503395, guid: 0f46826b5f6844e47bf5e43d598c96e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f46826b5f6844e47bf5e43d598c96e0, type: 3}
 --- !u!1001 &1853926634
 PrefabInstance:
