@@ -23,13 +23,13 @@ public class Cam : MonoBehaviour
     {
         if (collision.tag == "Player" && direcion == "up")
         {
-            cam.transform.position += new Vector3(0, 10, 0);
+            cam.transform.position += new Vector3(0, 10.4f, 0);
             player.transform.position += new Vector3(0, 7, 0);
         }
 
         if (collision.tag == "Player" && direcion == "down")
         {
-            cam.transform.position += new Vector3(0, -10, 0);
+            cam.transform.position += new Vector3(0, -10.4f, 0);
             player.transform.position += new Vector3(0, -7, 0);
         }
 
