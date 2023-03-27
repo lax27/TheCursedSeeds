@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Cam : MonoBehaviour
 {
+    private GameObject camera;
     public Transform cam;
     public string direcion;
+    private GameObject p;
     public Transform player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        camera = GameObject.Find("Main Camera");
+        cam = camera.GetComponent<Transform>();
+
+        p = GameObject.Find("mantee_v2");
+        player = p.GetComponent<Transform>();
     }
 
     // Update is called once per frame
