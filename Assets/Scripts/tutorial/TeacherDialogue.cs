@@ -12,6 +12,7 @@ public class TeacherDialogue : MonoBehaviour
     [SerializeField] private Pmove movement;
     public GameObject Teacher;
     private SpriteRenderer t;
+    private BoxCollider2D coll;
 
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
