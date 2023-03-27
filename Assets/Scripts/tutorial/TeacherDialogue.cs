@@ -23,6 +23,7 @@ public class TeacherDialogue : MonoBehaviour
     {
         mantee = GameObject.Find("Mantee_v2");
         t = Teacher.GetComponent<SpriteRenderer>();
+        coll = Teacher.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -72,6 +73,7 @@ public class TeacherDialogue : MonoBehaviour
             exclamation.SetActive(false);
             movement.enabled = true;
             t.enabled = false;
+            coll.enabled = false;
         }
     }
 
