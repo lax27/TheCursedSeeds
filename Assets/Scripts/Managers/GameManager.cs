@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
@@ -9,6 +10,9 @@ public class GameManager : MonoBehaviour
 
     public int[] inventory = new int[(int)Wseeds.LAST];
 
+    public GameObject pauseMenu;
+
+    
     private void Awake()
     {
         if (instance == null)
@@ -22,14 +26,27 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
     }
+
     void Start()
     {
-        
+        pauseMenu = GameObject.Find("PauseMenu");
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
     }
 
    
     void Update()
     {
-        
+        if (Input.GetButtonDown("Esc"))
+        {
+            if (pauseMenu != null)
+            {
+                pauseMenu.SetActive(true);
+                Time.timeScale = 0f;
+            }
+        }
+
     }
 }
