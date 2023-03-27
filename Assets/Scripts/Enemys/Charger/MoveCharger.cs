@@ -85,20 +85,23 @@ public class MoveCharger : MonoBehaviour
             }
         }
 
-        if (!isChargin)
-        {
-            dir3 = target.transform.position - transform.position;
-            rb.bodyType = RigidbodyType2D.Kinematic;
-            //transform.position = Vector2.MoveTowards(transform.position, target.transform.position, es.speed * Time.deltaTime);
-            if (!isGoingToCharge) {
-                transform.position += dir3 * es.speed * Time.deltaTime;
-            }
-            
-        }
+   
     }
 
     private void FixedUpdate()
     {
+
+        if (!isChargin)
+        {
+            dir3 = target.transform.position - transform.position;
+            //transform.position = Vector2.MoveTowards(transform.position, target.transform.position, es.speed * Time.deltaTime);
+            if (!isGoingToCharge)
+            {
+                transform.position += dir3.normalized * es.speed * Time.fixedDeltaTime;
+            }
+
+        }
+
         if (isChargin && !ef.isFreez)
         {
             rb.velocity = Vector2.zero;

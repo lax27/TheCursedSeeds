@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8726333363611514757}
   - component: {fileID: 4611398411515215479}
   - component: {fileID: 7230497891636738198}
+  - component: {fileID: 3568137363706336182}
   m_Layer: 0
   m_Name: WseedPrefab
   m_TagString: curency
@@ -123,3 +124,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!114 &3568137363706336182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5885078938549551052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2f3a276fe0f164fa90555b7795f734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ws: {fileID: 0}

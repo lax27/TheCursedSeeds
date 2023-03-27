@@ -5,16 +5,14 @@ using UnityEngine;
 public class escopeta : MonoBehaviour
 {
     public GameObject bullet;
-    public bool canFire;
     private float timer;
     public float timeBetwenFire;
     public Transform canon = null;
     Collider2D coll;
-
+    [SerializeField]private bool canFire;
     // Start is called before the first frame update
     void Start()
     {
-
         coll = bullet.GetComponent<Collider2D>();
     }
 
@@ -30,7 +28,6 @@ public class escopeta : MonoBehaviour
             {
                 canFire = true;
                 timer = 0;
-
             }
         }
 

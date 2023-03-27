@@ -23,16 +23,18 @@ public class CollectSeeds : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if  (collision.tag == "curency") { 
+        if  (collision.tag == "curency") {
+
+           Reference rf = collision.gameObject.GetComponent<Reference>();
             
-            //if ( == 0)
-            //{
-            //    GameManager.instance.inventory[0]++;
-            //}
-            //else if ( == 1)
-            //{
-            //    GameManager.instance.inventory[1]++;
-            //}
+            if (rf.ws.id_Wseed == 0)
+            {
+                GameManager.instance.inventory[0]++;
+            }
+            else if (rf.ws.id_Wseed == 1)
+            {
+                GameManager.instance.inventory[1]++;
+            }
 
             Destroy(collision.gameObject);
         }

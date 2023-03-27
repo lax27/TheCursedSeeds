@@ -37,7 +37,7 @@ public class LootBag : MonoBehaviour
         {
             GameObject WseedGameObject = Instantiate(dropedSeedPrefab, spawnPosition, Quaternion.identity);
             WseedGameObject.GetComponent<SpriteRenderer>().sprite = dropedSeed.seedSprite;
-
+            WseedGameObject.GetComponent<Reference>().ws = dropedSeed;
             float dropForce = 2f;
             Vector2 dropDirection = new Vector2(Random.Range(-1f,1f), Random.Range(-1f,1f));
             WseedGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);

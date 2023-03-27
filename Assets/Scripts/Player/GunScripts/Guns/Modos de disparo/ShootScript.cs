@@ -14,7 +14,7 @@ public class ShootScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        canFire = true;
         coll = bullet.GetComponent<Collider2D>();
     }
 
@@ -41,11 +41,6 @@ public class ShootScript : MonoBehaviour
 
             canFire = false;
             GameObject temp = Instantiate(bullet,canon.position,Quaternion.identity);
-            //GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
-            //GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
-            //GameObject temp4 = Instantiate(bullet, canon.position, Quaternion.identity);
-            //GameObject temp5 = Instantiate(bullet, canon.position, Quaternion.identity);
-            //GameObject temp6 = Instantiate(bullet, canon.position, Quaternion.identity);
         }
     }
 }

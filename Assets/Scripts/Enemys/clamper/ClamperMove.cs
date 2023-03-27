@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ClamperMove : MonoBehaviour
 {
-    private Vector3 dir;
-    private bool stoped = true;
-    private bool move = false;
-   [SerializeField] private float timer = 2;
-    [SerializeField ]private float timerM = 1f;
+    public Vector3 dir;
+    public bool stoped = true;
+    public bool move = false;
+    public float timer = 2;
+    public float timerM = 1f;
     // Start is called before the first frame update
     private EnemysStats es;
     void Start()
@@ -56,30 +56,6 @@ public class ClamperMove : MonoBehaviour
         if (move)
         {
             transform.position += dir * es.speed * Time.fixedDeltaTime;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            dir = transform.position - collision.transform.position;
-            dir = dir.normalized;
-            move = true;
-            stoped = false;
-        }
-
-        if (collision.tag == "wall")
-        {
-            dir =  transform.position - collision.transform.position;
-            dir = dir.normalized;
-            move = true;
-            stoped = false;
-        }
-
-        if (collision.tag == "bullet")
-        {
-            
         }
     }
 

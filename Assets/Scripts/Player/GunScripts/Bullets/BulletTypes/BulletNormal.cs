@@ -12,18 +12,20 @@ public class BulletNormal : MonoBehaviour
     private float sen;
     private float cos;
     public BulletStats bs;
-
+    private GameObject player;
+    private Transform p;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("mantee_v2");
         rb = GetComponent<Rigidbody2D>();
         bs = GetComponent<BulletStats>();
-        
+        p = player.GetComponent<Transform>();
 
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direcion = mousePos - transform.position; // el vector desde el objeto hacia el mouse
+        Vector3 direcion = mousePos - p.transform.position; // el vector desde el objeto hacia el mouse
         Vector3 randomBullet = Quaternion.Euler(0f, 0f, Random.Range(-dispersionAngle, dispersionAngle)) * direcion;      // cambio de direcion para que el arma tenga dispersion
         Vector3 rotation = transform.position - mousePos; // la rotacion es para que la bala siempre se vea recta en todos los angulos respecto al mouse
 
