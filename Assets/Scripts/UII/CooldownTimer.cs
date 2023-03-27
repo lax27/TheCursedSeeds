@@ -7,22 +7,22 @@ using UnityEngine.UI;
 
 public class CooldownTimer : MonoBehaviour
 {
-    private float minHealth;
+    private float minCooldown;
     [Range(0, 100)]
-    public float currentHealth;
+    public float currentCooldown;
     [Range(0, 100)]
-    public float maxHealth;
+    public float maxCooldown;
 
-    public Text currentHealthText;
-    public Image healthbarImage;
+    public Text currentCooldownText;
+    public Image cooldownBarImage;
 
 
 
     // Update is called once per frame
     void Update()
     {
-        currentHealthText.text = "" + currentHealth.ToString("n0");
-        healthbarImage.fillAmount = currentHealth / maxHealth;
-        currentHealth = Time.deltaTime;
+        currentCooldownText.text = "" + currentCooldown.ToString("n0");
+        cooldownBarImage.fillAmount = currentCooldown / maxCooldown;
+        currentCooldown = Time.deltaTime;
     }
 }

@@ -15,6 +15,7 @@ TagManager:
   - curency
   - EnemyB
   - Portal
+  - Pause
   layers:
   - Default
   - TransparentFX
