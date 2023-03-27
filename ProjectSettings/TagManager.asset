@@ -68,12 +68,15 @@ TagManager:
   - name: exclamation
     uniqueID: 2907877387
     locked: 0
+  - name: Portal
+    uniqueID: 2984029131
+    locked: 0
+  - name: Player
+    uniqueID: 1397462407
+    locked: 0
   - name: Enemijos
     uniqueID: 794498503
     locked: 0
   - name: ice cube
     uniqueID: 565724635
-    locked: 0
-  - name: Portal
-    uniqueID: 2984029131
     locked: 0
