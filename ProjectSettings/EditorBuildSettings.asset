@@ -8,10 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TUTO_TUTO.unity
     guid: 195fabc6ce5e5b54ab53761d773d2d77
-  - enabled: 1
-    path: Assets/Scenes/SoundAjustement.unity
-    guid: 7a40e69bda301544e9a3405bc34e6d3f
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 25827c3cafd2bb74ca8a42e289f1dc97
   m_configObjects: {}

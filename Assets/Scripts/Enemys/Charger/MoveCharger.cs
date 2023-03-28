@@ -81,7 +81,7 @@ public class MoveCharger : MonoBehaviour
             }
             else
             {
-                es.speed = 0.4f;
+                es.speed = 1.5f;
             }
         }
 

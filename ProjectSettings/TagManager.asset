@@ -16,6 +16,7 @@ TagManager:
   - EnemyB
   - Portal
   - Pause
+  - seta
   layers:
   - Default
   - TransparentFX
