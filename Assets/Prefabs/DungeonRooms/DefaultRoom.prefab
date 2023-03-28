@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3823148037272356618}
+  - component: {fileID: 1585958665203202438}
   m_Layer: 0
   m_Name: 'NewRigthRoom '
   m_TagString: Untagged
@@ -31,6 +32,24 @@ Transform:
   m_Father: {fileID: 1721812160800869629}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585958665203202438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106807351697981636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rooms:
+  - {fileID: 1721812160800869619}
+  canGenerate: 0
+  Generate: 0
+  roomCount: 0
+  tp: {fileID: 1721812161793753174}
 --- !u!1 &1721812160167666519
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,6 +4005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721812160800869629}
   - component: {fileID: 1721812160800869628}
+  - component: {fileID: 2248783131541279650}
   m_Layer: 0
   m_Name: DefaultRoom
   m_TagString: Untagged
@@ -4011,10 +4031,10 @@ Transform:
   - {fileID: 1721812161793753175}
   - {fileID: 1721812161752225904}
   - {fileID: 1721812162012261527}
-  - {fileID: 5252852894300463385}
+  - {fileID: 4970104841956492993}
   - {fileID: 3179926838088635960}
   - {fileID: 3823148037272356618}
-  - {fileID: 4970104841956492993}
+  - {fileID: 5252852894300463385}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4030,6 +4050,28 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &2248783131541279650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721812160800869619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdcbf8d130948a4988eebd10c4357c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewsRooms:
+  - {fileID: 9041887477532126020}
+  - {fileID: 6816562753951004129}
+  - {fileID: 1106807351697981636}
+  - {fileID: 4084529068613785445}
+  tp:
+  - {fileID: 1721812161285146634}
+  - {fileID: 1721812161752225911}
+  - {fileID: 1721812161793753174}
+  - {fileID: 1721812162012261526}
 --- !u!1 &1721812161285146634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,7 +4193,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: -0.2658856}
+  m_Offset: {x: -0.000000059604645, y: -0.18147731}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4162,7 +4204,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9825081, y: 2.5317712}
+  m_Size: {x: 1.9825081, y: 2.3629546}
   m_EdgeRadius: 0
 --- !u!114 &1721812161285146645
 MonoBehaviour:
@@ -4316,7 +4358,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.021370292, y: -0.19809067}
+  m_Offset: {x: -0.032343984, y: -0.19809067}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4327,7 +4369,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0252488, y: 1.9402654}
+  m_Size: {x: 1.9178202, y: 1.9402654}
   m_EdgeRadius: 0
 --- !u!114 &1721812161752225906
 MonoBehaviour:
@@ -4374,6 +4416,7 @@ GameObject:
   - component: {fileID: 1721812161793753170}
   - component: {fileID: 1721812161793753169}
   - component: {fileID: 1721812161793753168}
+  - component: {fileID: 3846950314387773653}
   m_Layer: 0
   m_Name: tp_rigth
   m_TagString: Untagged
@@ -4481,7 +4524,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03175932, y: -0.44662708}
+  m_Offset: {x: 0.12384087, y: -0.44662708}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4492,7 +4535,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9189893, y: 1.538186}
+  m_Size: {x: 1.7348262, y: 1.538186}
   m_EdgeRadius: 0
 --- !u!114 &1721812161793753169
 MonoBehaviour:
@@ -4507,7 +4550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  direcion: rigth
+  direcion: right
   player: {fileID: 0}
 --- !u!70 &1721812161793753168
 CapsuleCollider2D:
@@ -4525,6 +4568,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &3846950314387773653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721812161793753174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdcbf8d130948a4988eebd10c4357c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewsRooms:
+  - {fileID: 0}
+  tp:
+  - {fileID: 0}
 --- !u!1 &1721812162012261526
 GameObject:
   m_ObjectHideFlags: 0
@@ -4646,7 +4705,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: -0.5419054}
+  m_Offset: {x: -0.000000059604645, y: -0.31197333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4657,7 +4716,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9825081, y: 2.3639307}
+  m_Size: {x: 1.9825081, y: 2.8237948}
   m_EdgeRadius: 0
 --- !u!114 &1721812162012261521
 MonoBehaviour:
@@ -4687,8 +4746,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0, y: -0.114993095}
+  m_Size: {x: 1, y: 1.7700138}
   m_Direction: 0
 --- !u!1 &4084529068613785445
 GameObject:
@@ -4699,6 +4758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5252852894300463385}
+  - component: {fileID: 5450038604239056132}
   m_Layer: 0
   m_Name: NewDownRoom
   m_TagString: Untagged
@@ -4719,8 +4779,26 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5450038604239056132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4084529068613785445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rooms:
+  - {fileID: 1721812160800869619}
+  canGenerate: 0
+  Generate: 0
+  roomCount: 0
+  tp: {fileID: 1721812162012261526}
 --- !u!1 &6816562753951004129
 GameObject:
   m_ObjectHideFlags: 0
@@ -4730,6 +4808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3179926838088635960}
+  - component: {fileID: 994195333660811942}
   m_Layer: 0
   m_Name: NewLeftRoom
   m_TagString: Untagged
@@ -4752,6 +4831,24 @@ Transform:
   m_Father: {fileID: 1721812160800869629}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &994195333660811942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816562753951004129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rooms:
+  - {fileID: 1721812160800869619}
+  canGenerate: 0
+  Generate: 0
+  roomCount: 0
+  tp: {fileID: 1721812161752225911}
 --- !u!1 &9041887477532126020
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,6 +4858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4970104841956492993}
+  - component: {fileID: 1440825021596525844}
   m_Layer: 0
   m_Name: NewUpRoom
   m_TagString: Untagged
@@ -4781,5 +4879,23 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440825021596525844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041887477532126020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rooms:
+  - {fileID: 1721812160800869619}
+  canGenerate: 0
+  Generate: 0
+  roomCount: 0
+  tp: {fileID: 1721812161285146634}
