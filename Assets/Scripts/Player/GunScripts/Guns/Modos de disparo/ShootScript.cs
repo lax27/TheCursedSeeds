@@ -5,9 +5,11 @@ using UnityEngine;
 public class ShootScript : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject shells;
     public bool canFire;
     private float timer;
     public float timeBetwenFire;
+    private AudioSource au;
     public Transform canon = null;
     Collider2D coll;
 
@@ -16,6 +18,7 @@ public class ShootScript : MonoBehaviour
     {
         canFire = true;
         coll = bullet.GetComponent<Collider2D>();
+        au = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +33,6 @@ public class ShootScript : MonoBehaviour
             {
                 canFire = true;
                 timer = 0;
-
             }
         }
 
@@ -40,7 +42,34 @@ public class ShootScript : MonoBehaviour
         {
 
             canFire = false;
-            GameObject temp = Instantiate(bullet,canon.position,Quaternion.identity);
+            if (gameObject.name == "BasicGun")
+            {
+                //Hacer el fogonazo del arma
+
+                //Hacer sonido de disparo
+                au.Play();
+                //Casquillos
+                Instantiate(shells, transform.position, Quaternion.identity);
+                //Camerashake
+
+                //Spawn de la bala
+                GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+            }
+            if (gameObject.name == "ShotGun")
+            {
+                //hacer sonido de disparo
+                //instacniar casiquillos
+                //camerashake
+                GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+                GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
+                GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+                GameObject temp4 = Instantiate(bullet, canon.position, Quaternion.identity);
+                GameObject temp5 = Instantiate(bullet, canon.position, Quaternion.identity);
+                GameObject temp6 = Instantiate(bullet, canon.position, Quaternion.identity);
+                GameObject temp7 = Instantiate(bullet, canon.position, Quaternion.identity);
+                GameObject temp8 = Instantiate(bullet, canon.position, Quaternion.identity);
+
+            }
         }
     }
 }

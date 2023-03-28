@@ -82,7 +82,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 794498503
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: db56237257731e84183b63b4a593ed7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -321,7 +321,12 @@ PrefabInstance:
     - target: {fileID: 4047485851235706312, guid: cacdd6d10060cb04f905a86eb1b055d5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047485851235706312, guid: cacdd6d10060cb04f905a86eb1b055d5,
+        type: 3}
+      propertyPath: m_TagString
+      value: shootgun
       objectReference: {fileID: 0}
     - target: {fileID: 5132496241304233024, guid: cacdd6d10060cb04f905a86eb1b055d5,
         type: 3}
@@ -402,6 +407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369515813989828728, guid: 95c8638717ee38c4ea1b3c728c533b14,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}

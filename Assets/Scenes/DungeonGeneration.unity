@@ -348,6 +348,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2572113988730684769, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026438504942991025, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587646068486902712, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5094299271075325818, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5095049127602115650, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_Name

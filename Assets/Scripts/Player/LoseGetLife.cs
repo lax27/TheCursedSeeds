@@ -73,7 +73,7 @@ public class LoseGetLife : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "EnemyB")
+        if (collision.gameObject.tag == "enemyB")
         {
             if (isDamage == false)
             {

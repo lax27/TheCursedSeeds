@@ -7,16 +7,14 @@ TagManager:
   - bullet
   - enemy
   - ice
-  - tier C
-  - tier D
-  - crop
   - wall
   - exclamation
   - curency
-  - EnemyB
   - Portal
   - Pause
   - seta
+  - enemyB
+  - basicW
   layers:
   - Default
   - TransparentFX
