@@ -15,6 +15,8 @@ public class GenerateRoom : MonoBehaviour
         canGenerate = !DungeonManager.instance.CurrentRooms.Contains(transform.position) && DungeonManager.instance.CurrentRooms.Count < 8;
 
         Generate = Random.Range(0f, 100f) > 50f ? true : false;
+      
+
 
         if (canGenerate && Generate) {
             Instantiate(Rooms[roomCount], transform.position, Quaternion.identity);
@@ -24,11 +26,5 @@ public class GenerateRoom : MonoBehaviour
         {
             tp.SetActive(false);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
