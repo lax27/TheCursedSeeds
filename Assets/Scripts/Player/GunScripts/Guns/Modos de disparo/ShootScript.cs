@@ -9,7 +9,7 @@ public class ShootScript : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetwenFire;
-    private AudioSource au;
+    private AudioSource sound;
     public Transform canon = null;
     Collider2D coll;
 
@@ -18,7 +18,8 @@ public class ShootScript : MonoBehaviour
     {
         canFire = true;
         coll = bullet.GetComponent<Collider2D>();
-        au = GetComponent<AudioSource>();
+        sound = GetComponent<AudioSource>();
+    ;
     }
 
     // Update is called once per frame
@@ -44,10 +45,10 @@ public class ShootScript : MonoBehaviour
             canFire = false;
             if (gameObject.name == "BasicGun")
             {
-                //Hacer el fogonazo del arma
+                //Iniciar animacion de disparo
 
                 //Hacer sonido de disparo
-                au.Play();
+                sound.Play();
                 //Casquillos
                 Instantiate(shells, transform.position, Quaternion.identity);
                 //Camerashake

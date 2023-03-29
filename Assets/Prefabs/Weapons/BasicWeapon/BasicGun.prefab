@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5886319451353504179}
   - component: {fileID: 4761522737897993793}
   - component: {fileID: 5035407209629624931}
-  - component: {fileID: 3670508702241475765}
+  - component: {fileID: 8633640218594210205}
   m_Layer: 0
   m_Name: BasicGun
   m_TagString: Untagged
@@ -135,7 +135,7 @@ MonoBehaviour:
   canFire: 0
   timeBetwenFire: 0.5
   canon: {fileID: 2171958933753022544}
---- !u!82 &3670508702241475765
+--- !u!82 &8633640218594210205
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,9 +145,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3ffed8a0128eeb349b9d27b9d7bc66b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.507
+  m_Volume: 0.336
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f5d99af9a22924a892f6b7d7861774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mousePos: {x: 0, y: 0, z: 0}
 --- !u!1001 &540741077354935920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413,6 +414,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3670508702241475765, guid: 95c8638717ee38c4ea1b3c728c533b14,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.322
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670508702241475765, guid: 95c8638717ee38c4ea1b3c728c533b14,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
     - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
       propertyPath: timeBetwenFire
