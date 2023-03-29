@@ -8,4 +8,4 @@ viva hitler xd
 ### Sistema de cultivo pocho
 
 
-###ES PA PEGAR A QUIEN HIZO EL ANIMATOR
+### ES PA PEGAR A QUIEN HIZO EL ANIMATOR
