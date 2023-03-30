@@ -154,3 +154,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dispersionAngle: 8
   bs: {fileID: 4671373784362141992}
+  player: {fileID: 1474435761663872240, guid: 520ee3c8a53e7094a8ad11f6bd0f1ed0, type: 3}
