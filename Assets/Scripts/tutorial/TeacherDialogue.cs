@@ -21,7 +21,7 @@ public class TeacherDialogue : MonoBehaviour
     private bool TpActivate;
     private void Start()
     {
-        mantee = GameObject.Find("Mantee_v2");
+        mantee = GameObject.Find("mantee_v2");
         t = Teacher.GetComponent<SpriteRenderer>();
         coll = Teacher.GetComponent<BoxCollider2D>();
     }

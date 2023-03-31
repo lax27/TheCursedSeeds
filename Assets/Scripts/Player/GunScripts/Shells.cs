@@ -12,6 +12,7 @@ public class Shells : MonoBehaviour
     private GameObject rotatepoint;
     private SpriteRenderer sp;
     private AudioSource audioSource;
+    private float time = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,16 +37,23 @@ public class Shells : MonoBehaviour
         }
         if (timer <= 0)
         {
-            audioSource.Play();
             sp.sortingLayerName = "details";
             rb.bodyType = RigidbodyType2D.Static;
+            audioSource.Play();
+            StartCoroutine(DestroySound());
         }
-
-        Destroy(gameObject, 100f);
+            Destroy(gameObject, 100f);
     }
 
     private void FixedUpdate()
     {
         rb.AddForce(dir ,ForceMode2D.Impulse);
     }
+
+    private IEnumerator DestroySound()
+    {
+        Destroy(audioSource);
+        yield return new WaitForSecondsRealtime(time);
+    }
+
 }

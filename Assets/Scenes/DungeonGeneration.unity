@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 69211197}
   - component: {fileID: 69211196}
   - component: {fileID: 69211195}
+  - component: {fileID: 69211198}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &69211198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69211194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab645892c1c9dfd4f9ed2c86636a8469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.2
+  magintude: 0.1
+  originalPositon: {x: 0, y: 0, z: 0}
 --- !u!1 &528446500 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1721812161793753174, guid: 3ab331c9658baf2428cb5cd250b51d23,
@@ -387,33 +403,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab331c9658baf2428cb5cd250b51d23, type: 3}
---- !u!1001 &1489860527
+--- !u!1001 &1703012744
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2572113988730684769, guid: 27da0534244988346b0b1b449dfea2a8,
-        type: 3}
-      propertyPath: timeBetwenFire
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026438504942991025, guid: 27da0534244988346b0b1b449dfea2a8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.062
-      objectReference: {fileID: 0}
-    - target: {fileID: 4587646068486902712, guid: 27da0534244988346b0b1b449dfea2a8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5094299271075325818, guid: 27da0534244988346b0b1b449dfea2a8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5095049127602115650, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_Name
@@ -427,12 +423,12 @@ PrefabInstance:
     - target: {fileID: 5095049127602115662, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.773304
+      value: 0.59064376
       objectReference: {fileID: 0}
     - target: {fileID: 5095049127602115662, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7711377
+      value: 0.122621834
       objectReference: {fileID: 0}
     - target: {fileID: 5095049127602115662, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}

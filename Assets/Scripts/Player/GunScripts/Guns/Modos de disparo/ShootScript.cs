@@ -12,10 +12,16 @@ public class ShootScript : MonoBehaviour
     private AudioSource sound;
     public Transform canon = null;
     Collider2D coll;
+    public bool shake;
+    private GameObject cannon;
+    private Animator anim;
+ 
 
     // Start is called before the first frame update
     void Start()
     {
+        cannon = GameObject.Find("Canon");
+        anim = cannon.GetComponent<Animator>();
         canFire = true;
         coll = bullet.GetComponent<Collider2D>();
         sound = GetComponent<AudioSource>();
@@ -29,9 +35,13 @@ public class ShootScript : MonoBehaviour
 
         if (!canFire)
         {
+            
+            shake = false;
+
             timer += Time.deltaTime;
             if (timer > timeBetwenFire)
             {
+                anim.SetBool("Shoot", false);
                 canFire = true;
                 timer = 0;
             }
@@ -46,13 +56,13 @@ public class ShootScript : MonoBehaviour
             if (gameObject.name == "BasicGun")
             {
                 //Iniciar animacion de disparo
-
+                anim.SetBool("Shoot", true);
                 //Hacer sonido de disparo
                 sound.Play();
                 //Casquillos
                 Instantiate(shells, transform.position, Quaternion.identity);
                 //Camerashake
-
+                shake = true;
                 //Spawn de la bala
                 GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
             }
