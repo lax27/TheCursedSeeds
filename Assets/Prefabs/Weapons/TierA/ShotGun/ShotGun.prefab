@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5132496241304233024}
   - component: {fileID: 995228891814042547}
-  - component: {fileID: 7184978752973148489}
+  - component: {fileID: 5757523989730207526}
   m_Layer: 0
   m_Name: ShotGun
   m_TagString: Untagged
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 794498503
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -1740288742, guid: 303028dd7667c094ba8ff749a8ca7e42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7184978752973148489
+--- !u!114 &5757523989730207526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +95,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4047485851235706312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbe87d0082988a249af350d2b60a7237, type: 3}
+  m_Script: {fileID: 11500000, guid: 0948e7045d963f240b94d1f403e57dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6778799097550530304, guid: 9cf1c00ebf048ba49bc4c17e06b244c2, type: 3}
+  shells: {fileID: 0}
   canFire: 0
-  timeBetwenFire: 1.5
+  timer: 0
+  timeBetwenFire: 1
   canon: {fileID: 2752010500210949294}
 --- !u!1 &4762179352999044753
 GameObject:

@@ -22,7 +22,7 @@ public class bulletD : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "EnemyB")
+        if (collision.gameObject.tag == "enemyB")
         {
             Destroy(collision.gameObject);
         }

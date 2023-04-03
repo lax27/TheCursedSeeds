@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cam : MonoBehaviour
 {
-    private GameObject camera;
+    private GameObject c;
     public Transform cam;
     public string direcion;
     private GameObject p;
@@ -12,8 +12,8 @@ public class Cam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camera = GameObject.Find("Main Camera");
-        cam = camera.GetComponent<Transform>();
+        c = GameObject.Find("Main Camera");
+        cam = c.GetComponent<Transform>();
 
         p = GameObject.Find("mantee_v2");
         player = p.GetComponent<Transform>();

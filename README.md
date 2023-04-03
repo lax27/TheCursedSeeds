@@ -6,3 +6,6 @@ viva hitler xd
 ### Camara tipo Enter the Gungeon
 
 ### Sistema de cultivo pocho
+
+
+### ES PA PEGAR A QUIEN HIZO EL ANIMATOR
