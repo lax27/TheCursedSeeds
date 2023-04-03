@@ -62,7 +62,7 @@ public class ShootScript : MonoBehaviour
                 //Casquillos
                 Instantiate(shells, transform.position, Quaternion.identity);
                 //Camerashake
-                shake = true;
+               
                 //Spawn de la bala
                 GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
             }
