@@ -21,4 +21,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Saliendo del juego ");
     }
+
+    public void BackButton()
+    {
+        settingsMenu.SetActive(false);
+    }
 }

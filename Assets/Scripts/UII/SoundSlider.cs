@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class SoundSlider : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
+    public AudioSource menuMusic;
     // Start is called before the first frame update
     void Start()
     {
-        
+        volumeSlider.value = menuMusic.volume;
     }
 
     public void ChangeVolume()
     {
-        AudioListener.volume = volumeSlider.value;
+        menuMusic.volume = volumeSlider.value;
     }
 }
