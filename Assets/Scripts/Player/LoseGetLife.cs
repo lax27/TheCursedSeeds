@@ -10,6 +10,7 @@ public class LoseGetLife : MonoBehaviour
     public SpriteRenderer Sp;
     private float timer = 0;
     public bool isDamage = false;
+    public AudioSource hitSound;
  
 
 
@@ -67,6 +68,7 @@ public class LoseGetLife : MonoBehaviour
                 direcionEnemy = transform.position - collision.gameObject.transform.position;
                 direcionEnemy = direcionEnemy.normalized;
                 timer = 1;
+                hitSound.Play();
             }
             pm.isK = true;
         }
@@ -79,6 +81,7 @@ public class LoseGetLife : MonoBehaviour
             {
                 ps.life--;
                 timer = 1;
+                hitSound.Play();
             }
         }
     }

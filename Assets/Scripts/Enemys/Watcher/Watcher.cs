@@ -8,6 +8,7 @@ public class Watcher : MonoBehaviour
     public float visionDistance;
     public LineRenderer LineOfSight;
     public float timer;
+    public AudioSource audioS;
 
     private bool canFire = false;
     public GameObject bullet;
@@ -33,7 +34,6 @@ public class Watcher : MonoBehaviour
 
             if (hitInfo.collider.tag == "Player")
             {
-                Debug.Log("aaaaaaaaa");
                 Debug.DrawLine(transform.position, hitInfo.point, Color.red);
                 LineOfSight.SetPosition(1, hitInfo.point);
                 LineOfSight.startColor = Color.red;
@@ -52,6 +52,7 @@ public class Watcher : MonoBehaviour
             {
                 timer = 0.5f;
                 Instantiate(bullet, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.10f), gameObject.transform.rotation);
+                audioS.Play();
                 canFire = false;
             }
 
