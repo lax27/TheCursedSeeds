@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2465839978527300387}
   - component: {fileID: -4824810733795380179}
   - component: {fileID: 9044577313143557449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: clampwerBullwt
   m_TagString: enemyB
   m_Icon: {fileID: 0}
