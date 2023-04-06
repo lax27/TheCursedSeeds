@@ -7,6 +7,7 @@ public class Watcher : MonoBehaviour
     public float rotationSpeed;
     public float visionDistance;
     public LineRenderer LineOfSight;
+    public float timer;
 
     private bool canFire = false;
     public GameObject bullet;
@@ -19,6 +20,10 @@ public class Watcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        timer -= Time.deltaTime;
+
+
         LineOfSight.SetPosition(0, transform.position);
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
 
@@ -43,9 +48,10 @@ public class Watcher : MonoBehaviour
                 LineOfSight.endColor = Color.green;
             }
 
-            if (canFire)
+            if (canFire && timer <= 0)
             {
-                Instantiate(bullet, transform.position, Quaternion.identity);
+                timer = 0.5f;
+                Instantiate(bullet, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 0.10f), gameObject.transform.rotation);
                 canFire = false;
             }
 
