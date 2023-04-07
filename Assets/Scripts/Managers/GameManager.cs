@@ -49,4 +49,9 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    public void GrowingPlant(int seed_number)
+    {
+
+    }
 }
