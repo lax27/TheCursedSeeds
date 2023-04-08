@@ -25,10 +25,23 @@ public class button_responsive : MonoBehaviour
 
     public void Plant()
     {
-        //seed - 1 
-        GameManager.instance.inventory[seed_number]--;
-
-        //call function
-        //GameManager.instance.GrowingPlant(seed_number);
+        if (GameManager.instance.isPlanted == false)
+        {
+            //seed - 1 
+            if (GameManager.instance.inventory[seed_number] <= 0)
+            {
+                GameManager.instance.inventory[seed_number] = 0;
+            }
+            else
+            {
+                GameManager.instance.inventory[seed_number]--;
+            }
+            //call function
+            GameManager.instance.GrowingPlant(seed_number);
+        }
+        else 
+        { 
+            //mostrar dialog que ya hay una planta y que no podes plantar, o mostrar dialog de que hay una planta quieres destuirla para poner una nueva
+        }
     }
 }

@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
 
     public int[] inventory = new int[(int)Wseeds.LAST];
 
+    private float PlantTimer;
+    public bool isPlanted = false;
+    public bool isGrowed = false;
+    public GameObject pile;
+    public GameObject weapon;
+
+
+    //--------------------------------------------------------------------------------
     public GameObject pauseMenu;
 
     
@@ -39,6 +47,27 @@ public class GameManager : MonoBehaviour
    
     void Update()
     {
+        if (isPlanted)
+        {
+            PlantTimer -= Time.deltaTime;
+            if (PlantTimer <= 0)
+            {
+                isGrowed = true;
+                PlantTimer = 0;
+            }
+        }
+
+        if (isGrowed)
+        {
+            Instantiate(weapon, pile.transform.position,Quaternion.identity);
+            isPlanted = false;
+            isGrowed = false;
+        }
+
+
+
+
+
         if (Input.GetButtonDown("Esc"))
         {
             if (pauseMenu != null)
@@ -52,6 +81,17 @@ public class GameManager : MonoBehaviour
 
     public void GrowingPlant(int seed_number)
     {
+        if (seed_number == 0 && !isPlanted )
+        {
+            isPlanted = true;
+            PlantTimer = 300;
+        }
+
+        if (seed_number == 1 && !isPlanted )
+        {
+            isPlanted = true;
+            PlantTimer = 420;
+        }
 
     }
 }
