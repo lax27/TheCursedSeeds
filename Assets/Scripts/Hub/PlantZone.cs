@@ -8,7 +8,7 @@ public class PlantZone : MonoBehaviour
     private Collider2D cl;
     private PlayerStats pm;
     private ShootScript sh;
-    [SerializeField] private bool inRange = false;
+    public bool inRange = false;
     public GameObject plantMenu;
     public GameObject Guns;
     public GameObject press;
@@ -41,7 +41,7 @@ public class PlantZone : MonoBehaviour
         }
 
         //mejorar esto para que solo se abra con la e y se cierre otra vez pulsando e
-        if (Input.GetButtonDown("interaction") && inRange)
+        if (Input.GetButtonDown("interaction") && inRange && GameManager.instance.isWeapon == false)
         {
             press.SetActive(false);
             //desactivar el movimento
