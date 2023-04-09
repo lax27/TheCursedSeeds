@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
     private float PlantTimer;
     public bool isPlanted = false;
     public bool isGrowed = false;
+    public bool isWeapon = false;
     public GameObject pile;
-    public GameObject weapon;
-
-
+    private GameObject spawnWeapon;
+    public List<GameObject> weapons = new List<GameObject> ();
     //--------------------------------------------------------------------------------
     public GameObject pauseMenu;
 
@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
    
     void Update()
     {
+        Debug.Log(PlantTimer);
+
         if (isPlanted)
         {
             PlantTimer -= Time.deltaTime;
@@ -59,9 +61,10 @@ public class GameManager : MonoBehaviour
 
         if (isGrowed)
         {
-            Instantiate(weapon, pile.transform.position,Quaternion.identity);
+            Instantiate(spawnWeapon, pile.transform.position,Quaternion.identity);
             isPlanted = false;
             isGrowed = false;
+            isWeapon = true;
         }
 
 
@@ -83,15 +86,20 @@ public class GameManager : MonoBehaviour
     {
         if (seed_number == 0 && !isPlanted )
         {
+            spawnWeapon = weapons[0];
             isPlanted = true;
-            PlantTimer = 300;
+            PlantTimer = 10;//300;
         }
 
         if (seed_number == 1 && !isPlanted )
         {
+            spawnWeapon = weapons[1];
             isPlanted = true;
             PlantTimer = 420;
         }
+
+
+
 
     }
 }

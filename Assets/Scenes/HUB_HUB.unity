@@ -5085,11 +5085,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d2308e03f43884a935c85ceb579d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: 1700000036000000
+  inventory: 1700000000000000
   isPlanted: 0
   isGrowed: 0
+  isWeapon: 0
   pile: {fileID: 1873615610}
-  weapon: {fileID: 0}
+  weapons:
+  - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
   pauseMenu: {fileID: 0}
 --- !u!4 &1213607655
 Transform:
