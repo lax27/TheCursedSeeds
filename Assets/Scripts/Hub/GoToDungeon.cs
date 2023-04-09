@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Quit : MonoBehaviour
+public class GoToDungeon : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -19,8 +19,6 @@ public class Quit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Application.Quit();
-        
+        SceneManager.LoadScene(1);
     }
-
 }

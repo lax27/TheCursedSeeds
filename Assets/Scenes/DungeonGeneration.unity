@@ -259,8 +259,9 @@ MonoBehaviour:
   inventory: 0000000000000000
   isPlanted: 0
   isGrowed: 0
+  isWeapon: 0
   pile: {fileID: 0}
-  weapon: {fileID: 0}
+  weapons: []
   pauseMenu: {fileID: 0}
 --- !u!4 &1006827051
 Transform:

@@ -47,8 +47,6 @@ public class GameManager : MonoBehaviour
    
     void Update()
     {
-        Debug.Log(PlantTimer);
-
         if (isPlanted)
         {
             PlantTimer -= Time.deltaTime;

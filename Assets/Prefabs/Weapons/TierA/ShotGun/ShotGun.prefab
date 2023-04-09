@@ -99,9 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6778799097550530304, guid: 9cf1c00ebf048ba49bc4c17e06b244c2, type: 3}
-  shells: {fileID: 0}
+  shells: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a, type: 3}
   canFire: 0
-  timer: 0
   timeBetwenFire: 1
   canon: {fileID: 2752010500210949294}
 --- !u!1 &4762179352999044753

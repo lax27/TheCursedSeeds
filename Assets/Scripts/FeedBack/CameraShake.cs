@@ -23,13 +23,6 @@ public class CameraShake : MonoBehaviour
     void Update()
     {
       
-        if (shoot.shake)
-        {
-           
-            StartCoroutine(Shake(duration,magintude));
-           
-            StopCoroutine(Shake(duration,magintude));
-        }
     }
 
     public IEnumerator Shake(float duration, float magnitude)
