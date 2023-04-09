@@ -542,7 +542,7 @@ MonoBehaviour:
   rotationSpeed: 35
   visionDistance: 4
   LineOfSight: {fileID: 733049127}
-  timer: 0.5
+  timer: 0
   audioS: {fileID: 213569061}
   bullet: {fileID: 764685943533628976, guid: 825249035f7e25642b39fd08cff022b9, type: 3}
 --- !u!4 &769570371
