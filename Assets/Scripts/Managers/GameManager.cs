@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject pile;
     private GameObject spawnWeapon;
     public List<GameObject> weapons = new List<GameObject> ();
+    public int currentWeaponID = 0;
     //--------------------------------------------------------------------------------
     public GameObject pauseMenu;
 
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour
     {
         if (seed_number == 0 && !isPlanted )
         {
+            currentWeaponID = 1;
             spawnWeapon = weapons[0];
             isPlanted = true;
             PlantTimer = 10;//300;
@@ -91,6 +93,7 @@ public class GameManager : MonoBehaviour
 
         if (seed_number == 1 && !isPlanted )
         {
+            currentWeaponID = 2;
             spawnWeapon = weapons[1];
             isPlanted = true;
             PlantTimer = 420;
