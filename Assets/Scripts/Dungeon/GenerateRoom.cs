@@ -19,6 +19,7 @@ public class GenerateRoom : MonoBehaviour
 
 
         if (canGenerate && Generate) {
+            roomCount = Random.Range(0, Rooms.Length);
             Instantiate(Rooms[roomCount], transform.position, Quaternion.identity);
             DungeonManager.instance.CurrentRooms.Add(transform.position);
         }

@@ -25,6 +25,7 @@ public class GrabWeapon : MonoBehaviour
             GameManager.instance.isWeapon = false;
             rotationZone.transform.GetChild(0).gameObject.SetActive(false);
             rotationZone.transform.GetChild(NumChild).gameObject.SetActive(true);
+            GameManager.instance.currentWeaponID = NumChild;
             Destroy(gameObject);
       }
     }

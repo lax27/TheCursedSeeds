@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 2334146017784503448, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f46826b5f6844e47bf5e43d598c96e0, type: 3}
@@ -81,10 +81,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 994195333660811942, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
+      propertyPath: Rooms.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440825021596525844, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
+      propertyPath: Rooms.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585958665203202438, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
+      propertyPath: Rooms.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1721812160800869619, guid: 3ab331c9658baf2428cb5cd250b51d23,
         type: 3}
       propertyPath: m_Name
-      value: EasyRoom Variant
+      value: EasyRoom Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 1721812160800869629, guid: 3ab331c9658baf2428cb5cd250b51d23,
         type: 3}
@@ -140,6 +155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450038604239056132, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
+      propertyPath: Rooms.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab331c9658baf2428cb5cd250b51d23, type: 3}
@@ -219,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 2334146017784503448, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f46826b5f6844e47bf5e43d598c96e0, type: 3}
@@ -238,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 1685678027289531308, guid: b435a2b367d3b3341be833a16e9d137c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1685678027289531310, guid: b435a2b367d3b3341be833a16e9d137c,
         type: 3}
