@@ -11,9 +11,10 @@ public class LoseGetLife : MonoBehaviour
     private float timer = 0;
     public bool isDamage = false;
     public AudioSource hitSound;
- 
-
-
+    public GameObject HP1;
+    public GameObject HP2;
+    public GameObject HP3;
+    
     public Vector3 direcionEnemy;
     private Rigidbody2D rbPlayer;
     
@@ -35,7 +36,20 @@ public class LoseGetLife : MonoBehaviour
     void Update()
     {
         if (ps.life == 0) {
-            Debug.Log("Feedeastes perro");
+            HP1.SetActive(false);
+            HP2.SetActive(false);
+            HP3.SetActive(false);
+        }
+
+        if (ps.life == 1)
+        {
+            HP2.SetActive(false);
+            HP3.SetActive(false);
+        }
+
+        if (ps.life == 2)
+        {
+            HP3.SetActive(false);
         }
 
         if (timer > 0)
