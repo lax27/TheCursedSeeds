@@ -7,7 +7,7 @@ public class CollectSeeds : MonoBehaviour
     PlayerStats ps;
     Collider2D cl;
     private Wseeds ws;
-    public AudioSource picking;
+    //public AudioSource picking;
 
     // Start is called before the first frame update
     void Start()
@@ -31,12 +31,12 @@ public class CollectSeeds : MonoBehaviour
             if (rf.ws.id_Wseed == 0)
             {
                 GameManager.instance.inventory[0]++;
-                picking.Play();
+                //picking.Play();
             }
             else if (rf.ws.id_Wseed == 1)
             {
                 GameManager.instance.inventory[1]++;
-                picking.Play();
+                //picking.Play();
             }
 
             Destroy(collision.gameObject);
