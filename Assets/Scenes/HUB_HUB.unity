@@ -3809,7 +3809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &844627229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,6 +5105,7 @@ MonoBehaviour:
   pile: {fileID: 1873615610}
   weapons:
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
+  currentWeaponID: 0
   pauseMenu: {fileID: 0}
 --- !u!4 &1213607655
 Transform:
