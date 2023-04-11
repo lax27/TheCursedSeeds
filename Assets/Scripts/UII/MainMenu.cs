@@ -8,8 +8,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject settingsMenu;
     public void PlayButton()
     {
-        //SceneManager.LoadScene("BuenTuto");
-        Debug.Log("Falta poner escena en el Build");
+        SceneManager.LoadScene(1);
     }
 
     public void OpenSettingsMenu()
@@ -19,7 +18,7 @@ public class MainMenu : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
-        Debug.Log("Saliendo del juego ");
+        Debug.Log("Saliendo del juego...");
     }
 
     public void BackButton()
