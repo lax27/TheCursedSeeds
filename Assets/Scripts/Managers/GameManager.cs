@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public int currentWeaponID = 0;
     //--------------------------------------------------------------------------------
     public GameObject pauseMenu;
+    public GameObject[] roomPrefabs;
 
     
     private void Awake()

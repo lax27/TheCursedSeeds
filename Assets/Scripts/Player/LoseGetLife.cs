@@ -27,7 +27,11 @@ public class LoseGetLife : MonoBehaviour
         ps = GetComponent<PlayerStats>();
         rbPlayer = GetComponent<Rigidbody2D>();
         pm = GetComponent<Pmove>();
-     
+
+        HP1 = GameObject.Find("HP1");
+        HP2 = GameObject.Find("HP2");
+        HP3 = GameObject.Find("HP3");
+
         //uid = GameObject.Find("ui");
         //ui = uid.GetComponent<UI>();
 
@@ -83,7 +87,8 @@ public class LoseGetLife : MonoBehaviour
                 direcionEnemy = transform.position - collision.gameObject.transform.position;
                 direcionEnemy = direcionEnemy.normalized;
                 timer = 1;
-                hitSound.Play();
+                if(hitSound != null)
+                    hitSound.Play();
             }
             pm.isK = true;
         }

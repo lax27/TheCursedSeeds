@@ -191,6 +191,9 @@ MonoBehaviour:
   Sp: {fileID: 5095049127602115661}
   isDamage: 0
   hitSound: {fileID: 0}
+  HP1: {fileID: 0}
+  HP2: {fileID: 0}
+  HP3: {fileID: 0}
   direcionEnemy: {x: 0, y: 0, z: 0}
 --- !u!70 &7194415621783756744
 CapsuleCollider2D:
@@ -241,7 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d37afda7426402439bd3bec83c988ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  picking: {fileID: 0}
 --- !u!114 &1874673432262967476
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,7 +39,8 @@ public class Shells : MonoBehaviour
         {
             sp.sortingLayerName = "details";
             rb.bodyType = RigidbodyType2D.Static;
-            audioSource.Play();
+            if(audioSource != null)
+                audioSource.Play();
             StartCoroutine(DestroySound());
         }
             Destroy(gameObject, 100f);

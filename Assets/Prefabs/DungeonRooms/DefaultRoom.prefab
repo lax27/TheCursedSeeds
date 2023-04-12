@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3823148037272356618}
   - component: {fileID: 1585958665203202438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'NewRigthRoom '
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 1721812160167666515}
   - component: {fileID: 1721812160167666514}
   - component: {fileID: 1721812160167666513}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Default_Walls
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1444,7 +1444,7 @@ GameObject:
   - component: {fileID: 1721812160334965723}
   - component: {fileID: 1721812160334965541}
   - component: {fileID: 1721812160334965540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Default_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4008,7 +4008,7 @@ GameObject:
   - component: {fileID: 1721812160800869629}
   - component: {fileID: 1721812160800869628}
   - component: {fileID: 2248783131541279650}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DefaultRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4088,7 +4088,7 @@ GameObject:
   - component: {fileID: 1721812161285146646}
   - component: {fileID: 1721812161285146645}
   - component: {fileID: 1721812161285146644}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tp_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4253,7 +4253,7 @@ GameObject:
   - component: {fileID: 1721812161752225907}
   - component: {fileID: 1721812161752225906}
   - component: {fileID: 1721812161752225905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tp_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4419,7 +4419,7 @@ GameObject:
   - component: {fileID: 1721812161793753169}
   - component: {fileID: 1721812161793753168}
   - component: {fileID: 3846950314387773653}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tp_rigth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4600,7 +4600,7 @@ GameObject:
   - component: {fileID: 1721812162012261522}
   - component: {fileID: 1721812162012261521}
   - component: {fileID: 1721812162012261520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: tp_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4761,7 +4761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5252852894300463385}
   - component: {fileID: 5450038604239056132}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NewDownRoom
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -4813,7 +4813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3179926838088635960}
   - component: {fileID: 994195333660811942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NewLeftRoom
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -4865,7 +4865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970104841956492993}
   - component: {fileID: 1440825021596525844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NewUpRoom
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
