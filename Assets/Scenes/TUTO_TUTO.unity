@@ -13249,7 +13249,7 @@ MonoBehaviour:
   DialoguePanel: {fileID: 128475469}
   DialogueText: {fileID: 2090457203}
   DialogueLines:
-  - 'Welcome traveller, I''m sure you fell for that huge hole in the ceiling.
+  - 'Welcome traveller, I''m sure you fell from that huge hole in the ceiling.
 
 '
   - Let me show you how are the things under the surface. Just...
@@ -19288,7 +19288,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: 0000000000000000
+  isPlanted: 0
+  isGrowed: 0
+  isWeapon: 0
+  pile: {fileID: 0}
+  weapons: []
+  currentWeaponID: 0
   pauseMenu: {fileID: 0}
+  roomPrefabs: []
 --- !u!4 &2054265988
 Transform:
   m_ObjectHideFlags: 0
