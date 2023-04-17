@@ -7,9 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
     public enum Wseeds {RABBIT,ICEHEART,LAST};
-
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    [Header("Inventory")]
     public int[] inventory = new int[(int)Wseeds.LAST];
-
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    [Header("Hub Things")]
     private float PlantTimer;
     public bool isPlanted = false;
     public bool isGrowed = false;
@@ -18,9 +22,15 @@ public class GameManager : MonoBehaviour
     private GameObject spawnWeapon;
     public List<GameObject> weapons = new List<GameObject> ();
     public int currentWeaponID = 0;
-    //--------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    [Header("Player Stadistics")]
+    public bool TutorialPassed = false;
+    public int runsDone = 0;
+    public int totalEnemiesKilled = 0;
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public GameObject pauseMenu;
-    public GameObject[] roomPrefabs;
+
 
     
     private void Awake()

@@ -3809,7 +3809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &844627229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5107,6 +5107,7 @@ MonoBehaviour:
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
   currentWeaponID: 0
   pauseMenu: {fileID: 0}
+  roomPrefabs: []
 --- !u!4 &1213607655
 Transform:
   m_ObjectHideFlags: 0
@@ -5583,6 +5584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 446731444, guid: 27da0534244988346b0b1b449dfea2a8, type: 3}
+      propertyPath: pickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2576590e1eb21f64da9c9ebc55552df1, type: 3}
     - target: {fileID: 787164425058710678, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: shells

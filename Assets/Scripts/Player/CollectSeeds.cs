@@ -7,6 +7,7 @@ public class CollectSeeds : MonoBehaviour
     PlayerStats ps;
     Collider2D cl;
     private Wseeds ws;
+    [SerializeField] private AudioClip pickSound;
     //public AudioSource picking;
 
     // Start is called before the first frame update
@@ -26,8 +27,8 @@ public class CollectSeeds : MonoBehaviour
     {
         if  (collision.tag == "curency") {
 
-           Reference rf = collision.gameObject.GetComponent<Reference>();
-            
+           SoundController.instance.PlaySound(pickSound);
+           Reference rf = collision.gameObject.GetComponent<Reference>(); 
             if (rf.ws.id_Wseed == 0)
             {
                 GameManager.instance.inventory[0]++;
@@ -38,7 +39,6 @@ public class CollectSeeds : MonoBehaviour
                 GameManager.instance.inventory[1]++;
                 //picking.Play();
             }
-
             Destroy(collision.gameObject);
         }
     }

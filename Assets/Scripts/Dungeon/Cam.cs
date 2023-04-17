@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Cam : MonoBehaviour
 {
-    public Transform cam;
+    public GameObject cam;
     public string direcion;
     public Transform player;
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main.transform;
+        cam = GameObject.Find("CameraFollow");
         player = FindObjectOfType<PlayerStats>().transform;
     }
 

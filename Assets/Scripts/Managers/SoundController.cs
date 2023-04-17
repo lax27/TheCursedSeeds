@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-    public static SoundController Instance;
+
+    public static SoundController instance;
+
     private AudioSource audioSource;
 
     private void Awake()
     {
-        if (Instance == null) { 
-            
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
 
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -27,5 +28,5 @@ public class SoundController : MonoBehaviour
     {
         audioSource.PlayOneShot(sound);
     }
-
 }
+

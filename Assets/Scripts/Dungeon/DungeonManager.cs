@@ -10,6 +10,7 @@ public class DungeonManager : MonoBehaviour
     public static Vector2 roomMaxPositiveDistance = Vector2.zero;
     public static Vector2 roomMaxNegativeDistance = Vector2.zero;
 
+    public GameObject[] roomPrefabs;
     private void Awake()
     {
         if (instance == null)

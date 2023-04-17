@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Pmove : MonoBehaviour
 {
     PlayerStats ps;
@@ -29,19 +28,20 @@ public class Pmove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal;
+        float vertical;
         //condicional para el debuffo de controles invertidos
         if (!status.isConfused) {
-            direction = new Vector2(horizontal, vertical).normalized;
-            directionT = new Vector2(horizontal, vertical).normalized;
+             horizontal = Input.GetAxisRaw("Horizontal");
+             vertical = Input.GetAxisRaw("Vertical");
         }
         else {
-            direction = new Vector2(vertical,horizontal).normalized;
-            directionT = new Vector2(vertical,horizontal).normalized;
+            horizontal = -Input.GetAxisRaw("Horizontal");
+            vertical = -Input.GetAxisRaw("Vertical");
         }
 
+        direction = new Vector2(horizontal, vertical).normalized;
+        directionT = new Vector2(horizontal, vertical).normalized;
         //transform.position += directionT * ps.speed * Time.deltaTime;
 
         if (isK)

@@ -9,21 +9,24 @@ public class ShootScript : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetwenFire;
-    private AudioSource sound;
+    [SerializeField]private AudioClip sound;
     public Transform canon = null;
     Collider2D coll;
     private GameObject cannon;
     private Animator anim;
- 
+
+    private GameObject camera;
+    private CamaraShake shake;
 
     // Start is called before the first frame update
     void Start()
     {
+        camera = GameObject.Find("Main Camera");
+        shake = camera.GetComponent<CamaraShake>(); 
         cannon = GameObject.Find("Canon");
         //anim = cannon.GetComponent<Animator>();
         canFire = true;
         coll = bullet.GetComponent<Collider2D>();
-        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,11 +56,11 @@ public class ShootScript : MonoBehaviour
                 //Iniciar animacion de disparo
                 //anim.SetBool("Shoot", true);
                 //Hacer sonido de disparo
-                sound.Play();
+                SoundController.instance.PlaySound(sound);
                 //Casquillos
                 Instantiate(shells, transform.position, Quaternion.identity);
                 //Camerashake
-               
+                shake.CameraShake(0.05f, 0.12f);
                 //Spawn de la bala
                 GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
             }
