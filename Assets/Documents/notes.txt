@@ -1,0 +1,5 @@
+hacer a Lotus invencible por x tiempo cuando reciba hit
+más enemigsos tipo bullet hell
+
+https://www.youtube.com/watch?v=GeYP4_EFgfc	
+https://github.com/h8man/NavMeshPlus
