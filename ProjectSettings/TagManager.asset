@@ -16,6 +16,7 @@ TagManager:
   - enemyB
   - basicW
   - shootgun
+  - particles
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,8 @@ TagManager:
   - details
   - room
   - minimapIcon
-  - 
-  - 
+  - details
+  - particles
   - 
   - 
   - 
