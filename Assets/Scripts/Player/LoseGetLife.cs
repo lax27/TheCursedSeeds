@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class LoseGetLife : MonoBehaviour
 {
     Pmove pm;
     PlayerStats ps;
     Collider2D cl;
-    public SpriteRenderer Sp;
+    public SpriteRenderer sr;
     private float timer = 0;
     public bool isDamage = false;
     public AudioSource hitSound;
-    public GameObject HP1;
     public GameObject HP2;
     public GameObject HP3;
     
@@ -24,11 +22,12 @@ public class LoseGetLife : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ps = GetComponent<PlayerStats>();
+        GameObject player = GameObject.Find("mantee_v2");
+
+        ps = player.GetComponent<PlayerStats>();
         rbPlayer = GetComponent<Rigidbody2D>();
         pm = GetComponent<Pmove>();
 
-        HP1 = GameObject.Find("HP1");
         HP2 = GameObject.Find("HP2");
         HP3 = GameObject.Find("HP3");
 
@@ -40,12 +39,6 @@ public class LoseGetLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ps.life == 0) {
-            HP1.SetActive(false);
-            HP2.SetActive(false);
-            HP3.SetActive(false);
-        }
-
         if (ps.life == 1)
         {
             HP2.SetActive(false);
@@ -60,14 +53,14 @@ public class LoseGetLife : MonoBehaviour
         if (timer > 0)
         {
 
-            Sp.color = Color.red;
+            sr.color = Color.red;
             isDamage = true;
             timer -= Time.deltaTime;
 
        
             if (timer <= 0)
             {
-                Sp.color = Color.white;
+                sr.color = Color.white;
                 //rbPlayer.velocity = new Vector2(0, 0);
                 isDamage = false;             
             }
