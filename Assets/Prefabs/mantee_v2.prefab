@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 446731444}
   - component: {fileID: 1874673432262967476}
   - component: {fileID: 6821190719848198198}
+  - component: {fileID: 3118328544326157081}
   m_Layer: 0
   m_Name: mantee_v2
   m_TagString: Player
@@ -41,7 +42,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5095049128009420457}
-  - {fileID: 429395070911611445}
+  - {fileID: 5158326627075646207}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -192,6 +193,8 @@ MonoBehaviour:
   Sp: {fileID: 5095049127602115661}
   isDamage: 0
   hitSound: {fileID: 0}
+  inmuneTimeOfsset: 3
+  inmune: 0
   HP1: {fileID: 0}
   HP2: {fileID: 0}
   HP3: {fileID: 0}
@@ -245,6 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d37afda7426402439bd3bec83c988ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickSound: {fileID: 0}
 --- !u!114 &1874673432262967476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +281,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3118328544326157081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095049127602115650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6acb249b5611bd4284e531aa38f5d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 6291370537873ed4f8063bf18e432c7c, type: 2}
 --- !u!1 &5095049128009420456
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,8 +371,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5095049127602115662}
-  m_RootOrder: 1
+  m_Father: {fileID: 5158326627075646207}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &3354966020398598454
 AudioSource:
@@ -465,6 +482,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa151fe945573404c81edf20e4d4e8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8510707634775501597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5158326627075646207}
+  m_Layer: 0
+  m_Name: Extra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5158326627075646207
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8510707634775501597}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 429395070911611445}
+  m_Father: {fileID: 5095049127602115662}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4974863848216089520
 PrefabInstance:
   m_ObjectHideFlags: 0
