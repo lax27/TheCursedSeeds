@@ -7,13 +7,21 @@ public class LoseGetLife : MonoBehaviour
     Pmove pm;
     PlayerStats ps;
     Collider2D cl;
-    public SpriteRenderer sr;
+    public SpriteRenderer sp;
     private float timer = 0;
     public bool isDamage = false;
     public AudioSource hitSound;
+    public GameObject HP1;
     public GameObject HP2;
     public GameObject HP3;
     
+    private float inmuneTime = 3;
+    public float inmuneTimeOfsset;
+    public bool inmune = false;
+    private float flashTime = 0.5f;
+    private bool isFlash = true;
+
+
     public Vector3 direcionEnemy;
     private Rigidbody2D rbPlayer;
     
@@ -28,6 +36,7 @@ public class LoseGetLife : MonoBehaviour
         rbPlayer = GetComponent<Rigidbody2D>();
         pm = GetComponent<Pmove>();
 
+        HP1 = GameObject.Find("HP1");
         HP2 = GameObject.Find("HP2");
         HP3 = GameObject.Find("HP3");
 
@@ -39,6 +48,50 @@ public class LoseGetLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (inmune)
+        {
+            inmuneTime -= Time.deltaTime;
+            Physics2D.IgnoreLayerCollision(30, 8);
+
+            if (inmuneTime > 0)
+            {
+                flashTime -= Time.deltaTime;
+                if (flashTime <= 0)
+                {
+                    flashTime = 0.5f;
+                    isFlash = !isFlash;
+                }
+
+                if (isFlash)
+                {
+                    sp.color = new Color(255, 255, 255, 0.5f);
+                }
+                else
+                {
+                    sp.color = new Color(255, 255, 255, 1);
+                }
+
+
+            }
+
+            if (inmuneTime <= 0)
+            {
+                //devlover las layersColisions
+                sp.color = new Color(255, 255, 255, 255);
+                inmuneTime = inmuneTimeOfsset;
+                inmune = false;
+            }
+        }
+
+    /////////////////////////////////////////////////////
+        if (ps.life <= 0)
+        {
+            HP1.SetActive(false);
+            HP2.SetActive(false);
+            HP3.SetActive(false);
+        }
+
         if (ps.life == 1)
         {
             HP2.SetActive(false);
@@ -49,18 +102,15 @@ public class LoseGetLife : MonoBehaviour
         {
             HP3.SetActive(false);
         }
-
+        /////////////////////////////////////////////////////
         if (timer > 0)
         {
-
-            sr.color = Color.red;
             isDamage = true;
             timer -= Time.deltaTime;
 
        
             if (timer <= 0)
             {
-                sr.color = Color.white;
                 //rbPlayer.velocity = new Vector2(0, 0);
                 isDamage = false;             
             }
@@ -80,6 +130,7 @@ public class LoseGetLife : MonoBehaviour
                 direcionEnemy = transform.position - collision.gameObject.transform.position;
                 direcionEnemy = direcionEnemy.normalized;
                 timer = 1;
+                inmune = true;
                 if(hitSound != null)
                     hitSound.Play();
             }
@@ -94,6 +145,7 @@ public class LoseGetLife : MonoBehaviour
             {
                 ps.life--;
                 timer = 1;
+                inmune = true;
                 hitSound.Play();
             }
         }

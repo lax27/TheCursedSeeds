@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 2056414541106599102}
   - component: {fileID: 2056414541106599088}
   - component: {fileID: 2056414541106599089}
-  m_Layer: 0
+  - component: {fileID: 1302422611118293319}
+  m_Layer: 8
   m_Name: clamper
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 794498503
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 86b3d238dfb3b03459bef8589feb1634, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -233,6 +234,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 649301274021428973, guid: d203f3acacf682a4183183fb5ded0e6c, type: 3}
+--- !u!114 &1302422611118293319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056414541106599090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27670ba5755c0c1439401d3c2df6128d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 7db6d48da37053044ad381db1bd3ca7a, type: 2}
 --- !u!1 &2056414541144431415
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056414541144431413}
   - component: {fileID: 2056414541144431414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ice_cube
   m_TagString: ice
   m_Icon: {fileID: 0}
@@ -329,7 +343,7 @@ GameObject:
   - component: {fileID: 592414428925875541}
   - component: {fileID: 882688462206355285}
   - component: {fileID: 302130977730647080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +426,7 @@ GameObject:
   - component: {fileID: 7408421147510866420}
   - component: {fileID: 6044245782974940917}
   - component: {fileID: 8695517135428568763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: range
   m_TagString: Untagged
   m_Icon: {fileID: 0}

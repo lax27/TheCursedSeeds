@@ -8,14 +8,15 @@ public class EnemyDeath : MonoBehaviour
     EnemysStats es;
     Collider2D cl;
     float timerHit = 0;
-    SpriteRenderer sr;
+    private SpriteRenderer sr;
     public bool isHit = false;
+    private SimpleFlash flash;
     EnemyFreez ef;
     
     // Start is called before the first frame update
     void Start()
     {
-       
+        flash = GetComponent<SimpleFlash>();
         es = GetComponent<EnemysStats>();
         cl = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -36,7 +37,6 @@ public class EnemyDeath : MonoBehaviour
                 timerHit -= Time.deltaTime;
                 if (timerHit < 0.5f)
                 {
-                    sr.color = Color.white;
                     isHit = false;
                 }
             }
@@ -51,7 +51,7 @@ public class EnemyDeath : MonoBehaviour
             bs = collision.GetComponent<BulletStats>();
             Destroy(collision.gameObject);
             timerHit = 1;
-            sr.color = Color.red;
+            flash.FlashP(0.2f);
 
             isHit = true;
             es.life -= bs.damage;
