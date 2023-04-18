@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class LoseGetLife : MonoBehaviour
 {
-    Pmove pm;
-    PlayerStats ps;
-    Collider2D cl;
+    private Pmove pm;
+    private PlayerStats ps;
+    private Collider2D cl;
     public SpriteRenderer Sp;
     private float timer = 0;
     public bool isDamage = false;
     public AudioSource hitSound;
+    private float inmuneTime = 3;
+    public float inmuneTimeOfsset;
+    public bool inmune = false;
+    private SimpleFlash flash;
+
+  
+
     public GameObject HP1;
     public GameObject HP2;
     public GameObject HP3;
@@ -27,6 +34,8 @@ public class LoseGetLife : MonoBehaviour
         ps = GetComponent<PlayerStats>();
         rbPlayer = GetComponent<Rigidbody2D>();
         pm = GetComponent<Pmove>();
+        cl = GetComponent<Collider2D>();
+        flash = GetComponent<SimpleFlash>();
 
         HP1 = GameObject.Find("HP1");
         HP2 = GameObject.Find("HP2");
@@ -40,7 +49,23 @@ public class LoseGetLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ps.life == 0) {
+        if (inmune)
+        {
+            inmuneTime -= Time.deltaTime;
+            cl.enabled = false;
+            if (inmuneTime > 0)
+            {
+                flash.FlashP(0.2f);
+            }
+            if (inmuneTime <= 0)
+            {
+                cl.enabled = true;
+                inmuneTime = inmuneTimeOfsset;
+                inmune = false;
+            }
+        }
+        if (ps.life == 0)
+        {
             HP1.SetActive(false);
             HP2.SetActive(false);
             HP3.SetActive(false);
@@ -60,14 +85,13 @@ public class LoseGetLife : MonoBehaviour
         if (timer > 0)
         {
 
-            Sp.color = Color.red;
+            
             isDamage = true;
             timer -= Time.deltaTime;
 
        
             if (timer <= 0)
             {
-                Sp.color = Color.white;
                 //rbPlayer.velocity = new Vector2(0, 0);
                 isDamage = false;             
             }
@@ -87,7 +111,8 @@ public class LoseGetLife : MonoBehaviour
                 direcionEnemy = transform.position - collision.gameObject.transform.position;
                 direcionEnemy = direcionEnemy.normalized;
                 timer = 1;
-                if(hitSound != null)
+                inmune = true;
+                if (hitSound != null)
                     hitSound.Play();
             }
             pm.isK = true;
@@ -101,6 +126,7 @@ public class LoseGetLife : MonoBehaviour
             {
                 ps.life--;
                 timer = 1;
+                inmune = true;
                 hitSound.Play();
             }
         }
