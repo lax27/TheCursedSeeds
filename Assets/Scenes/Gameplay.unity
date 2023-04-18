@@ -359,6 +359,21 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
     - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
+      propertyPath: HP1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: HP2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: HP3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
       propertyPath: inmuneTimeOfsset
       value: 3
       objectReference: {fileID: 0}
@@ -371,6 +386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mantee_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095049127602115650, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5095049127602115661, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
@@ -475,6 +495,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1721812160167666514, guid: 3ab331c9658baf2428cb5cd250b51d23,
         type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721812160167666514, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[0].x
       value: 10.99997
       objectReference: {fileID: 0}
@@ -542,6 +567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DefaultRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721812160800869619, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1721812160800869629, guid: 3ab331c9658baf2428cb5cd250b51d23,
         type: 3}
