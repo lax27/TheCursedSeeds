@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour
+public class CamaraShake : MonoBehaviour
 {
     private Vector3 ogPos;
     public float offsetX = 0.0f;
@@ -35,7 +35,7 @@ public class CameraShake : MonoBehaviour
         }
     }
 
-    public void CameraShakeSettings(float time, float magnitude)
+    public void CameraShake(float time, float magnitude)
     {
         timeShake = time;
         shakeMagnitude = magnitude;

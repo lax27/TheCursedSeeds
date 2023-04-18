@@ -208,8 +208,8 @@ MonoBehaviour:
   shells: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a, type: 3}
   canFire: 0
   timeBetwenFire: 0.5
-  sound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   canon: {fileID: 2171958933753022544}
+  shake: 0
 --- !u!82 &8633640218594210205
 AudioSource:
   m_ObjectHideFlags: 0

@@ -16,13 +16,13 @@ public class ShootScript : MonoBehaviour
     private Animator anim;
 
     private GameObject camera;
-    private CameraShake shake;
+    private CamaraShake shake;
 
     // Start is called before the first frame update
     void Start()
     {
         camera = GameObject.Find("Main Camera");
-        shake = camera.GetComponent<CameraShake>(); 
+        shake = camera.GetComponent<CamaraShake>(); 
         cannon = GameObject.Find("Canon");
         //anim = cannon.GetComponent<Animator>();
         canFire = true;
@@ -32,6 +32,8 @@ public class ShootScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+   
+
         if (!canFire)
         {
             timer += Time.deltaTime;
@@ -42,6 +44,7 @@ public class ShootScript : MonoBehaviour
                 timer = 0;
             }
         }
+
 
 
         if (Input.GetMouseButton(0) && canFire)
@@ -57,15 +60,10 @@ public class ShootScript : MonoBehaviour
                 //Casquillos
                 Instantiate(shells, transform.position, Quaternion.identity);
                 //Camerashake
-<<<<<<< HEAD
-                shake.CameraShakeSettings(0.05f, 0.12f);
-=======
                 shake.CameraShake(0.01f, 0.12f);
->>>>>>> c21fc3bf8f443de337acb38eb6b31e6d3f209763
                 //Spawn de la bala
                 GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
             }
-
             if (gameObject.name == "ShotGun")
             {
                 //hacer sonido de disparo

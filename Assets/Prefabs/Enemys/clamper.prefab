@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 2056414541106599088}
   - component: {fileID: 2056414541106599089}
   - component: {fileID: 4022136142703926581}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: clamper
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6291370537873ed4f8063bf18e432c7c, type: 2}
+  sp: {fileID: 0}
 --- !u!1 &2056414541144431415
 GameObject:
   m_ObjectHideFlags: 0

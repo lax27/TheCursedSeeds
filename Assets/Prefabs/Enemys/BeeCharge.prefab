@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2334146017784503454}
   - component: {fileID: 2334146017784503449}
   - component: {fileID: 5608965156733552032}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: BeeCharge
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 6291370537873ed4f8063bf18e432c7c, type: 2}
+  sp: {fileID: 0}
 --- !u!1 &2334146018713380574
 GameObject:
   m_ObjectHideFlags: 0

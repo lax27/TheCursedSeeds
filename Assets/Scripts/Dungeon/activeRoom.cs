@@ -40,7 +40,7 @@ public class activeRoom : MonoBehaviour
 
                 if (col.enabled == false && a.enabled == false)
                 {
-                    //Debug.Log("Already on");
+                    Debug.Log("Already on");
                 }
                 else
                 {

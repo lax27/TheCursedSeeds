@@ -6,7 +6,7 @@ public class SimpleFlash : MonoBehaviour
 {
     [SerializeField] private Material flashMaterial;
 
-    private SpriteRenderer sp;
+    public SpriteRenderer sp;
     private Material originaMaterial;
     // Start is called before the first frame update
     void Start()
