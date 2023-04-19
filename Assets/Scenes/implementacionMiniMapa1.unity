@@ -241,12 +241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6441356323e2fe142b9e82338f9e2bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sp: {fileID: 0}
+  sp: {fileID: 0}
   isDamage: 0
   hitSound: {fileID: 0}
   HP1: {fileID: 1503097383}
   HP2: {fileID: 1593767381}
   HP3: {fileID: 1829825688}
+  inmuneTimeOfsset: 0
+  inmune: 0
   direcionEnemy: {x: 0, y: 0, z: 0}
 --- !u!114 &274453002
 MonoBehaviour:
@@ -722,11 +724,10 @@ MonoBehaviour:
   pile: {fileID: 0}
   weapons: []
   currentWeaponID: 0
+  TutorialPassed: 0
+  runsDone: 0
+  totalEnemiesKilled: 0
   pauseMenu: {fileID: 0}
-  roomPrefabs:
-  - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
-  - {fileID: 3997157319145803351, guid: 735092f3c0fd76a4d8ecd014bd92b1c8, type: 3}
-  - {fileID: 3346297318684851828, guid: dce301939cc1291499c94946c2620e2e, type: 3}
 --- !u!4 &1006827051
 Transform:
   m_ObjectHideFlags: 0
@@ -886,6 +887,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentRooms: []
+  roomPrefabs:
+  - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
+  - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
+  - {fileID: 3346297318684851828, guid: dce301939cc1291499c94946c2620e2e, type: 3}
 --- !u!114 &1227854804
 MonoBehaviour:
   m_ObjectHideFlags: 0

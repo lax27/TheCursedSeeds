@@ -22,7 +22,7 @@ public class ShootScript : MonoBehaviour
     void Start()
     {
         camera = GameObject.Find("Main Camera");
-        shake = camera.GetComponent<CameraShake>(); 
+        shake = Camera.main.GetComponent<CameraShake>(); 
         cannon = GameObject.Find("Canon");
         //anim = cannon.GetComponent<Animator>();
         canFire = true;

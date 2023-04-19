@@ -7,6 +7,7 @@ public class MiniMapCamera : MonoBehaviour
 {
     Camera camera;
     public int numOfRooms;
+    public float minimapZoom;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,6 @@ public class MiniMapCamera : MonoBehaviour
 
         transform.position = (Vector3)(esquinaSuperiorIzquierda * 0.5f + esquinaInferiorDerecha * 0.5f) + Vector3.forward* transform.position.z;
 
-        camera.orthographicSize = Camera.main.orthographicSize * Mathf.Max(verticalRooms, horizontalRooms) + Camera.main.orthographicSize;
+        camera.orthographicSize = Camera.main.orthographicSize * Mathf.Max(verticalRooms, horizontalRooms) + Camera.main.orthographicSize + minimapZoom;
     }
 }
