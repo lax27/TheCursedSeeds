@@ -9,7 +9,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TMP_Text DialogueText; 
     [SerializeField, TextArea(4, 6)] private string[] DialogueLines;
     [SerializeField] private GameObject mantee;
-    [SerializeField] private Pmove movement;
+    [SerializeField] private PlayerMovement movement;
 
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
@@ -18,7 +18,7 @@ public class Dialogue : MonoBehaviour
     private void Start()
     {
         mantee = GameObject.Find("mantee_v2");
-        movement = mantee.GetComponent<Pmove>();
+        movement = mantee.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame

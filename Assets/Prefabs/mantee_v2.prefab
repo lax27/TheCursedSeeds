@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8595297803472830934}
   - component: {fileID: 1662334562445184155}
   - component: {fileID: 5410514287837441782}
-  - component: {fileID: 9134118568565736847}
   - component: {fileID: 2927519899224286325}
   - component: {fileID: 7194415621783756744}
   - component: {fileID: 7880664680134765482}
@@ -157,26 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f2c0cd7fd25ae488ade8d01a58faa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeK: 0.3
-  KonckBackForce: 2.5
-  isK: 0
---- !u!114 &9134118568565736847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095049127602115650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431f605090ae0f04bb4b71b19f39f273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Currentcooldown: 0
-  DeathCooldown: 40
-  Frostcooldown: 20
-  LifeCooldown: 10
-  FireCooldown: 5
+  konckBackTimer: 0.5
+  konckBackForce: 10
+  beingKnockedBack: 0
+  directionKnockedBack: {x: 0, y: 0, z: 0}
 --- !u!114 &2927519899224286325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,18 +169,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5095049127602115650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6441356323e2fe142b9e82338f9e2bb0, type: 3}
+  m_Script: {fileID: 11500000, guid: a0e38e77a8f261941aedfdbb24eb4692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sp: {fileID: 0}
+  spriteRenderer: {fileID: 5095049127602115661}
   isDamage: 0
   hitSound: {fileID: 0}
-  HP1: {fileID: 0}
+  hpHealthUIIcons: {fileID: 0}
   HP2: {fileID: 0}
   HP3: {fileID: 0}
   inmuneTimeOfsset: 0
   inmune: 0
-  direcionEnemy: {x: 0, y: 0, z: 0}
 --- !u!70 &7194415621783756744
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

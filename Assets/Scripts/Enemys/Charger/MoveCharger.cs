@@ -8,7 +8,7 @@ public class MoveCharger : MonoBehaviour
     public Transform target;
     EnemysStats es;
     Rigidbody2D rb;
-    LoseGetLife ls;
+    PlayerHealthHandler ls;
     GameObject pl;
     EnemyFreez ef;
    
@@ -35,7 +35,7 @@ public class MoveCharger : MonoBehaviour
         pl = GameObject.Find("mantee_v2");
         es = GetComponent<EnemysStats>();
         rb = GetComponent<Rigidbody2D>();
-        ls = pl.GetComponent<LoseGetLife>();
+        ls = pl.GetComponent<PlayerHealthHandler>();
         ef = GetComponent<EnemyFreez>();
         target = pl.GetComponent<Transform>();
     }
@@ -75,7 +75,7 @@ public class MoveCharger : MonoBehaviour
       
         if (!ef.isFreez)
         {
-            if (ls.isDamage)
+            if (ls.enemyAttackPaused)
             {
                 es.speed = 0;
             }

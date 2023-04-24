@@ -37,7 +37,6 @@ public class MiniMapCamera : MonoBehaviour
         float horizontalRooms = (DungeonManager.roomMaxPositiveDistance.x  -DungeonManager.roomMaxNegativeDistance.x)/22f;
         float verticalRooms = (DungeonManager.roomMaxPositiveDistance.y + Mathf.Abs(DungeonManager.roomMaxNegativeDistance.y))/12.48f;
 
-
         Vector2 esquinaSuperiorIzquierda = new Vector2(DungeonManager.roomMaxNegativeDistance.x - 11f, DungeonManager.roomMaxPositiveDistance.y + 12.48f * 0.5f);
         Vector2 esquinaInferiorDerecha = new Vector2(DungeonManager.roomMaxPositiveDistance.x + 11f, DungeonManager.roomMaxNegativeDistance.y- 12.48f*0.5f);
 
