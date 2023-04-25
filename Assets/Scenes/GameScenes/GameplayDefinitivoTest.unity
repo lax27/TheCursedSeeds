@@ -847,7 +847,7 @@ MonoBehaviour:
   isGrowed: 0
   isWeapon: 0
   pile: {fileID: 0}
-  weapons: []
+  weaponsToSpawn: []
   currentWeaponID: 0
   TutorialPassed: 0
   runsDone: 0
@@ -995,6 +995,21 @@ PrefabInstance:
       objectReference: {fileID: 1829825688}
     - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
+      propertyPath: healthUIIcon1
+      value: 
+      objectReference: {fileID: 1503097383}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: healthUIIcon2
+      value: 
+      objectReference: {fileID: 1593767381}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: healthUIIcon3
+      value: 
+      objectReference: {fileID: 1829825688}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
       propertyPath: inmuneTimeOffset
       value: 3
       objectReference: {fileID: 0}
@@ -1013,6 +1028,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5095049127602115651, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1369661125}
     - target: {fileID: 5095049127602115662, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_RootOrder
@@ -1091,6 +1111,11 @@ PrefabInstance:
     - target: {fileID: 5410514287837441782, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: konckBackTimer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595297803472830934, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: cursedSeedID
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1234,6 +1259,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359497021}
   m_CullTransparentMesh: 1
+--- !u!95 &1369661125 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6821190719848198198, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1110700511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1416984816
 GameObject:
   m_ObjectHideFlags: 0

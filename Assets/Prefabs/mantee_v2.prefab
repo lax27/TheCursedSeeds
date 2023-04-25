@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 1662334562445184155}
   - component: {fileID: 5410514287837441782}
   - component: {fileID: 2927519899224286325}
-  - component: {fileID: 7194415621783756744}
-  - component: {fileID: 7880664680134765482}
   - component: {fileID: 446731444}
   - component: {fileID: 1874673432262967476}
   - component: {fileID: 6821190719848198198}
+  - component: {fileID: 7880664680134765482}
+  - component: {fileID: 7194415621783756744}
   m_Layer: 30
   m_Name: mantee_v2
   m_TagString: Player
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d05c71f4a84d44abe8fb6e99fb8cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 6821190719848198198}
   sprites:
   - {fileID: 21300000, guid: db56237257731e84183b63b4a593ed7c, type: 3}
   - {fileID: 21300000, guid: a4a3430d740aafc4da2d769a177fc3d7, type: 3}
@@ -128,9 +128,7 @@ MonoBehaviour:
   life: 3
   speed: 5
   seeds: 0
-  cursedSeedID: 2
-  weaponID1: 0
-  weaponID2: 0
+  cursedSeedID: 0
 --- !u!114 &1662334562445184155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f2c0cd7fd25ae488ade8d01a58faa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  konckBackTimer: 0.5
-  konckBackForce: 10
+  konckBackTimer: 0
+  konckBackForce: 0
   beingKnockedBack: 0
   directionKnockedBack: {x: 0, y: 0, z: 0}
 --- !u!114 &2927519899224286325
@@ -173,50 +171,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5095049127602115661}
-  isDamage: 0
+  enemyAttackPaused: 0
   hitSound: {fileID: 0}
-  hpHealthUIIcons: {fileID: 0}
-  HP2: {fileID: 0}
-  HP3: {fileID: 0}
-  inmuneTimeOfsset: 0
-  inmune: 0
---- !u!70 &7194415621783756744
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095049127602115650}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.034308344, y: -0.059793055}
-  m_Size: {x: 0.5247442, y: 0.9496974}
-  m_Direction: 0
---- !u!50 &7880664680134765482
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095049127602115650}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 6.5
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  healthUIIcon1: {fileID: 0}
+  healthUIIcon2: {fileID: 0}
+  healthUIIcon3: {fileID: 0}
+  inmuneTimeOffset: 3
+  isInmune: 0
 --- !u!114 &446731444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +223,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &7880664680134765482
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095049127602115650}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 6.5
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &7194415621783756744
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095049127602115650}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.034308344, y: -0.059793055}
+  m_Size: {x: 0.5247442, y: 0.9496974}
+  m_Direction: 0
 --- !u!1 &5095049128009420456
 GameObject:
   m_ObjectHideFlags: 0

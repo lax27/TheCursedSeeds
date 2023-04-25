@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1685678027289531311}
   - component: {fileID: 1685678027289531297}
   - component: {fileID: 1685678027289531296}
-  - component: {fileID: 9203873946229801344}
+  - component: {fileID: 4169201910381797971}
   m_Layer: 0
   m_Name: SetusConfusus
   m_TagString: Untagged
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0.036707997, y: -0.12778026}
   serializedVersion: 2
   m_Radius: 0.86533123
---- !u!114 &9203873946229801344
+--- !u!114 &4169201910381797971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,11 +129,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1685678027289531308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf095018d8a02c4b91d3c97509a172a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c88d3904f5b1654184d3f4a52cabc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Explo: {fileID: 1685678029044527828}
-  lc: {fileID: 1685678027289531296}
+  cl: {fileID: 1685678027289531296}
   sr: {fileID: 1685678027289531311}
 --- !u!1 &1685678029044527828
 GameObject:

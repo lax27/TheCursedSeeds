@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public bool isWeapon = false;
     public GameObject pile;
     private GameObject spawnWeapon;
-    public List<GameObject> weapons = new List<GameObject> ();
+    public List<GameObject> weaponsToSpawn = new List<GameObject> ();
     public int currentWeaponID = 0;
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
@@ -96,14 +96,14 @@ public class GameManager : MonoBehaviour
     {
         if (seed_number == 0 && !isPlanted )
         {
-            spawnWeapon = weapons[0];
+            spawnWeapon = weaponsToSpawn[0];
             isPlanted = true;
             PlantTimer = 10;//300;
         }
 
         if (seed_number == 1 && !isPlanted )
         {
-            spawnWeapon = weapons[1];
+            spawnWeapon = weaponsToSpawn[1];
             isPlanted = true;
             PlantTimer = 420;
         }
