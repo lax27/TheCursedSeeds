@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int life = 3;
-    public float speed = 5f;
+    public static PlayerStats instance;
+
+    public int playerHealth = 3;
+    public float playerSpeed = 5f;
     public int seeds = 0;
     public int cursedSeedID = 0;
 
- 
+
+    
     private void Start()
     {
-       
+        instance = this;
+
+
     }
 
 
 
     void Update()
     {
-        
     }
 }

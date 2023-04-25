@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 274453004}
   - component: {fileID: 274453003}
   - component: {fileID: 274453002}
-  - component: {fileID: 274453001}
+  - component: {fileID: 274453006}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -246,18 +246,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &274453001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274453000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6441356323e2fe142b9e82338f9e2bb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &274453002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +330,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &274453006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274453000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c16c9d1ea626af498a7646bfdf40932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthUIIcons:
+  - {fileID: 1503097383}
+  - {fileID: 1593767381}
+  - {fileID: 1829825688}
+  healthUIIcon1: {fileID: 0}
+  healthUIIcon2: {fileID: 0}
+  healthUIIcon3: {fileID: 0}
 --- !u!1001 &279792543
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,9 +11,7 @@ public class PlayerHealthHandler : MonoBehaviour
     public bool enemyAttackPaused = false;
 
     public AudioSource hitSound;
-    public GameObject healthUIIcon1;
-    public GameObject healthUIIcon2;
-    public GameObject healthUIIcon3;
+
 
     private LayerMask inmuneLayer;
     private LayerMask normalLayer;
@@ -37,13 +35,6 @@ public class PlayerHealthHandler : MonoBehaviour
         playerStats = GetComponent<PlayerStats>();
         rbPlayer = GetComponent<Rigidbody2D>();
         playerMovement = GetComponent<PlayerMovement>();
-
-   /* TODO mover codigo entre "////" a un script de UI */
-   ////
-        healthUIIcon1 = GameObject.Find("HP1");
-        healthUIIcon2 = GameObject.Find("HP2");
-        healthUIIcon3 = GameObject.Find("HP3");
-   ////
     }
 
     // Update is called once per frame
@@ -86,26 +77,6 @@ public class PlayerHealthHandler : MonoBehaviour
             }
         }
 
-    /* TODO mover codigo entre "////" a un script de UI */ 
-        /////////////////////////////////////////////////////
-        if (playerStats.life <= 0)
-        {
-            healthUIIcon1.SetActive(false);
-            healthUIIcon2.SetActive(false);
-            healthUIIcon3.SetActive(false);
-        }
-
-        if (playerStats.life == 1)
-        {
-            healthUIIcon2.SetActive(false);
-            healthUIIcon3.SetActive(false);
-        }
-
-        if (playerStats.life == 2)
-        {
-            healthUIIcon3.SetActive(false);
-        }
-        /////////////////////////////////////////////////////
         if (enemyAttackPauseTimer > 0)
         {
             enemyAttackPaused = true;
@@ -127,7 +98,7 @@ public class PlayerHealthHandler : MonoBehaviour
         if(collision.gameObject.tag == "enemy") {
             
              if(enemyAttackPaused == false && !isInmune) {
-                playerStats.life--;
+                playerStats.playerHealth--;
                 playerMovement.directionKnockedBack = transform.position - collision.gameObject.transform.position;
                 playerMovement.directionKnockedBack.Normalize();
                 enemyAttackPauseTimer = 1f;
@@ -144,7 +115,7 @@ public class PlayerHealthHandler : MonoBehaviour
         {
             if (enemyAttackPaused == false && !isInmune)
             {
-                playerStats.life--;
+                playerStats.playerHealth--;
                 enemyAttackPauseTimer = 1f;
                 isInmune = true;
                 hitSound.Play();

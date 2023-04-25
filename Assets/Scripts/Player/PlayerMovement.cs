@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            transform.position += direction * playerStats.speed * Time.fixedDeltaTime;
+            transform.position += direction * playerStats.playerSpeed * Time.fixedDeltaTime;
         }
     }
 }

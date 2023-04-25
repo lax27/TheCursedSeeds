@@ -45,17 +45,17 @@ public class PlantZone : MonoBehaviour
         {
             press.SetActive(false);
             //desactivar el movimento
-            pm.speed = 0;
+            pm.playerSpeed = 0;
 
             //desactivar el disparo
             Guns.SetActive(false);
             //activar el menu de platado   
             plantMenu.SetActive(true);
         }
-        if (pm.speed == 0 && Input.GetKeyDown(KeyCode.Escape))
+        if (pm.playerSpeed == 0 && Input.GetKeyDown(KeyCode.Escape))
         {
             press.SetActive(true);
-            pm.speed = 5;
+            pm.playerSpeed = 5;
             Guns.SetActive(true);
             plantMenu.SetActive(false);
 
