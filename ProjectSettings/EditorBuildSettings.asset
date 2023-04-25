@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TUTO_TUTO.unity
+    path: Assets/Scenes/GameScenes/TUTO_TUTO.unity
     guid: 195fabc6ce5e5b54ab53761d773d2d77
   - enabled: 1
-    path: Assets/Scenes/DungeonGeneration.unity
+    path: Assets/Scenes/TestingScenes/DungeonGeneration.unity
     guid: 11bf20184b42c7242adf844bf885e37a
   m_configObjects: {}

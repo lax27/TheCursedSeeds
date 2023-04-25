@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class CollectSeeds : MonoBehaviour
 {
-    PlayerStats ps;
-    Collider2D cl;
-    private Wseeds ws;
+
     [SerializeField] private AudioClip pickSound;
     //public AudioSource picking;
 
     // Start is called before the first frame update
     void Start()
     {
-        ps = GetComponent<PlayerStats>();   
-        cl = GetComponent<Collider2D>();
+
     }
 
     // Update is called once per frame

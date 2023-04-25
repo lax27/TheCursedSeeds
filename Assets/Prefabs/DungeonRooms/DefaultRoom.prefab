@@ -71,8 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4d757cdd60eff48a4585edefeb8ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: {fileID: 1213480401291677180}
-  tps: {fileID: 7560596291151677828}
+  enemiesParent: {fileID: 1213480401291677180}
+  parentAdjacentRoomsSpawnPositions: {fileID: 7560596291151677828}
 --- !u!1 &1106807351697981636
 GameObject:
   m_ObjectHideFlags: 0

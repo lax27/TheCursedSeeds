@@ -36,12 +36,12 @@ public class PlayerMovement : MonoBehaviour
         float verticalMoveInput;
         //condicional para el debuffo de controles invertidos
         if (!status.isConfused) {
-             horizontalMoveInput = Input.GetAxis("Horizontal");
-             verticalMoveInput = Input.GetAxis("Vertical");
+             horizontalMoveInput = Input.GetAxisRaw("Horizontal");
+             verticalMoveInput = Input.GetAxisRaw("Vertical");
         }
         else {
-            horizontalMoveInput = -Input.GetAxis("Horizontal");
-            verticalMoveInput = -Input.GetAxis("Vertical");
+            horizontalMoveInput = -Input.GetAxisRaw("Horizontal");
+            verticalMoveInput = -Input.GetAxisRaw("Vertical");
         }
 
         direction = new Vector2(horizontalMoveInput, verticalMoveInput).normalized;
@@ -55,8 +55,6 @@ public class PlayerMovement : MonoBehaviour
                 konckBackTimer = KNOCK_BACK_DURATION;
             }
         }
-
- 
     }
 
     /*

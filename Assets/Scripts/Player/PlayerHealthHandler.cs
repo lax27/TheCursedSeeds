@@ -14,12 +14,13 @@ public class PlayerHealthHandler : MonoBehaviour
     public GameObject healthUIIcon1;
     public GameObject healthUIIcon2;
     public GameObject healthUIIcon3;
-    
+
+    private LayerMask inmuneLayer;
+    private LayerMask normalLayer;
     private float inmuneTimer = 3;
     public float inmuneTimeOffset;
     public bool isInmune = false;
-
-    private float flashTimer = 0.5f;
+    private float flashTimer = 0.35f;
     private bool isFlashing = true;
 
 
@@ -30,18 +31,19 @@ public class PlayerHealthHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        normalLayer = LayerMask.NameToLayer("Player");
+        inmuneLayer = LayerMask.NameToLayer("PlayerInmune");
+        LayerMask.NameToLayer("PlayerInmune");
         playerStats = GetComponent<PlayerStats>();
         rbPlayer = GetComponent<Rigidbody2D>();
         playerMovement = GetComponent<PlayerMovement>();
 
+   /* TODO mover codigo entre "////" a un script de UI */
+   ////
         healthUIIcon1 = GameObject.Find("HP1");
         healthUIIcon2 = GameObject.Find("HP2");
         healthUIIcon3 = GameObject.Find("HP3");
-
-        //uid = GameObject.Find("ui");
-        //ui = uid.GetComponent<UI>();
-
-
+   ////
     }
 
     // Update is called once per frame
@@ -51,14 +53,14 @@ public class PlayerHealthHandler : MonoBehaviour
         if (isInmune)
         {
             inmuneTimer -= Time.deltaTime;
-            //Physics2D.IgnoreLayerCollision(30, 8);
+            gameObject.layer = inmuneLayer;
 
             if (inmuneTimer > 0f)
             {
                 flashTimer -= Time.deltaTime;
                 if (flashTimer <= 0f)
                 {
-                    flashTimer = 0.5f;
+                    flashTimer = 0.35f;
                     isFlashing = !isFlashing;
                 }
 
@@ -77,6 +79,7 @@ public class PlayerHealthHandler : MonoBehaviour
             if (inmuneTimer <= 0)
             {
                 //devlover las layersColisions
+                gameObject.layer = normalLayer;
                 spriteRenderer.color = new Color(255, 255, 255, 255);
                 inmuneTimer = inmuneTimeOffset;
                 isInmune = false;
