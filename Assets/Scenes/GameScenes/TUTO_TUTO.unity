@@ -19292,10 +19292,12 @@ MonoBehaviour:
   isGrowed: 0
   isWeapon: 0
   pile: {fileID: 0}
-  weapons: []
+  weaponsToSpawn: []
   currentWeaponID: 0
+  TutorialPassed: 0
+  runsDone: 0
+  totalEnemiesKilled: 0
   pauseMenu: {fileID: 0}
-  roomPrefabs: []
 --- !u!4 &2054265988
 Transform:
   m_ObjectHideFlags: 0
@@ -19372,7 +19374,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49da001e1dd32a340a8eb6d6c35ae56a, type: 2}
-  m_sharedMaterial: {fileID: -1311117009897175830, guid: f0cb68cc4408ad44390061c7a9cbf734,
+  m_sharedMaterial: {fileID: -4097892389270447983, guid: 49da001e1dd32a340a8eb6d6c35ae56a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
