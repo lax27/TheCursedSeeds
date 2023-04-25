@@ -7,7 +7,7 @@ public class ClamperShoot : MonoBehaviour
 {
     public GameObject bullet;
     private bool canFire = false;
-    private float timer = 1.5f;
+    private float timerbetweenShoot = 1.5f;
     private EnemyFreez ef;
 
     // Start is called before the first frame update
@@ -23,15 +23,15 @@ public class ClamperShoot : MonoBehaviour
         if (ef.isFreez)
         {
             canFire = false;
-            timer = 1.5f;
+            timerbetweenShoot  = 1.5f;
         }
 
-        timer -= Time.deltaTime;
+        timerbetweenShoot  -= Time.deltaTime;
 
-        if (timer <= 0)
+        if (timerbetweenShoot  <= 0)
         {
             canFire = true;
-            timer = 1.5f;
+            timerbetweenShoot  = 1.5f;
         }
 
         if (canFire)

@@ -6,8 +6,8 @@ public class EnemyBullet : MonoBehaviour
 {
 
     private Vector2 dir;
-    public BulletStats bs;
-    private GameObject p;
+    public BulletStats bulletStats;
+    private GameObject player;
     private Transform target;
     private Rigidbody2D rb;
 
@@ -15,11 +15,11 @@ public class EnemyBullet : MonoBehaviour
     void Start()
     {
       rb = GetComponent<Rigidbody2D>();
-      bs = GetComponent<BulletStats>();
-      p = GameObject.Find("mantee_v2");
-      target = p.GetComponent<Transform>();
+      bulletStats = GetComponent<BulletStats>();
+      player = GameObject.Find("mantee_v2");
+      target = player.GetComponent<Transform>();
 
         dir = target.transform.position - transform.position;
-        rb.velocity = dir.normalized * bs.speed;
+        rb.velocity = dir.normalized * bulletStats.speed;
     }
 }

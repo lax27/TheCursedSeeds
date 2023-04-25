@@ -50,6 +50,8 @@ public class ShootScript : MonoBehaviour
             canFire = false;
             if (gameObject.name == "BasicGun")
             {
+              //TO DO: Cabiar esto por una funcion que este en un script llamado Modos de disparo
+
                 //Iniciar animacion de disparo
                 //anim.SetBool("Shoot", true);
                 //Hacer sonido de disparo
@@ -64,6 +66,8 @@ public class ShootScript : MonoBehaviour
 
             if (gameObject.name == "ShotGun")
             {
+                //TO DO: Cabiar esto por una funcion que este en un script llamado Modos de disparo.
+
                 //hacer sonido de disparo
                 //instacniar casiquillos
                 //camerashake

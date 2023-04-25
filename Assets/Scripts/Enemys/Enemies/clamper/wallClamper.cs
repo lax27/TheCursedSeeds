@@ -5,14 +5,10 @@ using UnityEngine;
 public class wallClamper : MonoBehaviour
 {
     private ClamperMove mv;
-    private Collider2D cl;
-    private GameObject wall;
     // Start is called before the first frame update
     void Start()
     {
         mv = GetComponentInParent<ClamperMove>();
-        wall = GameObject.Find("wall");
-        cl = wall.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame

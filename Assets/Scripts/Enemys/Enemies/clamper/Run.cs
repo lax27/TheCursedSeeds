@@ -10,9 +10,7 @@ public class Run : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mv = GetComponentInParent<ClamperMove>();
-        ranged = GameObject.Find("range");
-        cl = ranged.GetComponent<Collider2D>();   
+        mv = GetComponentInParent<ClamperMove>();  
     }
 
     // Update is called once per frame
