@@ -9,7 +9,7 @@ public class TestPause : MonoBehaviour
     //FALTA CONFIGURAR QUE EL BACK TO MENU LLEVE AL MENU PRINCIPAL PORQUE ESTA EN LA MISMA ESCENA
     [SerializeField] GameObject pauseMenu;
 
-    //esta variable es para evitar bugs visuales del menu de pause
+    //esta variable enemiesStats para evitar bugs visuales del menu de pause
     [SerializeField] private GameObject selectedButton;
 
     public static bool isPaused;

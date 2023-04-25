@@ -4,31 +4,25 @@ using UnityEngine;
 
 public class wallClamper : MonoBehaviour
 {
-    private ClamperMove mv;
-    private Collider2D cl;
+    private ClamperMovement clamperMovement;
+    private Collider2D cl; 
     private GameObject wall;
     // Start is called before the first frame update
     void Start()
     {
-        mv = GetComponentInParent<ClamperMove>();
+        clamperMovement = GetComponentInParent<ClamperMovement>();
         wall = GameObject.Find("wall");
         cl = wall.GetComponent<Collider2D>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "wall")
         {
-            mv.dir = mv.dir - mv.transform.position;
-            mv.dir = mv.dir.normalized;
-            mv.move = true;
-            mv.stoped = false;
+            clamperMovement.dir = clamperMovement.dir - clamperMovement.transform.position;
+            clamperMovement.dir = clamperMovement.dir.normalized;
+            clamperMovement.isMoving = true;
+            clamperMovement.isStopped = false;
         }
     }
 }

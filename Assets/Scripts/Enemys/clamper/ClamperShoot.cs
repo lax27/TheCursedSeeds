@@ -7,31 +7,31 @@ public class ClamperShoot : MonoBehaviour
 {
     public GameObject bullet;
     private bool canFire = false;
-    private float timer = 1.5f;
-    private EnemyFreez ef;
+    private float timerToMove = 1.5f;
+    private EnemyFrozen enemyFrozen;
 
     // Start is called before the first frame update
     void Start()
     {
-        ef = GetComponent<EnemyFreez>();
+        enemyFrozen = GetComponent<EnemyFrozen>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (ef.isFreez)
+        if (enemyFrozen.isFrozen)
         {
             canFire = false;
-            timer = 1.5f;
+            timerToMove = 1.5f;
         }
 
-        timer -= Time.deltaTime;
+        timerToMove -= Time.deltaTime;
 
-        if (timer <= 0)
+        if (timerToMove <= 0)
         {
             canFire = true;
-            timer = 1.5f;
+            timerToMove = 1.5f;
         }
 
         if (canFire)

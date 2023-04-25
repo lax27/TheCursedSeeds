@@ -3,66 +3,61 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyFreez : MonoBehaviour
+public class EnemyFrozen : MonoBehaviour
 {
-    public bool isFreez = false;
+    public bool isFrozen = false;
     public bool setToFreeze = false;
     private SpriteRenderer sr;
     private float timerHit;
-    EnemysStats es;
+    EnemiesStats enemiesStats;
     public bool isHit = false;
     private float timeToMelt = 0.0f;
 
-    // 
     public GameObject ice;
     private SpriteRenderer[] srCubito;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        es = GetComponent<EnemysStats>();
+        enemiesStats = GetComponent<EnemiesStats>();
         sr = GetComponent<SpriteRenderer>();
 
-        //desbilitar el spriterender o el hijo del objeto
-        
-    
+        //deshabilitar el spriteRender o el hijo del objeto    
     }
 
-    // Update is called once per frame
     void Update()
     {
+       if (setToFreeze)
+       {
+           FreezeCharacter();
+       }
 
-        if (setToFreeze)
-        {
-            freezeChar();
-        }
-       if (isFreez)
-        {
-            timeToMelt -= Time.deltaTime;
+       if (isFrozen)
+       {
+       timeToMelt -= Time.deltaTime;
 
             if (timeToMelt <= 0.0f)
             {
-                meltChar();
+                MeltCharacter();
             }
-        }
-
+       }
     }
 
-    private void freezeChar()
+    private void FreezeCharacter()
     {
-        es.speed = 0;
+        enemiesStats.enemySpeed = 0;
         ice.SetActive(true);
-        isFreez = true;
+        isFrozen = true;
         timeToMelt = 5.0f;
         setToFreeze = false;
 
     }
 
-    private void meltChar()
+    private void MeltCharacter()
     {
         setToFreeze = false;
         ice.SetActive(false);
-        es.speed = 2;
-        isFreez = false;
+        enemiesStats.enemySpeed = 2;
+        isFrozen = false;
         timeToMelt = 0.0f;
     }
 }

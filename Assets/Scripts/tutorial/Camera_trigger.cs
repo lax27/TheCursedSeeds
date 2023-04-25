@@ -13,9 +13,9 @@ public class Camera_trigger : MonoBehaviour
     private SpriteRenderer S2;
     private SpriteRenderer S3;
 
-    private ClamperMove movement1;
-    private MoveCharger movement2;
-    private MoveCharger movement3;
+    private ClamperMovement movement1;
+    private ChargerMovement movement2;
+    private ChargerMovement movement3;
     private ClamperShoot shoot;
 
 
@@ -32,9 +32,9 @@ public class Camera_trigger : MonoBehaviour
         S3.enabled = false;
         S2.enabled = false;
 
-        movement2 = Bee_1.GetComponent<MoveCharger>();
-        movement3 = Bee_2.GetComponent<MoveCharger>();
-        movement1 = sus.GetComponent<ClamperMove>();
+        movement2 = Bee_1.GetComponent<ChargerMovement>();
+        movement3 = Bee_2.GetComponent<ChargerMovement>();
+        movement1 = sus.GetComponent<ClamperMovement>();
 
         shoot = sus.GetComponent<ClamperShoot>();
 

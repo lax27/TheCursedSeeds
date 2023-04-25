@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class MoveCharger : MonoBehaviour
+public class ChargerMovement : MonoBehaviour
 {
     public Transform target;
-    EnemysStats es;
+    EnemiesStats enemiesStats;
     Rigidbody2D rb;
-    PlayerHealthHandler ls;
+    PlayerHealthHandler playerHealthHandler;
     GameObject pl;
-    EnemyFreez ef;
+    EnemyFrozen enemyFrozen;
    
     public Vector2 dir;
     public Vector3 dir3;
     public bool isGoingToCharge = false;
-    public bool isChargin = false;
+    public bool isCharging = false;
     public float chargingForce = 50;
-
+    
 
     ///CONTADORES
 
@@ -33,10 +33,10 @@ public class MoveCharger : MonoBehaviour
     void Start()
     {
         pl = GameObject.Find("mantee_v2");
-        es = GetComponent<EnemysStats>();
+        enemiesStats = GetComponent<EnemiesStats>();
         rb = GetComponent<Rigidbody2D>();
-        ls = pl.GetComponent<PlayerHealthHandler>();
-        ef = GetComponent<EnemyFreez>();
+        playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
+        enemyFrozen = GetComponent<EnemyFrozen>();
         target = pl.GetComponent<Transform>();
     }
 
@@ -49,39 +49,39 @@ public class MoveCharger : MonoBehaviour
             toCharge -= Time.deltaTime;
             if (toCharge <= 0)
             {
-                isChargin = true;
+                isCharging = true;
             }
        }
 
       
-        if (isChargin)
+        if (isCharging)
         {
             chargeTime -= Time.deltaTime;
             if(chargeTime <= 0)
             {
                 rb.velocity = Vector2.zero; 
-                isChargin = false;
+                isCharging = false;
                 chargeTime = 0.55f;
                 toCharge = 1;
             }
         }
 
-        if (!isChargin)
+        if (!isCharging)
         {
             dir = target.transform.position - transform.position;
             dir = dir.normalized;
         }
         
       
-        if (!ef.isFreez)
+        if (!enemyFrozen.isFrozen)
         {
-            if (ls.enemyAttackPaused)
+            if (playerHealthHandler.enemyAttackPaused)
             {
-                es.speed = 0;
+                enemiesStats.enemySpeed = 0;
             }
             else
             {
-                es.speed = 1.5f;
+                enemiesStats.enemySpeed = 1.5f;
             }
         }
 
@@ -91,18 +91,18 @@ public class MoveCharger : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (!isChargin)
+        if (!isCharging)
         {
             dir3 = target.transform.position - transform.position;
-            //transform.position = Vector2.MoveTowards(transform.position, target.transform.position, es.speed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, target.transform.position, enemiesStats.enemySpeed * Time.deltaTime);
             if (!isGoingToCharge)
             {
-                transform.position += dir3.normalized * es.speed * Time.fixedDeltaTime;
+                transform.position += dir3.normalized * enemiesStats.enemySpeed * Time.fixedDeltaTime;
             }
 
         }
 
-        if (isChargin && !ef.isFreez)
+        if (isCharging && !enemyFrozen.isFrozen)
         {
             rb.velocity = Vector2.zero;
            

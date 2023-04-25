@@ -15,10 +15,4 @@ public class GunSelection : MonoBehaviour
         }
         rotatePoint.transform.GetChild(GameManager.instance.currentWeaponID).gameObject.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

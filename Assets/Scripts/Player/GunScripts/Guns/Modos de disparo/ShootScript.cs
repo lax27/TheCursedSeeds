@@ -13,7 +13,7 @@ public class ShootScript : MonoBehaviour
     public Transform canon = null;
     Collider2D coll;
     private GameObject cannon;
-    private Animator anim;
+    private Animator animator;
 
     private GameObject camera;
     private CameraShake shake;
@@ -24,7 +24,7 @@ public class ShootScript : MonoBehaviour
         camera = GameObject.Find("Main Camera");
         shake = Camera.main.GetComponent<CameraShake>(); 
         cannon = GameObject.Find("Canon");
-        //anim = cannon.GetComponent<Animator>();
+        //animator = cannon.GetComponent<Animator>();
         canFire = true;
         coll = bullet.GetComponent<Collider2D>();
     }
@@ -37,7 +37,7 @@ public class ShootScript : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > timeBetwenFire)
             {
-                //anim.SetBool("Shoot", false);
+                //animator.SetBool("Shoot", false);
                 canFire = true;
                 timer = 0;
             }
@@ -51,7 +51,7 @@ public class ShootScript : MonoBehaviour
             if (gameObject.name == "BasicGun")
             {
                 //Iniciar animacion de disparo
-                //anim.SetBool("Shoot", true);
+                //animator.SetBool("Shoot", true);
                 //Hacer sonido de disparo
                 SoundController.instance.PlaySound(sound);
                 //Casquillos

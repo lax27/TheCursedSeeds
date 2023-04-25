@@ -5,28 +5,28 @@ using UnityEngine.UIElements;
 
 public class EnemyDeath : MonoBehaviour
 {
-    EnemysStats es;
+    EnemiesStats enemiesStats;
     Collider2D cl;
-    float timerHit = 0;
+    float timerHit = 0f;
     private SpriteRenderer sr;
     public bool isHit = false;
     private SimpleFlash flash;
-    EnemyFreez ef;
+    EnemyFrozen enemyFrozen;
     
     // Start is called before the first frame update
     void Start()
     {
         flash = GetComponent<SimpleFlash>();
-        es = GetComponent<EnemysStats>();
+        enemiesStats = GetComponent<EnemiesStats>();
         cl = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
-        ef = GetComponent<EnemyFreez>();
+        enemyFrozen = GetComponent<EnemyFrozen>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (es.life <= 0) {
+        if (enemiesStats.enemyHealth <= 0) {
             GetComponent<LootBag>().InstatianteWseed(transform.position);
             Destroy(gameObject);
         }
@@ -54,7 +54,7 @@ public class EnemyDeath : MonoBehaviour
             flash.FlashP(0.2f);
 
             isHit = true;
-            es.life -= bs.damage;
+            enemiesStats.enemyHealth -= bs.damage;
         }
     }
 }

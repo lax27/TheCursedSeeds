@@ -6,10 +6,9 @@ public class ExploSeta : MonoBehaviour
 {
     GameObject player;
     public GameObject Explo;
-    bool isExploating = false;
-    PlayerStatus pst;
-    Collider2D cl;
-    public Collider2D lc;
+    bool isExploding = false;
+    PlayerStatus playerStatus;
+    public Collider2D cl;
     public SpriteRenderer sr;
     private float confusedTime = 5;
 
@@ -18,27 +17,27 @@ public class ExploSeta : MonoBehaviour
     {
         player = GameObject.Find("mantee_v2");
         cl = GetComponent<Collider2D>();
-        pst = player.GetComponent<PlayerStatus>();
+        playerStatus = player.GetComponent<PlayerStatus>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isExploating)
+        if (isExploding)
         {
             sr.enabled = false;
-            lc.enabled = false;
+            cl.enabled = false;
             Explo.SetActive(true);
 
 
-            pst.isConfused = true;
+            playerStatus.isConfused = true;
             confusedTime -= Time.deltaTime;
 
         }
         if (confusedTime <= 0)
         {
             Destroy(gameObject);
-            pst.isConfused = false;
+            playerStatus.isConfused = false;
         }
 
     }
@@ -47,7 +46,7 @@ public class ExploSeta : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            isExploating = true;
+            isExploding = true;
             sr.enabled = false;
         }
     }

@@ -4,39 +4,38 @@ using UnityEngine;
 
 public class ChargerRender : MonoBehaviour
 {
-    Animator anim;
-    EnemyDeath en;
-    MoveCharger mc;
     SpriteRenderer sr;
-    Vector3 direcion;
-    float magnitude;
+    Animator animator;
+    EnemyDeath enemyDeath;
+    ChargerMovement chargerMovement;
+    
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
-        en = GetComponent<EnemyDeath>();
-        mc = GetComponent<MoveCharger>();
+        animator = GetComponent<Animator>();
+        enemyDeath = GetComponent<EnemyDeath>();
+        chargerMovement = GetComponent<ChargerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (en.isHit)
+        if (enemyDeath.isHit)
         {
-            anim.SetBool("isHitA", true);
+            animator.SetBool("isHitA", true);
         }
         else
         {
-            anim.SetBool("isHitA", false);
+            animator.SetBool("isHitA", false);
         }
-        if (mc.isChargin)
+        if (chargerMovement.isCharging)
         {
-            anim.SetBool("isCharginA", true);
+            animator.SetBool("isCharginA", true);
         }
         else
         {
-            anim.SetBool("isCharginA", false);
+            animator.SetBool("isCharginA", false);
         }
 
 

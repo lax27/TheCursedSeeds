@@ -62,8 +62,8 @@ public class PlayerMovement : MonoBehaviour
     /*
      Nota:
     Cambiar transform position desde código se usa solo para casos muy especiales
-    para este caso lo habitual sería usar rbPlayer.velocity = direction * speed en el update
-    para así aprovechar las físicas de unity en lugar de sobreescribir la posición.
+    para este caso lo habitual sería usar rbPlayer.velocity = direction * speed enemyDeath el update
+    para así aprovechar las físicas de unity enemyDeath lugar de sobreescribir la posición.
      */
     private void FixedUpdate()
     {
