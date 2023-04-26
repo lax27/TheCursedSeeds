@@ -8,7 +8,7 @@ public class Shells : MonoBehaviour
     [SerializeField] private float timer = 0.5f;
     [SerializeField] private float timerD = 0.6f;
     private Vector2 dir;
-    private RotatePoint rp;
+    private PlayerAimWeapon rp;
     private GameObject rotatepoint;
     private SpriteRenderer sp;
     private AudioSource audioSource;
@@ -17,7 +17,7 @@ public class Shells : MonoBehaviour
     void Start()
     {
         rotatepoint = GameObject.Find("RotatePoint");
-        rp = rotatepoint.GetComponent<RotatePoint>();
+        rp = rotatepoint.GetComponent<PlayerAimWeapon>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
