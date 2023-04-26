@@ -3084,12 +3084,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &192326044 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5095049128009420456, guid: 27da0534244988346b0b1b449dfea2a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1820656125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &218437709
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,6 +3468,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342226634}
   m_CullTransparentMesh: 1
+--- !u!1 &421909286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2821631087714647902, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1820656125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424603481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,7 +5724,8 @@ MonoBehaviour:
   isGrowed: 0
   isWeapon: 0
   pile: {fileID: 1873615610}
-  weaponsToSpawn: []
+  weaponsToSpawn:
+  - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
   currentWeaponID: 0
   TutorialPassed: 0
   runsDone: 0
@@ -6184,7 +6185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a74b55aad8c3e4689529b6657c49aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSeeds: {fileID: 0}
+  numberOfSeeds: {fileID: 910658495}
   seed_number: 1
 --- !u!1 &1635609535
 GameObject:
@@ -6447,6 +6448,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8111055412696522258, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9016710718363842168, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_IsActive
@@ -6501,7 +6507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   plantMenu: {fileID: 844627228}
-  Guns: {fileID: 192326044}
+  Guns: {fileID: 421909286}
   press: {fileID: 52998666}
 --- !u!61 &1844387658
 BoxCollider2D:
@@ -7426,7 +7432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a74b55aad8c3e4689529b6657c49aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSeeds: {fileID: 0}
+  numberOfSeeds: {fileID: 1045549660}
   seed_number: 0
 --- !u!1 &2096756368
 GameObject:
