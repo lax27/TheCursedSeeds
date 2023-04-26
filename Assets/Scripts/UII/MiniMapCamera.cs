@@ -38,7 +38,7 @@ public class MiniMapCamera : MonoBehaviour
         // en este for lo que se hace es ver si es el mapa es mas grande en horizontal o en vertical
         // y se guarda los extremos negativo y positivo de el mapa en los vectores roomMaxPositiveDistance y roomMaxNegativeDistance
 
-        foreach (Vector2 roomPos in DungeonManager.instance.CurrentRooms)
+        foreach (Vector2 roomPos in DungeonManager.instance.currentRoomsPositions)
         {
             if (roomPos.x > DungeonManager.roomMaxPositiveDistance.x)
                 DungeonManager.roomMaxPositiveDistance.x = roomPos.x;

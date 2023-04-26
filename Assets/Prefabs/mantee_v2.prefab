@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e9b7ca4c418db4db1be10b0a081db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
-  speed: 5
+  playerHealth: 3
+  playerSpeed: 5
   seeds: 0
   cursedSeedID: 0
 --- !u!114 &1662334562445184155
@@ -173,9 +173,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5095049127602115661}
   enemyAttackPaused: 0
   hitSound: {fileID: 0}
-  healthUIIcon1: {fileID: 0}
-  healthUIIcon2: {fileID: 0}
-  healthUIIcon3: {fileID: 0}
   inmuneTimeOffset: 3
   isInmune: 0
 --- !u!114 &446731444
@@ -285,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5095049128009420456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.211, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -307,6 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mousePos: {x: 0, y: 0, z: 0}
+  gunSpriteRenderer: {fileID: 0}
 --- !u!1 &6672627194527296586
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +591,7 @@ PrefabInstance:
     - target: {fileID: 5886319451353504179, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.236
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5886319451353504179, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}

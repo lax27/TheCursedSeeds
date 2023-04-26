@@ -346,9 +346,6 @@ MonoBehaviour:
   - {fileID: 1503097383}
   - {fileID: 1593767381}
   - {fileID: 1829825688}
-  healthUIIcon1: {fileID: 0}
-  healthUIIcon2: {fileID: 0}
-  healthUIIcon3: {fileID: 0}
 --- !u!1001 &279792543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,6 +456,12 @@ Transform:
 --- !u!212 &678103072 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5095049127602115661, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1110700511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &741013651 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2613481509204252995, guid: 27da0534244988346b0b1b449dfea2a8,
     type: 3}
   m_PrefabInstance: {fileID: 1110700511}
   m_PrefabAsset: {fileID: 0}
@@ -1110,6 +1113,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095049128009420458, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: gunSpriteRenderer
+      value: 
+      objectReference: {fileID: 741013651}
     - target: {fileID: 5410514287837441782, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: konckBackForce
@@ -1172,7 +1180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f3760bba5c7bd041ad1e2a0fe7c54c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentRooms: []
+  currentRoomsPositions: []
   roomPrefabs:
   - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
@@ -1722,6 +1730,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MiniMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722188536751705358, guid: 1f6a440c4dfec5641ae51d5d6c6f2d43,
+        type: 3}
+      propertyPath: minimapZoom
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4722188536751705359, guid: 1f6a440c4dfec5641ae51d5d6c6f2d43,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f6a440c4dfec5641ae51d5d6c6f2d43, type: 3}

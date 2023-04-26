@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
 {
-    public List<Vector2> CurrentRooms = new List<Vector2>();
+    public List<Vector2> currentRoomsPositions = new List<Vector2>();
     public static DungeonManager instance { get; private set; }
 
     public static Vector2 roomMaxPositiveDistance = Vector2.zero;
@@ -29,7 +29,7 @@ public class DungeonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentRooms.Add(Vector2.zero);
+        currentRoomsPositions.Add(Vector2.zero);
     }
 
     // Update is called once per frame
