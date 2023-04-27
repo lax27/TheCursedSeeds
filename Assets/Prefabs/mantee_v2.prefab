@@ -542,7 +542,7 @@ PrefabInstance:
     - target: {fileID: 2369515813989828728, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4761522737897993793, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
@@ -553,6 +553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayerID
       value: 565724635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035407209629624931, guid: 95c8638717ee38c4ea1b3c728c533b14,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 5886319451353504179, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}

@@ -152,6 +152,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e670d93e95d4fc546b002b7798dfe17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dispersionAngle: 8
+  dispersionAngle: 5
   bs: {fileID: 4671373784362141992}
-  player: {fileID: 1474435761663872240, guid: 520ee3c8a53e7094a8ad11f6bd0f1ed0, type: 3}

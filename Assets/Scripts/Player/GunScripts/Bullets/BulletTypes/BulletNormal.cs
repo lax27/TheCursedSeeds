@@ -14,6 +14,8 @@ public class BulletNormal : MonoBehaviour
     public BulletStats bs;
     private GameObject player;
     private Transform p;
+    public Vector3 randomBullet;
+    public Vector3 direcion;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +27,12 @@ public class BulletNormal : MonoBehaviour
 
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direcion = mousePos - p.transform.position; // el vector desde el objeto hacia el mouse
-        Vector3 randomBullet = Quaternion.Euler(0f, 0f, Random.Range(-dispersionAngle, dispersionAngle)) * direcion;      // cambio de direcion para que el arma tenga dispersion
+
+        direcion = (mousePos - p.transform.position).normalized; // el vector desde el objeto hacia el mouse
+        randomBullet = Quaternion.Euler(0f, 0f, Random.Range(-dispersionAngle, dispersionAngle)) * direcion; // cambio de direcion para que el arma tenga dispersion
         Vector3 rotation = transform.position - mousePos; // la rotacion enemiesStats para que la bala siempre se vea recta enemyDeath todos los angulos respecto al mouse
 
-        rb.velocity = new Vector2(randomBullet.x, randomBullet.y).normalized * bs.speed;  //se pone el time.deltaTime
+        rb.velocity = new Vector2(randomBullet.x, randomBullet.y).normalized * bs.speed;  
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
     }

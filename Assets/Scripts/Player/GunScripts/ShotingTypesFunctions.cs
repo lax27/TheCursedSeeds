@@ -1,0 +1,76 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ShotingTypesFunctions : MonoBehaviour
+{
+    public void BasicShoot(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake)
+    {
+        //feadBack
+        shake.CameraShakeSettings(timeShake, magnitudeShake);
+
+        SoundController.instance.PlaySound(sound);
+
+        Instantiate(shells, gun.transform.position, Quaternion.identity);
+
+        //gun logic
+        GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+    }
+
+    public void Shootgun(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake)
+    {
+        //feadBack
+
+        //gun logic
+        GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+        GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
+        GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+        GameObject temp4 = Instantiate(bullet, canon.position, Quaternion.identity);
+        GameObject temp5 = Instantiate(bullet, canon.position, Quaternion.identity);
+        GameObject temp6 = Instantiate(bullet, canon.position, Quaternion.identity);
+        GameObject temp7 = Instantiate(bullet, canon.position, Quaternion.identity);
+        GameObject temp8 = Instantiate(bullet, canon.position, Quaternion.identity);
+    }
+
+    public void MachineGun(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake, int bulletCount)
+    {
+        //feadBack
+
+        //gun logic
+        BulletNormal dispersionBullet = bullet.GetComponent<BulletNormal>();
+        if (bulletCount < 4)
+        {
+            dispersionBullet.dispersionAngle = 0f;
+        }
+        else if (bulletCount < 6)
+        {
+            dispersionBullet.dispersionAngle = 5f;
+        }
+        else if (bulletCount < 10)
+        {
+            dispersionBullet.dispersionAngle = 15f;
+        }
+        GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+    }
+
+    //no funciona muy bien, hay que arreglarlo
+    public void ConeGun(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake,float coneAngle)
+    {
+        //feadBack
+
+
+        //gun logic
+        BulletNormal dispersionBullet = bullet.GetComponent<BulletNormal>();
+        
+        dispersionBullet.randomBullet = Quaternion.Euler(0f,0f,0f) * dispersionBullet.direcion;
+        GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+
+        dispersionBullet.randomBullet = Quaternion.Euler(0f, 0f, coneAngle) * dispersionBullet.direcion;
+        GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
+        
+        dispersionBullet.randomBullet = Quaternion.Euler(0f, 0f, -coneAngle) * dispersionBullet.direcion;
+        GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+    }
+
+
+}

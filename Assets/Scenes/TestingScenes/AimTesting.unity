@@ -960,6 +960,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1554634493433478153, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2613481509204252995, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1114,6 +1119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: konckBackTimer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8111055412696522258, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8595297803472830934, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
