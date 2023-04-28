@@ -6,7 +6,7 @@ public class GunRotation : MonoBehaviour
 {
     private Camera mainCam;
     public Vector3 mousePos;
-    public SpriteRenderer gunSpriteRenderer;
+    private SpriteRenderer gunSpriteRenderer;
     // Start is called before the first frame update
     void Start() {
 
@@ -17,6 +17,8 @@ public class GunRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        gunSpriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
 
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
