@@ -33,12 +33,13 @@ public class EnemyFrozen : MonoBehaviour
 
        if (isFrozen)
        {
-       timeToMelt -= Time.deltaTime;
+            //timeToMelt -= Time.deltaTime;
 
             if (timeToMelt <= 0.0f)
             {
                 MeltCharacter();
             }
+
        }
     }
 

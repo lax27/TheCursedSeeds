@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mousePos: {x: 0, y: 0, z: 0}
-  gunSpriteRenderer: {fileID: 0}
+  gunSpriteRenderer: {fileID: 6140062409455394673}
 --- !u!1 &6672627194527296586
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +639,12 @@ PrefabInstance:
 --- !u!4 &4026438504942991025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5886319451353504179, guid: 95c8638717ee38c4ea1b3c728c533b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 7372568675635769090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6140062409455394673 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3703438960888934515, guid: 95c8638717ee38c4ea1b3c728c533b14,
     type: 3}
   m_PrefabInstance: {fileID: 7372568675635769090}
   m_PrefabAsset: {fileID: 0}

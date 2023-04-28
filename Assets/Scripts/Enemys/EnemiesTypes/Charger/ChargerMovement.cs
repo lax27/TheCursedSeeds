@@ -43,6 +43,12 @@ public class ChargerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (enemyFrozen.isFrozen)
+        {
+            return;
+        }
+
         wait -= Time.deltaTime;
        if(wait <= 0) {
             isGoingToCharge = true;

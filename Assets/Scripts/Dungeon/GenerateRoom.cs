@@ -12,6 +12,14 @@ public class GenerateRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        // Si no hay dungeon manager significa que es una escena donde ya están puestas las salas a mano
+        // ejemplo: el tutorial
+        if (DungeonManager.instance == null)
+        {
+            return;
+        }
+
         bool roomCreatedInThisPosition = DungeonManager.instance.currentRoomsPositions.Contains(transform.position);
 
         int roomsAmount = DungeonManager.instance.currentRoomsPositions.Count;

@@ -10,7 +10,7 @@ public class Cam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cam = GameObject.Find("CameraFollow");
+        cam = Camera.main.gameObject;
         player = FindObjectOfType<PlayerStats>().transform;
     }
 

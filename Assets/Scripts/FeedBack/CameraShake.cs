@@ -29,7 +29,7 @@ public class CameraShake : MonoBehaviour
             shakePosition.y = Random.Range(-shakeMagnitude, shakeMagnitude);
             transform.position = transform.position + shakePosition;
         }
-        else
+        else if (transform.parent != null)
         {
             transform.position = transform.parent.position;
         }
