@@ -53,7 +53,7 @@ public class PlayerHealthHandler : MonoBehaviour
         if (isInmune)
         {
             inmuneTimer -= Time.deltaTime;
-            gameObject.layer = inmuneLayer;
+            Physics2D.IgnoreLayerCollision(7, 8, true);
 
             if (inmuneTimer > 0f)
             {
@@ -79,7 +79,7 @@ public class PlayerHealthHandler : MonoBehaviour
             if (inmuneTimer <= 0)
             {
                 //devlover las layersColisions
-                gameObject.layer = normalLayer;
+                Physics2D.IgnoreLayerCollision(7, 8, false);
                 spriteRenderer.color = new Color(255, 255, 255, 255);
                 inmuneTimer = inmuneTimeOffset;
                 isInmune = false;
