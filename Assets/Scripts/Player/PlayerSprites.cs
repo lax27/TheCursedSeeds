@@ -24,11 +24,7 @@ public class PlayerSprites : MonoBehaviour
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition); 
 
         Vector3 rotation = mousePos - transform.position;
-
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-
-        //transform.rotation = Quaternion.Euler(0, 0, rotZ);
-
         if(rotZ > 90 || rotZ < -90)
         {
             rs.flipX = true;
@@ -37,7 +33,7 @@ public class PlayerSprites : MonoBehaviour
             rs.flipX = false;
         }
 
-        if(rotZ > -135 && rotZ < -45){
+        if(rotZ > -125 && rotZ < -65){
             //rs.sprite = sprites[2];//front
             if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0){
                 animator.SetBool("Front", true);
@@ -57,7 +53,7 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveBack", false);
             }
         }
-        else if(rotZ > 45 && rotZ < 135){
+        else if(rotZ > 65 && rotZ < 125){
             //rs.sprite = sprites[1];//back
             if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
             {

@@ -6,7 +6,7 @@ using TMPro;
 public class AmoUI : MonoBehaviour
 {
     private TMP_Text ammo;
-    private GameObject Guns;
+    private GameObject guns;
     public ShootScript bullets;
     private string magazine;
 
@@ -18,16 +18,16 @@ public class AmoUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Guns = GameObject.Find("RotatePoint");
+        guns = GameObject.Find("RotatePoint");
         ammo = GameObject.Find("Amo").GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < Guns.transform.childCount; i++)
+        for (int i = 0; i < guns.transform.childCount; i++)
         {
-            bullets = Guns.transform.GetChild(GameManager.instance.currentWeaponID).GetComponent<ShootScript>();
+            bullets = guns.transform.GetChild(GameManager.instance.currentWeaponID).GetComponent<ShootScript>();
         }
 
 

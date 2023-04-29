@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ShootScript : MonoBehaviour
 {
@@ -18,9 +19,6 @@ public class ShootScript : MonoBehaviour
     public float reloadTimeOffset;
     public bool isReloading = false;
 
-
-    
-
     //FedBack
     [SerializeField]private AudioClip sound;
     public Transform canon = null;
@@ -31,9 +29,13 @@ public class ShootScript : MonoBehaviour
     //Script with the shoot code
     private ShotingTypesFunctions shotFunctions;
 
+    //script with the move code
+    private PlayerMovement playerMove;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerMove = GameObject.Find("mantee_v2").GetComponent<PlayerMovement>();
         shotFunctions = GetComponent<ShotingTypesFunctions>();
         shake = Camera.main.GetComponent<CameraShake>(); 
         animator = GetComponent<Animator>();    
@@ -45,12 +47,14 @@ public class ShootScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         if (!canFire)
         {
             timer += Time.deltaTime;
             if (timer > timeBetwenFire)
             {
                 //animator.SetBool("Shoot", false);
+                playerMove.isShooting = false;
                 canFire = true;
                 timer = 0;
             }
@@ -62,6 +66,7 @@ public class ShootScript : MonoBehaviour
                 canFire = false;
                 if (gameObject.name == "BasicGun")
                 {
+                    playerMove.isShooting = true;
                     shotFunctions.BasicShoot(bullet, sound, animator, shells, shake, gameObject, canon, 0.05f, 0.12f, 5f);
                     currentAmmo--;
                 }

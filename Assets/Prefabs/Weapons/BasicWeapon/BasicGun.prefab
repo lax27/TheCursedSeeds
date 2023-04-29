@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5886319451353504179}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2029671676516333746
 Animator:
@@ -137,8 +137,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2171958933753022544}
   - {fileID: 8468278116057023228}
+  - {fileID: 2171958933753022544}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -212,6 +212,7 @@ MonoBehaviour:
   currentAmmo: 12
   maxAmmo: 6
   reloadTimeOffset: 0.5
+  isReloading: 0
   sound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   canon: {fileID: 2171958933753022544}
   shells: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a, type: 3}
@@ -362,7 +363,7 @@ Transform:
   - {fileID: 7206905933952589917}
   - {fileID: 4029594655375009371}
   m_Father: {fileID: 5886319451353504179}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8889915756290007225
 GameObject:

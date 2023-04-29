@@ -7,11 +7,14 @@ public class PlayerAimWeapon : MonoBehaviour
     private GameObject aimTransform;
     private Camera mainCam;
     public Vector3 mousePos;
+    private GameObject guns;
 
     private void Start()
     {
         aimTransform = GameObject.Find("RotatePoint");
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        guns = GameObject.Find("RotatePoint");
+
     }
 
     private void Update()
@@ -37,6 +40,25 @@ public class PlayerAimWeapon : MonoBehaviour
             aimTransform.transform.GetChild(i).gameObject.transform.localScale = aimLocalScale;
         }
 
+        for (int i = 0; i < guns.transform.childCount; i++)
+        {
+            
+            if(i == GameManager.instance.currentWeaponID)
+            {
+                SpriteRenderer gunSprite = guns.transform.GetChild(i).GetComponent<SpriteRenderer>();
+                GameObject handsObject = guns.transform.GetChild(i).GetChild(0).gameObject;
+                if (angle > 65 && angle < 125)
+                {
+                    gunSprite.sortingLayerName = "details";
+                    handsObject.SetActive(false);
+                }
+                else
+                {
+                    gunSprite.sortingLayerName = "ice cube";
+                    handsObject.SetActive(true);
+                }
+                
+            }
+        }
     }
-
 }

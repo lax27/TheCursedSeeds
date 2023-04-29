@@ -135,7 +135,6 @@ public class PlayerHealthHandler : MonoBehaviour
                 if(hitSound != null)
                     hitSound.Play();
             }
-            playerMovement.beingKnockedBack = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
