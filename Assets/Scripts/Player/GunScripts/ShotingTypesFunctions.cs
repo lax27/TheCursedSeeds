@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class ShotingTypesFunctions : MonoBehaviour
 {
-    public void BasicShoot(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake)
+    public void BasicShoot(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake, float bulletDisspersion)
     {
         //feadBack
         shake.CameraShakeSettings(timeShake, magnitudeShake);
+
+        //animator.SetBool("Shoot", true);
 
         SoundController.instance.PlaySound(sound);
 
         Instantiate(shells, gun.transform.position, Quaternion.identity);
 
         //gun logic
+        BulletNormal dispersionBullet = bullet.GetComponent<BulletNormal>();
+        dispersionBullet.dispersionAngle = bulletDisspersion;
         GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
     }
 

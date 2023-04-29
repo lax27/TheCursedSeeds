@@ -6,7 +6,7 @@ public class PlayerAimWeapon : MonoBehaviour
 {
     private GameObject aimTransform;
     private Camera mainCam;
-
+    public Vector3 mousePos;
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class PlayerAimWeapon : MonoBehaviour
 
     private void Update()
     {
-        Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
         Vector3 aimDirection = (mousePos - gameObject.transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;

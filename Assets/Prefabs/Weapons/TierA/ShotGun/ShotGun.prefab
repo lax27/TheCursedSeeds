@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5132496241304233024}
   - component: {fileID: 995228891814042547}
   - component: {fileID: 5757523989730207526}
+  - component: {fileID: 492483746613922713}
   m_Layer: 0
   m_Name: ShotGun
   m_TagString: Untagged
@@ -99,10 +100,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 6778799097550530304, guid: 9cf1c00ebf048ba49bc4c17e06b244c2, type: 3}
-  shells: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a, type: 3}
   canFire: 0
   timeBetwenFire: 1
+  currentAmmo: 12
+  maxAmmo: 6
+  reloadTimeOffset: 0
+  sound: {fileID: 0}
   canon: {fileID: 2752010500210949294}
+  shells: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a, type: 3}
+--- !u!114 &492483746613922713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047485851235706312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2130ff3bbf3e443bb6b87461015a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4762179352999044753
 GameObject:
   m_ObjectHideFlags: 0

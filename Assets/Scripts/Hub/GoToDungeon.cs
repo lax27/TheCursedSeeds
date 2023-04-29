@@ -19,6 +19,10 @@ public class GoToDungeon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(2);
+        if (collision.tag == "Player")
+        {
+            SceneManager.LoadScene(2);
+        }
+        
     }
 }

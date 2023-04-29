@@ -11,6 +11,16 @@ public class ShootScript : MonoBehaviour
     public float timeBetwenFire;
     private int bulletCount;
 
+    //ammo logic
+    public int currentAmmo = 12;
+    public int maxAmmo = 6;
+    private float reloadTime;
+    public float reloadTimeOffset;
+    private bool isReloading = false;
+
+
+    
+
     //FedBack
     [SerializeField]private AudioClip sound;
     public Transform canon = null;
@@ -26,8 +36,10 @@ public class ShootScript : MonoBehaviour
     {
         shotFunctions = GetComponent<ShotingTypesFunctions>();
         shake = Camera.main.GetComponent<CameraShake>(); 
+        animator = GetComponent<Animator>();    
         canFire = true;
-
+        reloadTime = reloadTimeOffset;
+        
     }
 
     // Update is called once per frame
@@ -38,35 +50,55 @@ public class ShootScript : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > timeBetwenFire)
             {
+                //animator.SetBool("Shoot", false);
                 canFire = true;
                 timer = 0;
             }
         }
 
-
-        if (Input.GetMouseButton(0) && canFire)
+        
+        if (Input.GetMouseButton(0) && canFire && currentAmmo != 0 && !isReloading)
         {
-            canFire = false;
-            if (gameObject.name == "BasicGun")
-            {
-                shotFunctions.BasicShoot(bullet, sound, animator, shells, shake, gameObject, canon, 0.05f, 0.12f);
-            }
+                canFire = false;
+                if (gameObject.name == "BasicGun")
+                {
+                    shotFunctions.BasicShoot(bullet, sound, animator, shells, shake, gameObject, canon, 0.05f, 0.12f, 5f);
+                    currentAmmo--;
+                }
 
-            if (gameObject.name == "ShotGun")
-            {
-                shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0, 0);
-            }
+                if (gameObject.name == "ShotGun")
+                {
+                    shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0, 0);
+                    currentAmmo--;
+                }
 
             //if (gameObject.name == "MachineGun")
             //{
             //    shotFunctions.MachineGun(bullet, sound, animator, shells, shake, gameObject, canon, 0.02f, 0.10f, bulletCount);
+            //    currentAmmo--;
             //    bulletCount++;
             //}
         }
-
-        if (!Input.GetMouseButton(0))
+       
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            bulletCount = 0;
+            isReloading = true;
         }
+
+        if (isReloading)
+        {
+            //animacion de recarga
+            reloadTime -= Time.deltaTime;
+            if (reloadTime <= 0)
+            {
+                isReloading = false;
+                currentAmmo = maxAmmo;
+                reloadTime = reloadTimeOffset;
+            }
+        }
+       if (!Input.GetMouseButton(0))
+       {
+            bulletCount = 0;
+       }
     }
 }

@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 4761522737897993793}
   - component: {fileID: 5035407209629624931}
   - component: {fileID: 285154890137683908}
+  - component: {fileID: 4592863435409543925}
   m_Layer: 0
   m_Name: BasicGun
   m_TagString: Untagged
@@ -208,6 +209,9 @@ MonoBehaviour:
   bullet: {fileID: 8993573725950607081, guid: b85de4c97071f874ca8087918f41b25c, type: 3}
   canFire: 0
   timeBetwenFire: 0.5
+  currentAmmo: 12
+  maxAmmo: 6
+  reloadTimeOffset: 0.5
   sound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   canon: {fileID: 2171958933753022544}
   shells: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a, type: 3}
@@ -223,6 +227,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2130ff3bbf3e443bb6b87461015a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4592863435409543925
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2369515813989828728}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffb06b133ffc96f4492876ea54e5d08c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5349165104240696908
 GameObject:
   m_ObjectHideFlags: 0
