@@ -10,7 +10,7 @@ public class AmoUI : MonoBehaviour
     public ShootScript bullets;
     private string magazine;
 
-    private float timeBlink = 0.35f;
+    private float timeBlink = 0.5f;
     private bool isBlinking = false;
     public GameObject ReloadIcon;
 
@@ -36,12 +36,12 @@ public class AmoUI : MonoBehaviour
         magazine += bullets.maxAmmo.ToString();
         ammo.text = magazine;
 
-        if (bullets.currentAmmo <= 0)
+        if (bullets.isReloading)
         {
             timeBlink -= Time.deltaTime;
             if (timeBlink <= 0f)
             {
-                timeBlink = 0.35f;
+                timeBlink = 0.5f;
                 isBlinking = !isBlinking;
             }
 
@@ -53,13 +53,10 @@ public class AmoUI : MonoBehaviour
             {
                 ReloadIcon.SetActive(false);
             }
-            Debug.Log(timeBlink);
         }
-
-        if(bullets.currentAmmo > 0)
+        else
         {
             ReloadIcon.SetActive(false);
         }
-
     }
 }

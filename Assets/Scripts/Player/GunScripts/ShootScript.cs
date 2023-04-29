@@ -16,7 +16,7 @@ public class ShootScript : MonoBehaviour
     public int maxAmmo = 6;
     private float reloadTime;
     public float reloadTimeOffset;
-    private bool isReloading = false;
+    public bool isReloading = false;
 
 
     
@@ -80,7 +80,7 @@ public class ShootScript : MonoBehaviour
             //}
         }
        
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || currentAmmo <= 0)
         {
             isReloading = true;
         }
