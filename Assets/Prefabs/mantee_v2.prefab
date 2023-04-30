@@ -30,8 +30,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 126698524219019225}
-  - {fileID: 6351217129626090062}
   - {fileID: 7206354230899076892}
+  - {fileID: 6351217129626090062}
   m_Father: {fileID: 5095049127602115662}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -283,7 +283,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 6.5
+  m_LinearDrag: 400
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -468,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 5132496241304233024, guid: cacdd6d10060cb04f905a86eb1b055d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5132496241304233024, guid: cacdd6d10060cb04f905a86eb1b055d5,
         type: 3}
@@ -535,10 +535,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8205662777856051809}
     m_Modifications:
+    - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
+      propertyPath: canon
+      value: 
+      objectReference: {fileID: 5128045375676946532}
+    - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
+    - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
+      propertyPath: shells
+      value: 
+      objectReference: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a,
+        type: 3}
+    - target: {fileID: 8662394429053096237, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 9098307195744675180, guid: 20f059440d76b2c459ea8e81c593d7c6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9098307195744675180, guid: 20f059440d76b2c459ea8e81c593d7c6,
         type: 3}
@@ -593,10 +614,16 @@ PrefabInstance:
     - target: {fileID: 9098307195744675182, guid: 20f059440d76b2c459ea8e81c593d7c6,
         type: 3}
       propertyPath: m_Name
-      value: rabbit_weapon
+      value: rabbit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20f059440d76b2c459ea8e81c593d7c6, type: 3}
+--- !u!4 &5128045375676946532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7011500426571794246, guid: 20f059440d76b2c459ea8e81c593d7c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2767356850839019298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6351217129626090062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9098307195744675180, guid: 20f059440d76b2c459ea8e81c593d7c6,

@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8993573725950607081, guid: d4371dcf7cef82049809cc4c9369a9f8, type: 3}
   canFire: 0
-  timeBetwenFire: 0.4
+  timeBetwenFire: 0.7
   currentAmmo: 12
   maxAmmo: 12
   reloadTimeOffset: 1.5

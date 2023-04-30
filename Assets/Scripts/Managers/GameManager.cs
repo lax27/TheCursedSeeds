@@ -105,11 +105,7 @@ public class GameManager : MonoBehaviour
         {
             spawnWeapon = weaponsToSpawn[1];
             isPlanted = true;
-            PlantTimer = 420;
+            PlantTimer = 10;
         }
-
-
-
-
     }
 }
