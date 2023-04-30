@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShotingTypesFunctions : MonoBehaviour
 {
+    private bool isBursting = false;
     public void BasicShoot(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake, float bulletDisspersion)
     {
         //feadBack
@@ -57,24 +58,27 @@ public class ShotingTypesFunctions : MonoBehaviour
         GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
     }
 
-    //no funciona muy bien, hay que arreglarlo
-    public void ConeGun(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake,float coneAngle)
+    public void Rafaga(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake, float bulletDisspersion)
     {
         //feadBack
+        shake.CameraShakeSettings(timeShake, magnitudeShake);
 
+        //animator.SetBool("Shoot", true);
+
+        SoundController.instance.PlaySound(sound);
+
+        Instantiate(shells, gun.transform.position, Quaternion.identity);
 
         //gun logic
-        BulletNormal dispersionBullet = bullet.GetComponent<BulletNormal>();
-        
-        dispersionBullet.randomBullet = Quaternion.Euler(0f,0f,0f) * dispersionBullet.direcion;
-        GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
-
-        dispersionBullet.randomBullet = Quaternion.Euler(0f, 0f, coneAngle) * dispersionBullet.direcion;
-        GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
-        
-        dispersionBullet.randomBullet = Quaternion.Euler(0f, 0f, -coneAngle) * dispersionBullet.direcion;
-        GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+        StartCoroutine(Burst(bullet, canon));   
     }
 
-
+    IEnumerator Burst(GameObject bullet,Transform canon)
+    {
+            GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.05f);
+            GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.05f);
+            GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+    }
 }

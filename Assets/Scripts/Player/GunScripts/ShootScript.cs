@@ -63,20 +63,27 @@ public class ShootScript : MonoBehaviour
         
         if (Input.GetMouseButton(0) && canFire && currentAmmo != 0 && !isReloading)
         {
-                canFire = false;
-                if (gameObject.name == "BasicGun")
-                {
-                    playerMove.isShooting = true;
-                    shotFunctions.BasicShoot(bullet, sound, animator, shells, shake, gameObject, canon, 0.05f, 0.12f, 5f);
-                    currentAmmo--;
-                }
+           canFire = false;
 
-                if (gameObject.name == "ShotGun")
-                {
-                    shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0, 0);
-                    currentAmmo--;
-                }
+            if (gameObject.name == "BasicGun")
+            {
+                 playerMove.isShooting = true;
+                 shotFunctions.BasicShoot(bullet, sound, animator, shells, shake, gameObject, canon, 0.05f, 0.12f, 5f);
+                 currentAmmo--;
+            }
 
+            if (gameObject.name == "rabbit")
+            {
+                playerMove.isShooting = true;
+                shotFunctions.Rafaga(bullet, sound, animator, shells, shake, gameObject, canon, 0.1f, 0.15f, 6f);
+                currentAmmo--;
+            }
+
+            //if (gameObject.name == "ShotGun")
+            //{
+            //    shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0, 0);
+            //    currentAmmo--;
+            //}
             //if (gameObject.name == "MachineGun")
             //{
             //    shotFunctions.MachineGun(bullet, sound, animator, shells, shake, gameObject, canon, 0.02f, 0.10f, bulletCount);

@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAimWeapon playerAim;
     public bool isShooting = false;
     private Vector3 KnockBackDir;
+    public float knockBackForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         direction = new Vector2(horizontalMoveInput, verticalMoveInput).normalized;
+
+        if (GameManager.instance.currentWeaponID == 0)
+        {
+            knockBackForce = 500f;
+        }
+
     }
 
     
@@ -50,8 +57,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (isShooting)
         {
-            KnockBackDir = gameObject.transform.position - playerAim.mousePos;
-            rbPlayer.AddForce(KnockBackDir * 20 * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            KnockBackDir = (gameObject.transform.position - playerAim.mousePos).normalized;
+            rbPlayer.AddForce(KnockBackDir * knockBackForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
         }
     }
 }
