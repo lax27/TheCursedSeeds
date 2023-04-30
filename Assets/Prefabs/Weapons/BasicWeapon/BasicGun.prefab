@@ -211,7 +211,7 @@ MonoBehaviour:
   timeBetwenFire: 0.5
   currentAmmo: 12
   maxAmmo: 6
-  reloadTimeOffset: 0.5
+  reloadTimeOffset: 0.8
   isReloading: 0
   sound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   canon: {fileID: 2171958933753022544}

@@ -616,6 +616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rabbit
       objectReference: {fileID: 0}
+    - target: {fileID: 9098307195744675182, guid: 20f059440d76b2c459ea8e81c593d7c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20f059440d76b2c459ea8e81c593d7c6, type: 3}
 --- !u!4 &5128045375676946532 stripped
@@ -645,7 +650,7 @@ PrefabInstance:
     - target: {fileID: 2369515813989828728, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761522737897993793, guid: 95c8638717ee38c4ea1b3c728c533b14,
         type: 3}

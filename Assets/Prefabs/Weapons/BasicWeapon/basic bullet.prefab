@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993573725950607081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.662, y: -0.09570935, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,9 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 1739330569
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
-    type: 3}
-  m_Color: {r: 1, g: 0.62499803, b: 0.051886797, a: 1}
+  m_Sprite: {fileID: 21300000, guid: cada27be45a99d54a9ad215aa15aa12d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,9 +101,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.007895926, y: 0}
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 0.6579273
 --- !u!50 &8865896776906581199
 Rigidbody2D:
   serializedVersion: 4
@@ -154,3 +153,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dispersionAngle: 5
   bs: {fileID: 4671373784362141992}
+  randomBullet: {x: 0, y: 0, z: 0}
+  direcion: {x: 0, y: 0, z: 0}

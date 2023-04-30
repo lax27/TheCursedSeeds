@@ -12,7 +12,8 @@ public class PlantZone : MonoBehaviour
     public GameObject plantMenu;
     public GameObject Guns;
     public GameObject press;
-    private SpriteRenderer sr;   
+    private SpriteRenderer sr;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class PlantZone : MonoBehaviour
         pm = GameObject.Find("mantee_v2").GetComponent<PlayerStats>();
         sh = GameObject.Find("mantee_v2").GetComponent<ShootScript>();
         cl = GetComponent<Collider2D>();
+        rb = GameObject.Find("mantee_v2").GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,8 @@ public class PlantZone : MonoBehaviour
             //desactivar el movimento
             pm.speed = 0;
 
+            rb.mass = 1231231;
+
             //desactivar el disparo
             Guns.SetActive(false);
             //activar el menu de platado   
@@ -56,6 +60,7 @@ public class PlantZone : MonoBehaviour
         {
             press.SetActive(true);
             pm.speed = 5;
+            rb.mass = 1;
             Guns.SetActive(true);
             plantMenu.SetActive(false);
 
