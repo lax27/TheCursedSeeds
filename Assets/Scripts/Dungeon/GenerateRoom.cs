@@ -15,12 +15,6 @@ public class GenerateRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NormalRoom();
-
-        BossRoom();
-    }
-    private void NormalRoom()
-    {
         canGenerate = !DungeonManager.instance.CurrentRooms.Contains(transform.position) && DungeonManager.instance.CurrentRooms.Count < 8;
 
         Generate = Random.Range(0f, 100f) > 50f ? true : false;
@@ -37,13 +31,8 @@ public class GenerateRoom : MonoBehaviour
         {
             tp.SetActive(false);
         }
-    }
-
-    private void BossRoom()
-    {
-
+       
         canGenerate = !DungeonManager.instance.CurrentRooms.Contains(transform.position) && DungeonManager.instance.CurrentRooms.Count < 1;
-
         if (canGenerate)
         {
             roomCount = Random.Range(0, DungeonManager.instance.bossRoomPrefabs.Length);
@@ -55,4 +44,6 @@ public class GenerateRoom : MonoBehaviour
             tp.SetActive(false);
         }
     }
+
+
 }
