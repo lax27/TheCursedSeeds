@@ -16,6 +16,7 @@ public class GenerateRoom : MonoBehaviour
     void Start()
     {
         NormalRoom();
+
         BossRoom();
     }
     private void NormalRoom()
