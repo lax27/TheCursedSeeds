@@ -7,6 +7,7 @@ public class DungeonManager : MonoBehaviour
 {
     public List<Vector2> currentRoomsPositions = new List<Vector2>();
     public List<GameObject> RoomsObjecs = new List<GameObject>();
+    public List<GameObject> bossRoomBugs = new List<GameObject>();
     public static DungeonManager instance { get; private set; }
 
     public static Vector2 roomMaxPositiveDistance = Vector2.zero;
@@ -15,7 +16,8 @@ public class DungeonManager : MonoBehaviour
     public GameObject[] roomPrefabs;
     public GameObject[] bossRoomPrefabs;
 
-    private int oneTime = 1;
+
+    public int nextChild = 0;
 
     private void Awake()
     {
@@ -48,12 +50,26 @@ public class DungeonManager : MonoBehaviour
         GameObject rightChild = LastRoomSpawned.transform.GetChild(2).gameObject;
         GameObject downChild = LastRoomSpawned.transform.GetChild(3).gameObject;
 
-        if (oneTime == 1)
-        {
-            Instantiate(bossRoomPrefabs[0], upChild.transform.position,Quaternion.identity);
-        }
-   
 
-        oneTime--;
+        if (nextChild == 0)
+        {
+            GenerateBossRoom spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
+            spawnBossRoom.enabled = true;
+        }
+        
+        if (nextChild == 1)
+        {
+            GenerateBossRoom spawnBossRoom = leftChild.GetComponent<GenerateBossRoom>();
+            spawnBossRoom.enabled = true;
+        }
+        
+        if (nextChild == 2)
+        {
+            GenerateBossRoom spawnBossRoom = rightChild.GetComponent<GenerateBossRoom>();
+            spawnBossRoom.enabled = true;
+        }
+
+
+
     }
 }

@@ -303,6 +303,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1294351177}
+    - target: {fileID: 5450038604239056132, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab331c9658baf2428cb5cd250b51d23, type: 3}
 --- !u!1 &285287994
@@ -736,6 +741,7 @@ MonoBehaviour:
   currentRoomsPositions: []
   RoomsObjecs:
   - {fileID: 1994265448}
+  bossRoomBugs: []
   roomPrefabs:
   - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
