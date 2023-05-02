@@ -13,13 +13,13 @@ public class GenerateBossRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canGenerate = !DungeonManager.instance.CurrentRooms.Contains(transform.position) && DungeonManager.instance.CurrentRooms.Count < 1;
+        canGenerate = !DungeonManager.instance.currentRoomsPositions.Contains(transform.position) && DungeonManager.instance.currentRoomsPositions.Count < 1;
         if (canGenerate)
         {
 
             roomCount = Random.Range(0, DungeonManager.instance.bossRoomPrefabs.Length);
             Instantiate(DungeonManager.instance.bossRoomPrefabs[roomCount], transform.position, Quaternion.identity);
-            DungeonManager.instance.CurrentRooms.Add(transform.position);
+            DungeonManager.instance.currentRoomsPositions.Add(transform.position);
         }
         else
         {
