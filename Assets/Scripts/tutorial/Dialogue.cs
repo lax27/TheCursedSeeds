@@ -15,6 +15,7 @@ public class Dialogue : MonoBehaviour
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
+    public bool obliterate;
     private void Start()
     {
         mantee = GameObject.Find("mantee_v2");
@@ -66,6 +67,10 @@ public class Dialogue : MonoBehaviour
             DialoguePanel.SetActive(false);
             exclamation.SetActive(true);
             movement.enabled = true;
+            if (obliterate)
+            {
+                Destroy(this);
+            }
         }
     }
 
