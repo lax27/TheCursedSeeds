@@ -8,16 +8,16 @@ public class Shells : MonoBehaviour
     [SerializeField] private float timer = 0.5f;
     [SerializeField] private float timerD = 0.6f;
     private Vector2 dir;
-    private RotatePoint rp;
-    private GameObject rotatepoint;
+    private PlayerAimWeapon rp;
+    private GameObject gunRotation;
     private SpriteRenderer sp;
     private AudioSource audioSource;
     private float time = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        rotatepoint = GameObject.Find("RotatePoint");
-        rp = rotatepoint.GetComponent<RotatePoint>();
+        gunRotation = GameObject.Find("RotatePoint");
+        rp = gunRotation.GetComponent<PlayerAimWeapon>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();

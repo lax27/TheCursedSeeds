@@ -8,7 +8,7 @@ public class ShowDescription : MonoBehaviour
 { 
     [SerializeField] private GameObject Description;
     [SerializeField] private GameObject mantee;
-    [SerializeField] private Pmove movement;
+    [SerializeField] private PlayerMovement movement;
     [SerializeField] private GameObject exclamation;
 
     private bool isPlayerInRange;
@@ -20,7 +20,7 @@ public class ShowDescription : MonoBehaviour
     void Start()
     {
         mantee = GameObject.Find("mantee_v2");
-        movement = mantee.GetComponent<Pmove>();
+        movement = mantee.GetComponent<PlayerMovement>();
     }
     private void Show()
     {

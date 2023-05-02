@@ -10,16 +10,16 @@ GameObject:
   m_Component:
   - component: {fileID: 2334146017784503399}
   - component: {fileID: 2334146017784503398}
-  - component: {fileID: 2334146017784503393}
-  - component: {fileID: 2334146017784503392}
-  - component: {fileID: 2334146017784503395}
+  - component: {fileID: 6664644288504826416}
   - component: {fileID: 2334146017784503394}
   - component: {fileID: 2334146017784503453}
   - component: {fileID: 2334146017784503452}
+  - component: {fileID: 5766464301680568062}
+  - component: {fileID: 2334146017784503393}
+  - component: {fileID: 5786014723900277852}
   - component: {fileID: 2334146017784503455}
   - component: {fileID: 2334146017784503454}
   - component: {fileID: 2334146017784503449}
-  - component: {fileID: 5766464301680568062}
   m_Layer: 8
   m_Name: BeeCharge
   m_TagString: enemy
@@ -95,7 +95,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2334146017784503393
+--- !u!114 &6664644288504826416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,45 +104,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2334146017784503448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1351304149cdd3459842b47b0a752ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 20b7d3e62a680634dafd38b5193f5bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2334146017784503392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334146017784503448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd303f81ce548844b6e19b248632197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 10
-  speed: 1.5
-  damage: 1
---- !u!114 &2334146017784503395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334146017784503448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f005c5d1438df6c41ae39e1572458f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  dir: {x: 0, y: 0}
-  dir3: {x: 0, y: 0, z: 0}
-  isGoingToCharge: 0
-  isChargin: 1
-  chargingForce: 900
-  toCharge: 1
-  chargeTime: 0.5
-  wait: 5
+  enemyHealth: 7
+  enemySpeed: 5
+  enemyDamage: 1
 --- !u!114 &2334146017784503394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeaeeb8645409ac48851cb4033235f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFreez: 0
+  isFrozen: 0
   setToFreeze: 0
   isHit: 0
   ice: {fileID: 2334146018713380574}
@@ -189,6 +156,52 @@ MonoBehaviour:
   WseedsList:
   - {fileID: 11400000, guid: 639cc9d355f8cf74497f377f20b8b851, type: 2}
   - {fileID: 11400000, guid: 515c0593659d94b42a9134e032ec2817, type: 2}
+--- !u!114 &5766464301680568062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334146017784503448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27670ba5755c0c1439401d3c2df6128d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 7db6d48da37053044ad381db1bd3ca7a, type: 2}
+--- !u!114 &2334146017784503393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334146017784503448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1351304149cdd3459842b47b0a752ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5786014723900277852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334146017784503448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc48ce223f6aee541b275263a74b9f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  dir: {x: 0, y: 0}
+  dir3: {x: 0, y: 0, z: 0}
+  isGoingToCharge: 0
+  isCharging: 0
+  chargingForce: 50
+  toCharge: 1
+  chargeTime: 0.1
+  wait: 10
 --- !u!58 &2334146017784503455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -246,19 +259,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5766464301680568062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334146017784503448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27670ba5755c0c1439401d3c2df6128d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: 7db6d48da37053044ad381db1bd3ca7a, type: 2}
 --- !u!1 &2334146018713380574
 GameObject:
   m_ObjectHideFlags: 0

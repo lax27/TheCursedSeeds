@@ -5,7 +5,7 @@ using TMPro;
 
 public class button_responsive : MonoBehaviour
 {
-    public TMP_Text text;
+    public TMP_Text numberOfSeeds;
     public int seed_number;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class button_responsive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = GameManager.instance.inventory[seed_number].ToString();
+        numberOfSeeds.text = GameManager.instance.inventory[seed_number].ToString();
         if(GameManager.instance.inventory[seed_number] >= 64)
         {
             GameManager.instance.inventory[seed_number] = 64;

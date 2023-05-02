@@ -2,7 +2,7 @@ TIER D:
 - Rabbit se dispersa demasiado (10 rondas) (recarga 0.5s) // del tutorial
 - Basic me poco pero suficiente para empezar (6 rondas) (recarga 1s) //revolver
 - (Bank account) lanza tus dineros a cambio de mucho daño (sin rondas) (sin recargas) //Extra
-- Pistola de guisantes, poco daño, pero rebotan 2 veces (4 rondas) (recarga de 1s, lo que tardas en meter la mano en el bolsillo)
+- Pistola de guisantes, poco daño, pero rebotan 2 veces (4 rondas) (recarga de 1s, lo que tardas enemyDeath meter la mano enemyDeath el bolsillo)
 
 Tier C:
 - Rosa, daño reducido pero atraviesa enemigos (5 rondas) (recarga 0.5s) // arma perforante

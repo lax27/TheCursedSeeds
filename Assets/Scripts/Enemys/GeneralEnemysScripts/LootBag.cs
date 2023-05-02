@@ -11,19 +11,19 @@ public class LootBag : MonoBehaviour
     Wseed GetDroppedSeed()
     {
        int randmomNumber = Random.Range(1, 101);
-       List<Wseed> possibleseeds = new List<Wseed>();
+       List<Wseed> possibleSeeds = new List<Wseed>();
 
         foreach(Wseed wseed in WseedsList)
         {
             if (randmomNumber <= wseed.dropChance)
             {
-                possibleseeds.Add(wseed);
+                possibleSeeds.Add(wseed);
             }
         }
 
-        if (possibleseeds.Count > 0)
+        if (possibleSeeds.Count > 0)
         {
-            Wseed dropedSeed = possibleseeds[Random.Range(0, possibleseeds.Count)];
+            Wseed dropedSeed = possibleSeeds[Random.Range(0, possibleSeeds.Count)];
             return dropedSeed;
         }
         Debug.Log("No loot droped");
@@ -42,12 +42,5 @@ public class LootBag : MonoBehaviour
             Vector2 dropDirection = new Vector2(Random.Range(-1f,1f), Random.Range(-1f,1f));
             WseedGameObject.GetComponent<Rigidbody2D>().AddForce(dropDirection * dropForce, ForceMode2D.Impulse);
         }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

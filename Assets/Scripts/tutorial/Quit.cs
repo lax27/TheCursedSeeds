@@ -19,8 +19,7 @@ public class Quit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Application.Quit();
-        
+        SceneManager.LoadScene("HUB_HUB");
     }
 
 }
