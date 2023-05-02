@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GenerateRoom : MonoBehaviour
 {
@@ -24,19 +25,8 @@ public class GenerateRoom : MonoBehaviour
         {
 
             roomCount = Random.Range(0, DungeonManager.instance.roomPrefabs.Length);
-            Instantiate(DungeonManager.instance.roomPrefabs[roomCount], transform.position, Quaternion.identity);
-            DungeonManager.instance.CurrentRooms.Add(transform.position);
-        }
-        else
-        {
-            tp.SetActive(false);
-        }
-       
-        canGenerate = !DungeonManager.instance.CurrentRooms.Contains(transform.position) && DungeonManager.instance.CurrentRooms.Count < 1;
-        if (canGenerate)
-        {
-            roomCount = Random.Range(0, DungeonManager.instance.bossRoomPrefabs.Length);
-            Instantiate(DungeonManager.instance.bossRoomPrefabs[roomCount], transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(DungeonManager.instance.roomPrefabs[roomCount], transform.position, Quaternion.identity);
+            DungeonManager.instance.RoomsObjecs.Add(temp);
             DungeonManager.instance.CurrentRooms.Add(transform.position);
         }
         else
@@ -44,6 +34,5 @@ public class GenerateRoom : MonoBehaviour
             tp.SetActive(false);
         }
     }
-
 
 }

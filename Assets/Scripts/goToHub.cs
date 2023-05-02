@@ -21,6 +21,7 @@ public class goToHub : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            GameManager.instance.currentWeaponID = 0;
             SceneManager.LoadScene(0);
         }
 

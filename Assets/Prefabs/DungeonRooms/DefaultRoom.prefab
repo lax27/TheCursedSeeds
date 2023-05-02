@@ -103,7 +103,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1585958665203202438
 MonoBehaviour:
@@ -117,10 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rooms:
-  - {fileID: 3346297318684851828, guid: dce301939cc1291499c94946c2620e2e, type: 3}
-  - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
-  - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   canGenerate: 0
   Generate: 0
   roomCount: 0
@@ -191,7 +187,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &1721812160167666526
 Tilemap:
@@ -1568,7 +1564,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &1721812160334965541
 Tilemap:
@@ -4131,12 +4127,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1721812160334965723}
-  - {fileID: 1721812160167666512}
   - {fileID: 4970104841956492993}
   - {fileID: 3179926838088635960}
   - {fileID: 3823148037272356618}
   - {fileID: 5252852894300463385}
+  - {fileID: 1721812160334965723}
+  - {fileID: 1721812160167666512}
   - {fileID: 6053947233594393064}
   - {fileID: 5868170037393490847}
   - {fileID: 6860895739199785248}
@@ -4885,7 +4881,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5450038604239056132
 MonoBehaviour:
@@ -4899,10 +4895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rooms:
-  - {fileID: 3346297318684851828, guid: dce301939cc1291499c94946c2620e2e, type: 3}
-  - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
-  - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   canGenerate: 0
   Generate: 0
   roomCount: 0
@@ -4968,7 +4960,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &994195333660811942
 MonoBehaviour:
@@ -4982,10 +4974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rooms:
-  - {fileID: 3346297318684851828, guid: dce301939cc1291499c94946c2620e2e, type: 3}
-  - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
-  - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   canGenerate: 0
   Generate: 0
   roomCount: 0
@@ -5055,7 +5043,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721812160800869629}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1440825021596525844
 MonoBehaviour:
@@ -5069,10 +5057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5f0245a6f8aa2449d75c74523c8a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rooms:
-  - {fileID: 3346297318684851828, guid: dce301939cc1291499c94946c2620e2e, type: 3}
-  - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
-  - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   canGenerate: 0
   Generate: 0
   roomCount: 0

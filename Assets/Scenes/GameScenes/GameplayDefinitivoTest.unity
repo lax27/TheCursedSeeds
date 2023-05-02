@@ -697,6 +697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentRooms: []
+  RoomsObjecs:
+  - {fileID: 1994265448}
   roomPrefabs:
   - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}
   - {fileID: 1757936034293901413, guid: bba0f7d301d39c64ea01c01375f3ed41, type: 3}
@@ -720,6 +722,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4722188534930963810, guid: 1f6a440c4dfec5641ae51d5d6c6f2d43,
     type: 3}
   m_PrefabInstance: {fileID: 4722188535498577299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1994265448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1721812160800869619, guid: 3ab331c9658baf2428cb5cd250b51d23,
+    type: 3}
+  m_PrefabInstance: {fileID: 279792543}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2080970006
 PrefabInstance:
