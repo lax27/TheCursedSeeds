@@ -20,7 +20,7 @@ public class TpManager : MonoBehaviour
         {
             if (tp[i] != null)
             {
-                if (NewsRooms[i] == DungeonManager.instance.CurrentRooms.Contains(NewsRooms[i].transform.position))
+                if (NewsRooms[i] == DungeonManager.instance.currentRoomsPositions.Contains(NewsRooms[i].transform.position))
                 {
                     tp[i].SetActive(true);
                 }

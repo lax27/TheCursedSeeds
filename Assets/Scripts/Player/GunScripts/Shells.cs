@@ -9,15 +9,15 @@ public class Shells : MonoBehaviour
     [SerializeField] private float timerD = 0.6f;
     private Vector2 dir;
     private PlayerAimWeapon rp;
-    private GameObject rotatepoint;
+    private GameObject gunRotation;
     private SpriteRenderer sp;
     private AudioSource audioSource;
     private float time = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        rotatepoint = GameObject.Find("RotatePoint");
-        rp = rotatepoint.GetComponent<PlayerAimWeapon>();
+        gunRotation = GameObject.Find("RotatePoint");
+        rp = gunRotation.GetComponent<PlayerAimWeapon>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
