@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class GenerateBossRoom : MonoBehaviour
 {
+    public bool canGenerate;
+    public bool Generate;
+    public int roomCount = 0;
+    public GameObject tp;
+  
 
-
-    private void Update()
+    // Start is called before the first frame update
+    void Start()
     {
-        
-
-        if (DungeonManager.instance.bossBugsRooms.Count < 1 )
+        canGenerate = !DungeonManager.instance.currentRoomsPositions.Contains(transform.position) && DungeonManager.instance.currentRoomsPositions.Count < 1;
+        if (canGenerate)
         {
-            DungeonManager.instance.SpawnBossRoom();
-        }
-        
-        if(DungeonManager.instance.bossBugsRooms.Count > 1)
-        {
-            Destroy(this);
-        }
 
+            roomCount = Random.Range(0, DungeonManager.instance.bossRoomPrefabs.Length);
+            Instantiate(DungeonManager.instance.bossRoomPrefabs[roomCount], transform.position, Quaternion.identity);
+            DungeonManager.instance.currentRoomsPositions.Add(transform.position);
+        }
+        else
+        {
+            tp.SetActive(false);
+        }
     }
 }

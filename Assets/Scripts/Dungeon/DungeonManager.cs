@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -6,10 +5,8 @@ using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
 {
-    public List<Vector2> CurrentRooms = new List<Vector2>();
+    public List<Vector2> currentRoomsPositions = new List<Vector2>();
     public List<GameObject> RoomsObjecs = new List<GameObject>();
-    public List<GameObject> bossBugsRooms = new List<GameObject>();
-
     public static DungeonManager instance { get; private set; }
 
     public static Vector2 roomMaxPositiveDistance = Vector2.zero;
@@ -19,7 +16,6 @@ public class DungeonManager : MonoBehaviour
     public GameObject[] bossRoomPrefabs;
 
     private int oneTime = 1;
-    private bool bossRoomSpawned = false;
 
     private void Awake()
     {
@@ -39,44 +35,38 @@ public class DungeonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentRooms.Add(Vector2.zero);
+        currentRoomsPositions.Add(Vector2.zero);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!bossRoomSpawned)
+        if(oneTime > 0)
         {
-            SpawnBossRoom();
-        }
-
-
-    }
-    public void SpawnBossRoom()
-    {
-        GameObject LastSpawnedRoom = RoomsObjecs[RoomsObjecs.Count - 1];
-
-        for (int i = 0; i < CurrentRooms.Count; i++)
-        {
-            Debug.Log(CurrentRooms[i]);
-            Debug.Log(LastSpawnedRoom);
-            for (int j = 0; j < LastSpawnedRoom.transform.childCount;j++)
+            for (int i = 0; i < currentRoomsPositions.Count; i++)
             {
-                Debug.Log(LastSpawnedRoom.transform.GetChild(j).gameObject.transform.position);
+                if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(0).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(0).transform.position.y != currentRoomsPositions[i].y)
+                {
+                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(0).transform.position, Quaternion.identity);
+                    break;
+                }
+                else if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(1).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(1).transform.position.y != currentRoomsPositions[i].y)
+                {
+                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(1).transform.position, Quaternion.identity);
+                    break;
+                }
+                else if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(2).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(2).transform.position.y != currentRoomsPositions[i].y)
+                {
+                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(2).transform.position, Quaternion.identity);
+                    break;
+                }
+                else if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(3).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(3).transform.position.y != currentRoomsPositions[i].y)
+                {
+                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(3).transform.position, Quaternion.identity);
+                    break;
+                }
             }
-  
-
-
-
-
-
-
-
-
-
-
-            if (bossRoomSpawned) { break; }
         }
-       
+        oneTime--;
     }
 }
