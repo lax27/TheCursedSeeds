@@ -5959,6 +5959,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 565724635
       objectReference: {fileID: 0}
+    - target: {fileID: 5786014723900277852, guid: 0f46826b5f6844e47bf5e43d598c96e0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6664644288504826416, guid: 0f46826b5f6844e47bf5e43d598c96e0,
         type: 3}
       propertyPath: enemySpeed
