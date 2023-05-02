@@ -570,7 +570,7 @@ MonoBehaviour:
   isWeapon: 0
   pile: {fileID: 0}
   weaponsToSpawn: []
-  currentWeaponID: 2
+  currentWeaponID: 0
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0

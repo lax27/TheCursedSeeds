@@ -41,32 +41,19 @@ public class DungeonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(oneTime > 0)
+        GameObject LastRoomSpawned = RoomsObjecs[RoomsObjecs.Count - 1];
+
+        GameObject upChild = LastRoomSpawned.transform.GetChild(0).gameObject;
+        GameObject leftChild = LastRoomSpawned.transform.GetChild(1).gameObject;
+        GameObject rightChild = LastRoomSpawned.transform.GetChild(2).gameObject;
+        GameObject downChild = LastRoomSpawned.transform.GetChild(3).gameObject;
+
+        if (oneTime == 1)
         {
-            for (int i = 0; i < currentRoomsPositions.Count; i++)
-            {
-                if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(0).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(0).transform.position.y != currentRoomsPositions[i].y)
-                {
-                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(0).transform.position, Quaternion.identity);
-                    break;
-                }
-                else if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(1).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(1).transform.position.y != currentRoomsPositions[i].y)
-                {
-                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(1).transform.position, Quaternion.identity);
-                    break;
-                }
-                else if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(2).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(2).transform.position.y != currentRoomsPositions[i].y)
-                {
-                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(2).transform.position, Quaternion.identity);
-                    break;
-                }
-                else if (RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(3).transform.position.x != currentRoomsPositions[i].x && RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(3).transform.position.y != currentRoomsPositions[i].y)
-                {
-                    Instantiate(bossRoomPrefabs[0], RoomsObjecs[RoomsObjecs.Count - 1].transform.GetChild(3).transform.position, Quaternion.identity);
-                    break;
-                }
-            }
+            Instantiate(bossRoomPrefabs[0], upChild.transform.position,Quaternion.identity);
         }
+   
+
         oneTime--;
     }
 }
