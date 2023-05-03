@@ -24,7 +24,8 @@ public class GenerateRoom : MonoBehaviour
         if (canGenerate && willGenerate)
         {
             int selectedPrefabIndex = Random.Range(0, DungeonManager.instance.roomPrefabs.Length);
-            GameObject temp =Instantiate(DungeonManager.instance.roomPrefabs[selectedPrefabIndex], transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(DungeonManager.instance.roomPrefabs[selectedPrefabIndex], transform.position, Quaternion.identity);
+            temp.name = "Room " + DungeonManager.instance.RoomsObjecs.Count;
             DungeonManager.instance.RoomsObjecs.Add(temp);
             DungeonManager.instance.currentRoomsPositions.Add(transform.position);
         }

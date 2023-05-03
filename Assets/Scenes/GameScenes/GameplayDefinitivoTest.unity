@@ -748,6 +748,7 @@ MonoBehaviour:
   - {fileID: 3346297318684851828, guid: dce301939cc1291499c94946c2620e2e, type: 3}
   bossRoomPrefabs:
   - {fileID: 1630231665127500916, guid: 5f9769775c407214e917b078ecb53552, type: 3}
+  nextChild: 0
 --- !u!114 &1227854804
 MonoBehaviour:
   m_ObjectHideFlags: 0

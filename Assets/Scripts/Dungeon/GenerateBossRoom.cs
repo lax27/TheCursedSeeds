@@ -17,8 +17,8 @@ public class GenerateBossRoom : MonoBehaviour
         if (canGenerate)
         {
             GameObject temp = Instantiate(DungeonManager.instance.bossRoomPrefabs[0], transform.position, Quaternion.identity);
+            temp.name = "Boss" + DungeonManager.instance.bossRoomBugs.Count;
             DungeonManager.instance.bossRoomBugs.Add(temp);
-            Destroy(this);
         }
         
         if(DungeonManager.instance.nextChild == 0 && !canGenerate)
@@ -30,6 +30,11 @@ public class GenerateBossRoom : MonoBehaviour
         {
             DungeonManager.instance.nextChild = 2;
         }
-        
+
+        if (DungeonManager.instance.nextChild == 2 && !canGenerate)
+        {
+            DungeonManager.instance.nextChild = 3;
+        }
+
     }
 }

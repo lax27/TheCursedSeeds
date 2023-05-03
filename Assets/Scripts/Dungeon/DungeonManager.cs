@@ -19,6 +19,7 @@ public class DungeonManager : MonoBehaviour
 
     public int nextChild = 0;
 
+
     private void Awake()
     {
         if (instance == null)
@@ -43,33 +44,72 @@ public class DungeonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject LastRoomSpawned = RoomsObjecs[RoomsObjecs.Count - 1];
+       
+        
+        GameObject room8 = GameObject.Find("Room 8");
 
-        GameObject upChild = LastRoomSpawned.transform.GetChild(0).gameObject;
-        GameObject leftChild = LastRoomSpawned.transform.GetChild(1).gameObject;
-        GameObject rightChild = LastRoomSpawned.transform.GetChild(2).gameObject;
-        GameObject downChild = LastRoomSpawned.transform.GetChild(3).gameObject;
+        GameObject upChild = room8.transform.GetChild(0).gameObject;
+        GameObject leftChild = room8.transform.GetChild(1).gameObject;
+        GameObject rightChild = room8.transform.GetChild(2).gameObject;
+        GameObject downChild = room8.transform.GetChild(3).gameObject;
+
+        GameObject bossRoom = GameObject.Find("Boss0");
+        GameObject bugRoom = GameObject.Find("Boss1");
 
 
         if (nextChild == 0)
         {
-            GenerateBossRoom spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
-            spawnBossRoom.enabled = true;
+            GenerateBossRoom spawnBossRoom = leftChild.GetComponent<GenerateBossRoom>();
+            if (spawnBossRoom != null)
+                spawnBossRoom.enabled = true;
         }
         
         if (nextChild == 1)
         {
-            GenerateBossRoom spawnBossRoom = leftChild.GetComponent<GenerateBossRoom>();
-            spawnBossRoom.enabled = true;
+            GenerateBossRoom spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
+            if (spawnBossRoom != null)
+                spawnBossRoom.enabled = true;
         }
         
         if (nextChild == 2)
         {
+            
             GenerateBossRoom spawnBossRoom = rightChild.GetComponent<GenerateBossRoom>();
-            spawnBossRoom.enabled = true;
+            if(spawnBossRoom != null)
+                spawnBossRoom.enabled = true;
+        }
+
+        if (nextChild == 3)
+        {
+
+            GenerateBossRoom spawnBossRoom = downChild.GetComponent<GenerateBossRoom>();
+            if (spawnBossRoom != null)
+                spawnBossRoom.enabled = true;
+        }
+
+        if (bugRoom != null)
+        {
+            Destroy(bugRoom);
+            Debug.Log("Destoyed");
+        }
+        if (bossRoom == null)
+        {
+            StartCoroutine(CatchBugsRoom());
+
+            if (bossRoom == null)
+            {
+                GenerateBossRoom spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
+                if (spawnBossRoom != null)
+                    spawnBossRoom.enabled = true;
+            }
         }
 
 
+    }
 
+    IEnumerator CatchBugsRoom()
+    {
+        yield return new WaitForSecondsRealtime(5);
+        Debug.Log("no ta el bozz");
     }
 }

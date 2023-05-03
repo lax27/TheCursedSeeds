@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3823148037272356618}
   - component: {fileID: 1585958665203202438}
-  - component: {fileID: 6884377682219836003}
+  - component: {fileID: 2888310695228326006}
   m_Layer: 10
   m_Name: 'NewRigthRoom '
   m_TagString: Untagged
@@ -121,7 +121,7 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812161793753174}
   rooms: []
---- !u!114 &6884377682219836003
+--- !u!114 &2888310695228326006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4873,7 +4873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5252852894300463385}
   - component: {fileID: 5450038604239056132}
-  - component: {fileID: 3556897669942004016}
+  - component: {fileID: 3190748190555861317}
   m_Layer: 10
   m_Name: NewDownRoom
   m_TagString: Untagged
@@ -4911,7 +4911,7 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812162012261526}
   rooms: []
---- !u!114 &3556897669942004016
+--- !u!114 &3190748190555861317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4964,7 +4964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3179926838088635960}
   - component: {fileID: 994195333660811942}
-  - component: {fileID: 8590805983185792008}
+  - component: {fileID: 8104373485091225635}
   m_Layer: 10
   m_Name: NewLeftRoom
   m_TagString: Untagged
@@ -5002,7 +5002,7 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812161752225911}
   rooms: []
---- !u!114 &8590805983185792008
+--- !u!114 &8104373485091225635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5059,7 +5059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970104841956492993}
   - component: {fileID: 1440825021596525844}
-  - component: {fileID: 7283737018667243207}
+  - component: {fileID: 7402331288787491539}
   m_Layer: 10
   m_Name: NewUpRoom
   m_TagString: Untagged
@@ -5097,7 +5097,7 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812161285146634}
   rooms: []
---- !u!114 &7283737018667243207
+--- !u!114 &7402331288787491539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
