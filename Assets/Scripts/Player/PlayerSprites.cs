@@ -8,6 +8,7 @@ public class PlayerSprites : MonoBehaviour
     private Vector3 mousePos;
     private SpriteRenderer rs;
     public Animator animator;
+    private PlayerStats playerStats;
 
     public List<Sprite> sprites;
     // Start is called before the first frame update
@@ -16,6 +17,8 @@ public class PlayerSprites : MonoBehaviour
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rs = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerStats = GetComponent<PlayerStats>();
+
     }
 
     // Update is called once per frame
@@ -35,15 +38,16 @@ public class PlayerSprites : MonoBehaviour
 
         if(rotZ > -125 && rotZ < -65){
             //rs.sprite = sprites[2];//front
-            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0){
+            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0 && playerStats.life > 0){
                 animator.SetBool("Front", true);
                 animator.SetBool("Back", false);
                 animator.SetBool("Side", false);
                 animator.SetBool("MoveFront", false);
                 animator.SetBool("MoveSide", false);
                 animator.SetBool("MoveBack", false);
+                animator.SetBool("isDead", false);
             }
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 && playerStats.life > 0)
             {
                 animator.SetBool("Front", false);
                 animator.SetBool("Back", false);
@@ -51,11 +55,12 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveFront", true);
                 animator.SetBool("MoveSide", false);
                 animator.SetBool("MoveBack", false);
+                animator.SetBool("isDead", false);
             }
         }
         else if(rotZ > 65 && rotZ < 125){
             //rs.sprite = sprites[1];//back
-            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
+            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0 && playerStats.life > 0)
             {
                 animator.SetBool("Front", false);
                 animator.SetBool("Back", true);
@@ -63,8 +68,9 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveFront", false);
                 animator.SetBool("MoveSide",false);
                 animator.SetBool("MoveBack", false);
+                animator.SetBool("isDead", false);
             }
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 && playerStats.life > 0)
             {
                 animator.SetBool("Front", false);
                 animator.SetBool("Back", false);
@@ -72,10 +78,11 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveFront", false);
                 animator.SetBool("MoveSide", false);
                 animator.SetBool("MoveBack", true);
+                animator.SetBool("isDead", false);
             }
         } else{
             //rs.sprite = sprites[0]; //side
-            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
+            if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0 && playerStats.life > 0)
             {
                 animator.SetBool("Front", false);
                 animator.SetBool("Back", false);
@@ -83,9 +90,10 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveFront", false);
                 animator.SetBool("MoveSide", false);
                 animator.SetBool("MoveBack", false);
+                animator.SetBool("isDead", false);
             }
 
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 && playerStats.life > 0)
             {
                 animator.SetBool("Front", false);
                 animator.SetBool("Back", false);
@@ -93,6 +101,20 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveFront", false);
                 animator.SetBool("MoveSide", true);
                 animator.SetBool("MoveBack", false);
+                animator.SetBool("isDead", false);
+            }
+
+            if (playerStats.life <= 0)
+            {
+                animator.SetBool("Front", false);
+                animator.SetBool("Back", false);
+                animator.SetBool("Side", false);
+                animator.SetBool("MoveFront", false);
+                animator.SetBool("MoveSide", false);
+                animator.SetBool("MoveBack", false);
+                animator.SetTrigger("isDead");
+
+                Destroy(this);
             }
         }
 

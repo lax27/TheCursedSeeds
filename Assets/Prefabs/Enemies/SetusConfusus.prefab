@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.05
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1363,8 +1363,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -1482,7 +1482,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 21300000, guid: db7440c656e227c41b8e493ce7755aa9, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4761,7 +4761,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5152,6 +5152,21 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758111716666317586, guid: e2822f628e43e134784e7ad7d555fd67,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758111716666317586, guid: e2822f628e43e134784e7ad7d555fd67,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758111716666317586, guid: e2822f628e43e134784e7ad7d555fd67,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1739330569
       objectReference: {fileID: 0}
     - target: {fileID: 8128946355443006332, guid: e2822f628e43e134784e7ad7d555fd67,
         type: 3}

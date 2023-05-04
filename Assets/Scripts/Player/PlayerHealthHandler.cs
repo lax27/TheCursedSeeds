@@ -10,6 +10,7 @@ public class PlayerHealthHandler : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private float enemyAttackPauseTimer = 0f;
     public bool enemyAttackPaused = false;
+    
 
     public AudioSource hitSound;
     public GameObject healthUIIcon1;
@@ -36,6 +37,7 @@ public class PlayerHealthHandler : MonoBehaviour
         hitStop = GetComponent<HitStop>();
         mainCamera = GameObject.Find("Main Camera");
         shake = mainCamera.GetComponent<CameraShake>();
+
 
         healthUIIcon1 = GameObject.Find("HP1");
         healthUIIcon2 = GameObject.Find("HP2");
@@ -106,6 +108,10 @@ public class PlayerHealthHandler : MonoBehaviour
             DungeonManager.instance.RoomsObjecs.Clear();
             DungeonManager.instance.bossRoomBugs.Clear();
             DungeonManager.instance.nextChild = 0;
+
+
+
+
             //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
             GameManager.instance.currentWeaponID = 0;
             // 1 = hub

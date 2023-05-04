@@ -197,7 +197,7 @@ MonoBehaviour:
   dir3: {x: 0, y: 0, z: 0}
   isGoingToCharge: 0
   isCharging: 0
-  chargingForce: 1000
+  chargingForce: 700
   toCharge: 1.5
   chargeTime: 1.3
   wait: 5

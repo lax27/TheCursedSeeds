@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerStats.life <= 0)
+        {
+            Destroy(this);
+        }
         float horizontalMoveInput;
         float verticalMoveInput;
         //condicional para el debuffo de controles invertidos
