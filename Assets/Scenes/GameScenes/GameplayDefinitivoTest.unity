@@ -226,6 +226,7 @@ MonoBehaviour:
   offsetY: 0
   timeShake: 0
   shakeMagnitude: 0
+  isFinish: 0
 --- !u!1001 &279792543
 PrefabInstance:
   m_ObjectHideFlags: 0

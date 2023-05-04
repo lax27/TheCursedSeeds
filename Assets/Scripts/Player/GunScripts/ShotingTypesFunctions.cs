@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShotingTypesFunctions : MonoBehaviour
 {
-    private bool isBursting = false;
     public void BasicShoot(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake, float bulletDisspersion)
     {
         //feadBack

@@ -37,7 +37,7 @@ public class ShootScript : MonoBehaviour
     {
         playerMove = GameObject.Find("mantee_v2").GetComponent<PlayerMovement>();
         shotFunctions = GetComponent<ShotingTypesFunctions>();
-        shake = Camera.main.GetComponent<CameraShake>(); 
+        shake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
         animator = GetComponent<Animator>();    
         canFire = true;
         reloadTime = reloadTimeOffset;
