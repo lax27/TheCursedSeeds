@@ -10,10 +10,10 @@ public class PlayerHealthHandler : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private float enemyAttackPauseTimer = 0f;
     public bool enemyAttackPaused = false;
-    float timeDeath = 3.5f;
+    float timeDeath = 4;
 
 
-    public AudioSource hitSound;
+    public AudioClip hitSound;
     public GameObject healthUIIcon1;
     public GameObject healthUIIcon2;
     public GameObject healthUIIcon3;
@@ -30,6 +30,7 @@ public class PlayerHealthHandler : MonoBehaviour
     [SerializeField] private ParticleSystem hitSplash;
     private GameObject guns;
     public bool isPlayerDead = false;
+    private Collider2D coll;
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class PlayerHealthHandler : MonoBehaviour
         guns = GameObject.Find("RotatePoint");
         shake = mainCamera.GetComponent<CameraShake>();
         hitSplash = GetComponent<ParticleSystem>();
-
+        coll = GetComponent<Collider2D>();
 
         healthUIIcon1 = GameObject.Find("HP1");
         healthUIIcon2 = GameObject.Find("HP2");
@@ -99,6 +100,7 @@ public class PlayerHealthHandler : MonoBehaviour
         {
             playerMovement.enabled = false;
             guns.SetActive(false);
+            coll.enabled = false;
             isPlayerDead = true;
             //manager things 
             DungeonManager.instance.currentRoomsPositions.Clear();
@@ -169,8 +171,8 @@ public class PlayerHealthHandler : MonoBehaviour
 
                 isInmune = true;
 
-                if(hitSound != null)
-                    hitSound.Play();
+                if (hitSound != null)
+                    SoundController.instance.PlaySoundPlayer(hitSound);
 
                 hitSplash.Play();
 
@@ -201,7 +203,7 @@ public class PlayerHealthHandler : MonoBehaviour
                 isInmune = true;
 
                 if (hitSound != null)
-                    hitSound.Play();
+                    SoundController.instance.PlaySoundPlayer(hitSound);
 
                 hitSplash.Play();
 

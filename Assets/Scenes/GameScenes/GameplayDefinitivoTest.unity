@@ -454,6 +454,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c72751cd9ea3a149a5104c8d4fdcf68, type: 3}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
       propertyPath: hitSplash
       value: 
       objectReference: {fileID: 0}
@@ -547,6 +552,16 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8003393324581714778, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1513914714}
+    - target: {fileID: 8003393324581714778, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: audioSourcePlayerSounds
+      value: 
+      objectReference: {fileID: 1513914713}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27da0534244988346b0b1b449dfea2a8, type: 3}
 --- !u!1 &767182927 stripped
@@ -969,6 +984,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1513914713 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6599103890800512063, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 753737371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1513914714 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8441342495129486446, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 753737371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1729853035
 GameObject:
   m_ObjectHideFlags: 0

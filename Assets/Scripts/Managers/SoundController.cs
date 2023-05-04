@@ -7,7 +7,8 @@ public class SoundController : MonoBehaviour
 
     public static SoundController instance;
 
-    private AudioSource audioSource;
+    [SerializeField]private AudioSource audioSource; //para balas
+    [SerializeField]private AudioSource audioSourcePlayerSounds; //para sondios del pj
 
     private void Awake()
     {
@@ -22,11 +23,17 @@ public class SoundController : MonoBehaviour
             Destroy(gameObject);
         }
         audioSource = GetComponent<AudioSource>();
+        audioSourcePlayerSounds = GetComponent<AudioSource>();
     }
 
     public void PlaySound(AudioClip sound)
     {
         audioSource.PlayOneShot(sound);
+    }
+
+    public void PlaySoundPlayer(AudioClip sound)
+    {
+        audioSourcePlayerSounds.PlayOneShot(sound);
     }
 }
 
