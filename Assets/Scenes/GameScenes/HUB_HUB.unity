@@ -6513,6 +6513,7 @@ MonoBehaviour:
   PauseMenu: {fileID: 1424551282}
   movement: {fileID: 1292897275}
   weapon: {fileID: 2089157861}
+  menuPlant: {fileID: 844627228}
 --- !u!4 &1617567588
 Transform:
   m_ObjectHideFlags: 0
