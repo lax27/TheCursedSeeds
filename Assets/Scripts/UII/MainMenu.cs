@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] PlayerMovement movement;
     [SerializeField] GameObject weapon;
+    [SerializeField] GameObject menuPlant;
 
 
     private void Start()
@@ -20,9 +21,18 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseMenu.SetActive(true);
-            movement.enabled = false;
-            weapon.SetActive(false);
+            if (menuPlant.active == true)
+            {
+                Debug.Log("Plant Menu on");
+            }
+            else if(menuPlant.active == false)
+            {
+                Time.timeScale = 0;
+                PauseMenu.SetActive(true);
+                movement.enabled = false;
+                weapon.SetActive(false);
+
+            }
         }
 
     }
@@ -53,6 +63,8 @@ public class MainMenu : MonoBehaviour
         Debug.Log("clicked");
         movement.enabled = true;
         weapon.SetActive(true);
+        Time.timeScale = 1;
+
     }
 
     public void Return()
