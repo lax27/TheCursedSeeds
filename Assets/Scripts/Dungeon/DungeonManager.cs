@@ -17,6 +17,11 @@ public class DungeonManager : MonoBehaviour
     public GameObject[] roomPrefabs;
     public GameObject[] bossRoomPrefabs;
 
+    GameObject upChild;
+    GameObject leftChild;
+    GameObject rightChild;
+    GameObject downChild;
+    GenerateBossRoom spawnBossRoom;
 
     public int nextChild = 0;
 
@@ -46,10 +51,13 @@ public class DungeonManager : MonoBehaviour
     {
         GameObject room7 = GameObject.Find("Room 7");
 
-        GameObject upChild = room7.transform.GetChild(0).gameObject;
-        GameObject leftChild = room7.transform.GetChild(1).gameObject;
-        GameObject rightChild = room7.transform.GetChild(2).gameObject;
-        GameObject downChild = room7.transform.GetChild(3).gameObject;
+        if(room7 != null)
+        {
+            GameObject upChild = room7.transform.GetChild(0).gameObject;
+            GameObject leftChild = room7.transform.GetChild(1).gameObject;
+            GameObject rightChild = room7.transform.GetChild(2).gameObject;
+            GameObject downChild = room7.transform.GetChild(3).gameObject;
+        }
 
         GameObject bossRoom = GameObject.Find("Boss0");
         GameObject bugRoom = GameObject.Find("Boss1");
@@ -57,30 +65,36 @@ public class DungeonManager : MonoBehaviour
 
         if (nextChild == 0)
         {
-            GenerateBossRoom spawnBossRoom = leftChild.GetComponent<GenerateBossRoom>();
+            if(leftChild != null)
+              spawnBossRoom = leftChild.GetComponent<GenerateBossRoom>();
+            
             if (spawnBossRoom != null)
                 spawnBossRoom.enabled = true;
         }
         
         if (nextChild == 1)
         {
-            GenerateBossRoom spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
+            if (upChild != null)
+                spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
+
             if (spawnBossRoom != null)
                 spawnBossRoom.enabled = true;
         }
         
         if (nextChild == 2)
         {
-            
-            GenerateBossRoom spawnBossRoom = rightChild.GetComponent<GenerateBossRoom>();
+            if (rightChild != null)
+                spawnBossRoom = rightChild.GetComponent<GenerateBossRoom>();
+
             if(spawnBossRoom != null)
                 spawnBossRoom.enabled = true;
         }
 
         if (nextChild == 3)
         {
+            if (downChild != null)
+                spawnBossRoom = downChild.GetComponent<GenerateBossRoom>();
 
-            GenerateBossRoom spawnBossRoom = downChild.GetComponent<GenerateBossRoom>();
             if (spawnBossRoom != null)
                 spawnBossRoom.enabled = true;
         }
@@ -96,7 +110,8 @@ public class DungeonManager : MonoBehaviour
 
             if (bossRoom == null)
             {
-                GenerateBossRoom spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
+                if (leftChild != null)
+                    spawnBossRoom = upChild.GetComponent<GenerateBossRoom>();
                 if (spawnBossRoom != null)
                     spawnBossRoom.enabled = true;
             }

@@ -12,10 +12,14 @@ public class EnemyDeath : MonoBehaviour
     public bool isHit = false;
     private SimpleFlash flash;
     EnemyFrozen enemyFrozen;
+    private ParticleSystem blood;
+    public GameObject deathSplash;
     
     // Start is called before the first frame update
     void Start()
     {
+        blood = GetComponent<ParticleSystem>();
+
         flash = GetComponent<SimpleFlash>();
         enemiesStats = GetComponent<EnemiesStats>();
         cl = GetComponent<Collider2D>();
@@ -27,6 +31,11 @@ public class EnemyDeath : MonoBehaviour
     void Update()
     {
         if (enemiesStats.enemyHealth <= 0) {
+
+            for (int i = 0; i < Random.Range(3,10); i++)
+            {
+                Instantiate(deathSplash, transform.position, Quaternion.identity);
+            }
             GetComponent<LootBag>().InstatianteWseed(transform.position);
             Destroy(gameObject);
         }
@@ -54,6 +63,9 @@ public class EnemyDeath : MonoBehaviour
             flash.FlashP(0.2f);
 
             isHit = true;
+
+            blood.Play();
+
             enemiesStats.enemyHealth -= bs.damage;
         }
     }

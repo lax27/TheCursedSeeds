@@ -7,6 +7,7 @@ public class ExploSeta : MonoBehaviour
     GameObject player;
     public GameObject Explo;
     public GameObject zone;
+    public GameObject zone2;
     bool isExploding = false;
     PlayerStatus playerStatus;
     public Collider2D cl;
@@ -30,6 +31,7 @@ public class ExploSeta : MonoBehaviour
             cl.enabled = false;
             Explo.SetActive(true);
             Destroy(zone);
+            Destroy(zone2);
 
             playerStatus.isConfused = true;
             confusedTime -= Time.deltaTime;

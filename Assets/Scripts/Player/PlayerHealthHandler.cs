@@ -10,7 +10,8 @@ public class PlayerHealthHandler : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private float enemyAttackPauseTimer = 0f;
     public bool enemyAttackPaused = false;
-    
+    float timeDeath = 3.5f;
+
 
     public AudioSource hitSound;
     public GameObject healthUIIcon1;
@@ -26,25 +27,25 @@ public class PlayerHealthHandler : MonoBehaviour
     private HitStop hitStop;
     private GameObject mainCamera;
     private CameraShake shake;
+    [SerializeField] private ParticleSystem hitSplash;
+    private GameObject guns;
+    public bool isPlayerDead = false;
 
-    // public GameObject uid;
-    //private UI ui;
-    // Start is called before the first frame update
     void Start()
     {
         playerStats = GetComponent<PlayerStats>();
         playerMovement = GetComponent<PlayerMovement>();
         hitStop = GetComponent<HitStop>();
         mainCamera = GameObject.Find("Main Camera");
+        guns = GameObject.Find("RotatePoint");
         shake = mainCamera.GetComponent<CameraShake>();
+        hitSplash = GetComponent<ParticleSystem>();
 
 
         healthUIIcon1 = GameObject.Find("HP1");
         healthUIIcon2 = GameObject.Find("HP2");
         healthUIIcon3 = GameObject.Find("HP3");
 
-        //uid = GameObject.Find("ui");
-        //ui = uid.GetComponent<UI>();
 
 
     }
@@ -96,23 +97,18 @@ public class PlayerHealthHandler : MonoBehaviour
 
         if (playerStats.life <= 0)
         {
-            Debug.Log("Muerto");
-            // do hitStop
-
-            //do Death animation
-
+            playerMovement.enabled = false;
+            guns.SetActive(false);
+            isPlayerDead = true;
             //manager things 
-
             DungeonManager.instance.currentRoomsPositions.Clear();
             DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
             DungeonManager.instance.RoomsObjecs.Clear();
             DungeonManager.instance.bossRoomBugs.Clear();
             DungeonManager.instance.nextChild = 0;
 
-
-            float timeDeath = 5f;
             timeDeath -= Time.deltaTime;
-
+            Debug.Log(timeDeath);
             if (timeDeath <= 0)
             {
                 //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
@@ -176,6 +172,8 @@ public class PlayerHealthHandler : MonoBehaviour
                 if(hitSound != null)
                     hitSound.Play();
 
+                hitSplash.Play();
+
                 shake.CameraShakeSettings(0.1f, 0.1f);
 
                 if (playerStats.life <= 0 && !shake.isFinish)
@@ -204,6 +202,8 @@ public class PlayerHealthHandler : MonoBehaviour
 
                 if (hitSound != null)
                     hitSound.Play();
+
+                hitSplash.Play();
 
                 shake.CameraShakeSettings(0.1f, 0.1f);
 
