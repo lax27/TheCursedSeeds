@@ -94,6 +94,17 @@ public class ShootScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) || currentAmmo <= 0)
         {
             isReloading = true;
+            if(gameObject.name == "BasicGun")
+            {
+                animator.SetTrigger("Reloading");
+                animator.SetBool("idle", false);
+            }
+
+            if(gameObject.name == "rabbit")
+            {
+                animator.SetTrigger("Reloading");
+                animator.SetBool("idle", false);
+            }
         }
 
         if (isReloading)
@@ -105,6 +116,8 @@ public class ShootScript : MonoBehaviour
                 isReloading = false;
                 currentAmmo = maxAmmo;
                 reloadTime = reloadTimeOffset;
+                animator.ResetTrigger("Reloading");
+                animator.SetBool("idle", true);
             }
         }
        if (!Input.GetMouseButton(0))
