@@ -16,6 +16,9 @@ TagManager:
   - enemyB
   - basicW
   - shootgun
+  - Corridor
+  - Dungeon
+  - Grass
   layers:
   - Default
   - TransparentFX

@@ -65,9 +65,11 @@ GameObject:
   - component: {fileID: 2927519899224286325}
   - component: {fileID: 446731444}
   - component: {fileID: 1874673432262967476}
+  - component: {fileID: 114407698684730786}
   - component: {fileID: 6821190719848198198}
   - component: {fileID: 7880664680134765482}
   - component: {fileID: 7194415621783756744}
+  - component: {fileID: 6700302274402820495}
   m_Layer: 30
   m_Name: mantee_v2
   m_TagString: Player
@@ -88,7 +90,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8205662777856051809}
-  - {fileID: 429395070911611445}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -250,6 +251,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f989746c375a98a429aef4eacf63f4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114407698684730786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095049127602115650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23cfca3ffd6b284792fc43554e9a02e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foostepsOnGrass: []
+  foostepsOnWood: []
+  foostepsOnCorridor:
+  - {fileID: 8300000, guid: 988aa993c4ef39642b7e502fbc0286df, type: 3}
+  - {fileID: 8300000, guid: 95c570246ad22ab4c8cb0e6f775cf3d9, type: 3}
+  material: Corridor
 --- !u!95 &6821190719848198198
 Animator:
   serializedVersion: 4
@@ -307,51 +326,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.034308344, y: -0.059793055}
   m_Size: {x: 0.5247442, y: 0.9496974}
   m_Direction: 0
---- !u!1 &6672627194527296586
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 429395070911611445}
-  - component: {fileID: 3354966020398598454}
-  - component: {fileID: 7691868169415619297}
-  m_Layer: 0
-  m_Name: SoundController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &429395070911611445
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672627194527296586}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5095049127602115662}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &3354966020398598454
+--- !u!82 &6700302274402820495
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672627194527296586}
+  m_GameObject: {fileID: 5095049127602115650}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 988aa993c4ef39642b7e502fbc0286df, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -436,18 +422,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7691868169415619297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672627194527296586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa151fe945573404c81edf20e4d4e8bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2537873903983266652
 PrefabInstance:
   m_ObjectHideFlags: 0
