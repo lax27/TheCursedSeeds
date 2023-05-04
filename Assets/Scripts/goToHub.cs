@@ -21,6 +21,15 @@ public class goToHub : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            DungeonManager.instance.currentRoomsPositions.Clear();
+            DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
+            DungeonManager.instance.RoomsObjecs.Clear();
+            DungeonManager.instance.bossRoomBugs.Clear();
+            DungeonManager.instance.nextChild = 0;
+
+
+
+
             GameManager.instance.currentWeaponID = 0;
             SceneManager.LoadScene(0);
         }

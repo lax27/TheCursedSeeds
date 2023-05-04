@@ -453,6 +453,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
+      propertyPath: DefaultRoom
+      value: 
+      objectReference: {fileID: 1994265448}
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
       propertyPath: healthUIIcon1
       value: 
       objectReference: {fileID: 767182927}
@@ -693,6 +698,37 @@ Transform:
   m_Father: {fileID: 69211197}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1147755949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147755950}
+  m_Layer: 0
+  m_Name: Dungeon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1147755950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147755949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.9016447, y: 0.7437485, z: 0.055004925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227854801
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,8 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRoomsPositions: []
-  RoomsObjecs:
-  - {fileID: 1994265448}
+  RoomsObjecs: []
   bossRoomBugs: []
   roomPrefabs:
   - {fileID: 3844657001987722927, guid: 71ca80bc52cba634c984117b20fe3826, type: 3}

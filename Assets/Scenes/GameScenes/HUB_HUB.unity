@@ -130,6 +130,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: DefaultRoom
+      value: 
+      objectReference: {fileID: 1721812160800869619, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
     - target: {fileID: 5095049127602115650, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_Name
