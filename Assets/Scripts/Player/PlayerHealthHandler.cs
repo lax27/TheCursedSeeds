@@ -110,12 +110,17 @@ public class PlayerHealthHandler : MonoBehaviour
             DungeonManager.instance.nextChild = 0;
 
 
+            float timeDeath = 5f;
+            timeDeath -= Time.deltaTime;
 
+            if (timeDeath <= 0)
+            {
+                //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
+                GameManager.instance.currentWeaponID = 0;
+                // 1 = hub
+                SceneManager.LoadScene(1);
+            }
 
-            //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
-            GameManager.instance.currentWeaponID = 0;
-            // 1 = hub
-            //SceneManager.LoadScene(1);
         }
 
 

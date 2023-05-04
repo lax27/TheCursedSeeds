@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  direcion: down
+  direcion: up
   player: {fileID: 0}
 --- !u!70 &4099715836317898338
 CapsuleCollider2D:
@@ -193,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732347111240700599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.13, y: -4.45, z: 0}
+  m_LocalPosition: {x: -0, y: -0.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  direcion: up
+  direcion: down
   player: {fileID: 0}
 --- !u!70 &7678269103493566536
 CapsuleCollider2D:
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  direcion: right
+  direcion: left
   player: {fileID: 0}
 --- !u!70 &8603453598058812348
 CapsuleCollider2D:
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  direcion: left
+  direcion: right
   player: {fileID: 0}
 --- !u!70 &2079901846315128552
 CapsuleCollider2D:

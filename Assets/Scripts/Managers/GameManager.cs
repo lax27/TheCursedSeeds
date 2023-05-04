@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour
     public int runsDone = 0;
     public int totalEnemiesKilled = 0;
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    public GameObject pauseMenu;
+    [SerializeField]private GameObject pauseMenu;
+    [SerializeField]private GameObject guns;
 
 
     
@@ -50,6 +51,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pauseMenu = GameObject.Find("PauseMenu");
+        guns = GameObject.Find("RotatePoint");
+
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
@@ -86,6 +89,7 @@ public class GameManager : MonoBehaviour
             if (pauseMenu != null)
             {
                 pauseMenu.SetActive(true);
+                guns.SetActive(false);
                 Time.timeScale = 0f;
             }
         }

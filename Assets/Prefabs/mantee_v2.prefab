@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 7880664680134765482}
   - component: {fileID: 7194415621783756744}
   - component: {fileID: 6700302274402820495}
-  m_Layer: 30
+  m_Layer: 7
   m_Name: mantee_v2
   m_TagString: Player
   m_Icon: {fileID: 0}
