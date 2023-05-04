@@ -6,9 +6,30 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject settingsMenu;
+    [SerializeField] GameObject PauseMenu;
+    [SerializeField] PlayerMovement movement;
+    [SerializeField] GameObject weapon;
+
+
+    private void Start()
+    {
+        PauseMenu.SetActive(false);
+
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseMenu.SetActive(true);
+            movement.enabled = false;
+            weapon.SetActive(false);
+        }
+
+    }
+
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("GameplayDefinitivoTest");
     }
 
     public void OpenSettingsMenu()
@@ -24,5 +45,19 @@ public class MainMenu : MonoBehaviour
     public void BackButton()
     {
         settingsMenu.SetActive(false);
+    }
+
+    public void PauseOff()
+    {
+        PauseMenu.SetActive(false);
+        Debug.Log("clicked");
+        movement.enabled = true;
+        weapon.SetActive(true);
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("MainMenu");
+
     }
 }
