@@ -53,7 +53,6 @@ public class ShootScript : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > timeBetwenFire)
             {
-                //animator.SetBool("Shoot", false);
                 playerMove.isShooting = false;
                 canFire = true;
                 timer = 0;
