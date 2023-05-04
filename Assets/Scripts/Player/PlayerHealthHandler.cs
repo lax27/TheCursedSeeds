@@ -22,6 +22,9 @@ public class PlayerHealthHandler : MonoBehaviour
 
     private float flashTimer = 0.5f;
     private bool isFlashing = true;
+    private HitStop hitStop;
+    private GameObject mainCamera;
+    private CameraShake shake;
 
     // public GameObject uid;
     //private UI ui;
@@ -30,6 +33,9 @@ public class PlayerHealthHandler : MonoBehaviour
     {
         playerStats = GetComponent<PlayerStats>();
         playerMovement = GetComponent<PlayerMovement>();
+        hitStop = GetComponent<HitStop>();
+        mainCamera = GameObject.Find("Main Camera");
+        shake = mainCamera.GetComponent<CameraShake>();
 
         healthUIIcon1 = GameObject.Find("HP1");
         healthUIIcon2 = GameObject.Find("HP2");
@@ -103,7 +109,7 @@ public class PlayerHealthHandler : MonoBehaviour
             //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
             GameManager.instance.currentWeaponID = 0;
             // 1 = hub
-            SceneManager.LoadScene(1);
+            //SceneManager.LoadScene(1);
         }
 
 
@@ -153,9 +159,24 @@ public class PlayerHealthHandler : MonoBehaviour
                 playerMovement.directionKnockedBack = transform.position - collision.gameObject.transform.position;
                 playerMovement.directionKnockedBack.Normalize();
                 enemyAttackPauseTimer = 1f;
+
                 isInmune = true;
+
                 if(hitSound != null)
                     hitSound.Play();
+
+                shake.CameraShakeSettings(0.1f, 0.1f);
+
+                if (playerStats.life <= 0 && !shake.isFinish)
+                {
+                    hitStop.StopTime(0.05f, 10, 2.5f);
+                }
+                else
+                {
+                    hitStop.StopTime(0.05f, 20, 0.1f);
+                }
+                
+
             }
         }
     }
@@ -167,8 +188,24 @@ public class PlayerHealthHandler : MonoBehaviour
             {
                 playerStats.life--;
                 enemyAttackPauseTimer = 1f;
+
                 isInmune = true;
-                hitSound.Play();
+
+                if (hitSound != null)
+                    hitSound.Play();
+
+                shake.CameraShakeSettings(0.1f, 0.1f);
+
+                if (playerStats.life <= 0 && shake.isFinish)
+                {
+                    hitStop.StopTime(0.05f, 10, 2.5f);
+                }
+                else
+                {
+                    hitStop.StopTime(0.05f, 20, 0.1f);
+                }
+
+
             }
         }
     }

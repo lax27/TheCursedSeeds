@@ -44,12 +44,12 @@ public class DungeonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject room8 = GameObject.Find("Room 7");
+        GameObject room7 = GameObject.Find("Room 7");
 
-        GameObject upChild = room8.transform.GetChild(0).gameObject;
-        GameObject leftChild = room8.transform.GetChild(1).gameObject;
-        GameObject rightChild = room8.transform.GetChild(2).gameObject;
-        GameObject downChild = room8.transform.GetChild(3).gameObject;
+        GameObject upChild = room7.transform.GetChild(0).gameObject;
+        GameObject leftChild = room7.transform.GetChild(1).gameObject;
+        GameObject rightChild = room7.transform.GetChild(2).gameObject;
+        GameObject downChild = room7.transform.GetChild(3).gameObject;
 
         GameObject bossRoom = GameObject.Find("Boss0");
         GameObject bugRoom = GameObject.Find("Boss1");

@@ -5,7 +5,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ChargerMovement : MonoBehaviour
 {
-    public Transform target;
     EnemiesStats enemiesStats;
     Rigidbody2D rb;
     PlayerHealthHandler playerHealthHandler;
@@ -37,7 +36,6 @@ public class ChargerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
         enemyFrozen = GetComponent<EnemyFrozen>();
-        target = pl.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -61,15 +59,14 @@ public class ChargerMovement : MonoBehaviour
             {
                 rb.velocity = Vector2.zero; 
                 isCharging = false;
-                chargeTime = 0.55f;
-                toCharge = 1;
+                chargeTime = 1.3f;
+                toCharge = 1.5f;
             }
         }
 
         if (!isCharging)
         {
-            dir = target.transform.position - transform.position;
-            dir = dir.normalized;
+            dir = (pl.transform.position - transform.position).normalized;
         }
         
       
@@ -93,8 +90,7 @@ public class ChargerMovement : MonoBehaviour
 
         if (!isCharging)
         {
-            dir3 = target.transform.position - transform.position;
-            //transform.position = Vector2.MoveTowards(transform.position, target.transform.position, enemiesStats.enemySpeed * Time.deltaTime);
+            dir3 = (pl.transform.position - transform.position).normalized;
             if (!isGoingToCharge)
             {
                 transform.position += dir3.normalized * enemiesStats.enemySpeed * Time.fixedDeltaTime;
@@ -107,6 +103,7 @@ public class ChargerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
            
                 rb.bodyType = RigidbodyType2D.Dynamic;
+                
                 rb.AddForce(dir * chargingForce, ForceMode2D.Impulse);
                 isGoingToCharge = false;
                 wait = 10;
