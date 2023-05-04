@@ -11,6 +11,11 @@ public class ShotingTypesFunctions : MonoBehaviour
 
         //animator.SetBool("Shoot", true);
 
+        if(SoundController.instance == null)
+        {
+            FindObjectOfType<PlayerMovement>().gameObject.AddComponent<SoundController>();
+        }
+
         SoundController.instance.PlaySound(sound);
 
         Instantiate(shells, gun.transform.position, Quaternion.identity);

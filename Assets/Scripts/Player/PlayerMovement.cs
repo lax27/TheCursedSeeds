@@ -48,10 +48,27 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    bool isMoving = false;
     
     private void FixedUpdate()
     {
        transform.position += direction * playerStats.speed * Time.fixedDeltaTime;
+
+        if(direction.magnitude != 0)
+        {
+            if(!isMoving)
+            {
+                FoostepsSound.instance.StartPlayFoostepSound();
+                isMoving = true;
+            }
+        }else
+        {
+            if(isMoving)
+            {
+                FoostepsSound.instance.StopMoveSound();
+                isMoving = false;
+            }
+        }
 
         if (isShooting)
         {

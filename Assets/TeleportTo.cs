@@ -15,6 +15,8 @@ public class TeleportTo : MonoBehaviour
     public GameObject MoveThis;
     public GameObject Thistoo;
 
+    public bool urgentFix;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,11 +55,27 @@ public class TeleportTo : MonoBehaviour
         {
             MoveThis.transform.position = new Vector3(X, Y, Z);
 
+            if(urgentFix)
+            {
+                StartCoroutine(Fix());
+            }
+
             if (Thistoo != null)
             {
                 Thistoo.transform.position = new Vector3(X, Y, Z);
 
             }
         }
+    }
+
+    IEnumerator Fix()
+    {
+        float t = 0f;
+        while((t+= Time.deltaTime) < 1f)
+        {
+            yield return null;
+            MoveThis.transform.position = new Vector3(X, Y, Z); ;
+        }
+
     }
 }
