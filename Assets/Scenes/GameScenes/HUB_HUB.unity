@@ -230,6 +230,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6700302274402820495, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.079
+      objectReference: {fileID: 0}
     - target: {fileID: 8111055412696522258, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_IsActive
@@ -5014,6 +5019,7 @@ MonoBehaviour:
   offsetY: 0
   timeShake: 0
   shakeMagnitude: 0
+  isFinish: 0
 --- !u!81 &1158661218
 AudioListener:
   m_ObjectHideFlags: 0
