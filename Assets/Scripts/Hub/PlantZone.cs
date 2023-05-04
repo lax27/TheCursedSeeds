@@ -14,7 +14,7 @@ public class PlantZone : MonoBehaviour
     public GameObject press;
     private SpriteRenderer sr;
     private Rigidbody2D rb;
-
+    public GameObject growing;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +40,15 @@ public class PlantZone : MonoBehaviour
         else
         {
             sr.enabled = false;
+        }
+
+        if (GameManager.instance.isPlanted)
+        {
+            growing.SetActive(true);
+        }
+        else
+        {
+            growing.SetActive(false);
         }
 
         //mejorar esto para que solo se abra con la e y se cierre otra vez pulsando e

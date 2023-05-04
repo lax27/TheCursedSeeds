@@ -10,13 +10,14 @@ public class ChargerMovement : MonoBehaviour
     PlayerHealthHandler playerHealthHandler;
     GameObject pl;
     EnemyFrozen enemyFrozen;
-   
+    public List<AudioClip> audioClipList = new List<AudioClip>();
+
     public Vector2 dir;
     public Vector3 dir3;
     public bool isGoingToCharge = false;
     public bool isCharging = false;
     public float chargingForce = 50;
-    
+    private AudioSource au;
 
     ///CONTADORES
 
@@ -36,6 +37,7 @@ public class ChargerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
         enemyFrozen = GetComponent<EnemyFrozen>();
+        au = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,6 +61,7 @@ public class ChargerMovement : MonoBehaviour
       
         if (isCharging)
         {
+
             chargeTime -= Time.deltaTime;
             if(chargeTime <= 0)
             {

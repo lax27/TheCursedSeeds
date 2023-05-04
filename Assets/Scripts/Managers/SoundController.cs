@@ -9,6 +9,7 @@ public class SoundController : MonoBehaviour
 
     [SerializeField]private AudioSource audioSource; //para balas
     [SerializeField]private AudioSource audioSourcePlayerSounds; //para sondios del pj
+    [SerializeField]private AudioSource audioSourceEnemiesSounds; //para sondios del pj
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class SoundController : MonoBehaviour
         }
         audioSource = GetComponent<AudioSource>();
         audioSourcePlayerSounds = GetComponent<AudioSource>();
+        audioSourceEnemiesSounds = GetComponent<AudioSource>();
     }
 
     public void PlaySound(AudioClip sound)
@@ -35,5 +37,11 @@ public class SoundController : MonoBehaviour
     {
         audioSourcePlayerSounds.PlayOneShot(sound);
     }
+
+    public void PlaySoundEnemies(AudioClip sound)
+    {
+        audioSourceEnemiesSounds.PlayOneShot(sound);
+    }
+
 }
 
