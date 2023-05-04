@@ -99,6 +99,12 @@ public class ShootScript : MonoBehaviour
                 animator.SetTrigger("Reloading");
                 animator.SetBool("idle", false);
             }
+
+            if(gameObject.name == "rabbit")
+            {
+                animator.SetTrigger("Reloading");
+                animator.SetBool("idle", false);
+            }
         }
 
         if (isReloading)
