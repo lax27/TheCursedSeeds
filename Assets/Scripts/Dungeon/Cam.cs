@@ -21,7 +21,7 @@ public class Cam : MonoBehaviour
         {
             if (direcion == "up")
             {
-                cam.transform.position += new Vector3(0, 12.48f, 0);
+                cam.transform.position += new Vector3(0, 12.38f, 0);
                 player.transform.position += new Vector3(0, 7, 0);
             }
 

@@ -463,7 +463,6 @@ GameObject:
   m_Component:
   - component: {fileID: 46931738}
   - component: {fileID: 46931740}
-  - component: {fileID: 46931739}
   m_Layer: 0
   m_Name: SoundCollider
   m_TagString: Dungeon
@@ -486,26 +485,6 @@ Transform:
   m_Father: {fileID: 2051616851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &46931739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46931737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1c3c258162aaa45bc0c1c90181aa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlusVector: 0
-  equalVector: 1
-  minusVector: 0
-  X: -17.17
-  Y: 25.5
-  Z: -10
-  MoveThis: {fileID: 868792345}
-  Thistoo: {fileID: 0}
 --- !u!61 &46931740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2641,6 +2620,7 @@ MonoBehaviour:
   Z: -10
   MoveThis: {fileID: 868792345}
   Thistoo: {fileID: 0}
+  urgentFix: 0
 --- !u!61 &245835674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6263,6 +6243,7 @@ MonoBehaviour:
   Z: 0
   MoveThis: {fileID: 682341595}
   Thistoo: {fileID: 0}
+  urgentFix: 0
 --- !u!114 &476066536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6283,6 +6264,7 @@ MonoBehaviour:
   Z: -10
   MoveThis: {fileID: 868792345}
   Thistoo: {fileID: 0}
+  urgentFix: 1
 --- !u!61 &476066537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8237,7 +8219,6 @@ GameObject:
   m_Component:
   - component: {fileID: 707676978}
   - component: {fileID: 707676980}
-  - component: {fileID: 707676979}
   m_Layer: 0
   m_Name: SoundCollider
   m_TagString: Dungeon
@@ -8260,26 +8241,6 @@ Transform:
   m_Father: {fileID: 1765119595}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &707676979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707676977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1c3c258162aaa45bc0c1c90181aa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlusVector: 0
-  equalVector: 1
-  minusVector: 0
-  X: -17.17
-  Y: 25.5
-  Z: -10
-  MoveThis: {fileID: 868792345}
-  Thistoo: {fileID: 0}
 --- !u!61 &707676980
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8718,7 +8679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868792345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.69, y: 26.31, z: -10}
+  m_LocalPosition: {x: 63.12, y: 26.516, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10091,7 +10052,6 @@ GameObject:
   m_Component:
   - component: {fileID: 955129470}
   - component: {fileID: 955129472}
-  - component: {fileID: 955129471}
   m_Layer: 0
   m_Name: SoundCollider
   m_TagString: Dungeon
@@ -10114,26 +10074,6 @@ Transform:
   m_Father: {fileID: 162992536}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &955129471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955129469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1c3c258162aaa45bc0c1c90181aa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlusVector: 0
-  equalVector: 1
-  minusVector: 0
-  X: -17.17
-  Y: 25.5
-  Z: -10
-  MoveThis: {fileID: 868792345}
-  Thistoo: {fileID: 0}
 --- !u!61 &955129472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12330,6 +12270,7 @@ MonoBehaviour:
   Z: -10
   MoveThis: {fileID: 868792345}
   Thistoo: {fileID: 0}
+  urgentFix: 0
 --- !u!1 &1131267555
 GameObject:
   m_ObjectHideFlags: 0
@@ -12952,6 +12893,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1205955634}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1205955650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682341595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa151fe945573404c81edf20e4d4e8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226010686
 GameObject:
   m_ObjectHideFlags: 0
@@ -17442,7 +17395,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452731040}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa1c3c258162aaa45bc0c1c90181aa93, type: 3}
   m_Name: 
@@ -17450,11 +17403,12 @@ MonoBehaviour:
   PlusVector: 0
   equalVector: 1
   minusVector: 0
-  X: 63
-  Y: 25
+  X: 40
+  Y: 26.516
   Z: -10
   MoveThis: {fileID: 868792345}
   Thistoo: {fileID: 0}
+  urgentFix: 0
 --- !u!61 &1452731043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17559,7 +17513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453014496}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.53, y: 0.21, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17582,6 +17536,7 @@ MonoBehaviour:
   offsetY: 0
   timeShake: 0
   shakeMagnitude: 0
+  isFinish: 0
 --- !u!1 &1462808387
 GameObject:
   m_ObjectHideFlags: 0
@@ -17661,6 +17616,7 @@ MonoBehaviour:
   Z: -10
   MoveThis: {fileID: 868792345}
   Thistoo: {fileID: 0}
+  urgentFix: 0
 --- !u!1 &1507550805
 GameObject:
   m_ObjectHideFlags: 0
@@ -17738,7 +17694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1528631217}
   - component: {fileID: 1528631219}
-  - component: {fileID: 1528631218}
   m_Layer: 0
   m_Name: SoundCollider
   m_TagString: Dungeon
@@ -17761,26 +17716,6 @@ Transform:
   m_Father: {fileID: 298325509}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1528631218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528631216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1c3c258162aaa45bc0c1c90181aa93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlusVector: 0
-  equalVector: 1
-  minusVector: 0
-  X: -17.17
-  Y: 25.5
-  Z: -10
-  MoveThis: {fileID: 868792345}
-  Thistoo: {fileID: 0}
 --- !u!61 &1528631219
 BoxCollider2D:
   m_ObjectHideFlags: 0
