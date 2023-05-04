@@ -10,6 +10,7 @@ public class CameraShake : MonoBehaviour
     public float timeShake = 0.0f;
     public float shakeMagnitude = 0.0f;
     private Vector3 shakePosition = new Vector3();
+    public bool isFinish = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class CameraShake : MonoBehaviour
         
         if (timeShake > 0)
         {
+            isFinish = false;
             timeShake -= Time.deltaTime;
             shakePosition.x = Random.Range(-shakeMagnitude, shakeMagnitude);
             shakePosition.y = Random.Range(-shakeMagnitude, shakeMagnitude);
@@ -32,6 +34,7 @@ public class CameraShake : MonoBehaviour
         else
         {
             transform.position = transform.parent.position;
+            isFinish = true;
         }
     }
 

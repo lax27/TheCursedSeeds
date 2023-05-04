@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
 {
+    public static DungeonManager instance { get; private set; }
+
     public List<Vector2> currentRoomsPositions = new List<Vector2>();
     public List<GameObject> RoomsObjecs = new List<GameObject>();
     public List<GameObject> bossRoomBugs = new List<GameObject>();
-    public static DungeonManager instance { get; private set; }
 
     public static Vector2 roomMaxPositiveDistance = Vector2.zero;
     public static Vector2 roomMaxNegativeDistance = Vector2.zero;
@@ -18,7 +19,6 @@ public class DungeonManager : MonoBehaviour
 
 
     public int nextChild = 0;
-
 
     private void Awake()
     {
@@ -44,14 +44,12 @@ public class DungeonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        
-        GameObject room8 = GameObject.Find("Room 8");
+        GameObject room7 = GameObject.Find("Room 7");
 
-        GameObject upChild = room8.transform.GetChild(0).gameObject;
-        GameObject leftChild = room8.transform.GetChild(1).gameObject;
-        GameObject rightChild = room8.transform.GetChild(2).gameObject;
-        GameObject downChild = room8.transform.GetChild(3).gameObject;
+        GameObject upChild = room7.transform.GetChild(0).gameObject;
+        GameObject leftChild = room7.transform.GetChild(1).gameObject;
+        GameObject rightChild = room7.transform.GetChild(2).gameObject;
+        GameObject downChild = room7.transform.GetChild(3).gameObject;
 
         GameObject bossRoom = GameObject.Find("Boss0");
         GameObject bugRoom = GameObject.Find("Boss1");
@@ -103,8 +101,6 @@ public class DungeonManager : MonoBehaviour
                     spawnBossRoom.enabled = true;
             }
         }
-
-
     }
 
     IEnumerator CatchBugsRoom()

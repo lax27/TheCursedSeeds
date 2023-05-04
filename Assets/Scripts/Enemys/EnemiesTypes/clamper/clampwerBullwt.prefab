@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4683af4901c0c47b4f051473587c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bs: {fileID: 2465839978527300387}
+  bulletStats: {fileID: 0}
 --- !u!58 &9044577313143557449
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -150,6 +150,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0014924363, y: 0}
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 0.46865404

@@ -193,15 +193,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc48ce223f6aee541b275263a74b9f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   dir: {x: 0, y: 0}
   dir3: {x: 0, y: 0, z: 0}
   isGoingToCharge: 0
   isCharging: 0
-  chargingForce: 50
-  toCharge: 1
-  chargeTime: 0.1
-  wait: 10
+  chargingForce: 2000
+  toCharge: 1.5
+  chargeTime: 1.3
+  wait: 5
 --- !u!58 &2334146017784503455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -215,9 +214,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018652678, y: -0.016028076}
+  m_Offset: {x: -0.03034544, y: -0.016028076}
   serializedVersion: 2
-  m_Radius: 0.39356065
+  m_Radius: 0.25324774
 --- !u!50 &2334146017784503454
 Rigidbody2D:
   serializedVersion: 4
