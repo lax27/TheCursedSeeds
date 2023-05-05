@@ -102,6 +102,7 @@ public class PlayerHealthHandler : MonoBehaviour
             DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
             DungeonManager.instance.RoomsObjecs.Clear();
             DungeonManager.instance.bossRoomBugs.Clear();
+
             timeDeath -= Time.deltaTime;
             Debug.Log(timeDeath);
             if (timeDeath <= 0)

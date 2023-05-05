@@ -5478,7 +5478,7 @@ MonoBehaviour:
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
-  currentWeaponID: 0
+  currentWeaponID: 1
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
