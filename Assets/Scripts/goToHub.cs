@@ -25,7 +25,7 @@ public class goToHub : MonoBehaviour
             DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
             DungeonManager.instance.RoomsObjecs.Clear();
             DungeonManager.instance.bossRoomBugs.Clear();
-            DungeonManager.instance.nextChild = 0;
+          
 
 
 
