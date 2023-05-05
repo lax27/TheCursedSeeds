@@ -45,12 +45,10 @@ public class PlantZone : MonoBehaviour
         if (GameManager.instance.isPlanted)
         {
             growing.SetActive(true);
-            press.SetActive(false);
         }
         else
         {
             growing.SetActive(false);
-            press.SetActive(true);
         }
 
         //mejorar esto para que solo se abra con la e y se cierre otra vez pulsando e
