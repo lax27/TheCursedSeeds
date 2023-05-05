@@ -54,15 +54,10 @@ public class PlayerHealthHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isInmune)
-        {
-            Physics2D.IgnoreLayerCollision(30, 8, false);
-        }
-
         if (isInmune)
         {
             inmuneTimer -= Time.deltaTime;
-            Physics2D.IgnoreLayerCollision(30, 8, true);
+            Physics2D.IgnoreLayerCollision(7, 8, true);
 
             if (inmuneTimer > 0f)
             {
@@ -87,8 +82,8 @@ public class PlayerHealthHandler : MonoBehaviour
 
             if (inmuneTimer <= 0)
             {
+                Physics2D.IgnoreLayerCollision(7, 8, false);
                 //devlover las layersColisions
-                Physics2D.IgnoreLayerCollision(30, 8,false);
                 spriteRenderer.color = new Color(255, 255, 255, 255);
                 inmuneTimer = inmuneTimeOffset;
                 isInmune = false;
@@ -107,8 +102,6 @@ public class PlayerHealthHandler : MonoBehaviour
             DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
             DungeonManager.instance.RoomsObjecs.Clear();
             DungeonManager.instance.bossRoomBugs.Clear();
-            DungeonManager.instance.nextChild = 0;
-
             timeDeath -= Time.deltaTime;
             Debug.Log(timeDeath);
             if (timeDeath <= 0)

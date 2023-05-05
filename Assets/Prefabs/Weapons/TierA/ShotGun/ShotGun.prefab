@@ -101,10 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6778799097550530304, guid: 9cf1c00ebf048ba49bc4c17e06b244c2, type: 3}
   canFire: 0
-  timeBetwenFire: 1
-  currentAmmo: 12
-  maxAmmo: 6
-  reloadTimeOffset: 0
+  timeBetwenFire: 1.2
+  currentAmmo: 8
+  maxAmmo: 8
+  reloadTimeOffset: 1.5
   isReloading: 0
   sound: {fileID: 0}
   canon: {fileID: 2752010500210949294}

@@ -29,7 +29,17 @@ public class ShotingTypesFunctions : MonoBehaviour
     public void Shootgun(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake)
     {
         //feadBack
+        shake.CameraShakeSettings(timeShake, magnitudeShake);
 
+        //animator.SetTrigger("Shoot");
+
+        if (SoundController.instance == null)
+        {
+            FindObjectOfType<PlayerMovement>().gameObject.AddComponent<SoundController>();
+        }
+
+        SoundController.instance.PlaySound(sound);
+        Instantiate(shells, gun.transform.position, Quaternion.identity);
         //gun logic
         GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
         GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);

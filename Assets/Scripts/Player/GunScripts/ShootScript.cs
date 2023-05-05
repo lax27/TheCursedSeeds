@@ -78,11 +78,12 @@ public class ShootScript : MonoBehaviour
                 currentAmmo--;
             }
 
-            //if (gameObject.name == "ShotGun")
-            //{
-            //    shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0, 0);
-            //    currentAmmo--;
-            //}
+            if (gameObject.name == "ShotGun")
+            {
+                shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0.12f, 0.15f);
+                currentAmmo--;
+            }
+
             //if (gameObject.name == "MachineGun")
             //{
             //    shotFunctions.MachineGun(bullet, sound, animator, shells, shake, gameObject, canon, 0.02f, 0.10f, bulletCount);
