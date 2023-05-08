@@ -6,47 +6,26 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject settingsMenu;
-    [SerializeField] GameObject PauseMenu;
-    [SerializeField] PlayerMovement movement;
-    [SerializeField] GameObject weapon;
-    [SerializeField] GameObject menuPlant;
 
-
-    private void Start()
+    void Start()
     {
-        PauseMenu.SetActive(false);
 
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (menuPlant.active == true)
-            {
-                Debug.Log("Plant Menu on");
-            }
-            else if(menuPlant.active == false)
-            {
-                Time.timeScale = 0;
-                PauseMenu.SetActive(true);
-                movement.enabled = false;
-                weapon.SetActive(false);
-
-            }
-        }
-
+        
     }
 
-    public void PlayButton()
+    public void LoadSceneOnPlayButtonClick()
     {
-        SceneManager.LoadScene("GameplayDefinitivoTest");
+        SceneManager.LoadScene("1");
     }
 
     public void OpenSettingsMenu()
     {
         settingsMenu.SetActive(true);
     }
-    public void ExitButton()
+    public void CloseGameOnExitButtonClick()
     {
         Application.Quit();
         Debug.Log("Saliendo del juego...");
@@ -56,20 +35,21 @@ public class MainMenu : MonoBehaviour
     {
         settingsMenu.SetActive(false);
     }
-
-    public void PauseOff()
+    //PONER ESTO EN GAMEPLAY
+    /*public void PauseOff()
     {
         PauseMenu.SetActive(false);
-        Debug.Log("clicked");
-        movement.enabled = true;
-        weapon.SetActive(true);
+        Debug.Log("Pause is off");
         Time.timeScale = 1;
 
     }
+    */
 
-    public void Return()
+    //PONER ESTO EN EL MENU DE PAUSE
+    /*
+    public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-
     }
+    */
 }
