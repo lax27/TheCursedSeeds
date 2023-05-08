@@ -86,3 +86,9 @@ TagManager:
   - name: ice cube
     uniqueID: 565724635
     locked: 0
+  - name: hub_forest
+    uniqueID: 2727069893
+    locked: 0
+  - name: hub_limits
+    uniqueID: 552046293
+    locked: 0
