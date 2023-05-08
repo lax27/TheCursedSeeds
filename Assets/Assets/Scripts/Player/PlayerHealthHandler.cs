@@ -54,6 +54,14 @@ public class PlayerHealthHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int resetTest = 0;
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            resetTest++;
+            if(resetTest >= 15)
+                SceneManager.LoadScene("HUB_HUB");
+        }
+        //////////////////////////////////
         if (isInmune)
         {
             inmuneTimer -= Time.deltaTime;
@@ -110,7 +118,7 @@ public class PlayerHealthHandler : MonoBehaviour
                 //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
                 GameManager.instance.currentWeaponID = 0;
                 // 1 = hub
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("HUB_HUB");
             }
 
         }

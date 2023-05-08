@@ -19,7 +19,6 @@ public class BugRooms : MonoBehaviour
             DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
             DungeonManager.instance.RoomsObjecs.Clear();
             DungeonManager.instance.bossRoomBugs.Clear();
-            SceneManager.LoadScene(2);
             Destroy(this);
         }
 

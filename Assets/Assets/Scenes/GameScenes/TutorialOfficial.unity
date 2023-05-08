@@ -12893,18 +12893,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1205955634}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1205955650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682341595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa151fe945573404c81edf20e4d4e8bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1226010686
 GameObject:
   m_ObjectHideFlags: 0
@@ -18157,7 +18145,7 @@ MonoBehaviour:
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
-  pauseMenu: {fileID: 0}
+  guns: {fileID: 0}
 --- !u!4 &1609064738
 Transform:
   m_ObjectHideFlags: 0
@@ -32773,3 +32761,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127758409}
   m_CullTransparentMesh: 1
+--- !u!114 &1846737555926671527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682341595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa151fe945573404c81edf20e4d4e8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioSourcePlayerSounds: {fileID: 0}
+  audioSourceEnemiesSounds: {fileID: 0}

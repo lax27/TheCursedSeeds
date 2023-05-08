@@ -45,9 +45,20 @@ public class PlayerMovement : MonoBehaviour
 
         direction = new Vector2(horizontalMoveInput, verticalMoveInput).normalized;
 
+        //Retroceso en cada arma
         if (GameManager.instance.currentWeaponID == 0)
         {
+            knockBackForce = 400f;
+        }
+        else if (GameManager.instance.currentWeaponID == 1)
+        {
+            knockBackForce = 600f;
+
+        }
+        else if (GameManager.instance.currentWeaponID == 2)
+        {
             knockBackForce = 500f;
+
         }
 
     }
@@ -62,14 +73,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if(!isMoving)
             {
-                FoostepsSound.instance.StartPlayFoostepSound();
+                //FoostepsSound.instance.StartPlayFoostepSound();
                 isMoving = true;
             }
         }else
         {
             if(isMoving)
             {
-                FoostepsSound.instance.StopMoveSound();
+                //FoostepsSound.instance.StopMoveSound();
                 isMoving = false;
             }
         }

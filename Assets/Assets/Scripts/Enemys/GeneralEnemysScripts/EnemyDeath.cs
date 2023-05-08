@@ -34,7 +34,7 @@ public class EnemyDeath : MonoBehaviour
 
             for (int i = 0; i < Random.Range(3,10); i++)
             {
-                Instantiate(deathSplash, transform.position, Quaternion.identity);
+              Instantiate(deathSplash, transform.position, Quaternion.identity);
             }
             GetComponent<LootBag>().InstatianteWseed(transform.position);
             Destroy(gameObject);

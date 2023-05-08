@@ -403,12 +403,10 @@ GameObject:
   - component: {fileID: 2927519899224286325}
   - component: {fileID: 446731444}
   - component: {fileID: 1874673432262967476}
-  - component: {fileID: 114407698684730786}
-  - component: {fileID: 6821190719848198198}
   - component: {fileID: 6507651897588330834}
+  - component: {fileID: 6821190719848198198}
   - component: {fileID: 7880664680134765482}
   - component: {fileID: 7194415621783756744}
-  - component: {fileID: 6700302274402820495}
   - component: {fileID: 5602994346372687871}
   - component: {fileID: 8166270801809688801}
   m_Layer: 7
@@ -595,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f989746c375a98a429aef4eacf63f4d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114407698684730786
+--- !u!114 &6507651897588330834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -604,15 +602,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5095049127602115650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23cfca3ffd6b284792fc43554e9a02e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5b1be3573d8ef4ba406dcc75ff2b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foostepsOnGrass: []
-  footstepsOnDungeon: []
-  foostepsOnCorridor:
-  - {fileID: 8300000, guid: 988aa993c4ef39642b7e502fbc0286df, type: 3}
-  - {fileID: 8300000, guid: 95c570246ad22ab4c8cb0e6f775cf3d9, type: 3}
-  material: Corridor
 --- !u!95 &6821190719848198198
 Animator:
   serializedVersion: 4
@@ -633,18 +625,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6507651897588330834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095049127602115650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d5b1be3573d8ef4ba406dcc75ff2b74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &7880664680134765482
 Rigidbody2D:
   serializedVersion: 4
@@ -682,102 +662,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.034308344, y: -0.059793055}
   m_Size: {x: 0.5247442, y: 0.9496974}
   m_Direction: 0
---- !u!82 &6700302274402820495
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095049127602115650}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 988aa993c4ef39642b7e502fbc0286df, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!198 &5602994346372687871
 ParticleSystem:
   m_ObjectHideFlags: 0
