@@ -83,6 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3823148037272356618}
   - component: {fileID: 1585958665203202438}
+  - component: {fileID: 5889876927030692087}
   m_Layer: 10
   m_Name: 'NewRigthRoom '
   m_TagString: Untagged
@@ -120,6 +121,19 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812161793753174}
   rooms: []
+--- !u!114 &5889876927030692087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106807351697981636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c81e39fdc28fe94db13f4ab5a8fa8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tp: {fileID: 1721812161793753174}
 --- !u!1 &1213480401291677180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4860,6 +4874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5252852894300463385}
   - component: {fileID: 5450038604239056132}
+  - component: {fileID: 6802708180059573748}
   m_Layer: 10
   m_Name: NewDownRoom
   m_TagString: Untagged
@@ -4897,6 +4912,19 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812162012261526}
   rooms: []
+--- !u!114 &6802708180059573748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4084529068613785445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c81e39fdc28fe94db13f4ab5a8fa8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tp: {fileID: 1721812162012261526}
 --- !u!1 &5037386273059133933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4938,6 +4966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3179926838088635960}
   - component: {fileID: 994195333660811942}
+  - component: {fileID: 7690794384452821164}
   m_Layer: 10
   m_Name: NewLeftRoom
   m_TagString: Untagged
@@ -4975,6 +5004,19 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812161752225911}
   rooms: []
+--- !u!114 &7690794384452821164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6816562753951004129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c81e39fdc28fe94db13f4ab5a8fa8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tp: {fileID: 1721812161752225911}
 --- !u!1 &7560596291151677828
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,6 +5062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970104841956492993}
   - component: {fileID: 1440825021596525844}
+  - component: {fileID: 7844930914090444050}
   m_Layer: 10
   m_Name: NewUpRoom
   m_TagString: Untagged
@@ -5057,3 +5100,16 @@ MonoBehaviour:
   roomCount: 0
   tp: {fileID: 1721812161285146634}
   rooms: []
+--- !u!114 &7844930914090444050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041887477532126020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c81e39fdc28fe94db13f4ab5a8fa8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tp: {fileID: 1721812161285146634}

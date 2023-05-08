@@ -105,11 +105,7 @@ public class PlayerHealthHandler : MonoBehaviour
             guns.SetActive(false);
             coll.enabled = false;
             isPlayerDead = true;
-            //manager things 
-            DungeonManager.instance.currentRoomsPositions.Clear();
-            DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
-            DungeonManager.instance.RoomsObjecs.Clear();
-            DungeonManager.instance.bossRoomBugs.Clear();
+           
 
             timeDeath -= Time.deltaTime;
             Debug.Log(timeDeath);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DungeonManager : MonoBehaviour
 {
@@ -19,16 +20,7 @@ public class DungeonManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Debug.Log("WARNING: multiple" + this + "in scene!");
-            Destroy(this);
-        }
+        instance = this;
     }
 
 
@@ -41,7 +33,11 @@ public class DungeonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    
+
+        if (RoomsObjecs.Count < 4)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     
     }
 }
