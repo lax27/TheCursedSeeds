@@ -29,10 +29,7 @@ public class GameManager : MonoBehaviour
     public int runsDone = 0;
     public int totalEnemiesKilled = 0;
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    [SerializeField]private GameObject pauseMenu;
-    [SerializeField]private GameObject guns;
-
-
+    private GameObject guns;
     
     private void Awake()
     {
@@ -50,18 +47,16 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        pauseMenu = GameObject.Find("PauseMenu");
-        guns = GameObject.Find("RotatePoint");
 
-        if (pauseMenu != null)
-        {
-            pauseMenu.SetActive(false);
-        }
     }
 
    
     void Update()
     {
+
+        guns = GameObject.Find("RotatePoint");
+        pile = GameObject.Find("PlantZone");
+
         if (isPlanted)
         {
             PlantTimer -= Time.deltaTime;
@@ -79,21 +74,6 @@ public class GameManager : MonoBehaviour
             isGrowed = false;
             isWeapon = true;
         }
-
-
-
-
-
-        if (Input.GetButtonDown("Esc"))
-        {
-            if (pauseMenu != null)
-            {
-                pauseMenu.SetActive(true);
-                guns.SetActive(false);
-                Time.timeScale = 0f;
-            }
-        }
-
     }
 
     public void GrowingPlant(int seed_number)
@@ -102,14 +82,14 @@ public class GameManager : MonoBehaviour
         {
             spawnWeapon = weaponsToSpawn[0];
             isPlanted = true;
-            PlantTimer = 10;//300;
+            PlantTimer = 1f;
         }
 
         if (seed_number == 1 && !isPlanted )
         {
             spawnWeapon = weaponsToSpawn[1];
             isPlanted = true;
-            PlantTimer = 10;
+            PlantTimer = 1f;
         }
     }
 }

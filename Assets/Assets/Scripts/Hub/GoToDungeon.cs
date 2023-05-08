@@ -21,7 +21,7 @@ public class GoToDungeon : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("GameplayDefinitivoTest");
         }
         
     }

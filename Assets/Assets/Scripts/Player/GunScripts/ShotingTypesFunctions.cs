@@ -39,7 +39,9 @@ public class ShotingTypesFunctions : MonoBehaviour
         }
 
         SoundController.instance.PlaySound(sound);
+
         Instantiate(shells, gun.transform.position, Quaternion.identity);
+
         //gun logic
         GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
         GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);

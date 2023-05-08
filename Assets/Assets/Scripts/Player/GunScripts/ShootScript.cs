@@ -80,6 +80,7 @@ public class ShootScript : MonoBehaviour
 
             if (gameObject.name == "ShotGun")
             {
+                playerMove.isShooting = true;
                 shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0.12f, 0.15f);
                 currentAmmo--;
             }
