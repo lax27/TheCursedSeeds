@@ -79,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 1721812160800869619, guid: 3ab331c9658baf2428cb5cd250b51d23,
         type: 3}
       propertyPath: m_Name
-      value: DefaultRoom
+      value: NormalRoom
       objectReference: {fileID: 0}
     - target: {fileID: 1721812160800869629, guid: 3ab331c9658baf2428cb5cd250b51d23,
         type: 3}
@@ -138,6 +138,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab331c9658baf2428cb5cd250b51d23, type: 3}
+--- !u!1 &2258361102606412138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1213480401291677180, guid: 3ab331c9658baf2428cb5cd250b51d23,
+    type: 3}
+  m_PrefabInstance: {fileID: 1117009857040983190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5816019419808607670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6860895739199785248, guid: 3ab331c9658baf2428cb5cd250b51d23,
@@ -286,6 +292,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4169201910381797971, guid: b435a2b367d3b3341be833a16e9d137c,
+        type: 3}
+      propertyPath: enemies
+      value: 
+      objectReference: {fileID: 2258361102606412138}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b435a2b367d3b3341be833a16e9d137c, type: 3}
 --- !u!1001 &7097338195952675379

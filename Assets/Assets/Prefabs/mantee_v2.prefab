@@ -16,7 +16,7 @@ GameObject:
   m_Layer: 30
   m_Name: SoundController
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775621180660084451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.659, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -561,9 +561,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5095049127602115661}
   enemyAttackPaused: 0
   hitSound: {fileID: 0}
-  healthUIIcon1: {fileID: 0}
-  healthUIIcon2: {fileID: 0}
-  healthUIIcon3: {fileID: 0}
   inmuneTimeOffset: 3
   isInmune: 0
   hitSplash: {fileID: 0}
