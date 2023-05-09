@@ -395,7 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponsSprites:
   - {fileID: 21300000, guid: 373568c61cd01eb4ebe172a41a856b03, type: 3}
-  - {fileID: -1740288742, guid: 303028dd7667c094ba8ff749a8ca7e42, type: 3}
+  - {fileID: 21300000, guid: 5e3152f06816da949b5618f38a37a110, type: 3}
   - {fileID: 21300000, guid: f123666acb4cfdc4dae47e80e33b7cf1, type: 3}
 --- !u!1 &4987639659433000155
 GameObject:

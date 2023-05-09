@@ -114,7 +114,7 @@ public class PlayerHealthHandler : MonoBehaviour
            
 
             timeDeath -= Time.deltaTime;
-            Debug.Log(timeDeath);
+            //Debug.Log(timeDeath);
             if (timeDeath <= 0)
             {
                 //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
@@ -145,7 +145,7 @@ public class PlayerHealthHandler : MonoBehaviour
             noHpAnimator.SetBool("shake", true);
         }
 
-        Debug.Log(lifeGlowTimer);
+        //Debug.Log(lifeGlowTimer);
         //life Feedback:
         if (lifeGlowTimer <= 0)
         {
@@ -158,11 +158,6 @@ public class PlayerHealthHandler : MonoBehaviour
                 Image noLife = lifeUI.noLifesIcons[i].GetComponent<Image>();
                 noLife.color = transparentColor;
             }
-
-            hp.transform.position = normalhpPosition.position;
-            noHp.transform.position = normalhpPosition.position;
-
-
             lifeGlowTimer = 1f;
             isHitGlowUI = false;
             hpAnimator.SetBool("shake", false);
@@ -170,7 +165,7 @@ public class PlayerHealthHandler : MonoBehaviour
 
         }
 
-
+        Debug.Log(hpAnimator.GetBool("shake"));
 
     }
 

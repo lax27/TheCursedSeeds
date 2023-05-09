@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         {
             spawnWeapon = weaponsToSpawn[0];
             isPlanted = true;
-            PlantTimer = 1f;
+            PlantTimer = 100f;
         }
 
         if (seed_number == 1 && !isPlanted )
