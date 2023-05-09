@@ -17,7 +17,6 @@ public class DungeonManager : MonoBehaviour
 
     public GameObject[] roomPrefabs;
     public GameObject[] bossRoomPrefabs;
-
     private void Awake()
     {
         instance = this;

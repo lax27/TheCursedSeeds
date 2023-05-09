@@ -74,7 +74,7 @@ public class ShotingTypesFunctions : MonoBehaviour
         GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
     }
 
-    public void Rafaga(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake, float bulletDisspersion)
+    public void Rafaga(GameObject bullet, AudioClip sound, Animator animator, GameObject shells, CameraShake shake, GameObject gun, Transform canon, float timeShake, float magnitudeShake, float bulletDisspersion, PlayerMovement pM)
     {
         //feadBack
         shake.CameraShakeSettings(timeShake, magnitudeShake);
@@ -86,15 +86,18 @@ public class ShotingTypesFunctions : MonoBehaviour
         Instantiate(shells, gun.transform.position, Quaternion.identity);
 
         //gun logic
-        StartCoroutine(Burst(bullet, canon));   
+        StartCoroutine(Burst(bullet, canon,pM));   
     }
 
-    IEnumerator Burst(GameObject bullet,Transform canon)
+    IEnumerator Burst(GameObject bullet,Transform canon,PlayerMovement pM)
     {
             GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.05f);
+            pM.isShooting = true;
+        yield return new WaitForSeconds(0.07f);
             GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.05f);
+        pM.isShooting = true;
+        yield return new WaitForSeconds(0.07f);
             GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+        pM.isShooting = true;
     }
 }

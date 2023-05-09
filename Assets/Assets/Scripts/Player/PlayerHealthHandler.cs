@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealthHandler : MonoBehaviour
 {
@@ -14,9 +15,6 @@ public class PlayerHealthHandler : MonoBehaviour
 
 
     public AudioClip hitSound;
-    public GameObject healthUIIcon1;
-    public GameObject healthUIIcon2;
-    public GameObject healthUIIcon3;
     
     private float inmuneTimer = 3;
     public float inmuneTimeOffset;
@@ -32,6 +30,21 @@ public class PlayerHealthHandler : MonoBehaviour
     public bool isPlayerDead = false;
     private Collider2D coll;
 
+    //UI things:
+    private GameObject UI;
+    private hpUI lifeUI;
+    private bool isHitGlowUI = false;
+    private float lifeGlowTimer = 1f;
+    private Color transparentColor;
+
+    private GameObject noHp;
+    private GameObject hp;
+    private Transform normalhpPosition;
+    private Animator hpAnimator;
+    private Animator noHpAnimator;
+    
+    
+
     void Start()
     {
         playerStats = GetComponent<PlayerStats>();
@@ -42,26 +55,19 @@ public class PlayerHealthHandler : MonoBehaviour
         shake = mainCamera.GetComponent<CameraShake>();
         hitSplash = GetComponent<ParticleSystem>();
         coll = GetComponent<Collider2D>();
+        UI = GameObject.Find("UI");
+        lifeUI = UI.GetComponent<hpUI>();
+        transparentColor = new Color(255, 255, 255, 0.1f);
 
-        healthUIIcon1 = GameObject.Find("HP1");
-        healthUIIcon2 = GameObject.Find("HP2");
-        healthUIIcon3 = GameObject.Find("HP3");
-
-
-
+        hp = GameObject.Find("HP");
+        hpAnimator = hp.GetComponent<Animator>();
+        noHp = GameObject.Find("LostHP");
+        noHpAnimator = noHp.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        int resetTest = 0;
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            resetTest++;
-            if(resetTest >= 15)
-                SceneManager.LoadScene("HUB_HUB");
-        }
-        //////////////////////////////////
         if (isInmune)
         {
             inmuneTimer -= Time.deltaTime;
@@ -118,29 +124,6 @@ public class PlayerHealthHandler : MonoBehaviour
             }
 
         }
-
-
-    /* TODO mover codigo entre "////" a un script de UI */ 
-        /////////////////////////////////////////////////////
-        /////CAMBIOS
-        if (playerStats.life <= 0)
-        {
-            healthUIIcon1.SetActive(false);
-            healthUIIcon2.SetActive(false);
-            healthUIIcon3.SetActive(false);
-        }
-
-        if (playerStats.life == 1)
-        {
-            healthUIIcon2.SetActive(false);
-            healthUIIcon3.SetActive(false);
-        }
-
-        if (playerStats.life == 2)
-        {
-            healthUIIcon3.SetActive(false);
-        }
-        /////////////////////////////////////////////////////
         if (enemyAttackPauseTimer > 0)
         {
             enemyAttackPaused = true;
@@ -151,6 +134,40 @@ public class PlayerHealthHandler : MonoBehaviour
                 //rbPlayer.velocity = new Vector2(0, 0);
                 enemyAttackPaused = false;             
             }
+        }
+
+        if (isHitGlowUI)
+        {
+            lifeGlowTimer -= Time.deltaTime;
+
+            //hacer una animacion donde la barra de vida haga un shake
+            hpAnimator.SetBool("shake", true);
+            noHpAnimator.SetBool("shake", true);
+        }
+
+        Debug.Log(lifeGlowTimer);
+        //life Feedback:
+        if (lifeGlowTimer <= 0)
+        {
+            for (int i = 0; i < lifeUI.lifesIcons.Length; i++)
+            {
+
+                Image life = lifeUI.lifesIcons[i].GetComponent<Image>();
+                life.color = transparentColor;
+
+                Image noLife = lifeUI.noLifesIcons[i].GetComponent<Image>();
+                noLife.color = transparentColor;
+            }
+
+            hp.transform.position = normalhpPosition.position;
+            noHp.transform.position = normalhpPosition.position;
+
+
+            lifeGlowTimer = 1f;
+            isHitGlowUI = false;
+            hpAnimator.SetBool("shake", false);
+            noHpAnimator.SetBool("shake", false);
+
         }
 
 
@@ -168,6 +185,7 @@ public class PlayerHealthHandler : MonoBehaviour
                 enemyAttackPauseTimer = 1f;
 
                 isInmune = true;
+                isHitGlowUI = true;
 
                 if (hitSound != null)
                     SoundController.instance.PlaySoundPlayer(hitSound);
@@ -184,8 +202,19 @@ public class PlayerHealthHandler : MonoBehaviour
                 {
                     hitStop.StopTime(0.05f, 20, 0.1f);
                 }
-                
 
+                //UI
+                for (int i = 0; i < lifeUI.lifesIcons.Length; i++)
+                {
+
+                    Image life = lifeUI.lifesIcons[i].GetComponent<Image>();
+                    life.color = new Color(255, 255, 255, 255);
+
+                    Image noLife = lifeUI.noLifesIcons[i].GetComponent<Image>();
+                    noLife.color = new Color(255, 255, 255, 255);
+                }
+
+   
             }
         }
     }
@@ -199,6 +228,7 @@ public class PlayerHealthHandler : MonoBehaviour
                 enemyAttackPauseTimer = 1f;
 
                 isInmune = true;
+                isHitGlowUI = true;
 
                 if (hitSound != null)
                     SoundController.instance.PlaySoundPlayer(hitSound);
@@ -216,7 +246,16 @@ public class PlayerHealthHandler : MonoBehaviour
                     hitStop.StopTime(0.05f, 20, 0.1f);
                 }
 
+                //UI
+                for (int i = 0; i < lifeUI.lifesIcons.Length; i++)
+                {
 
+                    Image life = lifeUI.lifesIcons[i].GetComponent<Image>();
+                    life.color = new Color(255, 255, 255, 255);
+
+                    Image noLife = lifeUI.noLifesIcons[i].GetComponent<Image>();
+                    noLife.color = new Color(255, 255, 255, 255);
+                }
             }
         }
     }

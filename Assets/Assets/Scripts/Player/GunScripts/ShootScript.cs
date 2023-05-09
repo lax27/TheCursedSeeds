@@ -31,22 +31,27 @@ public class ShootScript : MonoBehaviour
 
     //script with the move code
     private PlayerMovement playerMove;
+    private PlayerStats playerStats;
+    private float normalspeedPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
         playerMove = GameObject.Find("mantee_v2").GetComponent<PlayerMovement>();
+        playerStats = GameObject.Find("mantee_v2").GetComponent<PlayerStats>();
         shotFunctions = GetComponent<ShotingTypesFunctions>();
         shake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
         animator = GetComponent<Animator>();    
         canFire = true;
         reloadTime = reloadTimeOffset;
-        
+        normalspeedPlayer = playerStats.speed;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerStats.speed = normalspeedPlayer;
        
         if (!canFire)
         {
@@ -73,14 +78,14 @@ public class ShootScript : MonoBehaviour
 
             if (gameObject.name == "rabbit")
             {
+                playerStats.speed = 0f;
                 playerMove.isShooting = true;
-                shotFunctions.Rafaga(bullet, sound, animator, shells, shake, gameObject, canon, 0.1f, 0.15f, 6f);
+                shotFunctions.Rafaga(bullet, sound, animator, shells, shake, gameObject, canon, 0.1f, 0.15f, 6f,playerMove);
                 currentAmmo--;
             }
 
             if (gameObject.name == "ShotGun")
             {
-                playerMove.isShooting = true;
                 shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0.12f, 0.15f);
                 currentAmmo--;
             }

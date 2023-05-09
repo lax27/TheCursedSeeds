@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public int totalEnemiesKilled = 0;
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     private GameObject guns;
+
+    //Dungeon things:
     
     private void Awake()
     {

@@ -6,9 +6,11 @@ using UnityEngine;
 public class ClamperShoot : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject shootSpawn;
     private bool canFire = false;
     private float timerToMove = 1.5f;
     private EnemyFrozen enemyFrozen;
+    [SerializeField] private ParticleSystem shootParticle;
     PlayerHealthHandler playerHealthHandler;
     GameObject pl;
 
@@ -44,7 +46,8 @@ public class ClamperShoot : MonoBehaviour
 
         if (canFire)
         {
-            Instantiate(bullet,transform.position,Quaternion.identity);
+            shootParticle.Play();
+            Instantiate(bullet,shootSpawn.transform.position,Quaternion.identity);
             canFire = false;
         }
     }
