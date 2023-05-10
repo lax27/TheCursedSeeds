@@ -3,23 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - bullet
-  - enemy
-  - ice
-  - wall
-  - exclamation
-  - curency
-  - Portal
-  - Pause
-  - seta
-  - enemyB
-  - basicW
-  - shootgun
-  - Corridor
-  - Dungeon
-  - Grass
-  - collector
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -27,29 +11,23 @@ TagManager:
   - 
   - Water
   - UI
-  - exclamation
-  - Player
-  - Enemies
-  - details
-  - room
-  - minimapIcon
-<<<<<<< HEAD
-  - plant collector
-  - 
-  - 
-=======
-  - wall
-  - plantZone
-  - weapon
->>>>>>> 5915fcc1fb9a779b704ed1d23a94b777bad1efb9
   - 
   - 
   - 
-  - ray
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -62,46 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Floor
-    uniqueID: 2425651459
-    locked: 0
-  - name: Wall
-    uniqueID: 4250941897
-    locked: 0
-  - name: Layer 3
-    uniqueID: 4189426099
-    locked: 0
-  - name: details
-    uniqueID: 1739330569
-    locked: 0
-  - name: exclamation
-    uniqueID: 2907877387
-    locked: 0
-  - name: Portal
-    uniqueID: 2984029131
-    locked: 0
-  - name: Player
-    uniqueID: 1397462407
-    locked: 0
-  - name: Enemijos
-    uniqueID: 794498503
-    locked: 0
-  - name: ray
-    uniqueID: 4264803575
-    locked: 0
-  - name: ice cube
-    uniqueID: 565724635
-    locked: 0
-  - name: hub_forest
-    uniqueID: 2727069893
-    locked: 0
-  - name: hub_limits
-    uniqueID: 552046293
-    locked: 0
-  - name: collector
-    uniqueID: 4178508737
-    locked: 0
-  - name: UI
-    uniqueID: 3552853077
     locked: 0
