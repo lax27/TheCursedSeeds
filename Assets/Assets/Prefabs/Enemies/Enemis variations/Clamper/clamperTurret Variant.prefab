@@ -7,10 +7,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2815708251424929447, guid: 956979c6b4f79294dac5907602af02d1,
+        type: 3}
+      propertyPath: enemyHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3455728272695557255, guid: 956979c6b4f79294dac5907602af02d1,
         type: 3}
       propertyPath: m_Name
-      value: clamperTurret
+      value: clamperTurret Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3455728272695557261, guid: 956979c6b4f79294dac5907602af02d1,
         type: 3}
@@ -85,12 +90,12 @@ PrefabInstance:
     - target: {fileID: 3761467363349842888, guid: 956979c6b4f79294dac5907602af02d1,
         type: 3}
       propertyPath: timerToMove
-      value: 0.3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3761467363349842888, guid: 956979c6b4f79294dac5907602af02d1,
         type: 3}
       propertyPath: timerMovement
-      value: 0.1
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 956979c6b4f79294dac5907602af02d1, type: 3}

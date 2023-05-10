@@ -32,7 +32,7 @@ public class GrabWeapon : MonoBehaviour
         {
             rbWeapon.angularDrag = 0;
             rbWeapon.drag = 0;
-            rbWeapon.mass = 0.1f;
+            rbWeapon.mass = 0.3f;
         }
         if (canPick && Input.GetKeyDown(KeyCode.E)) 
         {

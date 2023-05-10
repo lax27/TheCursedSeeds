@@ -87,10 +87,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2056414541106599089, guid: c6a2cffb2be4bb24b8ba32fe4c061616,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 7093450859893063126, guid: 9efbc96f81e485f4db1c41f59cf881ea,
+        type: 3}
     - target: {fileID: 2056414541106599090, guid: c6a2cffb2be4bb24b8ba32fe4c061616,
         type: 3}
       propertyPath: m_Name
-      value: MegaClamper
+      value: MegaClamper Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a2cffb2be4bb24b8ba32fe4c061616, type: 3}

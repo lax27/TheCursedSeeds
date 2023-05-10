@@ -12,6 +12,8 @@ public class ClamperShoot : MonoBehaviour
     private EnemyFrozen enemyFrozen;
     PlayerHealthHandler playerHealthHandler;
     GameObject pl;
+    public float timeBetrewShot = 5f;
+    public float timeBetrewShotOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +39,25 @@ public class ClamperShoot : MonoBehaviour
 
         timerToMove -= Time.deltaTime;
 
-        if (timerToMove <= 0)
+        if(gameObject.name == "clamperRapidFire Variant")
+        {
+            timeBetrewShot -= Time.deltaTime;
+            if (timeBetrewShot <= 0)
+            {
+                timeBetrewShot = timeBetrewShotOffset;
+                canFire = true;
+            }
+        }
+
+        if (timerToMove <= 0 && gameObject.name != "clamperRapidFire Variant")
         {
             canFire = true;
+            if(gameObject.name != "clamperTurret Variant")
             timerToMove = 1.5f;
+            else
+            {
+                timerToMove = 0.4f;
+            }
         }
 
         if (canFire)
