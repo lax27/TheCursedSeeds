@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChargerRender : MonoBehaviour
 {
+    private GameObject player;
     SpriteRenderer sr;
     Animator animator;
     EnemyDeath enemyDeath;
@@ -12,6 +13,7 @@ public class ChargerRender : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("mantee_v2");
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         enemyDeath = GetComponent<EnemyDeath>();
@@ -38,17 +40,16 @@ public class ChargerRender : MonoBehaviour
             animator.SetBool("isCharginA", false);
         }
 
-
+        if (player.transform.position.x > transform.position.x)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
           
-        //Debug.Log(magnitude);
-        //if (magnitude > 0)
-        //{
-        //    sr.flipX = true;
-        //}
-        //else if (magnitude < 0)
-        //{
-        //    sr.flipX = false;
-        //}
+      
 
     }
 }

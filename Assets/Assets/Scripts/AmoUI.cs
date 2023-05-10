@@ -35,28 +35,5 @@ public class AmoUI : MonoBehaviour
         magazine += "/";
         magazine += bullets.maxAmmo.ToString();
         ammo.text = magazine;
-
-        if (bullets.isReloading)
-        {
-            timeBlink -= Time.deltaTime;
-            if (timeBlink <= 0f)
-            {
-                timeBlink = 0.5f;
-                isBlinking = !isBlinking;
-            }
-
-            if (isBlinking)
-            {
-                ReloadIcon.SetActive(true);
-            }
-            else
-            {
-                ReloadIcon.SetActive(false);
-            }
-        }
-        else
-        {
-            ReloadIcon.SetActive(false);
-        }
     }
 }

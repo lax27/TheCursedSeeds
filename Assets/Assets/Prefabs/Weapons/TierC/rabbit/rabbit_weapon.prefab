@@ -138,9 +138,9 @@ MonoBehaviour:
   maxAmmo: 12
   reloadTimeOffset: 1.5
   isReloading: 0
-  sound: {fileID: 0}
-  canon: {fileID: 0}
-  shells: {fileID: 0}
+  sound: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
+  canon: {fileID: 7011500426571794246}
+  shells: {fileID: 6477338658747313365, guid: e3b55ad546036244ab4cef3d81793dc4, type: 3}
 --- !u!114 &2847600614879684678
 MonoBehaviour:
   m_ObjectHideFlags: 0
