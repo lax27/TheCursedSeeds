@@ -31,7 +31,7 @@ public class ShotingTypesFunctions : MonoBehaviour
         //feadBack
         shake.CameraShakeSettings(timeShake, magnitudeShake);
 
-        //animator.SetTrigger("Shoot");
+        animator.SetTrigger("Shoot");
 
         if (SoundController.instance == null)
         {

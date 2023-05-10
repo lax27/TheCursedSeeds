@@ -227,6 +227,32 @@ MonoBehaviour:
   timeShake: 0
   shakeMagnitude: 0
   isFinish: 0
+--- !u!1 &247547334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1951140770693705364, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 753737371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &247547339
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247547334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99104f071e6602d4ea24759ff9066bc4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &279792543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -479,6 +505,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1951140770693705364, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: hitSound
@@ -590,6 +621,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7844851976016800890, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: shells
+      value: 
+      objectReference: {fileID: 863809109687438546, guid: 0e0a4ed0edc33d14d93d77d7bf0e7269,
+        type: 3}
     - target: {fileID: 8003393324581714778, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: audioSource
@@ -600,6 +637,11 @@ PrefabInstance:
       propertyPath: audioSourcePlayerSounds
       value: 
       objectReference: {fileID: 1513914713}
+    - target: {fileID: 8111055412696522258, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27da0534244988346b0b1b449dfea2a8, type: 3}
 --- !u!1 &753737372 stripped
@@ -793,7 +835,7 @@ MonoBehaviour:
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
-  currentWeaponID: 2
+  currentWeaponID: 1
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
@@ -1252,6 +1294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987639659645067875, guid: 35e8b7db31a3d2a4c9ec68560d067bcc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6999512
       objectReference: {fileID: 0}
     - target: {fileID: 6055289147811762099, guid: 35e8b7db31a3d2a4c9ec68560d067bcc,
         type: 3}
