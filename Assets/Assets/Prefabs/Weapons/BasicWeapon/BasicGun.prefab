@@ -208,10 +208,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8993573725950607081, guid: b85de4c97071f874ca8087918f41b25c, type: 3}
   canFire: 0
-  timeBetwenFire: 0.5
-  currentAmmo: 12
+  timeBetwenFire: 0.4
+  currentAmmo: 6
   maxAmmo: 6
-  reloadTimeOffset: 0.8
+  reloadTimeOffset: 0.9
   isReloading: 0
   sound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   canon: {fileID: 2171958933753022544}

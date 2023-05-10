@@ -505,6 +505,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1554634493433478153, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554634493433478153, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 1951140770693705364, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_IsActive
@@ -539,6 +549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: healthUIIcon3
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384338270641983727, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3384338270641983727, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
@@ -621,12 +636,32 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6796109624870735375, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796109624870735375, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7844851976016800890, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: shells
       value: 
       objectReference: {fileID: 863809109687438546, guid: 0e0a4ed0edc33d14d93d77d7bf0e7269,
         type: 3}
+    - target: {fileID: 7844851976016800890, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844851976016800890, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8003393324581714778, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: audioSource
@@ -641,6 +676,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205662777856051809, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.07167139
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205662777856051809, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205662777856051809, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205662777856051809, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9974283
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205662777856051809, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -188.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27da0534244988346b0b1b449dfea2a8, type: 3}
@@ -796,7 +856,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006827049
 GameObject:
@@ -830,12 +890,11 @@ MonoBehaviour:
   inventory: 0000000000000000
   isPlanted: 0
   isGrowed: 0
-  isWeapon: 0
   pile: {fileID: 0}
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
-  currentWeaponID: 1
+  currentWeaponID: 2
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
@@ -1053,7 +1112,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1513914713 stripped
 AudioSource:
@@ -1129,7 +1188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1738867254 stripped
 Transform:
@@ -1188,7 +1247,7 @@ PrefabInstance:
     - target: {fileID: 4987639659512290352, guid: 35e8b7db31a3d2a4c9ec68560d067bcc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4987639659512290352, guid: 35e8b7db31a3d2a4c9ec68560d067bcc,
         type: 3}

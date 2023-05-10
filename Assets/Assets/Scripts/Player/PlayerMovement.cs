@@ -6,13 +6,13 @@ public class PlayerMovement : MonoBehaviour
     PlayerStats playerStats;
     PlayerStatus status;
     PlayerHealthHandler playerHealthHandler;
-    private Rigidbody2D rbPlayer;
+    public Rigidbody2D rbPlayer;
     private Vector3 direction;
     public Vector3 directionKnockedBack;
 
     private PlayerAimWeapon playerAim;
     public bool isShooting = false;
-    private Vector3 KnockBackDir;
+    public Vector3 KnockBackDir;
     public float knockBackForce;
     // Start is called before the first frame update
     void Start()
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (GameManager.instance.currentWeaponID == 2)
         {
-            knockBackForce = 500f;
+            knockBackForce = 0f;
 
         }
 

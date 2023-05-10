@@ -10,7 +10,6 @@ public class ClamperShoot : MonoBehaviour
     private bool canFire = false;
     private float timerToMove = 1.5f;
     private EnemyFrozen enemyFrozen;
-    [SerializeField] private ParticleSystem shootParticle;
     PlayerHealthHandler playerHealthHandler;
     GameObject pl;
 
@@ -46,7 +45,6 @@ public class ClamperShoot : MonoBehaviour
 
         if (canFire)
         {
-            shootParticle.Play();
             Instantiate(bullet,shootSpawn.transform.position,Quaternion.identity);
             canFire = false;
         }

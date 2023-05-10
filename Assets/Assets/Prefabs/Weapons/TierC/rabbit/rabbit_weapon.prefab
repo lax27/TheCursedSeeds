@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 9098307195744675181}
   - component: {fileID: 8662394429053096237}
   - component: {fileID: 2847600614879684678}
+  - component: {fileID: 8150242290400342574}
   m_Layer: 0
   m_Name: rabbit_weapon
   m_TagString: Untagged
@@ -153,6 +154,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2130ff3bbf3e443bb6b87461015a7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8150242290400342574
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098307195744675182}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7b413d007364b048977a6d26f043d32, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9098307196404990715
 GameObject:
   m_ObjectHideFlags: 0

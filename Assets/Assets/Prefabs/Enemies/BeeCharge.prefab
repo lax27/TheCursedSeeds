@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 7
-  enemySpeed: 5
+  enemySpeed: 2
   enemyDamage: 1
 --- !u!114 &2334146017784503394
 MonoBehaviour:
@@ -210,6 +210,8 @@ MonoBehaviour:
   toCharge: 1.5
   chargeTime: 1.3
   wait: 5
+  waitoffset: 5
+  enemyspeedofset: 2
 --- !u!58 &2334146017784503455
 CircleCollider2D:
   m_ObjectHideFlags: 0

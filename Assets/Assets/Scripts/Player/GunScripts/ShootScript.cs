@@ -78,7 +78,6 @@ public class ShootScript : MonoBehaviour
 
             if (gameObject.name == "rabbit")
             {
-                playerStats.speed = 0f;
                 playerMove.isShooting = true;
                 shotFunctions.Rafaga(bullet, sound, animator, shells, shake, gameObject, canon, 0.1f, 0.15f, 6f,playerMove);
                 currentAmmo--;
@@ -86,12 +85,14 @@ public class ShootScript : MonoBehaviour
 
             if (gameObject.name == "ShotGun")
             {
+                playerMove.isShooting = true;
                 shotFunctions.Shootgun(bullet, sound, animator, shells, shake, gameObject, canon, 0.12f, 0.15f);
                 currentAmmo--;
             }
 
             //if (gameObject.name == "MachineGun")
             //{
+            //    playermove.speed = 0;
             //    shotFunctions.MachineGun(bullet, sound, animator, shells, shake, gameObject, canon, 0.02f, 0.10f, bulletCount);
             //    currentAmmo--;
             //    bulletCount++;
@@ -123,6 +124,7 @@ public class ShootScript : MonoBehaviour
                 isReloading = false;
                 currentAmmo = maxAmmo;
                 reloadTime = reloadTimeOffset;
+
                 animator.ResetTrigger("Reloading");
                 animator.SetBool("idle", true);
             }

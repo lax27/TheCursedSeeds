@@ -149,6 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dispersionAngle: 10
   bs: {fileID: 1045520654608093622}
+  randomBullet: {x: 0, y: 0, z: 0}
+  direcion: {x: 0, y: 0, z: 0}
 --- !u!114 &1045520654608093622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,5 +163,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204155e46ba0f51438ed3e02b3eb33b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
-  damage: 1
+  speed: 30
+  damage: 2

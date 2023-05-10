@@ -17,6 +17,7 @@ public class button_responsive : MonoBehaviour
     void Update()
     {
         numberOfSeeds.text = GameManager.instance.inventory[seed_number].ToString();
+
         if(GameManager.instance.inventory[seed_number] >= 64)
         {
             GameManager.instance.inventory[seed_number] = 64;

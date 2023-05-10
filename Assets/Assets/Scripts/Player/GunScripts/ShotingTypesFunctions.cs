@@ -81,23 +81,37 @@ public class ShotingTypesFunctions : MonoBehaviour
 
         //animator.SetBool("Shoot", true);
 
-        SoundController.instance.PlaySound(sound);
 
         Instantiate(shells, gun.transform.position, Quaternion.identity);
 
         //gun logic
-        StartCoroutine(Burst(bullet, canon,pM));   
+        StartCoroutine(Burst(bullet, canon,pM, sound));   
     }
 
-    IEnumerator Burst(GameObject bullet,Transform canon,PlayerMovement pM)
+    IEnumerator Burst(GameObject bullet,Transform canon,PlayerMovement pM,AudioClip sound)
     {
-            GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
-            pM.isShooting = true;
+        BulletStats statsBullet = bullet.GetComponent<BulletStats>();
+        bullet.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        statsBullet.damage = 1f;
+        GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
+        SoundController.instance.PlaySound(sound);
+        pM.rbPlayer.AddForce(pM.KnockBackDir * 65, ForceMode2D.Impulse);
+        
         yield return new WaitForSeconds(0.07f);
-            GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
-        pM.isShooting = true;
-        yield return new WaitForSeconds(0.07f);
-            GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+       
+        bullet.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        statsBullet.damage = 1f;
+        GameObject temp2 = Instantiate(bullet, canon.position, Quaternion.identity);
+        SoundController.instance.PlaySound(sound);
+        pM.rbPlayer.AddForce(pM.KnockBackDir * (65 * 2) , ForceMode2D.Impulse);
+        
+        yield return new WaitForSeconds(0.09f);
+
+        bullet.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        statsBullet.damage = 3.5f;
+        GameObject temp3 = Instantiate(bullet, canon.position, Quaternion.identity);
+        SoundController.instance.PlaySound(sound);
+        pM.rbPlayer.AddForce(pM.KnockBackDir * (65 * 3), ForceMode2D.Impulse);
         pM.isShooting = true;
     }
 }

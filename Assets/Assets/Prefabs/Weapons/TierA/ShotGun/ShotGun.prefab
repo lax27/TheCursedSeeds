@@ -194,7 +194,7 @@ MonoBehaviour:
   isReloading: 0
   sound: {fileID: 8300000, guid: 68fda898783355f45a42e957b74233f7, type: 3}
   canon: {fileID: 2752010500210949294}
-  shells: {fileID: 2667953959347210726, guid: 7a2f066525b03184299f2cede13c768a, type: 3}
+  shells: {fileID: 863809109687438546, guid: 0e0a4ed0edc33d14d93d77d7bf0e7269, type: 3}
 --- !u!114 &492483746613922713
 MonoBehaviour:
   m_ObjectHideFlags: 0

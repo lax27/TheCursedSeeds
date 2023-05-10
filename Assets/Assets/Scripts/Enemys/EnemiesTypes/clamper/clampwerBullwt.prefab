@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5190039600244564786}
   - component: {fileID: 2465839978527300387}
   - component: {fileID: -4824810733795380179}
-  - component: {fileID: 9044577313143557449}
+  - component: {fileID: 7997122838344040414}
   m_Layer: 8
   m_Name: clampwerBullwt
   m_TagString: enemyB
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 649301274021428973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.5590124, y: -0.26253092, z: 0}
-  m_LocalScale: {x: 0.44315, y: 0.44315, z: 0.44315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,9 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 794498503
   m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
-    type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 788fb00723d572f46a1756940a8793ec, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,9 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4683af4901c0c47b4f051473587c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletStats: {fileID: 0}
---- !u!58 &9044577313143557449
-CircleCollider2D:
+  bulletStats: {fileID: 2465839978527300387}
+--- !u!60 &7997122838344040414
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,6 +149,30 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0014924363, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.46865404
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.32}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.004838451, y: 0.08251599}
+      - {x: -0.054101776, y: 0.06578781}
+      - {x: -0.13419351, y: 0.036645025}
+      - {x: -0.22038724, y: 0.012128947}
+      - {x: -0.24295513, y: 0.0000372848}
+      - {x: -0.21419288, y: -0.016645046}
+      - {x: -0.036580976, y: -0.08354821}
+      - {x: 0.01511226, y: -0.08104103}
+      - {x: 0.053056635, y: -0.074640244}
+      - {x: 0.07180604, y: -0.05670947}
+      - {x: 0.108652234, y: -0.032071456}
+      - {x: 0.14664513, y: -0.0062579587}
+      - {x: 0.14870949, y: 0.0072902422}
+      - {x: 0.12565944, y: 0.020882461}
+      - {x: 0.041806046, y: 0.069096595}

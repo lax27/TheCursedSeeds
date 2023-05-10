@@ -37,17 +37,14 @@ public class GrabWeapon : MonoBehaviour
         if (canPick && Input.GetKeyDown(KeyCode.E)) 
         {
 
-            rotationZone.transform.GetChild(0).gameObject.SetActive(false);
-            rotationZone.transform.GetChild(NumChild).gameObject.SetActive(true);
-            GameManager.instance.currentWeaponID = NumChild;
-            Destroy(gameObject);
-
-
             for (int i = 0; i < rotationZone.transform.childCount; i++)
             {
                 rotationZone.transform.GetChild(i).gameObject.SetActive(false);
             }
+
             rotationZone.transform.GetChild(NumChild).gameObject.SetActive(true);
+            GameManager.instance.currentWeaponID = NumChild;
+            Destroy(gameObject);
         }
 
         

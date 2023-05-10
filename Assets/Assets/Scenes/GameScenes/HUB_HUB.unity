@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &19782940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 362904973364688882, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 42245206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &42245206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,6 +175,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554634493433478153, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: canon
+      value: 
+      objectReference: {fileID: 1438414038}
+    - target: {fileID: 1554634493433478153, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554634493433478153, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: reloadTimeOffset
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1677397841315874608, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
@@ -245,6 +266,21 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.079
       objectReference: {fileID: 0}
+    - target: {fileID: 6796109624870735375, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: canon
+      value: 
+      objectReference: {fileID: 284412389}
+    - target: {fileID: 6796109624870735375, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: timeBetwenFire
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844851976016800890, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: canon
+      value: 
+      objectReference: {fileID: 19782940}
     - target: {fileID: 7844851976016800890, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: shells
@@ -3293,6 +3329,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249791788}
   m_CullTransparentMesh: 1
+--- !u!4 &284412389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5128045375676946532, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 42245206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &342226634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,7 +4143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &844627229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5719,7 +5761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d2308e03f43884a935c85ceb579d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: 0a0000000a000000
+  inventory: 010000000100000000000000000000000000000000000000000000000000000000000000
   isPlanted: 0
   isGrowed: 0
   pile: {fileID: 1873615610}
@@ -6007,6 +6049,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfSeeds: {fileID: 2096756370}
   seed_number: 2
+--- !u!4 &1438414038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5644750709222284858, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 42245206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1472742633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7308,6 +7356,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970529661}
   m_CullTransparentMesh: 1
+--- !u!1 &1980101675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6351217129626090060, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 42245206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1980101680
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980101675}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7b413d007364b048977a6d26f043d32, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1997216171
 GameObject:
   m_ObjectHideFlags: 0

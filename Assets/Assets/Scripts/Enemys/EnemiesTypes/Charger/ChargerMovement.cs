@@ -11,6 +11,7 @@ public class ChargerMovement : MonoBehaviour
     GameObject pl;
     EnemyFrozen enemyFrozen;
     public List<AudioClip> audioClipList = new List<AudioClip>();
+    
 
     public Vector2 dir;
     public Vector3 dir3;
@@ -23,8 +24,10 @@ public class ChargerMovement : MonoBehaviour
 
     public float toCharge = 1;
     public float chargeTime= 0.1f;
-    public float wait = 10;
+    public float wait;
 
+    public float waitoffset;
+    public float enemyspeedofset;
 
 
 
@@ -38,6 +41,8 @@ public class ChargerMovement : MonoBehaviour
         playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
         enemyFrozen = GetComponent<EnemyFrozen>();
         au = GetComponent<AudioSource>();
+        
+       
     }
 
     // Update is called once per frame
@@ -86,7 +91,7 @@ public class ChargerMovement : MonoBehaviour
             }
             else
             {
-                enemiesStats.enemySpeed = 1.5f;
+                enemiesStats.enemySpeed = enemyspeedofset;
             }
         }
 
@@ -114,7 +119,7 @@ public class ChargerMovement : MonoBehaviour
                 
                 rb.AddForce(dir * chargingForce, ForceMode2D.Impulse);
                 isGoingToCharge = false;
-                wait = 10;
+                wait = waitoffset;
         }
     }
 }

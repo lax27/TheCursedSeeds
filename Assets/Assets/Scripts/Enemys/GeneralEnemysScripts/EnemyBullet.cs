@@ -18,8 +18,13 @@ public class EnemyBullet : MonoBehaviour
       bulletStats = GetComponent<BulletStats>();
       player = GameObject.Find("mantee_v2");
       target = player.GetComponent<Transform>();
-
+        
         dir = target.transform.position - transform.position;
         rb.velocity = dir.normalized * bulletStats.speed;
+    }
+
+    private void Update()
+    {
+        
     }
 }
