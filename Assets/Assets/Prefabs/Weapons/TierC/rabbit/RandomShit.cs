@@ -30,4 +30,5 @@ public class RandomShit : MonoBehaviour
             Destroy(flys);
         }
     }
+
 }

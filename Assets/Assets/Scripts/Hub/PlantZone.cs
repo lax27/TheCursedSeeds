@@ -52,7 +52,7 @@ public class PlantZone : MonoBehaviour
         }
 
         //mejorar esto para que solo se abra con la e y se cierre otra vez pulsando e
-        if (Input.GetButtonDown("interaction") && inRange && GameManager.instance.isWeapon == false)
+        if (Input.GetButtonDown("interaction") && inRange && !GameManager.instance.isPlanted)
         {
             press.SetActive(false);
             //desactivar el movimento

@@ -245,6 +245,12 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.079
       objectReference: {fileID: 0}
+    - target: {fileID: 7844851976016800890, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: shells
+      value: 
+      objectReference: {fileID: 863809109687438546, guid: 0e0a4ed0edc33d14d93d77d7bf0e7269,
+        type: 3}
     - target: {fileID: 8111055412696522258, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: m_IsActive
@@ -5368,7 +5374,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1081350135
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5486,10 +5492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d2308e03f43884a935c85ceb579d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: 0000000001000000
+  inventory: 0a0000000a000000
   isPlanted: 0
   isGrowed: 0
-  isWeapon: 0
   pile: {fileID: 1873615610}
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
@@ -6509,7 +6514,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000008940697, y: -0.14290346}
@@ -6575,7 +6580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873615610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

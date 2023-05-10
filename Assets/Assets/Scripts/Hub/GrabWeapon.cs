@@ -4,25 +4,39 @@ using UnityEngine;
 
 public class GrabWeapon : MonoBehaviour
 {
-    private GameObject intreactionZone;
+    
     private GameObject rotationZone;
-    private PlantZone palntZone;
     public int NumChild;
+    private bool canPick = false;
+    private Rigidbody2D rbWeapon;
+    private Vector3 dir;
+    private float randomForce;
+    private float iceTime = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
+        randomForce = Random.Range(10f, 25f);
         rotationZone = GameObject.Find("RotatePoint");
-        intreactionZone = GameObject.Find("interaction");
-        palntZone = intreactionZone.GetComponent<PlantZone>();
+        rbWeapon = GetComponent<Rigidbody2D>();
+        dir = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0).normalized;
+        rbWeapon.AddForce(gameObject.transform.position + dir * randomForce,ForceMode2D.Impulse);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(palntZone.inRange && GameManager.instance.isWeapon && Input.GetButtonDown("interaction"))
-      {
-            Debug.Log("Coges el arma");
-            GameManager.instance.isWeapon = false;
+        iceTime -= Time.deltaTime;
+        if (iceTime <= 0)
+        {
+            rbWeapon.angularDrag = 0;
+            rbWeapon.drag = 0;
+            rbWeapon.mass = 0.1f;
+        }
+        if (canPick && Input.GetKeyDown(KeyCode.E)) 
+        {
+
             rotationZone.transform.GetChild(0).gameObject.SetActive(false);
             rotationZone.transform.GetChild(NumChild).gameObject.SetActive(true);
             GameManager.instance.currentWeaponID = NumChild;
@@ -35,5 +49,17 @@ public class GrabWeapon : MonoBehaviour
             }
             rotationZone.transform.GetChild(NumChild).gameObject.SetActive(true);
         }
+
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        canPick = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        canPick = false;
     }
 }
