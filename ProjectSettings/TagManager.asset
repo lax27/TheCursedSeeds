@@ -33,9 +33,15 @@ TagManager:
   - details
   - room
   - minimapIcon
+<<<<<<< HEAD
   - plant collector
   - 
   - 
+=======
+  - wall
+  - plantZone
+  - weapon
+>>>>>>> 5915fcc1fb9a779b704ed1d23a94b777bad1efb9
   - 
   - 
   - 

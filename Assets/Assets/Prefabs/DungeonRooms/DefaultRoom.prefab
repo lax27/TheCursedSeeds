@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 1721812160167666515}
   - component: {fileID: 1721812160167666514}
   - component: {fileID: 1721812160167666513}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: Default_Walls
   m_TagString: wall
   m_Icon: {fileID: 0}
