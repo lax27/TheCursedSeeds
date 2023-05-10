@@ -19,6 +19,7 @@ TagManager:
   - Corridor
   - Dungeon
   - Grass
+  - collector
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - details
   - room
   - minimapIcon
-  - 
+  - plant collector
   - 
   - 
   - 
@@ -91,6 +92,9 @@ TagManager:
     locked: 0
   - name: hub_limits
     uniqueID: 552046293
+    locked: 0
+  - name: collector
+    uniqueID: 4178508737
     locked: 0
   - name: UI
     uniqueID: 3552853077
