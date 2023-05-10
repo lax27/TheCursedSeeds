@@ -1,0 +1,53 @@
+TIER D:
+- Rabbit se dispersa demasiado (10 rondas) (recarga 0.5s) // del tutorial
+- Basic me poco pero suficiente para empezar (6 rondas) (recarga 1s) //revolver
+- (Bank account) lanza tus dineros a cambio de mucho daño (sin rondas) (sin recargas) //Extra
+- Pistola de guisantes, poco daño, pero rebotan 2 veces (4 rondas) (recarga de 1s, lo que tardas enemyDeath meter la mano enemyDeath el bolsillo)
+
+Tier C:
+- Rosa, daño reducido pero atraviesa enemigos (5 rondas) (recarga 0.5s) // arma perforante
+- Miner, coloca minas (yay!) (1 ronda) (recarga 0.5s)
+- Plant-AK, dispara rapido (increible), a pero con daño moderado (34 rondas) (recarga 1.5s)
+
+Tier B:
+- Dobe dirección, (pa lante pa atras) (10 rondas) (recarga 0.5s)
+- 
+-
+
+Tier A:
+- Escopeta, 5 dispersiones buen daño (4 rondas) (recarga 2s)
+- Quinta forma Girasol, el rasho macuin
+
+Tier S:
+- B.F.P, BIG FUCKING PLANT 
+
+
+
+//Extra
+
+- objeto que recarga la municion de las armas
+
+
+
+
+--TP COLORS AND THINGS--
+
+Blue -> Normal room
+Red & shattered-> Boss room
+Purple -> Epic room
+
+
+--TIER PRIOR OF SPRITES--
+
+- SEED SPRITES (2 SPRITES RABBIT & HEART) 
+- MANTEE
+- DEFAULT WEAPON
+- NPC FOR TUTORIAL
+
+
+
+------ TAREAS PARA MAÑANA -------
+
+- Alex: Enemigo base + enemigos no se muevan si la camará no enfoca
+
+- Aleix: Build tuto dialogue + dungeon map
