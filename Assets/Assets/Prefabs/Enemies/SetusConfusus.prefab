@@ -4822,7 +4822,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1685678027289531310}
   - component: {fileID: 1685678027289531311}
-  - component: {fileID: 1685678027289531297}
   - component: {fileID: 1685678027289531296}
   - component: {fileID: 4169201910381797971}
   m_Layer: 0
@@ -4888,8 +4887,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 794498503
-  m_SortingLayer: 8
+  m_SortingLayerID: -1310938165
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1905381632, guid: 13e9d777a2d75cb4284287cfb4d68abf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4902,22 +4901,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1685678027289531297
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685678027289531308}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.10699582}
-  serializedVersion: 2
-  m_Radius: 0.40699583
 --- !u!58 &1685678027289531296
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4951,6 +4934,7 @@ MonoBehaviour:
   zone2: {fileID: 5376151016699382080}
   cl: {fileID: 1685678027289531296}
   sr: {fileID: 1685678027289531311}
+  enemies: {fileID: 0}
 --- !u!1 &1685678029044527828
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class ActiveRoom : MonoBehaviour
 {
     public GameObject enemiesParent;
     public GameObject parentAdjacentRoomsSpawnPositions;
+    public GameObject unknown;
     private BoxCollider2D col;
     private Animator animator;
     
@@ -62,6 +63,8 @@ public class ActiveRoom : MonoBehaviour
             {
                 enemiesParent.transform.GetChild(i).gameObject.SetActive(true);
             }
+
+            Destroy(unknown);
         }
     }
 }
