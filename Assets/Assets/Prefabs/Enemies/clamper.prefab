@@ -222,6 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 649301274021428973, guid: d203f3acacf682a4183183fb5ded0e6c, type: 3}
   shootSpawn: {fileID: 439173217636481602}
+  timeBetrewShot: 5
+  timeBetrewShotOffset: 0
 --- !u!114 &526787069492651005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5232,7 +5234,7 @@ GameObject:
   - component: {fileID: 882688462206355285}
   - component: {fileID: 302130977730647080}
   m_Layer: 8
-  m_Name: wall
+  m_Name: wallLimit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5266,9 +5268,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045316733, y: 0.0074422066}
+  m_Offset: {x: 0.0383791, y: 0.0074422066}
   serializedVersion: 2
-  m_Radius: 0.66869634
+  m_Radius: 0.55
 --- !u!50 &882688462206355285
 Rigidbody2D:
   serializedVersion: 4
@@ -5302,6 +5304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9f7567ab2cc514aacd7d1ea20e6429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cl: {fileID: 592414428925875541}
 --- !u!1 &5400766462926644684
 GameObject:
   m_ObjectHideFlags: 0

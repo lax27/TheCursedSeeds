@@ -15,12 +15,15 @@ public class PlantZone : MonoBehaviour
     private SpriteRenderer sr;
     private Rigidbody2D rb;
     public GameObject growing;
+
+    public bool plantMenuActive = false;
+    private PauseMenu pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
         sr = press.GetComponent<SpriteRenderer>();
         sr.enabled = false;
-
+        pauseMenu = GameObject.Find("pauseMenu").GetComponent<PauseMenu>();
         pm = GameObject.Find("mantee_v2").GetComponent<PlayerStats>();
         sh = GameObject.Find("mantee_v2").GetComponent<ShootScript>();
         cl = GetComponent<Collider2D>();
@@ -30,7 +33,7 @@ public class PlantZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(plantMenuActive);
 
 
         if (inRange)
@@ -52,8 +55,10 @@ public class PlantZone : MonoBehaviour
         }
 
         //mejorar esto para que solo se abra con la e y se cierre otra vez pulsando e
-        if (Input.GetButtonDown("interaction") && inRange && !GameManager.instance.isPlanted)
+        if (Input.GetKeyDown(KeyCode.E) && inRange && !GameManager.instance.isPlanted && !pauseMenu.isActive && !plantMenuActive )
         {
+            plantMenuActive = true;
+
             press.SetActive(false);
             //desactivar el movimento
             pm.speed = 0;
@@ -65,8 +70,9 @@ public class PlantZone : MonoBehaviour
             //activar el menu de platado   
             plantMenu.SetActive(true);
         }
-        if (pm.speed == 0 && Input.GetKeyDown(KeyCode.Escape))
+        else if (pm.speed == 0 && Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E) && !pauseMenu.isActive && plantMenuActive)
         {
+            plantMenuActive = false;
             press.SetActive(true);
             pm.speed = 5;
             rb.mass = 1;

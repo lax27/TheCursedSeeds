@@ -21,17 +21,16 @@ public class GameManager : MonoBehaviour
     private GameObject spawnWeapon;
     public List<GameObject> weaponsToSpawn = new List<GameObject> ();
     public int currentWeaponID = 0;
-    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     
     [Header("Player Stadistics")]
     public bool TutorialPassed = false;
     public int runsDone = 0;
     public int totalEnemiesKilled = 0;
-    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    private GameObject guns;
 
     //Dungeon things:
-    
+    private GameObject guns;
+
     private void Awake()
     {
         if (instance == null)

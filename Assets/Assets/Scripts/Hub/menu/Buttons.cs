@@ -19,6 +19,7 @@ public class Buttons : MonoBehaviour
 
     public void playGame()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("HUB_HUB");
     }
 
