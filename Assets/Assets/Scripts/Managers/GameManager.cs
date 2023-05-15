@@ -30,6 +30,12 @@ public class GameManager : MonoBehaviour
 
     //Dungeon things:
     private GameObject guns;
+   [SerializeField]public int currentFloor = 0;
+    
+    public bool floor1Passed = false;
+    public bool floor2Passed = false;
+    public bool floor3Passed = false;
+    public bool bossPassed = false;
 
     private void Awake()
     {
@@ -73,6 +79,19 @@ public class GameManager : MonoBehaviour
             isPlanted = false;
             isGrowed = false;
         }
+
+
+        if (currentFloor == 2)
+            floor1Passed = true;
+
+        if (currentFloor == 3)
+            floor2Passed = true;
+        
+        if (currentFloor == 4)
+            floor3Passed = true;
+
+        if (currentFloor == 5)
+            bossPassed = true;
     }
 
     public void GrowingPlant(int seed_number)

@@ -55,7 +55,7 @@ public class PlantZone : MonoBehaviour
         }
 
         //mejorar esto para que solo se abra con la e y se cierre otra vez pulsando e
-        if (Input.GetKeyDown(KeyCode.E) && inRange && !GameManager.instance.isPlanted && !pauseMenu.isActive && !plantMenuActive )
+        if (Input.GetKeyDown(KeyCode.E) && inRange && !GameManager.instance.isPlanted && !pauseMenu.isActive && !plantMenuActive)
         {
             plantMenuActive = true;
 

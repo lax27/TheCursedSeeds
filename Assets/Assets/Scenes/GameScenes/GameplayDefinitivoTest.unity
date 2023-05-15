@@ -865,10 +865,15 @@ MonoBehaviour:
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
-  currentWeaponID: 2
+  currentWeaponID: 0
   TutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
+  currentFloor: 0
+  floor1Passed: 0
+  floor2Passed: 0
+  floor3Passed: 0
+  bossPassed: 0
 --- !u!4 &1006827051
 Transform:
   m_ObjectHideFlags: 0
@@ -1037,8 +1042,13 @@ MonoBehaviour:
   - {fileID: 9055928864422022528, guid: 8a6e6ec32e381f14a8b72ca93d515ceb, type: 3}
   - {fileID: 8003433944303461939, guid: c84785a391265b04eafbd5c6c33f52f7, type: 3}
   - {fileID: 4579373802546554200, guid: cfe2989c5206a93498c9dbd800e28433, type: 3}
-  bossRoomPrefabs:
+  nextFloorPrefab:
   - {fileID: 1630231665127500916, guid: 5f9769775c407214e917b078ecb53552, type: 3}
+  floors1Prefabs: []
+  floors2Prefabs: []
+  floors3Prefabs: []
+  floors4Prefabs: []
+  FinalBossPrefabs: []
 --- !u!114 &1227854804
 MonoBehaviour:
   m_ObjectHideFlags: 0

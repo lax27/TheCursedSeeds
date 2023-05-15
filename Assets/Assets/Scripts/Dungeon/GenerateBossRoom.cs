@@ -26,7 +26,7 @@ public class GenerateBossRoom : MonoBehaviour
 
         if (canGenerate && gameObject.transform.parent.name.Contains("7"))
         {
-            GameObject temp = Instantiate(DungeonManager.instance.bossRoomPrefabs[0], transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(DungeonManager.instance.nextFloorPrefab[0], transform.position, Quaternion.identity);
             temp.name = "Boss" + DungeonManager.instance.bossRoomBugs.Count;
             DungeonManager.instance.bossRoomBugs.Add(temp);
             DungeonManager.instance.currentRoomsPositions.Add(transform.position);

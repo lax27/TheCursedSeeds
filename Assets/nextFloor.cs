@@ -23,11 +23,10 @@ public class nextFloor : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //para el juego final:
-            //SceneManager.LoadScene("GameplayDefinitivoTest");
+            //juego fina: abrir menu donde poder volver al hub o continuar
 
-            //para la demo:
-            SceneManager.LoadScene("HUB_HUB");
+            GameManager.instance.currentFloor++;
+            SceneManager.LoadScene("GameplayDefinitivoTest");
         }
 
     }
