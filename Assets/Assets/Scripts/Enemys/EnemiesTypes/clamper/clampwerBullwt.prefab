@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2465839978527300387}
   - component: {fileID: -4824810733795380179}
   - component: {fileID: 7997122838344040414}
+  - component: {fileID: 6532160820526725620}
   m_Layer: 8
   m_Name: clampwerBullwt
   m_TagString: enemyB
@@ -176,3 +177,16 @@ PolygonCollider2D:
       - {x: 0.14870949, y: 0.0072902422}
       - {x: 0.12565944, y: 0.020882461}
       - {x: 0.041806046, y: 0.069096595}
+--- !u!114 &6532160820526725620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649301274021428973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b172c6da2bfabe42a1db0a5ee87f871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinForce: 10
