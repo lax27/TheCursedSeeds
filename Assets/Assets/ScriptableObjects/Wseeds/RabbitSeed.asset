@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedSprite: {fileID: 21300000, guid: ddcb5db251683b445b5f82ed5b4efeeb, type: 3}
   seedName: Rabbit
-  id_Wseed: 0
+  id_Wseed: 1
   dropChance: 100
