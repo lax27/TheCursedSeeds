@@ -29,12 +29,10 @@ public class CollectSeeds : MonoBehaviour
             if (rf.ws.id_Wseed == 0)
             {
                 GameManager.instance.inventory[0]++;
-                //picking.Play();
             }
             else if (rf.ws.id_Wseed == 1)
             {
                 GameManager.instance.inventory[1]++;
-                //picking.Play();
             }
             Destroy(collision.gameObject);
         }
