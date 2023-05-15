@@ -165,7 +165,7 @@ public class PlayerHealthHandler : MonoBehaviour
 
         }
 
-        Debug.Log(hpAnimator.GetBool("shake"));
+        //Debug.Log(hpAnimator.GetBool("shake"));
 
     }
 

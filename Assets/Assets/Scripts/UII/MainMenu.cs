@@ -31,10 +31,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Saliendo del juego...");
     }
 
-    public void BackButton()
-    {
-        settingsMenu.SetActive(false);
-    }
     //PONER ESTO EN GAMEPLAY
     /*public void PauseOff()
     {
