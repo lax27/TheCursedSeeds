@@ -37,7 +37,23 @@ public class PlayerAimWeapon : MonoBehaviour
         }
         for (int i = 0; i < aimTransform.transform.childCount;i++)
         {
-            aimTransform.transform.GetChild(i).gameObject.transform.localScale = aimLocalScale;
+            if (aimTransform.transform.GetChild(i).gameObject.name != "ShotGun")
+            {
+                aimTransform.transform.GetChild(i).gameObject.transform.localScale = aimLocalScale;
+            }
+            else
+            {
+                SpriteRenderer gunRend = aimTransform.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>();
+                if (angle > 90f || angle < -90f)
+                {
+                    gunRend.flipY = true;
+                }
+                else
+                {
+                    gunRend.flipY = false;
+                }
+            }
+            
         }
 
         for (int i = 0; i < guns.transform.childCount; i++)

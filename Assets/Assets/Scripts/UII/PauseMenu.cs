@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -80,7 +81,30 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitGame()
     {
+        GameManager.instance.SaveGame();
         Application.Quit();
     }
 
+    public void NewGame(GameObject warning)
+    {
+        if (!File.Exists("TheCursedSeedGame.sav"))
+        {
+            SceneManager.LoadScene("Hub_HUB");
+        }
+        else
+        {
+            warning.SetActive(true);
+        }
+    }
+
+    public void No(GameObject warning)
+    {
+        warning.SetActive(false);
+    }
+
+    public void DeleteSaveAndCreateNew()
+    {
+        GameManager.instance.SaveGame();
+        SceneManager.LoadScene("Hub_HUB");
+    }
 }

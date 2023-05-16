@@ -63,7 +63,7 @@ public class FloorMenu : MonoBehaviour
 
     }
 
-    public void ReturnToHub()
+    public void ReturnToHub(GameObject gameObject)
     {
         player.SetActive(true);
         gameObject.SetActive(false);

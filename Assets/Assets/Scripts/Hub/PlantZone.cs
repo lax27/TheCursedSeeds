@@ -70,7 +70,7 @@ public class PlantZone : MonoBehaviour
             //activar el menu de platado   
             plantMenu.SetActive(true);
         }
-        else if (pm.speed == 0 && Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E) && !pauseMenu.isActive && plantMenuActive)
+        else if (pm.speed == 0 && Input.GetKeyDown(KeyCode.Escape) && !pauseMenu.isActive && plantMenuActive || Input.GetKeyDown(KeyCode.E) && !pauseMenu.isActive && plantMenuActive)
         {
             plantMenuActive = false;
             press.SetActive(true);

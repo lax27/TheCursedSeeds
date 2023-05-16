@@ -543,8 +543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f2c0cd7fd25ae488ade8d01a58faa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rbPlayer: {fileID: 0}
   directionKnockedBack: {x: 0, y: 0, z: 0}
   isShooting: 0
+  KnockBackDir: {x: 0, y: 0, z: 0}
   knockBackForce: 0
 --- !u!114 &2927519899224286325
 MonoBehaviour:
@@ -5506,6 +5508,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8205662777856051809}
     m_Modifications:
+    - target: {fileID: 995228891814042547, guid: cacdd6d10060cb04f905a86eb1b055d5,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 995228891814042547, guid: cacdd6d10060cb04f905a86eb1b055d5,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4047485851235706312, guid: cacdd6d10060cb04f905a86eb1b055d5,
         type: 3}
       propertyPath: m_Name
@@ -5519,6 +5531,11 @@ PrefabInstance:
     - target: {fileID: 5132496241304233024, guid: cacdd6d10060cb04f905a86eb1b055d5,
         type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132496241304233024, guid: cacdd6d10060cb04f905a86eb1b055d5,
+        type: 3}
+      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5132496241304233024, guid: cacdd6d10060cb04f905a86eb1b055d5,

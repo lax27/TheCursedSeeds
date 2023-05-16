@@ -4,7 +4,6 @@ using UnityEngine;
 using System.IO;
 
 
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
@@ -62,7 +61,17 @@ public class GameManager : MonoBehaviour
    
     void Update()
     {
-        if(money >= 999999999)
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            SaveGame();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+           LoadGame();
+        }
+
+        if (money >= 999999999)
         {
             money = 999999999;
         }
@@ -105,15 +114,6 @@ public class GameManager : MonoBehaviour
         if (currentFloor == 5)
             bossPassed = true;
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SaveGame();
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadGame();
-        }
     }
 
     public void GrowingPlant(int seed_number)
@@ -133,67 +133,49 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void SaveGame()
     {
-        BinaryWriter writer = new BinaryWriter(File.Open("TheCursedSeeds.sav", FileMode.Create));
+        BinaryWriter writer = new BinaryWriter(File.Open("TheCursedSeedGame.sav", FileMode.Create));
 
-        writer.Write(inventory[0]);
-        writer.Write(inventory[1]);
-        //writer.Write(inventory[2]);       
-        //writer.Write(inventory[3]);       
-        //writer.Write(inventory[4]);       
-        //writer.Write(inventory[5]);       
-        //writer.Write(inventory[6]);       
-        //writer.Write(inventory[7]);       
-        //writer.Write(inventory[8]);
 
-        //writer.Write(money);
-        //writer.Write(PlantTimer);
-        //writer.Write(isPlanted);
-        //writer.Write(isGrowed);
-        //writer.Write(TutorialPassed);
-        //writer.Write(runsDone);
-        //writer.Write(totalEnemiesKilled);
-        //writer.Write(floor1Passed);
-        //writer.Write(floor2Passed);
-        //writer.Write(floor3Passed);
-        //writer.Write(bossPassed);
+        //Write Ints
+        writer.Write(inventory.Length);
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            writer.Write(inventory[i]);
+        }
+        //Write Floats
+        
+        //Write Bools
+
         writer.Close();
-
     }
+
 
     public void LoadGame()
     {
         BinaryReader reader;
-        if (File.Exists("TheCursedSeeds.sav")) {
-            reader = new BinaryReader(File.Open("TheCursedSeeds.sav", FileMode.Open));
 
-            inventory[0] = reader.ReadInt32();
-            inventory[1] = reader.ReadInt32();
-            //inventory[2] = reader.ReadInt32();
-            //inventory[3] = reader.ReadInt32();
-            //inventory[4] = reader.ReadInt32();
-            //inventory[5] = reader.ReadInt32();
-            //inventory[6] = reader.ReadInt32();
-            //inventory[7] = reader.ReadInt32();
-            //inventory[8] = reader.ReadInt32();
-
-            //money = reader.ReadInt32();
-            //PlantTimer = reader.ReadSingle();
-            //isPlanted = reader.ReadBoolean();
-            //isGrowed = reader.ReadBoolean();
-            ////TutorialPassed = reader.ReadBoolean();
-            //runsDone = reader.ReadInt32();
-            //totalEnemiesKilled = reader.ReadInt32();
-            //floor1Passed = reader.ReadBoolean();
-            //floor2Passed = reader.ReadBoolean();
-            //floor3Passed = reader.ReadBoolean();
-            //bossPassed = reader.ReadBoolean();
+        if (File.Exists("TheCursedSeedGame.sav"))
+        {
+            reader = new BinaryReader(File.Open("TheCursedSeedGame.sav", FileMode.Open));
         }
         else
         {
             return;
         }
+
+        //Read Ints
+        int length = reader.ReadInt32();
+
+        for(int i = 0; i < length; i++)
+        {
+            inventory[i] = reader.ReadInt32();
+        }
+        //Read Floats
+
+        //Read Bools
 
         reader.Close();
     }
