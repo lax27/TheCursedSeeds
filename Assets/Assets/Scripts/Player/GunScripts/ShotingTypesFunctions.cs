@@ -63,14 +63,17 @@ public class ShotingTypesFunctions : MonoBehaviour
         {
             dispersionBullet.dispersionAngle = 0f;
         }
+
         else if (bulletCount < 6)
         {
             dispersionBullet.dispersionAngle = 5f;
         }
+
         else if (bulletCount < 10)
         {
             dispersionBullet.dispersionAngle = 15f;
         }
+
         GameObject temp = Instantiate(bullet, canon.position, Quaternion.identity);
     }
 
@@ -80,7 +83,6 @@ public class ShotingTypesFunctions : MonoBehaviour
         shake.CameraShakeSettings(timeShake, magnitudeShake);
 
         //animator.SetBool("Shoot", true);
-
 
         Instantiate(shells, gun.transform.position, Quaternion.identity);
 

@@ -4,14 +4,14 @@ using TMPro;
 
 public class DialoguePop : MonoBehaviour
 {
-    [SerializeField] private GameObject DialoguePanel;
-    [SerializeField] private TMP_Text DialogueText;
-    [SerializeField, TextArea(4, 6)] private string DialogueLines;
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField, TextArea(4, 6)] private string dialogueLines;
 
     // Start is called before the first frame update
     void Start()
     {
-        DialogueText.text = DialogueLines;
+        dialogueText.text = dialogueLines;
     }
 
     // Update is called once per frame
@@ -19,15 +19,12 @@ public class DialoguePop : MonoBehaviour
     {
         for (int i = 0; i < 256; i -= 2)
         {
-            DialogueText.color = new Color(97, 255, 111, i);
+            dialogueText.color = new Color(97, 255, 111, i);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DialoguePanel.SetActive(true);
-
-
-
+        dialoguePanel.SetActive(true);
     }
 }

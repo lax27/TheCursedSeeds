@@ -12,24 +12,18 @@ public class ChangeColor : MonoBehaviour
     public float B;
     public float A;
 
-
     public  bool valid;
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
         if (valid)
         {
-                         test.material.color = new Color(
-                         R  / 255.0f,
-                         G  / 255.0f,
-                         B  / 255.0f,
-                         A  / 255.0f);
-
+            test.material.color = new Color(
+            R  / 255.0f,
+            G  / 255.0f,
+            B  / 255.0f,
+            A  / 255.0f);
         }
     }
 

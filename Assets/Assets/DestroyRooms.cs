@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DestroyRooms : MonoBehaviour
 {
-
     public static DestroyRooms instance { get; private set; }
 
     // Start is called before the first frame update

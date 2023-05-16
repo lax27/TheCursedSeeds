@@ -13,7 +13,6 @@ public class PlayerHealthHandler : MonoBehaviour
     public bool enemyAttackPaused = false;
     float timeDeath = 4;
 
-
     public AudioClip hitSound;
     
     private float inmuneTimer = 3;
@@ -39,7 +38,6 @@ public class PlayerHealthHandler : MonoBehaviour
 
     private GameObject noHp;
     private GameObject hp;
-    private Transform normalhpPosition;
     private Animator hpAnimator;
     private Animator noHpAnimator;
     
@@ -58,7 +56,6 @@ public class PlayerHealthHandler : MonoBehaviour
         UI = GameObject.Find("UI");
         lifeUI = UI.GetComponent<hpUI>();
         transparentColor = new Color(255, 255, 255, 0.1f);
-
         hp = GameObject.Find("HP");
         hpAnimator = hp.GetComponent<Animator>();
         noHp = GameObject.Find("LostHP");
@@ -90,8 +87,6 @@ public class PlayerHealthHandler : MonoBehaviour
                 {
                     spriteRenderer.color = new Color(255, 255, 255, 1);
                 }
-
-
             }
 
             if (inmuneTimer <= 0)
@@ -104,23 +99,21 @@ public class PlayerHealthHandler : MonoBehaviour
             }
         }
 
-
         if (playerStats.life <= 0)
         {
             playerMovement.enabled = false;
             guns.SetActive(false);
             coll.enabled = false;
             isPlayerDead = true;
-           
-
             timeDeath -= Time.deltaTime;
+
             //Debug.Log(timeDeath);
             if (timeDeath <= 0)
             {
                 //WAIT FEW SECONDS AND changeScene to hub and set weapon id to 0
                 GameManager.instance.currentWeaponID = 0;
                 // 1 = hub
-                SceneManager.LoadScene("HUB_HUB");
+                SceneManager.LoadScene("1");
             }
 
         }
@@ -151,7 +144,6 @@ public class PlayerHealthHandler : MonoBehaviour
         {
             for (int i = 0; i < lifeUI.lifesIcons.Length; i++)
             {
-
                 Image life = lifeUI.lifesIcons[i].GetComponent<Image>();
                 life.color = transparentColor;
 
@@ -178,7 +170,6 @@ public class PlayerHealthHandler : MonoBehaviour
                 playerMovement.directionKnockedBack = transform.position - collision.gameObject.transform.position;
                 playerMovement.directionKnockedBack.Normalize();
                 enemyAttackPauseTimer = 1f;
-
                 isInmune = true;
                 isHitGlowUI = true;
 
@@ -186,13 +177,13 @@ public class PlayerHealthHandler : MonoBehaviour
                     SoundController.instance.PlaySoundPlayer(hitSound);
 
                 hitSplash.Play();
-
                 shake.CameraShakeSettings(0.1f, 0.1f);
 
                 if (playerStats.life <= 0 && !shake.isFinish)
                 {
                     hitStop.StopTime(0.05f, 10, 2.5f);
                 }
+
                 else
                 {
                     hitStop.StopTime(0.05f, 20, 0.1f);
@@ -201,16 +192,13 @@ public class PlayerHealthHandler : MonoBehaviour
                 //UI
                 for (int i = 0; i < lifeUI.lifesIcons.Length; i++)
                 {
-
                     Image life = lifeUI.lifesIcons[i].GetComponent<Image>();
                     life.color = new Color(255, 255, 255, 255);
 
                     Image noLife = lifeUI.noLifesIcons[i].GetComponent<Image>();
                     noLife.color = new Color(255, 255, 255, 255);
                 }
-
-   
-            }
+             }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -221,7 +209,6 @@ public class PlayerHealthHandler : MonoBehaviour
             {
                 playerStats.life--;
                 enemyAttackPauseTimer = 1f;
-
                 isInmune = true;
                 isHitGlowUI = true;
 
@@ -236,6 +223,7 @@ public class PlayerHealthHandler : MonoBehaviour
                 {
                     hitStop.StopTime(0.05f, 10, 2.5f);
                 }
+
                 else
                 {
                     hitStop.StopTime(0.05f, 20, 0.1f);

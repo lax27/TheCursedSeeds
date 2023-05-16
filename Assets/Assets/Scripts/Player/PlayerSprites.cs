@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class PlayerSprites : MonoBehaviour
 {
-    private Camera mainCam;
     private Vector3 mousePos;
-    private SpriteRenderer rs;
+    private SpriteRenderer sr;
     public Animator animator;
     private PlayerStats playerStats;
-
     public List<Sprite> sprites;
+
     // Start is called before the first frame update
     void Start()
     {
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        rs = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         playerStats = GetComponent<PlayerStats>();
-
     }
 
     // Update is called once per frame
@@ -28,12 +25,15 @@ public class PlayerSprites : MonoBehaviour
 
         Vector3 rotation = mousePos - transform.position;
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+
         if(rotZ > 90 || rotZ < -90)
         {
-            rs.flipX = true;
-        }else if (rotZ < 90 || rotZ > -90)
+            sr.flipX = true;
+        }
+
+        else if (rotZ < 90 || rotZ > -90)
         {
-            rs.flipX = false;
+            sr.flipX = false;
         }
 
         if(rotZ > -125 && rotZ < -65){
@@ -47,6 +47,7 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveBack", false);
                 animator.SetBool("isDead", false);
             }
+
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 && playerStats.life > 0)
             {
                 animator.SetBool("Front", false);
@@ -57,7 +58,9 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveBack", false);
                 animator.SetBool("isDead", false);
             }
+
         }
+
         else if(rotZ > 65 && rotZ < 125){
             //rs.sprite = sprites[1];//back
             if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0 && playerStats.life > 0)
@@ -70,6 +73,7 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveBack", false);
                 animator.SetBool("isDead", false);
             }
+
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 && playerStats.life > 0)
             {
                 animator.SetBool("Front", false);
@@ -80,7 +84,11 @@ public class PlayerSprites : MonoBehaviour
                 animator.SetBool("MoveBack", true);
                 animator.SetBool("isDead", false);
             }
-        } else{
+
+        } 
+        
+        else
+        {
             //rs.sprite = sprites[0]; //side
             if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0 && playerStats.life > 0)
             {
@@ -117,6 +125,5 @@ public class PlayerSprites : MonoBehaviour
                 Destroy(this);
             }
         }
-
     }
 }

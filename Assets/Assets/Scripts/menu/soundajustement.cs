@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class soundajustement : MonoBehaviour
 {
+    //NOMBRE HA DE ESTAR EN MAYUS. YA HAY UN SCTIPT PARA EL MENU
     [SerializeField] Slider volumeSlider;
 
     void Start()

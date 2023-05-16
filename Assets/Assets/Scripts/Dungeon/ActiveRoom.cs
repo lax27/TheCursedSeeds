@@ -7,7 +7,7 @@ public class ActiveRoom : MonoBehaviour
     public GameObject enemiesParent;
     public GameObject parentAdjacentRoomsSpawnPositions;
     public GameObject unknown;
-    private BoxCollider2D col;
+    private BoxCollider2D col2D;
     private Animator animator;
     
     // Start is called before the first frame update
@@ -28,30 +28,30 @@ public class ActiveRoom : MonoBehaviour
         {
             for(int i = 0; i < parentAdjacentRoomsSpawnPositions.transform.childCount; i++)
             {
-                col = parentAdjacentRoomsSpawnPositions.transform.GetChild(i).GetComponent<BoxCollider2D>();
-                col.enabled = true;
+                col2D = parentAdjacentRoomsSpawnPositions.transform.GetChild(i).GetComponent<BoxCollider2D>();
+                col2D.enabled = true;
                 animator = parentAdjacentRoomsSpawnPositions.transform.GetChild(i).GetComponent<Animator>();
                 animator.enabled = true;
             }
         }
+
         else
         {
             for (int i = 0; i < parentAdjacentRoomsSpawnPositions.transform.childCount; i++)
             {
-                col = parentAdjacentRoomsSpawnPositions.transform.GetChild(i).GetComponent<BoxCollider2D>();
+                col2D = parentAdjacentRoomsSpawnPositions.transform.GetChild(i).GetComponent<BoxCollider2D>();
                 animator = parentAdjacentRoomsSpawnPositions.transform.GetChild(i).GetComponent<Animator>();
 
-                if (col.enabled == false && animator.enabled == false)
+                if (col2D.enabled == false && animator.enabled == false)
                 {
                     //Debug.Log("Already on");
                 }
                 else
                 {
-                    col.enabled = false;
+                    col2D.enabled = false;
                     animator.enabled = false;
                 }
             }
-
         }
     }
 
@@ -65,6 +65,7 @@ public class ActiveRoom : MonoBehaviour
             }
 
             Destroy(unknown);
+
         }
     }
 }

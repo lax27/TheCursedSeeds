@@ -8,17 +8,4 @@ public class PlayerStats : MonoBehaviour
     public float speed = 5f;
     public int seeds = 0;
     public int cursedSeedID = 0;
-
- 
-    private void Start()
-    {
-       
-    }
-
-
-
-    void Update()
-    {
-        
-    }
 }

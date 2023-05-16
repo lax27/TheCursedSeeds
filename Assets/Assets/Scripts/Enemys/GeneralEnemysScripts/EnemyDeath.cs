@@ -6,25 +6,20 @@ using UnityEngine.UIElements;
 public class EnemyDeath : MonoBehaviour
 {
     EnemiesStats enemiesStats;
-    Collider2D cl;
-    float timerHit = 0f;
-    private SpriteRenderer sr;
-    public bool isHit = false;
+  
     private SimpleFlash flash;
-    EnemyFrozen enemyFrozen;
     private ParticleSystem blood;
     public GameObject deathSplash;
-    
+
+    float timerHit = 0f;
+    public bool isHit = false;
+
     // Start is called before the first frame update
     void Start()
     {
         blood = GetComponent<ParticleSystem>();
-
         flash = GetComponent<SimpleFlash>();
         enemiesStats = GetComponent<EnemiesStats>();
-        cl = GetComponent<Collider2D>();
-        sr = GetComponent<SpriteRenderer>();
-        enemyFrozen = GetComponent<EnemyFrozen>();
     }
 
     // Update is called once per frame
@@ -40,16 +35,15 @@ public class EnemyDeath : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (isHit)
+        {
+            timerHit -= Time.deltaTime;
 
-            if (isHit)
+            if (timerHit < 0.5f)
             {
-                timerHit -= Time.deltaTime;
-                if (timerHit < 0.5f)
-                {
-                    isHit = false;
-                }
+                isHit = false;
             }
-  
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

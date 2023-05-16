@@ -3,12 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStatus : MonoBehaviour
+    //¿Este script es realmente necesario?
 {
     public bool isConfused = false;
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

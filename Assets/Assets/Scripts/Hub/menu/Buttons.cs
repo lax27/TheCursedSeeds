@@ -5,22 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void playGame()
+    public void PlayGame()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("HUB_HUB");
+        //1 = HUB_HUB
+        SceneManager.LoadScene("1");
     }
 
     public void Quit()

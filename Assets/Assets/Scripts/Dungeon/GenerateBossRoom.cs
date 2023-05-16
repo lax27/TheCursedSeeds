@@ -6,18 +6,16 @@ public class GenerateBossRoom : MonoBehaviour
 {
     public GameObject tp;
     private const int MAX_ROOMS = 1;
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(BossSpawn());
-
     }
 
     IEnumerator BossSpawn()
     {
         yield return null;
-
-
 
         bool roomCreatedInThisPosition = DungeonManager.instance.currentRoomsPositions.Contains(transform.position);
         int roomsAmount = DungeonManager.instance.currentRoomsPositions.Count;
@@ -37,7 +35,5 @@ public class GenerateBossRoom : MonoBehaviour
             gameObject.SetActive(false);
             tp.SetActive(false);
         }
-
-      
     }
 }

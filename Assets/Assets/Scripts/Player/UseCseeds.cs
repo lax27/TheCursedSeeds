@@ -5,73 +5,73 @@ using UnityEngine;
 
 public class UseCseeds : MonoBehaviour
 {
-    PlayerStats ps;
+    //WTF ES CHS?????
 
-    private GameObject[] enemys;
+    PlayerStats playerStats;
+
+    private GameObject[] enemies;
    // private List<ChargerMove> chs;
     private List<EnemyFrozen> chs;
 
-    public float Currentcooldown = 0;
-    public float DeathCooldown = 40;
-    public float Frostcooldown = 20;
-    public float LifeCooldown = 10;
-    public float FireCooldown = 5;
+    public float currentCooldown = 0;
+    public float deathCooldown = 40;
+    public float frostCooldown = 20;
+    public float lifeCooldown = 10;
+    public float fireCooldown = 5;
     
     // Start is called before the first frame update
     void Start()
     {
+        playerStats = GetComponent<PlayerStats>();
 
-        ps = GetComponent<PlayerStats>();
-
-        enemys = GameObject.FindGameObjectsWithTag("enemy");
+        enemies = GameObject.FindGameObjectsWithTag("enemy");
 
         //chs = new List<ChargerMove>();
         chs = new List<EnemyFrozen>();
 
-        for (int i = 0; i < enemys.Length; i++)
+        for (int i = 0; i < enemies.Length; i++)
         {
-            EnemyFrozen freez = enemys[i].GetComponent<EnemyFrozen>();
+            EnemyFrozen freez = enemies[i].GetComponent<EnemyFrozen>();
             if (freez != null)
             {
                 chs.Add(freez);
             }
-
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Currentcooldown > 0)
+        if (currentCooldown > 0)
         {
-            Currentcooldown -= Time.deltaTime;
+            currentCooldown -= Time.deltaTime;
            //Debug.Log(Currentcooldown);
         }
 
         //Para la Atumm seed, CseedID == 1
-        if (Input.GetButtonDown("cseed") && Currentcooldown <= 0 && ps.cursedSeedID == 1) {
+        if (Input.GetButtonDown("cseed") && currentCooldown <= 0 && playerStats.cursedSeedID == 1) {
 
-            Currentcooldown = DeathCooldown;
+            currentCooldown = deathCooldown;
         }
 
         //Para la Frost seed, CseedID == 2
-        if (Input.GetButtonDown("cseed") && Currentcooldown <= 0 && ps.cursedSeedID == 2) {
+        if (Input.GetButtonDown("cseed") && currentCooldown <= 0 && playerStats.cursedSeedID == 2) {
 
-            Currentcooldown = Frostcooldown;
+            currentCooldown = frostCooldown;
 
             for (int i = 0; i < chs.Count; i++) {
                 chs[i].setToFreeze = true;
             }
         }
+
         //Para la spring seed, CseedID == 3
-        if (Input.GetButtonDown("cseed") && Currentcooldown <= 0 && ps.cursedSeedID == 3) {
-            Currentcooldown = LifeCooldown;
+        if (Input.GetButtonDown("cseed") && currentCooldown <= 0 && playerStats.cursedSeedID == 3) {
+            currentCooldown = lifeCooldown;
         }
 
         //Para la  summer seed, CseedID == 4
-        if (Input.GetButtonDown("cseed") && Currentcooldown <= 0 && ps.cursedSeedID == 4) {
-            Currentcooldown = FireCooldown;
+        if (Input.GetButtonDown("cseed") && currentCooldown <= 0 && playerStats.cursedSeedID == 4) {
+            currentCooldown = fireCooldown;
         }
-
     }
 }

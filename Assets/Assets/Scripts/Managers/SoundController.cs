@@ -13,16 +13,17 @@ public class SoundController : MonoBehaviour
 
     private void Awake()
     {
-
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
         else
         {
             Destroy(gameObject);
         }
+
         audioSource = GetComponent<AudioSource>();
         audioSourcePlayerSounds = GetComponent<AudioSource>();
         audioSourceEnemiesSounds = GetComponent<AudioSource>();
@@ -42,6 +43,5 @@ public class SoundController : MonoBehaviour
     {
         audioSourceEnemiesSounds.PlayOneShot(sound);
     }
-
 }
 

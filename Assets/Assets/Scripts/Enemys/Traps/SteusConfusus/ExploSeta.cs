@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class ExploSeta : MonoBehaviour
 {
+    [SerializeField] GameObject enemies;
+
+    PlayerStatus playerStatus;
     GameObject player;
-    public GameObject Explo;
+
+    public GameObject explosion;
     public GameObject zone;
     public GameObject zone2;
-    bool isExploding = false;
-    PlayerStatus playerStatus;
     public Collider2D cl;
     public SpriteRenderer sr;
+
     private float confusedTime = 5;
-    [SerializeField] GameObject enemies;
+    bool isExploding = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +34,7 @@ public class ExploSeta : MonoBehaviour
         {
             sr.enabled = false;
             cl.enabled = false;
-            Explo.SetActive(true);
+            explosion.SetActive(true);
             Destroy(zone);
             Destroy(zone2);
             confusedTime -= Time.deltaTime;
@@ -40,7 +44,7 @@ public class ExploSeta : MonoBehaviour
         {
             sr.enabled = false;
             cl.enabled = false;
-            Explo.SetActive(true);
+            explosion.SetActive(true);
             Destroy(zone);
             Destroy(zone2);
 

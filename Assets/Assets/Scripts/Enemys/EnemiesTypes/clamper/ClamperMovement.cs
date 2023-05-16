@@ -11,20 +11,19 @@ public class ClamperMovement : MonoBehaviour
     public float timerToMove = 2f; 
     public float timerMovement = 1f;
     PlayerHealthHandler playerHealthHandler;
-    GameObject pl;
+    GameObject Player;
 
 
     void Start()
     {
         enemiesStats = GetComponent<EnemiesStats>();
-        pl = GameObject.Find("mantee_v2");
-        playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
+        Player = GameObject.Find("mantee_v2");
+        playerHealthHandler = Player.GetComponent<PlayerHealthHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (playerHealthHandler.isPlayerDead)
         {
             this.enabled = false;
@@ -53,13 +52,11 @@ public class ClamperMovement : MonoBehaviour
             timerMovement -= Time.deltaTime;
         }
 
-
         if (timerMovement <= 0)
         {
             isStopped = true;
             isMoving = false;
         }
-
     }
 
     private void FixedUpdate()

@@ -27,14 +27,17 @@ public class ChargerRender : MonoBehaviour
         {
             animator.SetBool("isHitA", true);
         }
+
         else
         {
             animator.SetBool("isHitA", false);
         }
+
         if (chargerMovement.isCharging)
         {
             animator.SetBool("isCharginA", true);
         }
+
         else
         {
             animator.SetBool("isCharginA", false);
@@ -44,12 +47,10 @@ public class ChargerRender : MonoBehaviour
         {
             sr.flipX = true;
         }
+
         else
         {
             sr.flipX = false;
         }
-          
-      
-
     }
 }

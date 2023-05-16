@@ -10,7 +10,6 @@ public class ShootScript : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetwenFire;
-    private int bulletCount;
 
     //ammo logic
     public int currentAmmo = 12;
@@ -129,9 +128,5 @@ public class ShootScript : MonoBehaviour
                 animator.SetBool("idle", true);
             }
         }
-       if (!Input.GetMouseButton(0))
-       {
-            bulletCount = 0;
-       }
     }
 }

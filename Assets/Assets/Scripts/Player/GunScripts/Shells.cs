@@ -6,18 +6,13 @@ public class Shells : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] private float timer = 0.5f;
-    [SerializeField] private float timerD = 0.6f;
     private Vector2 dir;
-    private PlayerAimWeapon rp;
-    private GameObject gunRotation;
     private SpriteRenderer sp;
     private AudioSource audioSource;
     private float time = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        gunRotation = GameObject.Find("RotatePoint");
-        rp = gunRotation.GetComponent<PlayerAimWeapon>();
         rb = GetComponent<Rigidbody2D>();
         sp = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
@@ -28,29 +23,32 @@ public class Shells : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        timerD -= Time.deltaTime;
 
         if (timer <= 0.35f)
         {
             sp.sortingLayerName = "ice cube";
             rb.gravityScale = 100;
         }
+
         if (timer <= 0)
         {
             sp.sortingLayerName = "details";
             rb.bodyType = RigidbodyType2D.Static;
+
             if(audioSource != null)
                 audioSource.Play();
+
             StartCoroutine(DestroySound());
         }
-            Destroy(gameObject, 100f);
+
+        Destroy(gameObject, 100f);
+
     }
 
     private void FixedUpdate()
     {
         rb.AddForce(dir ,ForceMode2D.Impulse);
     }
-
     private IEnumerator DestroySound()
     {
         Destroy(audioSource);

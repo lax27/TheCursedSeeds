@@ -6,30 +6,26 @@ public class SimpleFlash : MonoBehaviour
 {
     [SerializeField] private Material flashMaterial;
 
-    private SpriteRenderer sp;
-    private Material originaMaterial;
+    private SpriteRenderer sr;
+    private Material originalMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
-        sp = GetComponent<SpriteRenderer>();
-        originaMaterial = sp.material;
+        sr = GetComponent<SpriteRenderer>();
+        originalMaterial = sr.material;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void FlashP(float duration)
     {
          IEnumerator FlashRoutine()
-        {
-                sp.material = flashMaterial;
-                yield return new WaitForSeconds(duration);
-                sp.material = originaMaterial;
-            
-        }
-        StartCoroutine(FlashRoutine());
-    }
+         {
+            sr.material = flashMaterial;
+            yield return new WaitForSeconds(duration);
+            sr.material = originalMaterial;
+         }
 
+        StartCoroutine(FlashRoutine());
+
+    }
 }
