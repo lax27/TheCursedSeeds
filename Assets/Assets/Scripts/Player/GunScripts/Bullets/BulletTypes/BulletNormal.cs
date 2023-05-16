@@ -8,9 +8,6 @@ public class BulletNormal : MonoBehaviour
     Rigidbody2D rb;
     Camera mainCam;
     Vector3 mousePos;
-    private float randomAngle;
-    private float sen;
-    private float cos;
     public BulletStats bs;
     private GameObject player;
     private Transform p;

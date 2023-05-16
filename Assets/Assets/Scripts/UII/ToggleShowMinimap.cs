@@ -23,7 +23,5 @@ public class ToggleShowMinimap : MonoBehaviour
         { 
             minimap.SetActive(true);
         }
-
-
     }
 }

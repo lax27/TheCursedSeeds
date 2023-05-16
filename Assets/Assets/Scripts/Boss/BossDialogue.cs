@@ -4,11 +4,11 @@ using TMPro;
 
 public class BossDialogue : MonoBehaviour
 {
-    [SerializeField] private GameObject DialoguePanel;
-    [SerializeField] private TMP_Text DialogueText;
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private GameObject mantee;
     [SerializeField] private PlayerMovement movement;
-    [SerializeField, TextArea(4, 6)] private string[] DialogueLines;
+    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
 
     private float typingTime = 0.05f;
     private bool isPlayerInRange;
@@ -23,13 +23,13 @@ public class BossDialogue : MonoBehaviour
         movement = mantee.GetComponent<PlayerMovement>();
         if (count == 0)
         {
-            DialogueLines[0] = "count es 0";
-            DialogueLines[1] = "Todo correcto";
+            dialogueLines[0] = "count es 0";
+            dialogueLines[1] = "Todo correcto";
         }
         else
         {
-            DialogueLines[0] = "Esto ya ha pasado";
-            DialogueLines[1] = "Como";
+            dialogueLines[0] = "Esto ya ha pasado";
+            dialogueLines[1] = "Como";
         }
     }
 
@@ -38,34 +38,29 @@ public class BossDialogue : MonoBehaviour
     {
         if (isPlayerInRange && !isPrinted)
         {
-
             if (!didDialogueStart)
             {
                 StartDialogue();
             }
             else if (Input.GetButtonDown("interaction"))
             {
-                 if (DialogueText.text == DialogueLines[lineIndex])
+                if (dialogueText.text == dialogueLines[lineIndex])
                 {
                     NextDialogueLine();
                 }
                 else
                 {
                     StopAllCoroutines();
-                    DialogueText.text = DialogueLines[lineIndex];
-                  }
+                    dialogueText.text = dialogueLines[lineIndex];
+                }
             }
-
         }
-
-
-
     }
 
     private void StartDialogue()
     {
         didDialogueStart = true;
-        DialoguePanel.SetActive(true);
+        dialoguePanel.SetActive(true);
         lineIndex = 0;
         movement.enabled = false;
         StartCoroutine(ShowLine());
@@ -74,14 +69,14 @@ public class BossDialogue : MonoBehaviour
     private void NextDialogueLine()
     {
         lineIndex++;
-        if (lineIndex < DialogueLines.Length)
+        if (lineIndex < dialogueLines.Length)
         {
             StartCoroutine(ShowLine());
         }
         else
         {
             didDialogueStart = false;
-            DialoguePanel.SetActive(false);
+            dialoguePanel.SetActive(false);
             movement.enabled = true;
             isPrinted = true;
         }
@@ -89,11 +84,11 @@ public class BossDialogue : MonoBehaviour
 
     private IEnumerator ShowLine()
     {
-        DialogueText.text = string.Empty;
+        dialogueText.text = string.Empty;
 
-        foreach (char ch in DialogueLines[lineIndex])
+        foreach (char ch in dialogueLines[lineIndex])
         {
-            DialogueText.text += ch;
+            dialogueText.text += ch;
             yield return new WaitForSecondsRealtime(typingTime);
         }
     }

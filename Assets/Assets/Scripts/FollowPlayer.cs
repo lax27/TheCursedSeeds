@@ -7,11 +7,6 @@ public class FollowPlayer : MonoBehaviour
     public GameObject player;
     public GameObject target;
     private bool inRange;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -19,7 +14,6 @@ public class FollowPlayer : MonoBehaviour
         if (inRange)
         {
             player.transform.parent = target.transform;
-
         }
     }
 

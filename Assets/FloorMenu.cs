@@ -67,8 +67,8 @@ public class FloorMenu : MonoBehaviour
     {
         player.SetActive(true);
         gameObject.SetActive(false);
-        Collider2D collD = portal.GetComponent<Collider2D>();
-        collD.enabled = false;
+        Collider2D col2D = portal.GetComponent<Collider2D>();
+        col2D.enabled = false;
 
         goToDungeon.inPortal = false;
     }
@@ -76,6 +76,7 @@ public class FloorMenu : MonoBehaviour
     public void GoToDungeon(int floorNumber)
     {
         GameManager.instance.currentFloor = floorNumber;
-        SceneManager.LoadScene("GameplayDefinitivoTest");
+        //2 = GameplayDefinitivoTest
+        SceneManager.LoadScene("2");
     }
 }

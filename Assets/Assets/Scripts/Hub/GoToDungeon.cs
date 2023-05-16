@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GoToDungeon : MonoBehaviour
 {
-    private GameObject player;
     [SerializeField] private GameObject floorMenu;
+
+    private GameObject player;
+
     public bool inPortal = false;
+
     // Start is called before the first frame update
     void Start()
     {

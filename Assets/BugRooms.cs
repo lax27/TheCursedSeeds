@@ -13,11 +13,11 @@ public class BugRooms : MonoBehaviour
     {
         //roomBug = GameObject.Find("Room 0");
         //roomBug2 = GameObject.Find("Room 1");
-        if (DungeonManager.instance.currentRoomsPositions.Count < 4 && DungeonManager.instance.RoomsObjecs.Count < 3)
+        if (DungeonManager.instance.currentRoomsPositions.Count < 4 && DungeonManager.instance.roomsObjecs.Count < 3)
         {
             DungeonManager.instance.currentRoomsPositions.Clear();
             DungeonManager.instance.currentRoomsPositions.Add(Vector2.zero);
-            DungeonManager.instance.RoomsObjecs.Clear();
+            DungeonManager.instance.roomsObjecs.Clear();
             DungeonManager.instance.bossRoomBugs.Clear();
             Destroy(this);
         }
@@ -42,10 +42,5 @@ public class BugRooms : MonoBehaviour
         //    SceneManager.LoadScene(2);
         //    Destroy(this);
         //}
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

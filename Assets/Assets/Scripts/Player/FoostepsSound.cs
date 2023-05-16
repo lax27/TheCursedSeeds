@@ -33,9 +33,7 @@ public class FoostepsSound : MonoBehaviour
                 StartCoroutine(FadeOutRoutine(stepSources[i]));
 
             }
-            
         }
-
     }
 
     float stepSoundFrecuency = 0.5f;
@@ -50,10 +48,11 @@ public class FoostepsSound : MonoBehaviour
             {
                 stepTimeoutCount = 0f;
                 PlayFoostepSound();
-
             }
 
-        }else
+        }
+        
+        else
         {
             stepTimeoutCount = 0f;
         }
@@ -69,17 +68,19 @@ public class FoostepsSound : MonoBehaviour
     {
         float duration = 0.2f;
         float originalVolume = aSource.volume;
-
         float timeCounter = 0f;
+
         while (timeCounter < duration)
         {
             timeCounter += Time.deltaTime;
             float t = timeCounter/ duration;
+
             if(aSource)
                 aSource.volume = originalVolume * (1f - t);
             
             yield return null;
         }
+
         if (aSource)
         {
             aSource.Stop();
@@ -93,14 +94,16 @@ public class FoostepsSound : MonoBehaviour
     IEnumerator DestroySoundOnFinish(AudioSource source)
     {
         float duration = lastAudioClipPlayed.length;
-
         float timeCounter = 0f;
+
         while (timeCounter < duration)
         {
             timeCounter += Time.deltaTime;
             yield return null;
         }
+
         Destroy(source);
+
     }
    
     private void PlayFoostepSound()
@@ -139,6 +142,7 @@ public class FoostepsSound : MonoBehaviour
             default:
                 break;
         }
+
         StartCoroutine(DestroySoundOnFinish(aSource));
 
     }

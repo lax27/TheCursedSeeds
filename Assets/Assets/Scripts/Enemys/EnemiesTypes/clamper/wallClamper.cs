@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class wallClamper : MonoBehaviour
 {
+    //ESTA MIERDA NO SE ESTÁ USANDO PARA NADA
     private ClamperMovement clamperMovement;
     [SerializeField]private Collider2D cl; 
     // Start is called before the first frame update

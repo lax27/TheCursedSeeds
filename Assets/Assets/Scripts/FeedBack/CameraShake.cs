@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    private Vector3 ogPos;
     public float offsetX = 0.0f;
     public float offsetY = 0.0f;
     public float timeShake = 0.0f;
@@ -20,9 +19,7 @@ public class CameraShake : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        ogPos = transform.position;
-        
+    {        
         if (timeShake > 0)
         {
             isFinish = false;

@@ -5,21 +5,19 @@ using UnityEngine;
 
 public class EnemyFrozen : MonoBehaviour
 {
+    EnemiesStats enemiesStats;
+    public GameObject ice;
+
     public bool isFrozen = false;
     public bool setToFreeze = false;
-    private SpriteRenderer sr;
-    private float timerHit;
-    EnemiesStats enemiesStats;
     public bool isHit = false;
     private float timeToMelt = 0.0f;
 
-    public GameObject ice;
-    private SpriteRenderer[] srCubito;
+
     
     void Start()
     {
         enemiesStats = GetComponent<EnemiesStats>();
-        sr = GetComponent<SpriteRenderer>();
 
         //deshabilitar el spriteRender o el hijo del objeto    
     }
@@ -33,12 +31,13 @@ public class EnemyFrozen : MonoBehaviour
 
        if (isFrozen)
        {
-       timeToMelt -= Time.deltaTime;
+            timeToMelt -= Time.deltaTime;
 
             if (timeToMelt <= 0.0f)
             {
                 MeltCharacter();
             }
+
        }
     }
 
@@ -49,7 +48,6 @@ public class EnemyFrozen : MonoBehaviour
         isFrozen = true;
         timeToMelt = 5.0f;
         setToFreeze = false;
-
     }
 
     private void MeltCharacter()

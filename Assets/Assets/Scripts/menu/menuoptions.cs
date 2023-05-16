@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class menuoptions : MonoBehaviour
 {
+    //NOMBRE HA DE ESTAR EN MAYUS. YA HAY UN SCTIPT PARA EL VOLUMEN DEL MENU
+
     // Start is called before the first frame update
     void Start()
     {

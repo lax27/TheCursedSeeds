@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
 {
     PlayerStats playerStats;
     PlayerStatus status;
-    PlayerHealthHandler playerHealthHandler;
     public Rigidbody2D rbPlayer;
     private Vector3 direction;
     public Vector3 directionKnockedBack;
@@ -19,8 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerStats = GetComponent<PlayerStats>();
         status = GetComponent<PlayerStatus>();
-        rbPlayer = GetComponent<Rigidbody2D>();
-        playerHealthHandler = GetComponent<PlayerHealthHandler>();
+        rbPlayer = GetComponent<Rigidbody2D>();;
         playerAim = GameObject.Find("RotatePoint").GetComponent<PlayerAimWeapon>();
     }
 

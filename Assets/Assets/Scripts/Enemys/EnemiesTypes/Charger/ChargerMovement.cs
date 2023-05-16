@@ -12,25 +12,19 @@ public class ChargerMovement : MonoBehaviour
     EnemyFrozen enemyFrozen;
     public List<AudioClip> audioClipList = new List<AudioClip>();
     
-
     public Vector2 dir;
     public Vector3 dir3;
     public bool isGoingToCharge = false;
     public bool isCharging = false;
     public float chargingForce = 50;
-    private AudioSource au;
 
     ///CONTADORES
 
     public float toCharge = 1;
     public float chargeTime= 0.1f;
     public float wait;
-
-    public float waitoffset;
-    public float enemyspeedofset;
-
-
-
+    public float waitOffset;
+    public float enemySpeedOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -40,34 +34,33 @@ public class ChargerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
         enemyFrozen = GetComponent<EnemyFrozen>();
-        au = GetComponent<AudioSource>();
-        
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (playerHealthHandler.isPlayerDead)
         {
             this.enabled = false;
         }
+
         wait -= Time.deltaTime;
+
        if(wait <= 0) {
+
             isGoingToCharge = true;
             toCharge -= Time.deltaTime;
+
             if (toCharge <= 0)
             {
                 isCharging = true;
             }
        }
 
-      
         if (isCharging)
         {
-
             chargeTime -= Time.deltaTime;
+
             if(chargeTime <= 0)
             {
                 rb.velocity = Vector2.zero; 
@@ -81,7 +74,6 @@ public class ChargerMovement : MonoBehaviour
         {
             dir = (pl.transform.position - transform.position).normalized;
         }
-        
       
         if (!enemyFrozen.isFrozen)
         {
@@ -91,16 +83,13 @@ public class ChargerMovement : MonoBehaviour
             }
             else
             {
-                enemiesStats.enemySpeed = enemyspeedofset;
+                enemiesStats.enemySpeed = enemySpeedOffset;
             }
-        }
-
-   
+        }   
     }
 
     private void FixedUpdate()
     {
-
         if (!isCharging)
         {
             dir3 = (pl.transform.position - transform.position).normalized;
@@ -113,13 +102,11 @@ public class ChargerMovement : MonoBehaviour
 
         if (isCharging && !enemyFrozen.isFrozen)
         {
-            rb.velocity = Vector2.zero;
-           
-                rb.bodyType = RigidbodyType2D.Dynamic;
-                
-                rb.AddForce(dir * chargingForce, ForceMode2D.Impulse);
-                isGoingToCharge = false;
-                wait = waitoffset;
+            rb.velocity = Vector2.zero;      
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.AddForce(dir * chargingForce, ForceMode2D.Impulse);
+            isGoingToCharge = false;
+            wait = waitOffset;
         }
     }
 }

@@ -10,7 +10,6 @@ public class GenerateRoom : MonoBehaviour
     public GameObject[] rooms;
 
     public const int MAX_ROOMS = 8;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +20,12 @@ public class GenerateRoom : MonoBehaviour
         bool canGenerate = !roomCreatedInThisPosition && !roomGenerationLimitExceeded;
         bool willGenerate = Random.Range(0f, 100f) > 50f || roomsAmount == 0;
 
-
         if (canGenerate && willGenerate)
         {
             int selectedPrefabIndex = Random.Range(0, DungeonManager.instance.roomPrefabs.Length);
             GameObject temp = Instantiate(DungeonManager.instance.roomPrefabs[selectedPrefabIndex], transform.position, Quaternion.identity);
-            temp.name = "Room " + DungeonManager.instance.RoomsObjecs.Count;
-            DungeonManager.instance.RoomsObjecs.Add(temp);
+            temp.name = "Room " + DungeonManager.instance.roomsObjecs.Count;
+            DungeonManager.instance.roomsObjecs.Add(temp);
             DungeonManager.instance.currentRoomsPositions.Add(transform.position);
             
             if(DungeonManager.instance.currentRoomsPositions.Count <= GenerateRoom.MAX_ROOMS)
@@ -38,10 +36,6 @@ public class GenerateRoom : MonoBehaviour
         else
         { 
             enabled = false;
-        }
-        
+        }  
     }
-
-
-
 }

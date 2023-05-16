@@ -11,16 +11,16 @@ public class ClamperShoot : MonoBehaviour
     private float timerToMove = 1.5f;
     private EnemyFrozen enemyFrozen;
     PlayerHealthHandler playerHealthHandler;
-    GameObject pl;
-    public float timeBetrewShot = 5f;
-    public float timeBetrewShotOffset;
+    GameObject Player;
+    public float timeBetweenShots = 5f;
+    public float timeBetweenShotsOffset;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyFrozen = GetComponent<EnemyFrozen>();
-        pl = GameObject.Find("mantee_v2");
-        playerHealthHandler = pl.GetComponent<PlayerHealthHandler>();
+        Player = GameObject.Find("mantee_v2");
+        playerHealthHandler = Player.GetComponent<PlayerHealthHandler>();
     }
 
     // Update is called once per frame
@@ -41,10 +41,11 @@ public class ClamperShoot : MonoBehaviour
 
         if(gameObject.name == "clamperRapidFire Variant")
         {
-            timeBetrewShot -= Time.deltaTime;
-            if (timeBetrewShot <= 0)
+            timeBetweenShots -= Time.deltaTime;
+
+            if (timeBetweenShots <= 0)
             {
-                timeBetrewShot = timeBetrewShotOffset;
+                timeBetweenShots = timeBetweenShotsOffset;
                 canFire = true;
             }
         }
@@ -52,8 +53,10 @@ public class ClamperShoot : MonoBehaviour
         if (timerToMove <= 0 && gameObject.name != "clamperRapidFire Variant")
         {
             canFire = true;
+
             if(gameObject.name != "clamperTurret Variant")
             timerToMove = 1.5f;
+
             else
             {
                 timerToMove = 0.4f;

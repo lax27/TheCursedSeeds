@@ -330,6 +330,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1294351177}
+    - target: {fileID: 2248783131541279650, guid: 3ab331c9658baf2428cb5cd250b51d23,
+        type: 3}
+      propertyPath: newRooms.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2888310695228326006, guid: 3ab331c9658baf2428cb5cd250b51d23,
         type: 3}
       propertyPath: m_Enabled
@@ -462,7 +467,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &753737371
 PrefabInstance:
@@ -500,7 +505,7 @@ PrefabInstance:
         type: 3}
       propertyPath: hitSplash
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 753737375}
     - target: {fileID: 2927519899224286325, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: DefaultRoom
@@ -597,6 +602,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5410514287837441782, guid: 27da0534244988346b0b1b449dfea2a8,
+        type: 3}
+      propertyPath: rbPlayer
+      value: 
+      objectReference: {fileID: 753737374}
     - target: {fileID: 5602994346372687871, guid: 27da0534244988346b0b1b449dfea2a8,
         type: 3}
       propertyPath: playOnAwake
@@ -701,6 +711,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &753737374 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7880664680134765482, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 753737371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &753737375 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5602994346372687871, guid: 27da0534244988346b0b1b449dfea2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 753737371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &978324554
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +849,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1006827049
 GameObject:
@@ -861,15 +883,16 @@ MonoBehaviour:
   inventory: 0000000000000000
   money: 0
   isPlanted: 0
-  isGrowed: 0
+  isGrown: 0
   pile: {fileID: 0}
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
   currentWeaponID: 1
-  TutorialPassed: 0
+  tutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
+  maxLives: 3
   currentFloor: 0
   floor1Passed: 0
   floor2Passed: 0
@@ -888,7 +911,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062121027
 GameObject:
@@ -1100,7 +1123,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1513914713 stripped
 AudioSource:
@@ -1176,7 +1199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1834296730
 GameObject:
@@ -1304,7 +1327,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994265448 stripped
 GameObject:
@@ -1332,7 +1355,7 @@ PrefabInstance:
     - target: {fileID: 3285997519163195569, guid: e37874b7084f8f742b43f432c91d7b84,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3285997519163195569, guid: e37874b7084f8f742b43f432c91d7b84,
         type: 3}

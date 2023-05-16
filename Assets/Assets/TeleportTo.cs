@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TeleportTo : MonoBehaviour
 {
-    public bool PlusVector;
+    public bool plusVector;
     public bool equalVector;
     public bool minusVector;
 
@@ -12,58 +12,45 @@ public class TeleportTo : MonoBehaviour
     public float Y;
     public float Z;
 
-    public GameObject MoveThis;
-    public GameObject Thistoo;
+    public GameObject moveThis;
+    public GameObject thistoo;
 
     public bool urgentFix;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (PlusVector)
+        if (plusVector)
         {
-            MoveThis.transform.position += new Vector3(X, Y, Z);
+            moveThis.transform.position += new Vector3(X, Y, Z);
             
-            if(Thistoo != null)
+            if(thistoo != null)
             {
-                Thistoo.transform.position += new Vector3(X, Y, Z);
+                thistoo.transform.position += new Vector3(X, Y, Z);
 
             }
         }
         else if (minusVector)
         {
-            MoveThis.transform.position -= new Vector3(X, Y, Z);
+            moveThis.transform.position -= new Vector3(X, Y, Z);
 
-            if (Thistoo != null)
+            if (thistoo != null)
             {
-                Thistoo.transform.position -= new Vector3(X, Y, Z);
+                thistoo.transform.position -= new Vector3(X, Y, Z);
 
             }
         }
         else if (equalVector)
         {
-            MoveThis.transform.position = new Vector3(X, Y, Z);
+            moveThis.transform.position = new Vector3(X, Y, Z);
 
             if(urgentFix)
             {
                 StartCoroutine(Fix());
             }
 
-            if (Thistoo != null)
+            if (thistoo != null)
             {
-                Thistoo.transform.position = new Vector3(X, Y, Z);
-
+                thistoo.transform.position = new Vector3(X, Y, Z);
             }
         }
     }
@@ -74,8 +61,7 @@ public class TeleportTo : MonoBehaviour
         while((t+= Time.deltaTime) < 1f)
         {
             yield return null;
-            MoveThis.transform.position = new Vector3(X, Y, Z); ;
+            moveThis.transform.position = new Vector3(X, Y, Z); ;
         }
-
     }
 }

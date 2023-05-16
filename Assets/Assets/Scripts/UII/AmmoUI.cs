@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class AmoUI : MonoBehaviour
+public class AmmoUI : MonoBehaviour
 {
     private TMP_Text ammo;
     private GameObject guns;

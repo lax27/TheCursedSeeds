@@ -5,28 +5,25 @@ using UnityEngine;
 
 public class PlantZone : MonoBehaviour
 {
-    private Collider2D cl;
-    private PlayerStats pm;
-    private ShootScript sh;
-    public bool inRange = false;
-    public GameObject plantMenu;
-    public GameObject Guns;
-    public GameObject press;
+    private PlayerStats playerStats;
     private SpriteRenderer sr;
     private Rigidbody2D rb;
+    private PauseMenu pauseMenu;
+    public GameObject plantMenu;
+    public GameObject guns;
+    public GameObject press;
     public GameObject growing;
 
     public bool plantMenuActive = false;
-    private PauseMenu pauseMenu;
+    public bool inRange = false;
+
     // Start is called before the first frame update
     void Start()
     {
         sr = press.GetComponent<SpriteRenderer>();
         sr.enabled = false;
         pauseMenu = GameObject.Find("pauseMenu").GetComponent<PauseMenu>();
-        pm = GameObject.Find("mantee_v2").GetComponent<PlayerStats>();
-        sh = GameObject.Find("mantee_v2").GetComponent<ShootScript>();
-        cl = GetComponent<Collider2D>();
+        playerStats = GameObject.Find("mantee_v2").GetComponent<PlayerStats>();
         rb = GameObject.Find("mantee_v2").GetComponent<Rigidbody2D>();
     }
 
@@ -34,12 +31,11 @@ public class PlantZone : MonoBehaviour
     void Update()
     {
         //Debug.Log(plantMenuActive);
-
-
         if (inRange)
         {
             sr.enabled = true;
         }
+
         else
         {
             sr.enabled = false;
@@ -49,6 +45,7 @@ public class PlantZone : MonoBehaviour
         {
             growing.SetActive(true);
         }
+
         else
         {
             growing.SetActive(false);
@@ -58,29 +55,29 @@ public class PlantZone : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && inRange && !GameManager.instance.isPlanted && !pauseMenu.isActive && !plantMenuActive)
         {
             plantMenuActive = true;
-
             press.SetActive(false);
+
             //desactivar el movimento
-            pm.speed = 0;
+            playerStats.speed = 0;
 
             rb.mass = 1231231;
 
             //desactivar el disparo
-            Guns.SetActive(false);
+            guns.SetActive(false);
+
             //activar el menu de platado   
             plantMenu.SetActive(true);
         }
-        else if (pm.speed == 0 && Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E) && !pauseMenu.isActive && plantMenuActive)
+
+        else if (playerStats.speed == 0 && Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E) && !pauseMenu.isActive && plantMenuActive)
         {
             plantMenuActive = false;
             press.SetActive(true);
-            pm.speed = 5;
+            playerStats.speed = 5;
             rb.mass = 1;
-            Guns.SetActive(true);
+            guns.SetActive(true);
             plantMenu.SetActive(false);
-
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

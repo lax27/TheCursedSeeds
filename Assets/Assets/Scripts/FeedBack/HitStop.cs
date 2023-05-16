@@ -22,6 +22,7 @@ public class HitStop : MonoBehaviour
             {
                 Time.timeScale += Time.deltaTime * speed;
             }
+
             else
             {
                 Time.timeScale = 1f;
@@ -39,6 +40,7 @@ public class HitStop : MonoBehaviour
             StopCoroutine(StartTimeAgain(delay));
             StartCoroutine(StartTimeAgain(delay));
         }
+
         else
         {
             restoreTime = true;

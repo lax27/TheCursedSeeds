@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnableTpColls : MonoBehaviour
 {
-    [SerializeField] private Collider2D tpColl;
+    [SerializeField] private Collider2D tpCol2D;
     // Start is called before the first frame update
     void Start()
     {
-        tpColl = GameObject.Find("dungeonTp").GetComponent<Collider2D>();
+        tpCol2D = GameObject.Find("dungeonTp").GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -19,6 +19,6 @@ public class EnableTpColls : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        tpColl.enabled = true;
+        tpCol2D.enabled = true;
     }
 }

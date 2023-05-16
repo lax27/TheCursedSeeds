@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LootBag : MonoBehaviour
 {
-    public GameObject dropedSeedPrefab;
+    public GameObject droppedSeedPrefab;
     public List<Wseed> WseedsList = new List<Wseed>();
 
     // Start is called before the first frame update
@@ -26,6 +26,7 @@ public class LootBag : MonoBehaviour
             Wseed dropedSeed = possibleSeeds[Random.Range(0, possibleSeeds.Count)];
             return dropedSeed;
         }
+
         Debug.Log("No loot droped");
         return null;
     }
@@ -33,9 +34,10 @@ public class LootBag : MonoBehaviour
     public void InstatianteWseed(Vector3 spawnPosition)
     {
         Wseed dropedSeed = GetDroppedSeed();
+
         if (dropedSeed != null)
         {
-            GameObject WseedGameObject = Instantiate(dropedSeedPrefab, spawnPosition, Quaternion.identity);
+            GameObject WseedGameObject = Instantiate(droppedSeedPrefab, spawnPosition, Quaternion.identity);
             WseedGameObject.GetComponent<SpriteRenderer>().sprite = dropedSeed.seedSprite;
             WseedGameObject.GetComponent<Reference>().ws = dropedSeed;
             float dropForce = 2f;

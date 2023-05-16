@@ -3527,7 +3527,7 @@ Transform:
   - {fileID: 1293272109}
   - {fileID: 1567153850}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249791788
 GameObject:
@@ -5175,7 +5175,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &910216581
 GameObject:
@@ -6489,7 +6489,7 @@ Transform:
   - {fileID: 844627232}
   - {fileID: 791189667}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172386274
 GameObject:
@@ -6672,15 +6672,16 @@ MonoBehaviour:
   inventory: 010000000000000000000000000000000000000000000000000000000000000000000000
   money: 0
   isPlanted: 0
-  isGrowed: 0
+  isGrown: 0
   pile: {fileID: 1873615610}
   weaponsToSpawn:
   - {fileID: 717133719154522201, guid: 2477a58e651910b46b64829ba416c968, type: 3}
   - {fileID: 717133719154522201, guid: d04d4e13089d57547a22df2723b13200, type: 3}
   currentWeaponID: 0
-  TutorialPassed: 0
+  tutorialPassed: 0
   runsDone: 0
   totalEnemiesKilled: 0
+  maxLives: 3
   currentFloor: 0
   floor1Passed: 0
   floor2Passed: 0
@@ -6699,7 +6700,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1237380383
 GameObject:
@@ -7770,7 +7771,7 @@ PrefabInstance:
     - target: {fileID: 3285997519163195568, guid: e37874b7084f8f742b43f432c91d7b84,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3285997519163195569, guid: e37874b7084f8f742b43f432c91d7b84,
         type: 3}

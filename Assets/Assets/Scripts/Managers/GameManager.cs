@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
@@ -17,22 +15,25 @@ public class GameManager : MonoBehaviour
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
     [Header("Hub Things")]
-    private float PlantTimer;
+    private float plantTimer;
     public bool isPlanted = false;
-    public bool isGrowed = false;
+    public bool isGrown = false;
     public GameObject pile;
     private GameObject spawnWeapon;
     public List<GameObject> weaponsToSpawn = new List<GameObject> ();
     public int currentWeaponID = 0;
 
-    
-    [Header("Player Stadistics")]
-    public bool TutorialPassed = false;
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    [Header("Player Game Stats")]
+    public bool tutorialPassed = false;
     public int runsDone = 0;
     public int totalEnemiesKilled = 0;
+    public int maxLives = 3;
+
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     //Dungeon things:
-    private GameObject guns;
    [SerializeField]public int currentFloor = 0;
     
     public bool floor1Passed = false;
@@ -54,12 +55,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
-   
     void Update()
     {
         if(money >= 999999999)
@@ -72,26 +67,24 @@ public class GameManager : MonoBehaviour
             money = 0;
         }
 
-        guns = GameObject.Find("RotatePoint");
         pile = GameObject.Find("PlantZone");
 
         if (isPlanted)
         {
-            PlantTimer -= Time.deltaTime;
-            if (PlantTimer <= 0)
+            plantTimer -= Time.deltaTime;
+            if (plantTimer <= 0)
             {
-                isGrowed = true;
-                PlantTimer = 0;
+                isGrown = true;
+                plantTimer = 0;
             }
         }
 
-        if (isGrowed)
+        if (isGrown)
         {
            GameObject weaponSpawnedTemp = Instantiate(spawnWeapon, pile.transform.position,Quaternion.identity);
             isPlanted = false;
-            isGrowed = false;
+            isGrown = false;
         }
-
 
         if (currentFloor == 2)
             floor1Passed = true;
@@ -122,14 +115,14 @@ public class GameManager : MonoBehaviour
         {
             spawnWeapon = weaponsToSpawn[0];
             isPlanted = true;
-            PlantTimer = 5f;
+            plantTimer = 5f;
         }
 
         if (seed_number == 1 && !isPlanted )
         {
             spawnWeapon = weaponsToSpawn[1];
             isPlanted = true;
-            PlantTimer = 5f;
+            plantTimer = 5f;
         }
     }
 

@@ -17,19 +17,19 @@ public class PatrollerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float speed = 5f;
 
         Vector2 direction = patrollerPointers[destinationPointerIndex].transform.position - transform.position;
         direction.Normalize();
 
-
         rbPatroller.velocity = direction * speed;
 
         float distanceToCurrentPointer = Vector2.Distance(transform.position, patrollerPointers[destinationPointerIndex].transform.position);
+
         if(distanceToCurrentPointer <= 0.1f)
         {
             destinationPointerIndex++;
+
             if(destinationPointerIndex == patrollerPointers.Length) 
             {
                 destinationPointerIndex = 0;
